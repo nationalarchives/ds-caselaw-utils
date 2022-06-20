@@ -28,8 +28,3 @@ def neutral_url(citation):
             url_components = "/".join([match.groups()[x - 1] for x in groups])
             return f"/{url_components}".lower()
     return None
-
-
-while True:
-    citation = input()
-    print(neutral_url(citation))
