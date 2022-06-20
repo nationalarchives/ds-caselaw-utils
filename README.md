@@ -12,3 +12,12 @@ so that we can have a single point of truth potentially across many repositories
 from ds_caselaw_utils import neutral_url
 neutral_url("[2022] EAT 1")  # '/eat/2022/4'
 ```
+
+## Building
+
+```rm -rf dist```
+```poetry build```
+```python3 -m twine upload --repository testpypi dist/* --verbose ```
+
+(Use `pypi` once happy)
+(There's probably a way to do the last step with just poetry)
