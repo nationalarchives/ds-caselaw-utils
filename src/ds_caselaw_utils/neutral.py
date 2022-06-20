@@ -4,6 +4,11 @@ Convert neutral Citations to URL
 
 import re
 
+# Reading the match_data:
+# the components of the URL for [2022] EAT 1 are the
+# 2nd, 1st and 3rd components of the neutral citation,
+# so the URL becomes eat/2022/1
+
 match_data = {
     # fmt: off
     r"^\[(\d{4})\] (UKSC|UKPC) (\d+)$": [2, 1, 3],
@@ -23,6 +28,7 @@ def neutral_url(citation):
             url_components = "/".join([match.groups()[x - 1] for x in groups])
             return f"/{url_components}".lower()
     return None
+
 
 while True:
     citation = input()
