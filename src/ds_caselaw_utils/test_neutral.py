@@ -12,6 +12,7 @@ class TestNeutralURL(unittest.TestCase):
         self.assertEqual(neutral_url("[2022] UKUT 1 (IAC)"), "/ukut/iac/2022/1")
         self.assertEqual(neutral_url("[2022] EAT 1"), "/eat/2022/1")
         self.assertEqual(neutral_url("[2022] UKFTT 1 (TC)"), "/ukftt/tc/2022/1")
+        self.assertEqual(neutral_url("[2022] UKFTT 1 (GRC)"), "/ukftt/grc/2022/1")
 
     def test_bad_neutral_urls(self):
         self.assertEqual(neutral_url(""), None)
