@@ -1,0 +1,32 @@
+name: Publish Python distributions to PyPI
+
+on:
+  push:
+    tags:
+      - v*
+
+jobs:
+  build-n-publish:
+    name: Build and publish Python distributions to PyPI
+    strategy:
+      fail-fast: false
+      matrix:
+        poetry-version: [ "1.0", "1.1.11" ]
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@main
+      - name: Set up Python 3.9
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.9
+      - name: Run image
+        uses: abatilo/actions-poetry@v2.0.0
+        with:
+          poetry-version: ${{ matrix.poetry-version }}
+      - name: Build with poetry
+        run: poetry build
+      - name: Publish distribution to PyPI
+        if: startsWith(github.ref, 'refs/tags')
+        uses: pypa/gh-action-pypi-publish@master
+        with:
+          password: ${{ secrets.PYPI_API_TOKEN }}
