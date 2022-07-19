@@ -15,14 +15,18 @@ neutral_url("[2022] EAT 1")  # '/eat/2022/4'
 
 ## Testing
 
-```python -m unittest```
+```bash
+$ cd src/ds_caselaw_utils
+$ python -m unittest
+```
 
 ## Building
 
+```bash
+$ rm -rf dist
+$ poetry build
+$ python3 -m twine upload --repository testpypi dist/* --verbose
 ```
-rm -rf dist
-poetry build
-python3 -m twine upload --repository testpypi dist/* --verbose ```
 
 (Use `pypi` once happy)
 (There's probably a way to do the last step with just poetry)
