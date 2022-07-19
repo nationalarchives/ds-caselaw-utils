@@ -10,8 +10,6 @@ jobs:
     name: Build and publish Python distributions to PyPI
     strategy:
       fail-fast: false
-      matrix:
-        poetry-version: [ "1.0", "1.1.11" ]
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@main
@@ -22,7 +20,7 @@ jobs:
       - name: Run image
         uses: abatilo/actions-poetry@v2.0.0
         with:
-          poetry-version: ${{ matrix.poetry-version }}
+          poetry-version: 1.1.11
       - name: Build with poetry
         run: poetry build
       - name: Publish distribution to PyPI
