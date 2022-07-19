@@ -11,6 +11,7 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.9"
+"ruamel.yaml" = "^0.17.21"
 
 [tool.poetry.dev-dependencies]
 
