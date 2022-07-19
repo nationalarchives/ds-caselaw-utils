@@ -16,6 +16,7 @@ neutral_url("[2022] EAT 1")  # '/eat/2022/4'
 ## Testing
 
 ```bash
+$ poetry shell
 $ cd src/ds_caselaw_utils
 $ python -m unittest
 ```
@@ -28,5 +29,5 @@ $ poetry build
 $ python3 -m twine upload --repository testpypi dist/* --verbose
 ```
 
-(Use `pypi` once happy)
+(Use `pypi` instead of testpypi once happy)
 (There's probably a way to do the last step with just poetry)

@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "ds_caselaw_utils"
-version = "0.1.4"
+version = "0.1.5"
 description = "Utilities for the National Archives Caselaw project"
 authors = ["David McKee <dragon@dxw.com>"]
 license = "MIT"
@@ -11,6 +11,7 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.9"
+"ruamel.yaml" = "^0.17.21"
 
 [tool.poetry.dev-dependencies]
 
