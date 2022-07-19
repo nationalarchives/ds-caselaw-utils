@@ -28,5 +28,21 @@ $ poetry build
 $ python3 -m twine upload --repository testpypi dist/* --verbose
 ```
 
-(Use `pypi` once happy)
-(There's probably a way to do the last step with just poetry)
+## Releasing
+
+When making a new release, update the [changelog](CHANGELOG.md) in the release
+pull request.
+
+The package will **only** be released to PyPI if the branch is tagged. A merge 
+to main alone will **not** trigger a release to PyPI.
+
+To create a release:
+
+0. Update the version number in `pyproject.toml`
+1. Create a branch `release/v{major}.{minor}.{patch}`
+2. Update changelog for the release
+3. Commit and push
+4. Open a PR from that branch to main
+5. Get approval on the PR
+6. Tag the HEAD of the PR `v{major}.{minor}.{patch}` and push the tag
+7. Merge the PR to main and push
