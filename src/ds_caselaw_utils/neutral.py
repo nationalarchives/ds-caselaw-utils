@@ -2,28 +2,23 @@
 Convert neutral Citations to URL
 """
 
+import pathlib
 import re
 
-# Reading the match_data:
-# the components of the URL for [2022] EAT 1 are the
-# 2nd, 1st and 3rd components of the neutral citation,
-# so the URL becomes eat/2022/1
+from ruamel.yaml import YAML
 
-match_data = {
-    # fmt: off
-    r"^\[(\d{4})\] (UKSC|UKPC) (\d+)$": [2, 1, 3],
-    r"^\[(\d{4})\] (EWCA) (Civ|Crim) (\d+)$": [2, 3, 1, 4],
-    r"^\[(\d{4})\] (EWHC) (\d+) \((Admin|Admlty|Ch|Comm|Costs|Fam|IPEC|Pat|QB|SCCO|TCC)\)$": [2, 4, 1, 3],  # noqa: E501
-    r"^\[(\d{4})\] (EWFC|EWCOP) (\d+)$": [2, 1, 3],
-    r"^\[(\d{4})\] (UKUT) (\d+) \((AAC|IAC|LC|TCC)\)$": [2, 4, 1, 3],
-    r"^\[(\d{4})\] (EAT) (\d+)$": [2, 1, 3],
-    r"^\[(\d{4})\] (UKFTT) (\d+) \((TC|GRC)\)$": [2, 4, 1, 3],
-    # fmt: on
-}
+yaml = YAML()
+datafile = pathlib.Path(__file__).parent / "data/neutral_citation_regex.yaml"
+with open(datafile) as f:
+    citation_data = yaml.load(f)
 
 
 def neutral_url(citation):
-    for regex, groups in match_data.items():
+    """Given a neutral citation such as `[2020] EAT 17`,
+    return a public-API URL like `/eat/2020/17`, or None
+    if no match is found.
+    """
+    for regex, groups in citation_data:
         if match := re.match(regex, citation):
             url_components = "/".join([match.groups()[x - 1] for x in groups])
             return f"/{url_components}".lower()

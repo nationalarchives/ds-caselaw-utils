@@ -16,6 +16,7 @@ neutral_url("[2022] EAT 1")  # '/eat/2022/4'
 ## Testing
 
 ```bash
+$ poetry shell
 $ cd src/ds_caselaw_utils
 $ python -m unittest
 ```
@@ -33,7 +34,7 @@ $ python3 -m twine upload --repository testpypi dist/* --verbose
 When making a new release, update the [changelog](CHANGELOG.md) in the release
 pull request.
 
-The package will **only** be released to PyPI if the branch is tagged. A merge 
+The package will **only** be released to PyPI if the branch is tagged. A merge
 to main alone will **not** trigger a release to PyPI.
 
 To create a release:
