@@ -1,0 +1,169 @@
+-
+    code: UKSC
+    name: The Supreme Court
+    link: https://www.supremecourt.uk/
+    ncn: \[(\d{4})\] (UKSC) (\d+)
+-
+    code: UKPC
+    name: The Judicial Committee of the Privy Council
+    link: https://www.jcpc.uk/
+    ncn: \[(\d{4})\] (UKPC) \d+
+-
+    code: EWCA-Criminal
+    name: Court of Appeal Criminal Division
+    link: https://www.gov.uk/courts-tribunals/court-of-appeal-criminal-division
+    ncn: \[(\d{4})\] (EWCA) (Crim) (\d+)
+-
+    code: EWCA-Civil
+    name: Court of Appeal Civil Division
+    link: https://www.gov.uk/courts-tribunals/court-of-appeal-civil-division
+    ncn: \[(\d{4})\] (EWCA) (Civ) (\d+)
+-
+    code: EWHC
+    name: The High Court
+-
+    code: EWHC-QBD
+    name: Queen's Bench Division of the High Court
+    link: https://www.gov.uk/courts-tribunals/queens-bench-division-of-the-high-court
+    ncn: \[(\d{4})\] (EWHC) (\d+) \((QB)\)
+-
+    code: EWHC-Chancery
+    name: Chancery Division of the High Court
+    link: https://www.gov.uk/courts-tribunals/chancery-division-of-the-high-court
+    ncn: \[(\d{4})\] (EWHC) (\d+) \((Ch)\)
+-
+    code: EWHC-Family
+    name: Family Division of the High Court
+    link: https://www.gov.uk/courts-tribunals/family-division-of-the-high-court
+    ncn: \[(\d{4})\] (EWHC) (\d+) \((Fam)\)
+-
+    code: EWHC-QBD-Admin
+    name: Administrative Court
+    link: https://www.gov.uk/courts-tribunals/administrative-court
+    ncn: \[(\d{4})\] (EWHC) (\d+) \((Admin)\)
+-
+    code: EWHC-QBD-Planning
+    name: Planning Court
+    link: https://www.gov.uk/courts-tribunals/planning-court
+-
+    code: EWHC-QBD-BusinessAndProperty
+    name: The Business and Property Courts
+    link: https://www.gov.uk/courts-tribunals/the-business-and-property-courts
+-
+    code: EWHC-QBD-Commercial
+    name: Commercial Court
+    link: https://www.gov.uk/courts-tribunals/commercial-court
+    ncn: \[(\d{4})\] (EWHC) (\d+) \((Comm)\)
+-
+    code: EWHC-QBD-Admiralty
+    name: Admiralty Court
+    link: https://www.gov.uk/courts-tribunals/admiralty-court
+    ncn: \[(\d{4})\] (EWHC) (\d+) \((Admlty)\)
+-
+    code: EWHC-QBD-TCC
+    name: Technology and Construction Court
+    link: https://www.gov.uk/courts-tribunals/technology-and-construction-court
+    ncn: \[(\d{4})\] (EWHC) (\d+) \((TCC)\)
+-
+    code: EWHC-QBD-Commercial-Financial
+    name: The Financial List
+    link: https://www.gov.uk/courts-tribunals/the-financial-list
+    ncn: \[(\d{4})\] (EWHC) (\d+) \((Comm)\)
+-
+    code: EWHC-QBD-Commercial-Circuit
+    name: Circuit Commercial Court
+    link: https://www.gov.uk/courts-tribunals/commercial-circuit-court
+    ncn: \[(\d{4})\] (EWHC) (\d+) \((Comm)\)
+-
+    code: EWHC-Chancery-BusinessAndProperty
+    name: The Business and Property Courts
+    link: https://www.gov.uk/courts-tribunals/the-business-and-property-courts
+-
+    code: EWHC-Chancery-Business
+    name: The Business List
+    link: https://www.gov.uk/courts-tribunals/the-business-list
+-
+    code: EWHC-Chancery-InsolvencyAndCompanies
+    name: Insolvency and Companies List
+    link: https://www.gov.uk/courts-tribunals/insolvency-list
+-
+    code: EWHC-Chancery-Financial
+    name: The Financial List
+    link: https://www.gov.uk/courts-tribunals/the-financial-list
+-
+    code: EWHC-Chancery-IntellectualProperty
+    name: The Intellectual Property List
+    link: https://www.gov.uk/courts-tribunals/the-intellectual-property-list
+-
+    code: EWHC-Chancery-Patents
+    name: Patents Court
+    link: https://www.gov.uk/courts-tribunals/patents-court
+    ncn: \[(\d{4})\] (EWHC) (\d+) \((Pat)\)
+-
+    code: EWHC-Chancery-PropertyTrustsProbate
+    name: The Property, Trusts and Probate List
+    link: https://www.gov.uk/courts-tribunals/the-property-trusts-and-probate-list
+
+-
+    code: EWHC-Chancery-IPEC
+    name: Intellectual Property Enterprise Court
+    link: https://www.gov.uk/courts-tribunals/intellectual-property-enterprise-court
+    ncn: \[(\d{4})\] (EWHC) (\d+) \((IPEC)\)
+-
+    code: EWHC-Chancery-Appeals
+    name: Chancery Appeals
+    link: https://www.gov.uk/courts-tribunals/chancery-division-of-the-high-court
+-
+    code: EWHC-SeniorCourtsCosts
+    name: Senior Courts Costs Office
+    link: https://www.gov.uk/courts-tribunals/senior-courts-costs-office
+    ncn: \[(\d{4})\] (EWHC) (\d+) \((SCCO)\)
+-
+    code: EWCOP
+    name: Court of Protection
+    link: https://www.gov.uk/courts-tribunals/court-of-protection
+    ncn: \[(\d{4})\] (EWCOP) (\d+)
+-
+    code: EWFC
+    name: The Family Court
+    link: https://www.judiciary.uk/you-and-the-judiciary/going-to-court/family-law-courts/
+    ncn: \[(\d{4})\] (EWFC) (\d+)
+-
+    code: UKUT-AAC
+    name: Upper Tribunal (Administrative Appeals Chamber)
+    link: https://www.gov.uk/courts-tribunals/upper-tribunal-administrative-appeals-chamber
+    ncn: \[(\d{4})\] (UKUT) (\d+) \((AAC)\)
+-
+    code: UKUT-IAC
+    name: Upper Tribunal (Immigration and Asylum Chamber)
+    link: https://www.gov.uk/courts-tribunals/upper-tribunal-immigration-and-asylum-chamber
+    ncn: \[(\d{4})\] (UKUT) (\d+) \((IAC)\)
+-
+    code: UKUT-LC
+    name: Upper Tribunal (Lands Chamber)
+    link: https://www.gov.uk/courts-tribunals/upper-tribunal-lands-chamber
+    ncn: \[(\d{4})\] (UKUT) (\d+) \((LC)\)
+-
+    code: UKUT-TCC
+    name: Upper Tribunal (Tax and Chancery Chamber)
+    link: https://www.gov.uk/courts-tribunals/upper-tribunal-tax-and-chancery-chamber
+    ncn: \[(\d{4})\] (UKUT) (\d+) \((TCC)\)
+-
+    code: EAT
+    name: Employment Appeal Tribunal
+    link: https://www.gov.uk/courts-tribunals/employment-appeal-tribunal
+    ncn: \[(\d{4})\] (EAT) (\d+)
+-
+    code: UKFTT-TC
+    name: First-tier Tribunal (Tax)
+    link: https://www.gov.uk/courts-tribunals/first-tier-tribunal-tax
+    ncn: \[(\d{4})\] (UKFTT) (\d+) \((TC)\)
+-
+    code: UKFTT-GRC
+    name: First-tier Tribunal (General Regulatory Chamber)
+    link: https://www.gov.uk/courts-tribunals/first-tier-tribunal-general-regulatory-chamber
+    ncn: \[(\d{4})\] (UKFTT) (\d+) \((GRC)\)
+-
+    code: ET
+    name: Employment Tribunal
+    link: https://www.gov.uk/courts-tribunals/employment-tribunal
