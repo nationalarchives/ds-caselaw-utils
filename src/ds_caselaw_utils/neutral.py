@@ -21,5 +21,5 @@ def neutral_url(citation):
     for regex, groups in citation_data:
         if match := re.match(regex, citation):
             url_components = "/".join([match.groups()[x - 1] for x in groups])
-            return f"/{url_components}".lower()
+            return url_components.lower()
     return None
