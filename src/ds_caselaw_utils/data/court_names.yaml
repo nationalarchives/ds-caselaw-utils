@@ -27,6 +27,11 @@
     link: https://www.gov.uk/courts-tribunals/queens-bench-division-of-the-high-court
     ncn: \[(\d{4})\] (EWHC) (\d+) \((QB)\)
 -
+    code: EWHC-KBD
+    name: King's Bench Division of the High Court
+    link: https://www.gov.uk/courts-tribunals/kings-bench-division-of-the-high-court
+    ncn: \[(\d{4})\] (EWHC) (\d+) \((KB)\)
+-
     code: EWHC-Chancery
     name: Chancery Division of the High Court
     link: https://www.gov.uk/courts-tribunals/chancery-division-of-the-high-court
