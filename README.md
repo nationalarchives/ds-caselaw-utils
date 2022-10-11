@@ -11,6 +11,48 @@ so that we can have a single point of truth potentially across many repositories
 ```
 from ds_caselaw_utils import neutral_url
 neutral_url("[2022] EAT 1")  # '/eat/2022/4'
+
+from ds_caselaw_utils import courts
+
+courts.get_all() # return a list of all courts
+
+courts.get_selectable() # returns a list of all courts that are whitelisted to
+                        # appear as searchable options
+
+courts.get_listable_groups() # returns a grouped list of courts that are whitelisted to
+                             # be listed publicly
+```
+
+The list of courts is defined in `src/ds_caselaw_utils/data/court_names.yml`. The format is as follows:
+
+```
+- name: high_court # Internal name of a group of courts to be displayed together
+  display_name: "High Court" # An optional public facing name for this group.
+  courts: # List of courts to be displayed under this group
+    -
+        # An internal code for this court:
+        code: EWHC-SeniorCourtsCosts
+         # The public facing name of the court:
+        name: Senior Courts Costs Office
+        # An alternative wording for use in listings (optional, defaults to `name`)
+        list_name: High Court (Senior Court Costs Office)
+        # A URL to link to for more information on this court:
+        link: https://www.gov.uk/courts-tribunals/senior-courts-costs-office
+        # A regex matching neutral citations for this court's judgments:
+        ncn: \[(\d{4})\] (EWHC) (\d+) \((SCCO)\)
+        # The canonical parameter value used in searches for this court:
+        param: 'ewhc/scco'
+        # Any additional parameter aliases which display judgments from this court:
+        extra_params: ['ewhc/costs']
+        # The year of the first judgment we have on file for this court:
+        start_year: 2003
+        # The year of the last judgment we have on file for this court
+        # (optional, defaults to current year):
+        end_year: ~
+        # Whether to expose this court publicly as selectable in search filters:
+        selectable: true
+        # Whether to expose this court publicly in listings:
+        listable: true
 ```
 
 ## Testing
