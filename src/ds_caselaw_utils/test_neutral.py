@@ -1,6 +1,6 @@
 import unittest
 
-from neutral import neutral_url
+from .neutral import neutral_url
 
 
 class TestNeutralURL(unittest.TestCase):
