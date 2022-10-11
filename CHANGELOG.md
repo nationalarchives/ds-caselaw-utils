@@ -14,4 +14,7 @@ The format is based on [Keep a Changelog 1.0.0].
 ## [Release 0.1.4]
 - Initial tagged release
 
+## [Release 0.2.0]
+- Add helpers for accessing metadata about courts
+
 [keep a changelog 1.0.0]: https://keepachangelog.com/en/1.0.0/
