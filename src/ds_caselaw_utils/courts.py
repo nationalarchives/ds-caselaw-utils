@@ -3,10 +3,12 @@ Get metada data for the courts covered by the service
 """
 
 import pathlib
-from ruamel.yaml import YAML
 from datetime import date
 
-class Court():
+from ruamel.yaml import YAML
+
+
+class Court:
     def __init__(self, data):
         self.code = data.get("code")
         self.name = data.get("name")
@@ -18,18 +20,27 @@ class Court():
         self.start_year = data.get("start_year")
         self.end_year = data.get("end_year") or date.today().year
 
-class CourtGroup():
+
+class CourtGroup:
     def __init__(self, name, courts):
         self.name = name
         self.courts = courts
 
 
-class CourtsRepository():
+class CourtsRepository:
     def __init__(self, data):
         self._data = data
 
+    def get_by_param(self, param):
+        for group in self._data:
+            for court in group.get("courts"):
+                if court.get("param") == param:
+                    return Court(court)
+
     def get_all(self):
-        return [Court(court) for category in self._data for court in category.get("courts")]
+        return [
+            Court(court) for category in self._data for court in category.get("courts")
+        ]
 
     def get_selectable(self):
         courts = []
@@ -42,7 +53,11 @@ class CourtsRepository():
     def get_listable_groups(self):
         groups = []
         for category in self._data:
-            courts = [Court(court) for court in category.get("courts") if court.get("listable")]
+            courts = [
+                Court(court)
+                for court in category.get("courts")
+                if court.get("listable")
+            ]
             if len(courts) > 0:
                 groups.append(CourtGroup(category.get("display_name"), courts))
         return groups

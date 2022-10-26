@@ -32,4 +32,4 @@ jobs:
       - name: Install libraries
         run: poetry install
       - name: Run tests
-        run: poetry run python -m unittest discover -s src/ds_caselaw_utils/
+        run: cd src && poetry run python -m unittest
