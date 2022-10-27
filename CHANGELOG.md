@@ -20,4 +20,7 @@ The format is based on [Keep a Changelog 1.0.0].
 ## [Release 0.3.0]
 - Add helper to access court metadata by parameter value.
 
+## [Release 0.3.1]
+- Add newly supported first-tier tribunals to the court list
+
 [keep a changelog 1.0.0]: https://keepachangelog.com/en/1.0.0/
