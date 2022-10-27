@@ -1,23 +1,26 @@
-import unittest
 import pathlib
-from ruamel.yaml import YAML
+import unittest
 from datetime import date
 
-from .courts import courts, Court, CourtsRepository
+from ruamel.yaml import YAML
+
+from .courts import Court, CourtsRepository, courts
 
 
 class TestCourtsRepository(unittest.TestCase):
     def test_loads_selectable_courts(self):
-        data = [{
-            "name": "court_group",
-            "courts": [{
-                "name": "court1",
-                "selectable": True,
-            }, {
-                "name": "court2",
-                "selectable": False
-            }]
-        }]
+        data = [
+            {
+                "name": "court_group",
+                "courts": [
+                    {
+                        "name": "court1",
+                        "selectable": True,
+                    },
+                    {"name": "court2", "selectable": False},
+                ],
+            }
+        ]
         repo = CourtsRepository(data)
         selectable = repo.get_selectable()
         self.assertIn("court1", [c.name for c in selectable])
@@ -28,30 +31,41 @@ class TestCourtsRepository(unittest.TestCase):
             {
                 "name": "court_group1",
                 "display_name": "court group 1",
-                "courts": [{
-                    "name": "court1",
-                    "listable": True,
-                }, {
-                    "name": "court2",
-                    "listable": False
-                }]
-            }, {
+                "courts": [
+                    {
+                        "name": "court1",
+                        "listable": True,
+                    },
+                    {"name": "court2", "listable": False},
+                ],
+            },
+            {
                 "name": "court_group2",
                 "display_name": "court group 2",
-                "courts": [{
-                    "name": "court3",
-                    "listable": False
-                }]
-            }
+                "courts": [{"name": "court3", "listable": False}],
+            },
         ]
         repo = CourtsRepository(data)
         groups = repo.get_listable_groups()
         self.assertIn("court group 1", [g.name for g in groups])
         self.assertNotIn("court group 2", [g.name for g in groups])
-        self.assertIn("court1" , [c.name for g in groups for c in g.courts])
-        self.assertNotIn("court2" , [c.name for g in groups for c in g.courts])
-        self.assertNotIn("court3" , [c.name for g in groups for c in g.courts])
+        self.assertIn("court1", [c.name for g in groups for c in g.courts])
+        self.assertNotIn("court2", [c.name for g in groups for c in g.courts])
+        self.assertNotIn("court3", [c.name for g in groups for c in g.courts])
 
+    def test_loads_court_by_param(self):
+        data = [
+            {
+                "name": "court_group1",
+                "courts": [{"param": "court1", "name": "Court 1"}],
+            },
+            {
+                "name": "court_group2",
+                "courts": [{"param": "court2", "name": "Court 2"}],
+            },
+        ]
+        repo = CourtsRepository(data)
+        self.assertEqual("Court 2", repo.get_by_param("court2").name)
 
 
 class TestCourt(unittest.TestCase):
@@ -75,6 +89,7 @@ class TestCourt(unittest.TestCase):
         court = Court({})
         self.assertEqual(date.today().year, court.end_year)
 
+
 class TestCourts(unittest.TestCase):
     def test_loads_court_yaml(self):
         yaml = YAML()
@@ -87,4 +102,3 @@ class TestCourts(unittest.TestCase):
                 courts_from_yaml.append(court)
         for (court, data) in zip(courts.get_all(), courts_from_yaml):
             self.assertEqual(court.name, data["name"])
-

@@ -16,6 +16,8 @@ from ds_caselaw_utils import courts
 
 courts.get_all() # return a list of all courts
 
+courts.get_by_param("ewhc/ch") # get a court by its parameter value
+
 courts.get_selectable() # returns a list of all courts that are whitelisted to
                         # appear as searchable options
 
