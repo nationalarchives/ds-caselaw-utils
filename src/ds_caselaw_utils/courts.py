@@ -62,6 +62,24 @@ class CourtsRepository:
                 groups.append(CourtGroup(category.get("display_name"), courts))
         return groups
 
+    def get_listable_courts(self):
+        courts = []
+        for group in self._data:
+            if not group.get("is_tribunal"):
+                for court in group.get("courts", []):
+                    if court.get("listable"):
+                        courts.append(Court(court))
+        return courts
+
+    def get_listable_tribunals(self):
+        courts = []
+        for group in self._data:
+            if group.get("is_tribunal"):
+                for court in group.get("courts", []):
+                    if court.get("listable"):
+                        courts.append(Court(court))
+        return courts
+
 
 yaml = YAML()
 datafile = pathlib.Path(__file__).parent / "data/court_names.yaml"

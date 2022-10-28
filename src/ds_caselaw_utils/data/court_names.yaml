@@ -1,5 +1,6 @@
 - name: supreme_court
   display_name: ~
+  is_tribunal: false
   courts:
     -
         code: UKSC
@@ -13,6 +14,7 @@
         listable: true
 - name: privy_council
   display_name: ~
+  is_tribunal: false
   courts:
     -
         code: UKPC
@@ -26,6 +28,7 @@
         listable: true
 - name: court_of_appeal
   display_name: "Court of Appeal"
+  is_tribunal: false
   courts:
     -
         code: EWCA-Civil
@@ -51,6 +54,7 @@
         listable: true
 - name: high_court
   display_name: "High Court"
+  is_tribunal: false
   courts:
     -
         code: EWHC-QBD-Admin
@@ -291,6 +295,7 @@
         listable: false
 - name: upper_tribunals
   display_name: "Upper Tribunals"
+  is_tribunal: true
   courts:
     -
         code: UKUT-IAC
@@ -339,6 +344,7 @@
         end_year: ~
 - name: employment_appeal_tribunal
   display_name: ~
+  is_tribunal: true
   courts:
     -
         code: EAT
@@ -352,6 +358,7 @@
         end_year: ~
 - name: first_tier_tribunals
   display_name: "First-tier Tribunals"
+  is_tribunal: true
   courts:
     -
         code: UKFTT-TC

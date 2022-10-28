@@ -67,6 +67,60 @@ class TestCourtsRepository(unittest.TestCase):
         repo = CourtsRepository(data)
         self.assertEqual("Court 2", repo.get_by_param("court2").name)
 
+    def test_returns_listable_courts(self):
+        data = [
+            {
+                "name": "court_group1",
+                "is_tribunal": False,
+                "courts": [
+                    {"param": "court1", "listable": True, "name": "Court 1"},
+                    {"param": "court2", "listable": False, "name": "Court 2"},
+                ],
+            },
+            {
+                "name": "court_group2",
+                "is_tribunal": True,
+                "courts": [{"param": "court3", "listable": True, "name": "Court 3"}],
+            },
+        ]
+        repo = CourtsRepository(data)
+        self.assertIn("court1", [c.canonical_param for c in repo.get_listable_courts()])
+        self.assertNotIn(
+            "court2", [c.canonical_param for c in repo.get_listable_courts()]
+        )
+        self.assertNotIn(
+            "court3", [c.canonical_param for c in repo.get_listable_courts()]
+        )
+
+    def test_returns_listable_tribunals(self):
+        data = [
+            {
+                "name": "court_group1",
+                "is_tribunal": False,
+                "courts": [
+                    {"param": "court1", "listable": True, "name": "Court 1"},
+                ],
+            },
+            {
+                "name": "court_group2",
+                "is_tribunal": True,
+                "courts": [
+                    {"param": "court2", "listable": False, "name": "Court 2"},
+                    {"param": "court3", "listable": True, "name": "Court 3"},
+                ],
+            },
+        ]
+        repo = CourtsRepository(data)
+        self.assertNotIn(
+            "court1", [c.canonical_param for c in repo.get_listable_tribunals()]
+        )
+        self.assertNotIn(
+            "court2", [c.canonical_param for c in repo.get_listable_tribunals()]
+        )
+        self.assertIn(
+            "court3", [c.canonical_param for c in repo.get_listable_tribunals()]
+        )
+
 
 class TestCourt(unittest.TestCase):
     def test_list_name_explicit(self):
