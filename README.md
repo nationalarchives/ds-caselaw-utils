@@ -23,6 +23,14 @@ courts.get_selectable() # returns a list of all courts that are whitelisted to
 
 courts.get_listable_groups() # returns a grouped list of courts that are whitelisted to
                              # be listed publicly
+
+courts.get_listable_courts() # returns a list of all *courts* (ie not tribunals)
+                             # which are whitelisted to be listed publicly
+
+courts.get_listable_tribunals() # return a list of all *tribunals*  which are
+                                # whitelisted to be listed publicly
+
+
 ```
 
 The list of courts is defined in `src/ds_caselaw_utils/data/court_names.yml`. The format is as follows:
@@ -30,6 +38,7 @@ The list of courts is defined in `src/ds_caselaw_utils/data/court_names.yml`. Th
 ```
 - name: high_court # Internal name of a group of courts to be displayed together
   display_name: "High Court" # An optional public facing name for this group.
+  is_tribunal: false # Whether this group contains courts or tribunals
   courts: # List of courts to be displayed under this group
     -
         # An internal code for this court:

@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "ds_caselaw_utils"
-version = "0.3.2"
+version = "0.4.0"
 description = "Utilities for the National Archives Caselaw project"
 authors = ["David McKee <dragon@dxw.com>", "Tim Cowlishaw <tim@timcowlishaw.co.uk>"]
 license = "MIT"
