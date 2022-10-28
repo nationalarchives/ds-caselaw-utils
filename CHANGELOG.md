@@ -23,4 +23,7 @@ The format is based on [Keep a Changelog 1.0.0].
 ## [Release 0.3.1]
 - Add newly supported first-tier tribunals to the court list
 
+## [Release 0.3.2]
+- Fix bug in court names - parameter values for upper tribunals were incorrect.
+
 [keep a changelog 1.0.0]: https://keepachangelog.com/en/1.0.0/
