@@ -36,7 +36,7 @@
         list_name: "Court of Appeal (Civil Division)"
         link: https://www.gov.uk/courts-tribunals/court-of-appeal-civil-division
         ncn: \[(\d{4})\] (EWCA) (Civ) (\d+)
-        param: 'ecwa/civ'
+        param: 'ewca/civ'
         start_year: '2003'
         end_year: ~
         selectable: true
@@ -47,7 +47,7 @@
         list_name: Court of Appeal (Criminal Division)
         link: https://www.gov.uk/courts-tribunals/court-of-appeal-criminal-division
         ncn: \[(\d{4})\] (EWCA) (Crim) (\d+)
-        param: 'ecwa/crim'
+        param: 'ewca/crim'
         start_year: '2003'
         end_year: ~
         selectable: true
