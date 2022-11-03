@@ -4,6 +4,9 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog 1.0.0].
 
+## [Release 0.4.1]
+- Correct two canonical params for courts which were incorrect.
+
 ## [Release 0.4.0]
 - Add accessors to return all visible courts or tribunals ungrouped.
 
