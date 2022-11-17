@@ -305,7 +305,7 @@
         ncn: \[(\d{4})\] (UKUT) (\d+) \((IAC)\)
         selectable: true
         listable: true
-        param: 'ukut-iac'
+        param: 'ukut/iac'
         start_year: 2010
         end_year: ~
 
@@ -317,7 +317,7 @@
         ncn: \[(\d{4})\] (UKUT) (\d+) \((LC)\)
         selectable: true
         listable: true
-        param: 'ukut-lc'
+        param: 'ukut/lc'
         start_year: 2015
         end_year: ~
     -
@@ -328,7 +328,7 @@
         ncn: \[(\d{4})\] (UKUT) (\d+) \((TCC)\)
         selectable: true
         listable: true
-        param: 'ukut-tcc'
+        param: 'ukut/tcc'
         start_year: 2017
         end_year: ~
     -
@@ -339,7 +339,7 @@
         ncn: \[(\d{4})\] (UKUT) (\d+) \((AAC)\)
         selectable: true
         listable: true
-        param: 'ukut-aac'
+        param: 'ukut/aac'
         start_year: 2022
         end_year: ~
 - name: employment_appeal_tribunal
@@ -365,7 +365,7 @@
         name: First-tier Tribunal (Tax Chamber)
         link: https://www.gov.uk/courts-tribunals/first-tier-tribunal-tax
         ncn: \[(\d{4})\] (UKFTT) (\d+) \((TC)\)
-        param: 'ukftt-tc'
+        param: 'ukftt/tc'
         start_year: 2022
         end_year: ~
         selectable: true
@@ -373,7 +373,7 @@
     -
         code: UKFTT-GRC
         name: First-tier Tribunal (General Regulatory Chamber)
-        param: 'ukftt-grc'
+        param: 'ukftt/grc'
         link: https://www.gov.uk/courts-tribunals/first-tier-tribunal-general-regulatory-chamber
         ncn: \[(\d{4})\] (UKFTT) (\d+) \((GRC)\)
         start_year: 2022
