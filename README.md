@@ -1,10 +1,13 @@
-# Caselaw utility functions
+# The National Archives: Find Case Law
+
+This repository is part of the [Find Case Law](https://caselaw.nationalarchives.gov.uk/) project at [The National Archives](https://www.nationalarchives.gov.uk/). For more information on the project, check [the documentation](https://github.com/nationalarchives/ds-find-caselaw-docs).
+
+# Python Utilities
+
+This repository contains common functions used throughout the National Archives Caselaw project, reducing duplication and complexity.
 
 pypi name: [ds-caselaw-utils](https://pypi.org/project/ds-caselaw-utils)
 python import name: `ds_caselaw_utils`
-
-This repo contains functions of general use throughout the National Archives Caselaw project
-so that we can have a single point of truth potentially across many repositories.
 
 ## Examples
 
