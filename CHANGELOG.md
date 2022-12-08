@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog 1.0.0].
 
+## [Release 0.4.3]
+  - Standardise documentation (README and licence)
+  - Add CodeQL configuration
+  - Add a check for secrets
+
+## [Release 0.4.2]
+- Set the default search for all courts to be URI based, for now
+
 ## [Release 0.4.1]
 - Correct two canonical params for courts which were incorrect.
 

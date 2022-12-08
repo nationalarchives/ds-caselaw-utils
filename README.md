@@ -103,3 +103,4 @@ To create a release:
 5. Get approval on the PR
 6. Tag the HEAD of the PR `v{major}.{minor}.{patch}` and push the tag
 7. Merge the PR to main and push
+8. Add a new release to Github for that tag for consistency's sake
