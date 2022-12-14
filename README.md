@@ -4,6 +4,8 @@ This repository is part of the [Find Case Law](https://caselaw.nationalarchives.
 
 # Python Utilities
 
+![PyPI](https://img.shields.io/pypi/v/ds-caselaw-utils) ![Libraries.io dependency status for latest release](https://img.shields.io/librariesio/release/pypi/ds-caselaw-utils)
+
 This repository contains common functions used throughout the National Archives Caselaw project, reducing duplication and complexity.
 
 pypi name: [ds-caselaw-utils](https://pypi.org/project/ds-caselaw-utils)
