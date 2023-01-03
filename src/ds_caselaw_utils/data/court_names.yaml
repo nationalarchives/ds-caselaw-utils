@@ -9,7 +9,7 @@
         ncn: \[(\d{4})\] (UKSC) (\d+)
         param: 'uksc'
         start_year: '2014'
-        end_year: ~
+        end_year: 2022
         selectable: true
         listable: true
 - name: privy_council
@@ -23,7 +23,7 @@
         ncn: \[(\d{4})\] (UKPC) \d+
         param: 'ukpc'
         start_year: '2014'
-        end_year: ~
+        end_year: 2022
         selectable: true
         listable: true
 - name: court_of_appeal
@@ -38,7 +38,7 @@
         ncn: \[(\d{4})\] (EWCA) (Civ) (\d+)
         param: 'ewca/civ'
         start_year: '2003'
-        end_year: ~
+        end_year: 2022
         selectable: true
         listable: true
     -
@@ -49,7 +49,7 @@
         ncn: \[(\d{4})\] (EWCA) (Crim) (\d+)
         param: 'ewca/crim'
         start_year: '2003'
-        end_year: ~
+        end_year: 2022
         selectable: true
         listable: true
 - name: high_court
@@ -64,7 +64,7 @@
         ncn: \[(\d{4})\] (EWHC) (\d+) \((Admin)\)
         param: 'ewhc/admin'
         start_year: 2003
-        end_year: ~
+        end_year: 2022
         selectable: true
         listable: true
     -
@@ -75,7 +75,7 @@
         ncn: \[(\d{4})\] (EWHC) (\d+) \((Admlty)\)
         param: 'ewhc/admlty'
         start_year: 2003
-        end_year: ~
+        end_year: 2022
         selectable: true
         listable: true
     -
@@ -86,7 +86,7 @@
         ncn: \[(\d{4})\] (EWHC) (\d+) \((Ch)\)
         param: 'ewhc/ch'
         start_year: 2003
-        end_year: ~
+        end_year: 2022
         selectable: true
         listable: true
     -
@@ -97,7 +97,7 @@
         ncn: \[(\d{4})\] (EWHC) (\d+) \((Comm)\)
         param: 'ewhc/comm'
         start_year: 2003
-        end_year: ~
+        end_year: 2022
         selectable: true
         listable: true
     -
@@ -109,7 +109,7 @@
         param: 'ewhc/scco'
         extra_params: ['ewhc/costs']
         start_year: 2003
-        end_year: ~
+        end_year: 2022
         selectable: true
         listable: true
     -
@@ -120,7 +120,7 @@
         ncn: \[(\d{4})\] (EWHC) (\d+) \((Fam)\)
         param: 'ewhc/fam'
         start_year: 2003
-        end_year: ~
+        end_year: 2022
         selectable: true
         listable: true
     -
@@ -130,7 +130,7 @@
         ncn: \[(\d{4})\] (EWHC) (\d+) \((IPEC)\)
         param: 'ewhc/ipec'
         start_year: 2003
-        end_year: ~
+        end_year: 2022
         selectable: true
         listable: true
     -
@@ -152,7 +152,7 @@
         ncn: \[(\d{4})\] (EWHC) (\d+) \((Pat)\)
         param: 'ewhc/pat'
         start_year: 2003
-        end_year: ~
+        end_year: 2022
         selectable: true
         listable: true
     -
@@ -163,7 +163,7 @@
         param: "ewhc/kb"
         extra_params: ["ewhc/qb"]
         start_year: 2003
-        end_year: ~
+        end_year: 2022
         selectable: true
         listable: false
     -
@@ -183,7 +183,7 @@
         ncn: \[(\d{4})\] (EWHC) (\d+) \((KB)\)
         param: "ewhc/kb"
         start_year: 2022
-        end_year: ~
+        end_year: 2022
         selectable: false
         listable: true
     -
@@ -194,7 +194,7 @@
         ncn: \[(\d{4})\] (EWHC) (\d+) \((TCC)\)
         param: 'ewhc/tcc'
         start_year: 2003
-        end_year: ~
+        end_year: 2022
         selectable: true
         listable: true
     -
@@ -204,7 +204,7 @@
         ncn: \[(\d{4})\] (EWCOP) (\d+)
         param: 'ewcop'
         start_year: 2009
-        end_year: ~
+        end_year: 2022
         selectable: true
         listable: true
     -
@@ -214,7 +214,7 @@
         ncn: \[(\d{4})\] (EWFC) (\d+)
         param: 'ewfc'
         start_year: 2009
-        end_year: ~
+        end_year: 2022
         selectable: true
         listable: true
     -
@@ -307,7 +307,7 @@
         listable: true
         param: 'ukut/iac'
         start_year: 2010
-        end_year: ~
+        end_year: 2022
 
     -
         code: UKUT-LC
@@ -319,7 +319,7 @@
         listable: true
         param: 'ukut/lc'
         start_year: 2015
-        end_year: ~
+        end_year: 2022
     -
         code: UKUT-TCC
         name: Upper Tribunal Tax and Chancery Chamber
@@ -330,7 +330,7 @@
         listable: true
         param: 'ukut/tcc'
         start_year: 2017
-        end_year: ~
+        end_year: 2022
     -
         code: UKUT-AAC
         name: Upper Tribunal Administrative Appeals Chamber
@@ -341,7 +341,7 @@
         listable: true
         param: 'ukut/aac'
         start_year: 2022
-        end_year: ~
+        end_year: 2022
 - name: employment_appeal_tribunal
   display_name: ~
   is_tribunal: true
@@ -355,7 +355,7 @@
         listable: true
         param: 'eat'
         start_year: 2021
-        end_year: ~
+        end_year: 2022
 - name: first_tier_tribunals
   display_name: "First-tier Tribunals"
   is_tribunal: true
@@ -367,7 +367,7 @@
         ncn: \[(\d{4})\] (UKFTT) (\d+) \((TC)\)
         param: 'ukftt/tc'
         start_year: 2022
-        end_year: ~
+        end_year: 2022
         selectable: true
         listable: true
     -
@@ -377,7 +377,7 @@
         link: https://www.gov.uk/courts-tribunals/first-tier-tribunal-general-regulatory-chamber
         ncn: \[(\d{4})\] (UKFTT) (\d+) \((GRC)\)
         start_year: 2022
-        end_year: ~
+        end_year: 2022
         selectable: true
         listable: true
     -
@@ -385,6 +385,6 @@
         name: Employment Tribunal
         link: https://www.gov.uk/courts-tribunals/employment-tribunal
         start_year: 2022
-        end_year: ~
+        end_year: 2022
         selectable: false
         listable: false
