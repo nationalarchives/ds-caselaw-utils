@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog 1.0.0].
 
+## [Release 0.4.4]
+- Fix all court end dates to 2022, pending ingest of judgments for 2023
+  (and/or an alternative solution for accessing this metadata dynamically)
+
 ## [Release 0.4.3]
   - Standardise documentation (README and licence)
   - Add CodeQL configuration
