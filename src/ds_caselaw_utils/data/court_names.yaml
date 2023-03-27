@@ -8,7 +8,7 @@
         link: https://www.supremecourt.uk/
         ncn: \[(\d{4})\] (UKSC) (\d+)
         param: 'uksc'
-        start_year: '2014'
+        start_year: 2014
         end_year: 2022
         selectable: true
         listable: true
@@ -22,7 +22,7 @@
         link: https://www.jcpc.uk/
         ncn: \[(\d{4})\] (UKPC) \d+
         param: 'ukpc'
-        start_year: '2014'
+        start_year: 2014
         end_year: 2022
         selectable: true
         listable: true
@@ -37,7 +37,7 @@
         link: https://www.gov.uk/courts-tribunals/court-of-appeal-civil-division
         ncn: \[(\d{4})\] (EWCA) (Civ) (\d+)
         param: 'ewca/civ'
-        start_year: '2003'
+        start_year: 2003
         end_year: 2022
         selectable: true
         listable: true
@@ -48,7 +48,7 @@
         link: https://www.gov.uk/courts-tribunals/court-of-appeal-criminal-division
         ncn: \[(\d{4})\] (EWCA) (Crim) (\d+)
         param: 'ewca/crim'
-        start_year: '2003'
+        start_year: 2003
         end_year: 2022
         selectable: true
         listable: true
