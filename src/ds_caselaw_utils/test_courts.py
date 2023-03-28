@@ -154,5 +154,5 @@ class TestCourts(unittest.TestCase):
         for group in court_data:
             for court in group.get("courts"):
                 courts_from_yaml.append(court)
-        for (court, data) in zip(courts.get_all(), courts_from_yaml):
+        for court, data in zip(courts.get_all(), courts_from_yaml):
             self.assertEqual(court.name, data["name"])
