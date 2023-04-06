@@ -99,7 +99,7 @@ To create a release:
 
 0. Update the version number in `pyproject.toml`
 1. Create a branch `release/v{major}.{minor}.{patch}`
-2. Update changelog for the release
+2. Update `CHANGELOG.md` and `pyproject.toml` for the release
 3. Commit and push
 4. Open a PR from that branch to main
 5. Get approval on the PR
