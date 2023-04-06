@@ -67,6 +67,20 @@ class TestCourtsRepository(unittest.TestCase):
         repo = CourtsRepository(data)
         self.assertEqual("Court 2", repo.get_by_param("court2").name)
 
+    def test_loads_court_by_code(self):
+        data = [
+            {
+                "name": "court_group1",
+                "courts": [{"code": "court1", "name": "Court 1"}],
+            },
+            {
+                "name": "court_group2",
+                "courts": [{"code": "court2", "name": "Court 2"}],
+            },
+        ]
+        repo = CourtsRepository(data)
+        self.assertEqual("Court 2", repo.get_by_code("court2").name)
+
     def test_returns_listable_courts(self):
         data = [
             {

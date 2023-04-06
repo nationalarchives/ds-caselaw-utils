@@ -30,12 +30,19 @@ class CourtGroup:
 class CourtsRepository:
     def __init__(self, data):
         self._data = data
+        self._byParam = {}
+        self._byCode = {}
+        for group in self._data:
+            for courtData in group.get("courts"):
+                court = Court(courtData)
+                self._byParam[courtData.get("param")] = court
+                self._byCode[courtData.get("code")] = court
 
     def get_by_param(self, param):
-        for group in self._data:
-            for court in group.get("courts"):
-                if court.get("param") == param:
-                    return Court(court)
+        return self._byParam[param]
+
+    def get_by_code(self, code):
+        return self._byCode[code]
 
     def get_all(self):
         return [
