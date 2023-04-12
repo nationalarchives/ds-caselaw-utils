@@ -27,6 +27,10 @@ class CourtGroup:
         self.courts = courts
 
 
+class CourtNotFoundException(Exception):
+    pass
+
+
 class CourtsRepository:
     def __init__(self, data):
         self._data = data
@@ -39,10 +43,16 @@ class CourtsRepository:
                 self._byCode[courtData.get("code")] = court
 
     def get_by_param(self, param):
-        return self._byParam[param]
+        try:
+            return self._byParam[param]
+        except KeyError:
+            raise CourtNotFoundException()
 
     def get_by_code(self, code):
-        return self._byCode[code]
+        try:
+            return self._byCode[code]
+        except KeyError:
+            raise CourtNotFoundException()
 
     def get_all(self):
         return [
