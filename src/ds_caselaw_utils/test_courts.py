@@ -4,7 +4,7 @@ from datetime import date
 
 from ruamel.yaml import YAML
 
-from .courts import Court, CourtsRepository, courts
+from .courts import Court, CourtNotFoundException, CourtsRepository, courts
 
 
 class TestCourtsRepository(unittest.TestCase):
@@ -67,6 +67,20 @@ class TestCourtsRepository(unittest.TestCase):
         repo = CourtsRepository(data)
         self.assertEqual("Court 2", repo.get_by_param("court2").name)
 
+    def test_raises_on_unknown_court_param(self):
+        data = [
+            {
+                "name": "court_group1",
+                "courts": [{"param": "court1", "name": "Court 1"}],
+            },
+            {
+                "name": "court_group2",
+                "courts": [{"param": "court2", "name": "Court 2"}],
+            },
+        ]
+        repo = CourtsRepository(data)
+        self.assertRaises(CourtNotFoundException, repo.get_by_param, "court3")
+
     def test_loads_court_by_code(self):
         data = [
             {
@@ -80,6 +94,20 @@ class TestCourtsRepository(unittest.TestCase):
         ]
         repo = CourtsRepository(data)
         self.assertEqual("Court 2", repo.get_by_code("court2").name)
+
+    def test_raises_on_unknown_court_code(self):
+        data = [
+            {
+                "name": "court_group1",
+                "courts": [{"code": "court1", "name": "Court 1"}],
+            },
+            {
+                "name": "court_group2",
+                "courts": [{"code": "court2", "name": "Court 2"}],
+            },
+        ]
+        repo = CourtsRepository(data)
+        self.assertRaises(CourtNotFoundException, repo.get_by_code, "court3")
 
     def test_returns_listable_courts(self):
         data = [
