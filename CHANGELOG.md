@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog 1.0.0].
 
+## [Release 1.0.0]
+- Raise a meaningful exception (CourtNotFoundException) when a court is not
+  found for a given param or code.
+
+
 ## [Release 0.5.0]
 - Added ability to look up court by code
 
@@ -50,7 +55,8 @@ The format is based on [Keep a Changelog 1.0.0].
 ## [Release 0.1.4]
 - Initial tagged release
 
-[Unreleased]: https://github.com/nationalarchives/ds-caselaw-utils/compare/v0.5.0...HEAD
+[Unreleased]: https://github.com/nationalarchives/ds-caselaw-utils/compare/v1.0.0...HEAD
+[Release 0.5.0]: https://github.com/nationalarchives/ds-caselaw-utils/compare/v0.5.0...v1.0.0
 [Release 0.5.0]: https://github.com/nationalarchives/ds-caselaw-utils/compare/v0.4.5...v0.5.0
 [Release 0.4.5]: https://github.com/nationalarchives/ds-caselaw-utils/compare/v0.4.4...v0.4.5
 [Release 0.4.4]: https://github.com/nationalarchives/ds-caselaw-utils/compare/v0.4.3...v0.4.4
