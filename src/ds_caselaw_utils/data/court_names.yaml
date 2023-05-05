@@ -68,6 +68,17 @@
         selectable: true
         listable: true
     -
+        code: EWHC-KBD-Admin
+        name: Administrative Court
+        list_name: High Court (Administrative Court)
+        link: https://www.gov.uk/courts-tribunals/administrative-court
+        ncn: \[(\d{4})\] (EWHC) (\d+) \((Admin)\)
+        param: 'ewhc/admin'
+        start_year: 2022
+        end_year: 2022
+        selectable: false
+        listable: false
+    -
         code: EWHC-QBD-Admiralty
         name: Admiralty Court
         list_name: High Court (Admiralty Division)
@@ -78,6 +89,17 @@
         end_year: 2022
         selectable: true
         listable: true
+    -
+        code: EWHC-KBD-Admiralty
+        name: Admiralty Court
+        list_name: High Court (Admiralty Division)
+        link: https://www.gov.uk/courts-tribunals/admiralty-court
+        ncn: \[(\d{4})\] (EWHC) (\d+) \((Admlty)\)
+        param: 'ewhc/admlty'
+        start_year: 2022
+        end_year: 2022
+        selectable: false
+        listable: false
     -
         code: EWHC-Chancery
         name: Chancery Division of the High Court
@@ -100,6 +122,17 @@
         end_year: 2022
         selectable: true
         listable: true
+    -
+        code: EWHC-KBD-Commercial
+        name: Commercial Court
+        list_name: High Court (Commercial Court)
+        link: https://www.gov.uk/courts-tribunals/commercial-court
+        ncn: \[(\d{4})\] (EWHC) (\d+) \((Comm)\)
+        param: 'ewhc/comm'
+        start_year: 2022
+        end_year: 2022
+        selectable: false
+        listable: false
     -
         code: EWHC-SeniorCourtsCosts
         name: Senior Courts Costs Office
@@ -198,6 +231,17 @@
         selectable: true
         listable: true
     -
+        code: EWHC-KBD-TCC
+        name: Technology and Construction Court
+        list_name: High Court (Technology and Construction Court)
+        link: https://www.gov.uk/courts-tribunals/technology-and-construction-court
+        ncn: \[(\d{4})\] (EWHC) (\d+) \((TCC)\)
+        param: 'ewhc/tcc'
+        start_year: 2022
+        end_year: 2022
+        selectable: false
+        listable: false
+    -
         code: EWCOP
         name: Court of Protection
         link: https://www.gov.uk/courts-tribunals/court-of-protection
@@ -224,12 +268,23 @@
         selectable: false
         listable: false
     -
+        code: EWHC-KBD-Planning
+        name: Planning Court
+        link: https://www.gov.uk/courts-tribunals/planning-court
+        selectable: false
+        listable: false
+    -
         code: EWHC-QBD-BusinessAndProperty
         name: The Business and Property Courts
         link: https://www.gov.uk/courts-tribunals/the-business-and-property-courts
         selectable: false
         listable: false
-
+    -
+        code: EWHC-KBD-BusinessAndProperty
+        name: The Business and Property Courts
+        link: https://www.gov.uk/courts-tribunals/the-business-and-property-courts
+        selectable: false
+        listable: false
     -
         code: EWHC-QBD-Commercial-Financial
         name: The Financial List
@@ -238,7 +293,21 @@
         selectable: false
         listable: false
     -
+        code: EWHC-KBD-Commercial-Financial
+        name: The Financial List
+        link: https://www.gov.uk/courts-tribunals/the-financial-list
+        ncn: \[(\d{4})\] (EWHC) (\d+) \((Comm)\)
+        selectable: false
+        listable: false
+    -
         code: EWHC-QBD-Commercial-Circuit
+        name: Circuit Commercial Court
+        link: https://www.gov.uk/courts-tribunals/commercial-circuit-court
+        ncn: \[(\d{4})\] (EWHC) (\d+) \((Comm)\)
+        selectable: false
+        listable: false
+    -
+        code: EWHC-KBD-Commercial-Circuit
         name: Circuit Commercial Court
         link: https://www.gov.uk/courts-tribunals/commercial-circuit-court
         ncn: \[(\d{4})\] (EWHC) (\d+) \((Comm)\)
