@@ -25,3 +25,4 @@ class TestNeutralURL(unittest.TestCase):
         )  # Could be a Bailii reference, might want to drop B in future.
         self.assertEqual(neutral_url("[2022] EAT A"), None)
         self.assertEqual(neutral_url("[2022] NOTACOURT 1 TC"), None)
+        self.assertEqual(neutral_url(None), None)
