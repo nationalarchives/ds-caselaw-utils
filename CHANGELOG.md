@@ -4,6 +4,9 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog 1.0.0].
 
+## [Release 1.0.1]
+- Add King's Bench identifiers to the court list
+
 ## [Release 1.0.0]
 - Raise a meaningful exception (CourtNotFoundException) when a court is not
   found for a given param or code.
