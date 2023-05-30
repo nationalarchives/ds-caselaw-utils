@@ -41,7 +41,6 @@
                 "type": "string",
                 "pattern": "^[a-z]{2,}(/[a-z]{2,})?$"
               }
-
             },
             "ncn": {
               "type": "string"
