@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schema.caselaw.nationalarchives.gov.uk/courts.schema.json",
+  "title": "Courts",
+  "description": "A list of courts",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "name": {
+        "type": "string"
+      },
+      "display_name": {
+        "type": ["string", "null"]
+      },
+      "is_tribunal": {
+        "type": "boolean"
+      },
+      "courts": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "code": {
+              "type": "string",
+              "pattern": "^[A-Za-z]{2,}(-[A-Za-z]{2,})*$"
+            },
+            "name": {
+              "type": "string"
+            },
+            "list_name": {
+              "type": "string"
+            },
+            "param": {
+              "type": "string",
+              "pattern": "^[a-z]{2,}(/[a-z]{2,})?$"
+            },
+            "extra_params": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^[a-z]{2,}(/[a-z]{2,})?$"
+              }
+            },
+            "ncn": {
+              "type": "string"
+            },
+            "link": {
+              "type": "string",
+              "format": "uri"
+            },
+            "start_year": {
+              "type": "integer",
+              "minimum": 1066
+            },
+            "end_year": {
+              "type": "integer"
+            },
+            "listable": {
+              "type": "boolean"
+            },
+            "selectable": {
+              "type": "boolean"
+            }
+          },
+          "required": ["code", "name", "link", "listable", "selectable"],
+          "additionalProperties": false
+        }
+      }
+    },
+    "required": ["name", "display_name", "is_tribunal", "courts"],
+    "additionalProperties": false
+  }
+}
