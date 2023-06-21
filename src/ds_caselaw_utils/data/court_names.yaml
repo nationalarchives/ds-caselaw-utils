@@ -220,24 +220,6 @@
       end_year: 2022
       selectable: false
       listable: false
-    - code: EWCOP
-      name: Court of Protection
-      link: https://www.gov.uk/courts-tribunals/court-of-protection
-      ncn: \[(\d{4})\] (EWCOP) (\d+)
-      param: "ewcop"
-      start_year: 2009
-      end_year: 2022
-      selectable: true
-      listable: true
-    - code: EWFC
-      name: Family Court
-      link: https://www.judiciary.uk/you-and-the-judiciary/going-to-court/family-law-courts/
-      ncn: \[(\d{4})\] (EWFC) (\d+)
-      param: "ewfc"
-      start_year: 2009
-      end_year: 2022
-      selectable: true
-      listable: true
     - code: EWHC-QBD-Planning
       name: Planning Court
       link: https://www.gov.uk/courts-tribunals/planning-court
@@ -323,6 +305,28 @@
       link: https://www.gov.uk/courts-tribunals/chancery-division-of-the-high-court
       selectable: false
       listable: false
+- name: lower_courts
+  display_name: "Lower Courts"
+  is_tribunal: false
+  courts:
+    - code: EWCOP
+      name: Court of Protection
+      link: https://www.gov.uk/courts-tribunals/court-of-protection
+      ncn: \[(\d{4})\] (EWCOP) (\d+)
+      param: "ewcop"
+      start_year: 2009
+      end_year: 2022
+      selectable: true
+      listable: true
+    - code: EWFC
+      name: Family Court
+      link: https://www.judiciary.uk/you-and-the-judiciary/going-to-court/family-law-courts/
+      ncn: \[(\d{4})\] (EWFC) (\d+)
+      param: "ewfc"
+      start_year: 2009
+      end_year: 2022
+      selectable: true
+      listable: true
 - name: upper_tribunals
   display_name: "Upper Tribunals"
   is_tribunal: true
