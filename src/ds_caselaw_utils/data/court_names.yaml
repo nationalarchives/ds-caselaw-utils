@@ -122,17 +122,6 @@
       end_year: 2022
       selectable: false
       listable: false
-    - code: EWHC-SeniorCourtsCosts
-      name: Senior Courts Costs Office
-      list_name: High Court (Senior Court Costs Office)
-      link: https://www.gov.uk/courts-tribunals/senior-courts-costs-office
-      ncn: \[(\d{4})\] (EWHC) (\d+) \((SCCO)\)
-      param: "ewhc/scco"
-      extra_params: ["ewhc/costs"]
-      start_year: 2003
-      end_year: 2022
-      selectable: true
-      listable: true
     - code: EWHC-Family
       name: Family Division of the High Court
       list_name: High Court (Family Division)
@@ -143,6 +132,16 @@
       end_year: 2022
       selectable: true
       listable: true
+    - code: EWHC-KBD
+      name: King's / Queen's Bench Division of the High Court
+      link: https://www.gov.uk/courts-tribunals/kings-bench-division-of-the-high-court
+      ncn: \[(\d{4})\] (EWHC) (\d+) \((KB)\)
+      param: "ewhc/kb"
+      extra_params: ["ewhc/qb"]
+      start_year: 2003
+      end_year: 2022
+      selectable: true
+      listable: false
     - code: EWHC-Chancery-IPEC
       name: Intellectual Property Enterprise Court
       link: https://www.gov.uk/courts-tribunals/intellectual-property-enterprise-court
@@ -172,16 +171,6 @@
       end_year: 2022
       selectable: true
       listable: true
-    - code: EWHC-KBD
-      name: King's / Queen's Bench Division of the High Court
-      link: https://www.gov.uk/courts-tribunals/kings-bench-division-of-the-high-court
-      ncn: \[(\d{4})\] (EWHC) (\d+) \((KB)\)
-      param: "ewhc/kb"
-      extra_params: ["ewhc/qb"]
-      start_year: 2003
-      end_year: 2022
-      selectable: true
-      listable: false
     - code: EWHC-QBD
       name: High Court (Queen's Bench Division)
       link: https://www.gov.uk/courts-tribunals/queens-bench-division-of-the-high-court
@@ -199,6 +188,17 @@
       start_year: 2022
       end_year: 2022
       selectable: false
+      listable: true
+    - code: EWHC-SeniorCourtsCosts
+      name: Senior Courts Costs Office
+      list_name: High Court (Senior Court Costs Office)
+      link: https://www.gov.uk/courts-tribunals/senior-courts-costs-office
+      ncn: \[(\d{4})\] (EWHC) (\d+) \((SCCO)\)
+      param: "ewhc/scco"
+      extra_params: ["ewhc/costs"]
+      start_year: 2003
+      end_year: 2022
+      selectable: true
       listable: true
     - code: EWHC-QBD-TCC
       name: Technology and Construction Court
@@ -220,24 +220,6 @@
       end_year: 2022
       selectable: false
       listable: false
-    - code: EWCOP
-      name: Court of Protection
-      link: https://www.gov.uk/courts-tribunals/court-of-protection
-      ncn: \[(\d{4})\] (EWCOP) (\d+)
-      param: "ewcop"
-      start_year: 2009
-      end_year: 2022
-      selectable: true
-      listable: true
-    - code: EWFC
-      name: Family Court
-      link: https://www.judiciary.uk/you-and-the-judiciary/going-to-court/family-law-courts/
-      ncn: \[(\d{4})\] (EWFC) (\d+)
-      param: "ewfc"
-      start_year: 2009
-      end_year: 2022
-      selectable: true
-      listable: true
     - code: EWHC-QBD-Planning
       name: Planning Court
       link: https://www.gov.uk/courts-tribunals/planning-court
@@ -323,21 +305,42 @@
       link: https://www.gov.uk/courts-tribunals/chancery-division-of-the-high-court
       selectable: false
       listable: false
+- name: lower_courts
+  display_name: "Lower Courts"
+  is_tribunal: false
+  courts:
+    - code: EWCOP
+      name: Court of Protection
+      link: https://www.gov.uk/courts-tribunals/court-of-protection
+      ncn: \[(\d{4})\] (EWCOP) (\d+)
+      param: "ewcop"
+      start_year: 2009
+      end_year: 2022
+      selectable: true
+      listable: true
+    - code: EWFC
+      name: Family Court
+      link: https://www.judiciary.uk/you-and-the-judiciary/going-to-court/family-law-courts/
+      ncn: \[(\d{4})\] (EWFC) (\d+)
+      param: "ewfc"
+      start_year: 2009
+      end_year: 2022
+      selectable: true
+      listable: true
 - name: upper_tribunals
   display_name: "Upper Tribunals"
   is_tribunal: true
   courts:
-    - code: UKUT-IAC
-      name: Upper Tribunal Immigration and Asylum Chamber
-      list_name: Upper Tribunal (Immigration and Asylum Chamber)
-      link: https://www.gov.uk/courts-tribunals/upper-tribunal-immigration-and-asylum-chamber
-      ncn: \[(\d{4})\] (UKUT) (\d+) \((IAC)\)
+    - code: UKUT-AAC
+      name: Upper Tribunal Administrative Appeals Chamber
+      list_name: Upper Tribunal (Administrative Appeals Chamber)
+      link: https://www.gov.uk/courts-tribunals/upper-tribunal-administrative-appeals-chamber
+      ncn: \[(\d{4})\] (UKUT) (\d+) \((AAC)\)
       selectable: true
       listable: true
-      param: "ukut/iac"
-      start_year: 2010
+      param: "ukut/aac"
+      start_year: 2022
       end_year: 2022
-
     - code: UKUT-LC
       name: Upper Tribunal Lands Chamber
       list_name: Upper Tribunal (Lands Chamber)
@@ -348,6 +351,16 @@
       param: "ukut/lc"
       start_year: 2015
       end_year: 2022
+    - code: UKUT-IAC
+      name: Upper Tribunal Immigration and Asylum Chamber
+      list_name: Upper Tribunal (Immigration and Asylum Chamber)
+      link: https://www.gov.uk/courts-tribunals/upper-tribunal-immigration-and-asylum-chamber
+      ncn: \[(\d{4})\] (UKUT) (\d+) \((IAC)\)
+      selectable: true
+      listable: true
+      param: "ukut/iac"
+      start_year: 2010
+      end_year: 2022
     - code: UKUT-TCC
       name: Upper Tribunal Tax and Chancery Chamber
       list_name: Upper Tribunal (Tax and Chancery Chamber)
@@ -357,16 +370,6 @@
       listable: true
       param: "ukut/tcc"
       start_year: 2017
-      end_year: 2022
-    - code: UKUT-AAC
-      name: Upper Tribunal Administrative Appeals Chamber
-      list_name: Upper Tribunal (Administrative Appeals Chamber)
-      link: https://www.gov.uk/courts-tribunals/upper-tribunal-administrative-appeals-chamber
-      ncn: \[(\d{4})\] (UKUT) (\d+) \((AAC)\)
-      selectable: true
-      listable: true
-      param: "ukut/aac"
-      start_year: 2022
       end_year: 2022
 - name: employment_appeal_tribunal
   display_name: ~
@@ -385,15 +388,13 @@
   display_name: "First-tier Tribunals"
   is_tribunal: true
   courts:
-    - code: UKFTT-TC
-      name: First-tier Tribunal (Tax Chamber)
-      link: https://www.gov.uk/courts-tribunals/first-tier-tribunal-tax
-      ncn: \[(\d{4})\] (UKFTT) (\d+) \((TC)\)
-      param: "ukftt/tc"
+    - code: ET
+      name: Employment Tribunal
+      link: https://www.gov.uk/courts-tribunals/employment-tribunal
       start_year: 2022
       end_year: 2022
-      selectable: true
-      listable: true
+      selectable: false
+      listable: false
     - code: UKFTT-GRC
       name: First-tier Tribunal (General Regulatory Chamber)
       param: "ukftt/grc"
@@ -403,10 +404,12 @@
       end_year: 2022
       selectable: true
       listable: true
-    - code: ET
-      name: Employment Tribunal
-      link: https://www.gov.uk/courts-tribunals/employment-tribunal
+    - code: UKFTT-TC
+      name: First-tier Tribunal (Tax Chamber)
+      link: https://www.gov.uk/courts-tribunals/first-tier-tribunal-tax
+      ncn: \[(\d{4})\] (UKFTT) (\d+) \((TC)\)
+      param: "ukftt/tc"
       start_year: 2022
       end_year: 2022
-      selectable: false
-      listable: false
+      selectable: true
+      listable: true
