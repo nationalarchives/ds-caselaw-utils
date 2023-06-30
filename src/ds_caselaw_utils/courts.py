@@ -20,6 +20,9 @@ class Court:
         self.start_year = data.get("start_year")
         self.end_year = data.get("end_year") or date.today().year
 
+    def __repr__(self):
+        return self.name
+
 
 class CourtGroup:
     def __init__(self, name, courts):

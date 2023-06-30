@@ -165,6 +165,11 @@ class TestCourtsRepository(unittest.TestCase):
 
 
 class TestCourt(unittest.TestCase):
+    def test_repr_string(self):
+        court = Court({"name": "court_name"})
+        self.assertEqual("court_name", str(court))
+        self.assertEqual("court_name", repr(court))
+
     def test_list_name_explicit(self):
         court = Court({"list_name": "court_name"})
         self.assertEqual("court_name", court.list_name)
