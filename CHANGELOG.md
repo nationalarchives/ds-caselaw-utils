@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog 1.0.0].
 
+## [Unreleased]
+
+## [Release 1.0.2]
+
+- Add JSON Schema to validate courts data
+- Ensure courts in alphabetical order in their parent courts
+- Courts display their name in repr contexts
+
 ## [Release 1.0.1]
 
 - Add King's Bench identifiers to the court list
@@ -72,7 +80,10 @@ The format is based on [Keep a Changelog 1.0.0].
 
 - Initial tagged release
 
-[unreleased]: https://github.com/nationalarchives/ds-caselaw-utils/compare/v1.0.0...HEAD
+[unreleased]: https://github.com/nationalarchives/ds-caselaw-utils/compare/v1.0.2...HEAD
+[release 1.0.2]: https://github.com/nationalarchives/ds-caselaw-utils/compare/v1.0.1...v1.0.2
+[release 1.0.1]: https://github.com/nationalarchives/ds-caselaw-utils/compare/v1.0.0...v1.0.1
+[release 1.0.0]: https://github.com/nationalarchives/ds-caselaw-utils/compare/v0.5.0...v1.0.0
 [release 0.5.0]: https://github.com/nationalarchives/ds-caselaw-utils/compare/v0.5.0...v1.0.0
 [release 0.5.0]: https://github.com/nationalarchives/ds-caselaw-utils/compare/v0.4.5...v0.5.0
 [release 0.4.5]: https://github.com/nationalarchives/ds-caselaw-utils/compare/v0.4.4...v0.4.5
