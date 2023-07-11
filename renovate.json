@@ -1,16 +1,4 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "config:base",
-    ":approveMajorUpdates",
-    ":automergeLinters",
-    ":automergePatch",
-    ":automergePr",
-    ":automergeRequireAllStatusChecks",
-    ":automergeTesters",
-    ":dependencyDashboard",
-    ":enablePreCommit",
-    ":maintainLockFilesWeekly"
-  ],
-  "platformAutomerge": true
+  "extends": ["github>nationalarchives/ds-find-caselaw-docs"]
 }
