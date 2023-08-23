@@ -1,5 +1,5 @@
 """
-Get metada data for the courts covered by the service
+Get meta data for the courts covered by the service
 """
 
 import pathlib

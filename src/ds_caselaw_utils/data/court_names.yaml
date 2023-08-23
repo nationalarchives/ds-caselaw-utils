@@ -384,6 +384,20 @@
       param: "eat"
       start_year: 2021
       end_year: 2022
+- name: investigatory_powers_tribunal
+  display_name: ~
+  is_tribunal: true
+  courts:
+    - code: IPT
+      name: Investigatory Powers Tribunal
+      # https://www.gov.uk/government/organisations/investigatory-powers-tribunal
+      link: https://investigatorypowerstribunal.org.uk/
+      ncn: \[(\d{4}\] (UKIPTrib) (\d+)
+      selectable: true
+      listable: true
+      param: "ukiptrib"
+      start_year: 2003
+      end_year: 2023
 - name: first_tier_tribunals
   display_name: "First-tier Tribunals"
   is_tribunal: true
