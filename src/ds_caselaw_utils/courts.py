@@ -74,6 +74,18 @@ class CourtsRepository:
                     courts.append(Court(court))
         return courts
 
+    def get_selectable_groups(self):
+        groups = []
+        for category in self._data:
+            courts = [
+                Court(court)
+                for court in category.get("courts")
+                if court.get("selectable")
+            ]
+            if len(courts) > 0:
+                groups.append(CourtGroup(category.get("display_name"), courts))
+        return groups
+
     def get_listable_groups(self):
         groups = []
         for category in self._data:
