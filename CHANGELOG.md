@@ -6,6 +6,11 @@ The format is based on [Keep a Changelog 1.0.0].
 
 ## [Unreleased]
 
+## [Release 1.1.0]
+
+- Add `display_heading` property to CourtGroups to determine if they are displayed in the PUI as groups.
+- Add `get_selectable_groups` method to CourtsRepository to get all selectable courts, grouped.
+
 ## [Release 1.0.2]
 
 - Add JSON Schema to validate courts data
@@ -80,7 +85,8 @@ The format is based on [Keep a Changelog 1.0.0].
 
 - Initial tagged release
 
-[unreleased]: https://github.com/nationalarchives/ds-caselaw-utils/compare/v1.0.2...HEAD
+[unreleased]: https://github.com/nationalarchives/ds-caselaw-utils/compare/v1.1.0...HEAD
+[release 1.1.0]: https://github.com/nationalarchives/ds-caselaw-utils/compare/v1.0.2...v1.1.0
 [release 1.0.2]: https://github.com/nationalarchives/ds-caselaw-utils/compare/v1.0.1...v1.0.2
 [release 1.0.1]: https://github.com/nationalarchives/ds-caselaw-utils/compare/v1.0.0...v1.0.1
 [release 1.0.0]: https://github.com/nationalarchives/ds-caselaw-utils/compare/v0.5.0...v1.0.0
