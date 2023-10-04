@@ -29,6 +29,10 @@ class CourtGroup:
         self.name = name
         self.courts = courts
 
+    @property
+    def display_heading(self):
+        return self.name is not None
+
 
 class CourtNotFoundException(Exception):
     pass

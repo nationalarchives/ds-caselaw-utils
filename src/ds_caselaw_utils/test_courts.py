@@ -4,7 +4,7 @@ from datetime import date
 
 from ruamel.yaml import YAML
 
-from .courts import Court, CourtNotFoundException, CourtsRepository, courts
+from .courts import Court, CourtGroup, CourtNotFoundException, CourtsRepository, courts
 
 
 class TestCourtsRepository(unittest.TestCase):
@@ -189,6 +189,16 @@ class TestCourt(unittest.TestCase):
     def test_end_year_default(self):
         court = Court({})
         self.assertEqual(date.today().year, court.end_year)
+
+
+class TestCourtGroup(unittest.TestCase):
+    def test_display_heading_when_has_display_name(self):
+        group = CourtGroup("name", [])
+        assert group.display_heading
+
+    def test_dont_display_heading_when_no_display_name(self):
+        group = CourtGroup(None, [])
+        assert not group.display_heading
 
 
 class TestCourts(unittest.TestCase):
