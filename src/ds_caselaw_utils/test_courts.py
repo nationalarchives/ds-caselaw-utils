@@ -12,6 +12,7 @@ class TestCourtsRepository(unittest.TestCase):
         data = [
             {
                 "name": "court_group",
+                "display_name": "court group 1",
                 "courts": [
                     {
                         "name": "court1",
@@ -19,12 +20,23 @@ class TestCourtsRepository(unittest.TestCase):
                     },
                     {"name": "court2", "selectable": False},
                 ],
-            }
+            },
+            {
+                "name": "court_group2",
+                "display_name": "court group 2",
+                "courts": [{"name": "court3", "selectable": False}],
+            },
         ]
         repo = CourtsRepository(data)
         selectable = repo.get_selectable()
         self.assertIn("court1", [c.name for c in selectable])
         self.assertNotIn("court2", [c.name for c in selectable])
+        groups = repo.get_selectable_groups()
+        self.assertIn("court group 1", [g.name for g in groups])
+        self.assertNotIn("court group 2", [g.name for g in groups])
+        self.assertIn("court1", [c.name for g in groups for c in g.courts])
+        self.assertNotIn("court2", [c.name for g in groups for c in g.courts])
+        self.assertNotIn("court3", [c.name for g in groups for c in g.courts])
 
     def test_loads_listable_courts(self):
         data = [
