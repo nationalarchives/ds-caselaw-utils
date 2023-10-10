@@ -182,13 +182,13 @@ class TestCourt(unittest.TestCase):
         self.assertEqual("court_name", str(court))
         self.assertEqual("court_name", repr(court))
 
-    def test_list_name_explicit(self):
-        court = Court({"list_name": "court_name"})
-        self.assertEqual("court_name", court.list_name)
+    def test_grouped_name_explicit(self):
+        court = Court({"grouped_name": "court_name"})
+        self.assertEqual("court_name", court.grouped_name)
 
-    def test_list_name_default(self):
+    def test_grouped_name_default(self):
         court = Court({"name": "court_name"})
-        self.assertEqual("court_name", court.list_name)
+        self.assertEqual("court_name", court.grouped_name)
 
     def test_param_aliases(self):
         court = Court({"param": "param_1", "extra_params": ["param_2"]})

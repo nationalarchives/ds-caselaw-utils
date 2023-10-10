@@ -12,7 +12,7 @@ class Court:
     def __init__(self, data):
         self.code = data.get("code")
         self.name = data.get("name")
-        self.list_name = data.get("list_name") or data.get("name")
+        self.grouped_name = data.get("grouped_name") or data.get("name")
         self.link = data.get("link")
         self.ncn = data.get("ncn")
         self.canonical_param = data.get("param")
