@@ -86,6 +86,32 @@ class CourtsRepository:
                 groups.append(CourtGroup(category.get("display_name"), courts))
         return groups
 
+    def get_grouped_selectable_courts(self):
+        groups = []
+        for category in self._data:
+            if not category.get("is_tribunal"):
+                courts = [
+                    Court(court)
+                    for court in category.get("courts")
+                    if court.get("selectable")
+                ]
+                if len(courts) > 0:
+                    groups.append(CourtGroup(category.get("display_name"), courts))
+        return groups
+
+    def get_grouped_selectable_tribunals(self):
+        groups = []
+        for category in self._data:
+            if category.get("is_tribunal"):
+                courts = [
+                    Court(court)
+                    for court in category.get("courts")
+                    if court.get("selectable")
+                ]
+                if len(courts) > 0:
+                    groups.append(CourtGroup(category.get("display_name"), courts))
+        return groups
+
     def get_listable_groups(self):
         groups = []
         for category in self._data:
