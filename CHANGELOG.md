@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog 1.0.0].
 
 ## [Unreleased]
 
+## [Release 1.2.1]
+
+- Reorder tribunal groups so Employment Appeal is at the top
+
 ## [Release 1.2.0]
 
 - Add accessors for grouped selectable courts and tribunals (`get_grouped_selectable_courts` / `get_grouped_selectable_tribunals`)
@@ -91,7 +95,8 @@ The format is based on [Keep a Changelog 1.0.0].
 
 - Initial tagged release
 
-[unreleased]: https://github.com/nationalarchives/ds-caselaw-utils/compare/v1.2.0...HEAD
+[unreleased]: https://github.com/nationalarchives/ds-caselaw-utils/compare/v1.2.1...HEAD
+[release 1.2.1]: https://github.com/nationalarchives/ds-caselaw-utils/compare/v1.2.0...v1.2.1
 [release 1.2.0]: https://github.com/nationalarchives/ds-caselaw-utils/compare/v1.1.0...v1.2.0
 [release 1.1.0]: https://github.com/nationalarchives/ds-caselaw-utils/compare/v1.0.2...v1.1.0
 [release 1.0.2]: https://github.com/nationalarchives/ds-caselaw-utils/compare/v1.0.1...v1.0.2
