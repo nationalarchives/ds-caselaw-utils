@@ -28,7 +28,7 @@
             "name": {
               "type": "string"
             },
-            "list_name": {
+            "grouped_name": {
               "type": "string"
             },
             "param": {

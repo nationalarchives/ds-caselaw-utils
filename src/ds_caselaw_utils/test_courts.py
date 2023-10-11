@@ -175,6 +175,84 @@ class TestCourtsRepository(unittest.TestCase):
             "court3", [c.canonical_param for c in repo.get_listable_tribunals()]
         )
 
+    def test_returns_grouped_selectable_courts(self):
+        data = [
+            {
+                "name": "group2",
+                "display_name": "Court group",
+                "is_tribunal": False,
+                "courts": [
+                    {"param": "court1", "selectable": True, "name": "Selectable court"},
+                    {
+                        "param": "court2",
+                        "selectable": False,
+                        "name": "Unselectable court",
+                    },
+                ],
+            },
+            {
+                "name": "group2",
+                "display_name": "Tribunal group",
+                "is_tribunal": True,
+                "courts": [
+                    {
+                        "param": "court3",
+                        "selectable": True,
+                        "name": "Selectable tribunal",
+                    }
+                ],
+            },
+        ]
+        repo = CourtsRepository(data)
+        groups = repo.get_grouped_selectable_courts()
+        self.assertIn("Court group", [g.name for g in groups])
+        self.assertNotIn("Tribunal group", [g.name for g in groups])
+        self.assertIn("Selectable court", [c.name for g in groups for c in g.courts])
+        self.assertNotIn(
+            "Unselectable court", [c.name for g in groups for c in g.courts]
+        )
+        self.assertNotIn(
+            "Selectable tribunal", [c.name for g in groups for c in g.courts]
+        )
+
+    def test_returns_grouped_selectable_tribunals(self):
+        data = [
+            {
+                "name": "group1",
+                "display_name": "Court group",
+                "is_tribunal": False,
+                "courts": [
+                    {"param": "court1", "selectable": True, "name": "Selectable court"},
+                ],
+            },
+            {
+                "name": "group2",
+                "display_name": "Tribunal group",
+                "is_tribunal": True,
+                "courts": [
+                    {
+                        "param": "court2",
+                        "selectable": True,
+                        "name": "Selectable tribunal",
+                    },
+                    {
+                        "param": "court3",
+                        "selectable": False,
+                        "name": "Unselectable tribunal",
+                    },
+                ],
+            },
+        ]
+        repo = CourtsRepository(data)
+        groups = repo.get_grouped_selectable_tribunals()
+        self.assertIn("Tribunal group", [g.name for g in groups])
+        self.assertNotIn("Court group", [g.name for g in groups])
+        self.assertIn("Selectable tribunal", [c.name for g in groups for c in g.courts])
+        self.assertNotIn(
+            "Unselectable tribunal", [c.name for g in groups for c in g.courts]
+        )
+        self.assertNotIn("Selectable court", [c.name for g in groups for c in g.courts])
+
 
 class TestCourt(unittest.TestCase):
     def test_repr_string(self):
@@ -182,13 +260,13 @@ class TestCourt(unittest.TestCase):
         self.assertEqual("court_name", str(court))
         self.assertEqual("court_name", repr(court))
 
-    def test_list_name_explicit(self):
-        court = Court({"list_name": "court_name"})
-        self.assertEqual("court_name", court.list_name)
+    def test_grouped_name_explicit(self):
+        court = Court({"grouped_name": "court_name"})
+        self.assertEqual("court_name", court.grouped_name)
 
-    def test_list_name_default(self):
+    def test_grouped_name_default(self):
         court = Court({"name": "court_name"})
-        self.assertEqual("court_name", court.list_name)
+        self.assertEqual("court_name", court.grouped_name)
 
     def test_param_aliases(self):
         court = Court({"param": "param_1", "extra_params": ["param_2"]})

@@ -49,9 +49,9 @@ The list of courts is defined in `src/ds_caselaw_utils/data/court_names.yml`. Th
         # An internal code for this court:
         code: EWHC-SeniorCourtsCosts
          # The public facing name of the court:
-        name: Senior Courts Costs Office
-        # An alternative wording for use in listings (optional, defaults to `name`)
-        list_name: High Court (Senior Court Costs Office)
+        name: High Court (Senior Courts Costs Office)
+        # An optional alternative wording for use when displayed in grouped format (defaults to 'name'):
+        grouped_name: Senior Court Costs Office
         # A URL to link to for more information on this court:
         link: https://www.gov.uk/courts-tribunals/senior-courts-costs-office
         # A regex matching neutral citations for this court's judgments:
