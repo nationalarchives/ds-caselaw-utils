@@ -6,6 +6,12 @@ The format is based on [Keep a Changelog 1.0.0].
 
 ## [Unreleased]
 
+## [Release 1.2.0]
+
+- Add accessors for grouped selectable courts and tribunals (`get_grouped_selectable_courts` / `get_grouped_selectable_tribunals`)
+- Reorder and rename courts for hierarchical view
+- Rename 'list_name' to 'grouped_name' to make it clearer in which contexts each name is used
+
 ## [Release 1.1.0]
 
 - Add `display_heading` property to CourtGroups to determine if they are displayed in the PUI as groups.
@@ -85,7 +91,8 @@ The format is based on [Keep a Changelog 1.0.0].
 
 - Initial tagged release
 
-[unreleased]: https://github.com/nationalarchives/ds-caselaw-utils/compare/v1.1.0...HEAD
+[unreleased]: https://github.com/nationalarchives/ds-caselaw-utils/compare/v1.2.0...HEAD
+[release 1.2.0]: https://github.com/nationalarchives/ds-caselaw-utils/compare/v1.1.0...v1.2.0
 [release 1.1.0]: https://github.com/nationalarchives/ds-caselaw-utils/compare/v1.0.2...v1.1.0
 [release 1.0.2]: https://github.com/nationalarchives/ds-caselaw-utils/compare/v1.0.1...v1.0.2
 [release 1.0.1]: https://github.com/nationalarchives/ds-caselaw-utils/compare/v1.0.0...v1.0.1
