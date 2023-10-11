@@ -347,6 +347,19 @@
       end_year: 2022
       selectable: true
       listable: true
+- name: employment_appeal_tribunal
+  display_name: ~
+  is_tribunal: true
+  courts:
+    - code: EAT
+      name: Employment Appeal Tribunal
+      link: https://www.gov.uk/courts-tribunals/employment-appeal-tribunal
+      ncn: \[(\d{4})\] (EAT) (\d+)
+      selectable: true
+      listable: true
+      param: "eat"
+      start_year: 2021
+      end_year: 2022
 - name: upper_tribunals
   display_name: "Upper Tribunals"
   is_tribunal: true
@@ -390,19 +403,6 @@
       listable: true
       param: "ukut/tcc"
       start_year: 2017
-      end_year: 2022
-- name: employment_appeal_tribunal
-  display_name: ~
-  is_tribunal: true
-  courts:
-    - code: EAT
-      name: Employment Appeal Tribunal
-      link: https://www.gov.uk/courts-tribunals/employment-appeal-tribunal
-      ncn: \[(\d{4})\] (EAT) (\d+)
-      selectable: true
-      listable: true
-      param: "eat"
-      start_year: 2021
       end_year: 2022
 - name: first_tier_tribunals
   display_name: "First-tier Tribunals"
