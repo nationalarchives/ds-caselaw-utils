@@ -382,6 +382,7 @@
       selectable: true
       listable: true
       param: "ukut/iac"
+      extra_params: ["ukait"]
       start_year: 2010
       end_year: 2022
     - code: UKUT-LC
@@ -435,4 +436,14 @@
       start_year: 2022
       end_year: 2022
       selectable: true
+      listable: true
+    - code: UKAIT
+      grouped_name: Asylum & Immigration Tribunal
+      name: Asylum & Immigration Tribunal
+      link: https://www.gov.uk/courts-tribunals/upper-tribunal-immigration-and-asylum-chamber
+      ncn: \[(\d{4})\] (UKAIT) (\d+))
+      param: "ukait"
+      start_year: 2003
+      end_year: 2010
+      selectable: false
       listable: true
