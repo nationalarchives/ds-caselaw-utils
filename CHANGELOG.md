@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog 1.0.0].
 
 ## [Unreleased]
 
+## [Release 1.3.0]
+
+- The Upper Tribunal (Immigation and Asylum Chamber) used to be called the "Asylum and Immigration Tribunal", with a different NCN format (and therefore URL param). This release ensures that cases with both NCN styles show for the Upper Tribunal (I&AC), and that the two court names are shown with the appropriate dates in contexts where we lists courts.
+
 ## [Release 1.2.1]
 
 - Reorder tribunal groups so Employment Appeal is at the top
@@ -95,7 +99,8 @@ The format is based on [Keep a Changelog 1.0.0].
 
 - Initial tagged release
 
-[unreleased]: https://github.com/nationalarchives/ds-caselaw-utils/compare/v1.2.1...HEAD
+[unreleased]: https://github.com/nationalarchives/ds-caselaw-utils/compare/v1.3.0...HEAD
+[release 1.3.0]: https://github.com/nationalarchives/ds-caselaw-utils/compare/v1.2.1...v1.3.0
 [release 1.2.1]: https://github.com/nationalarchives/ds-caselaw-utils/compare/v1.2.0...v1.2.1
 [release 1.2.0]: https://github.com/nationalarchives/ds-caselaw-utils/compare/v1.1.0...v1.2.0
 [release 1.1.0]: https://github.com/nationalarchives/ds-caselaw-utils/compare/v1.0.2...v1.1.0
