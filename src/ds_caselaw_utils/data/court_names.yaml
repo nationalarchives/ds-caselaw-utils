@@ -385,6 +385,15 @@
       extra_params: ["ukait"]
       start_year: 2003
       end_year: 2022
+    - code: UKAIT
+      selectable: false
+      listable: false
+      param: "ukait"
+      name: Asylum & Immigration Tribunal
+      link: https://www.gov.uk/courts-tribunals/upper-tribunal-immigration-and-asylum-chamber
+      ncn: \[(\d{4})\] (UKAIT) (\d+)
+      start_year: 2003
+      end_year: 2010
     - code: UKUT-LC
       grouped_name: Lands Chamber
       name: Upper Tribunal (Lands Chamber)
