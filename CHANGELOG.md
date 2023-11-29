@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog 1.0.0].
 
 ## [Unreleased]
 
+## [Release 1.3.2]
+
+- Add a new unlisted court with the UKAIT court code in order that EUI court validation works.
+
 ## [Release 1.3.1]
 
 - Don't list both aliases of the Immigration and Asylum tribunal, but keep the url alias.
@@ -103,7 +107,8 @@ The format is based on [Keep a Changelog 1.0.0].
 
 - Initial tagged release
 
-[unreleased]: https://github.com/nationalarchives/ds-caselaw-utils/compare/v1.3.1...HEAD
+[unreleased]: https://github.com/nationalarchives/ds-caselaw-utils/compare/v1.3.2...HEAD
+[release 1.3.2]: https://github.com/nationalarchives/ds-caselaw-utils/compare/v1.3.1...v1.3.2
 [release 1.3.1]: https://github.com/nationalarchives/ds-caselaw-utils/compare/v1.3.0...v1.3.1
 [release 1.3.0]: https://github.com/nationalarchives/ds-caselaw-utils/compare/v1.2.1...v1.3.0
 [release 1.2.1]: https://github.com/nationalarchives/ds-caselaw-utils/compare/v1.2.0...v1.2.1
