@@ -341,6 +341,7 @@
     - code: EWFC
       name: Family Court
       link: https://www.judiciary.uk/you-and-the-judiciary/going-to-court/family-law-courts/
+      # Note: there also exists (1999) EWFC 123 B, but the .ncn parameter is not used in anger.
       ncn: \[(\d{4})\] (EWFC) (\d+)
       param: "ewfc"
       start_year: 2009
