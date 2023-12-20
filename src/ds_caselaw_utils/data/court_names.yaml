@@ -347,7 +347,7 @@
       end_year: 2022
       selectable: true
       listable: true
-    - code: "EWFC-BX"
+    - code: "EWFC-B"
       name: Family Court (B)
       # This is an artifact of how the Family Court creates tiers of importance.
       link: https://www.judiciary.uk/you-and-the-judiciary/going-to-court/family-law-courts/
