@@ -63,16 +63,22 @@ class ParsedURLPattern:
             return [2, 1, 3]
 
 
-courtlist = courts.get_all()
-url_patterns = sorted(list(set(court.ncn for court in courtlist if court.ncn)))
+def all_patterns() -> list[ParsedURLPattern]:
+    url_patterns = [court.ncn for court in courts.get_all() if court.ncn]
+    for url_pattern in url_patterns:
+        pattern = ParsedURLPattern(url_pattern)
+        print(pattern.regex, pattern.url_order_numbers, pattern.url_order)
+        yield pattern
 
-court_strings = set()
-subcourt_strings = set()
-for url_pattern in url_patterns:
-    pattern = ParsedURLPattern(url_pattern)
-    print(pattern.regex, pattern.url_order_numbers, pattern.url_order)
-    court_strings.add(pattern.court)
-    if pattern.subcourt:
-        subcourt_strings.add(pattern.subcourt)
 
-print(court_strings, subcourt_strings)
+def all_court_regex():
+    return "|".join({pattern.court for pattern in all_patterns()})
+
+
+def all_subcourt_regex():
+    return "|".join(
+        {pattern.subcourt for pattern in all_patterns() if pattern.subcourt}
+    )
+
+
+print(all_court_regex(), all_subcourt_regex())
