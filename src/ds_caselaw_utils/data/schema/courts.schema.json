@@ -23,7 +23,7 @@
           "properties": {
             "code": {
               "type": "string",
-              "pattern": "^[A-Za-z]{2,}(-[A-Za-z]{2,})*$"
+              "pattern": "^[A-Za-z]{2,}(-[A-Za-z]{1,})*$"
             },
             "name": {
               "type": "string"
