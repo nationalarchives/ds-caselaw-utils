@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog 1.0.0].
 
+## [Release 1.3.5]
+
+- Fix an issue with EWFC B's name taking priority for the 'ewfc' param
+
 ## [Release 1.3.4]
 
 - Add data for EWFC B
