@@ -23,7 +23,7 @@
           "properties": {
             "code": {
               "type": "string",
-              "pattern": "^[A-Za-z]{2,}(-[A-Za-z]{1,})*$"
+              "pattern": "^[A-Za-z]{2,}(-[A-Za-z]+)*$"
             },
             "name": {
               "type": "string"
@@ -33,13 +33,13 @@
             },
             "param": {
               "type": "string",
-              "pattern": "^[a-z]{2,}(/[a-z]{2,})?$"
+              "pattern": "^[a-z]{2,}(/[a-z]+)?$"
             },
             "extra_params": {
               "type": "array",
               "items": {
                 "type": "string",
-                "pattern": "^[a-z]{2,}(/[a-z]{2,})?$"
+                "pattern": "^[a-z]{2,}(/[a-z]+)?$"
               }
             },
             "ncn": {
