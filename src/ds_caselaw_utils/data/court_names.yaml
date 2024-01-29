@@ -447,6 +447,52 @@
       end_year: 2022
       selectable: true
       listable: true
+      jurisdictions:
+        - code: Charity
+          prefix: CA
+          name: Charity
+        - code: CommunityRightToBid
+          prefix: CR
+          name: Community Right to Bid
+        - code: NetworkInformationSystems
+          prefix: NIS
+          name: Electronic Communications, Postal Services, and Network Information Systems
+        - code: Environment
+          prefix: NV
+          name: Environment
+        - code: EstateAgents
+          prefix: EEA
+          name: Estate Agents
+        - code: ExamBoards
+          prefix: EB
+          name: Exam Boards
+        - code: FoodSafety
+          prefix: FD
+          name: Food Safety
+        - code: Gambling
+          prefix: GA
+          name: Gambling
+        - code: ImmigrationServices
+          prefix: IMS
+          name: Immigration Services
+        - code: IndividualElectoralRegulation
+          prefix: IR
+          name: Individual Electoral Regulation
+        - code: InformationRights
+          prefix: EA
+          name: Information Rights
+        - code: Pensions
+          prefix: PEN
+          name: Pensions
+        - code: StandardsAndLicensing
+          prefix: PR
+          name: Standards & Licensing
+        - code: Transport
+          prefix: D
+          name: Transport
+        - code: WelfareOfAnimals
+          prefix: WA
+          name: Welfare of Animals
     - code: UKFTT-TC
       grouped_name: Tax Chamber
       name: First-tier Tribunal (Tax Chamber)

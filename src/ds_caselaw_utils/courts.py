@@ -8,6 +8,13 @@ from datetime import date
 from ruamel.yaml import YAML
 
 
+class Jurisdiction:
+    def __init__(self, data):
+        self.code = data.get("code")
+        self.name = data.get("name")
+        self.prefix = data.get("prefix")
+
+
 class Court:
     def __init__(self, data):
         self.code = data.get("code")
@@ -19,9 +26,69 @@ class Court:
         self.param_aliases = [data.get("param")] + (data.get("extra_params") or [])
         self.start_year = data.get("start_year")
         self.end_year = data.get("end_year") or date.today().year
+        self.jurisdictions = [
+            Jurisdiction(jurisdiction_data)
+            for jurisdiction_data in data.get("jurisdictions", [])
+        ]
+
+    def get_jurisdiction(self, code):
+        return [j for j in self.jurisdictions if j.code == code][0]
+
+    def expand_jurisdictions(self):
+        return [self] + [
+            CourtWithJurisdiction(self, jurisdiction)
+            for jurisdiction in self.jurisdictions
+        ]
 
     def __repr__(self):
         return self.name
+
+
+class CourtWithJurisdiction(Court):
+    def __init__(self, court, jurisdiction):
+        self.court = court
+        self.jurisdiction = jurisdiction
+        self.jurisdictions = []
+
+    @property
+    def code(self):
+        return "/".join((self.court.code, self.jurisdiction.code))
+
+    @property
+    def name(self):
+        return "%s – %s" % (self.court.name, self.jurisdiction.name)
+
+    @property
+    def grouped_name(self):
+        return self.court.grouped_name
+
+    @property
+    def link(self):
+        return self.court.link
+
+    @property
+    def ncn(self):
+        return self.court.ncn
+
+    @property
+    def canonical_param(self):
+        return self.court.canonical_param
+
+    @property
+    def param_aliases(self):
+        return self.court.param_aliases
+
+    @property
+    def start_year(self):
+        return self.court.start_year
+
+    @property
+    def end_year(self):
+        return self.court.end_year
+
+    @property
+    def jurisdiction_prefix(self):
+        return self.jurisdiction.prefix
 
 
 class CourtGroup:
@@ -55,16 +122,37 @@ class CourtsRepository:
         except KeyError:
             raise CourtNotFoundException()
 
-    def get_by_code(self, code):
+    def get_court_by_code(self, code):
         try:
             return self._byCode[code]
         except KeyError:
             raise CourtNotFoundException()
 
-    def get_all(self):
-        return [
+    def get_court_with_jurisdiction_by_code(self, court_code, jursidiction_code):
+        court = self.get_court_by_code(court_code)
+        jurisdiction = court.get_jurisdiction(jursidiction_code)
+        if jurisdiction is not None:
+            return CourtWithJurisdiction(court, jurisdiction)
+        else:
+            raise CourtNotFoundException()
+
+    def get_by_code(self, code):
+        if "/" in code:
+            (court_code, jurisdiction_code) = code.split("/")
+            return self.get_court_with_jurisdiction_by_code(
+                court_code, jurisdiction_code
+            )
+        else:
+            return self.get_court_by_code(code)
+
+    def get_all(self, with_jurisdictions=False):
+        courts = [
             Court(court) for category in self._data for court in category.get("courts")
         ]
+        if with_jurisdictions:
+            return [c for court in courts for c in court.expand_jurisdictions()]
+        else:
+            return courts
 
     def get_selectable(self):
         courts = []
