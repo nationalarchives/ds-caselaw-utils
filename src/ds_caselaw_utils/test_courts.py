@@ -1,13 +1,60 @@
 import pathlib
 import unittest
 from datetime import date
+from unittest.mock import MagicMock, PropertyMock
 
 from ruamel.yaml import YAML
 
-from .courts import Court, CourtGroup, CourtNotFoundException, CourtsRepository, courts
+from .courts import (
+    Court,
+    CourtGroup,
+    CourtNotFoundException,
+    CourtsRepository,
+    CourtWithJurisdiction,
+    courts,
+)
+
+
+def mock_with_properties(properties={}):
+    mock = MagicMock()
+    for property, value in properties.items():
+        property_mock = PropertyMock(return_value=value)
+        setattr(type(mock), property, property_mock)
+        setattr(mock, "mock_%s" % property, property_mock)
+    return mock
 
 
 class TestCourtsRepository(unittest.TestCase):
+    def test_loads_all_courts_without_jurisdictions(self):
+        data = [
+            {
+                "name": "court_group",
+                "display_name": "court group 1",
+                "courts": [
+                    {"name": "court1", "jurisdictions": [{"name": "jurisdiction1"}]}
+                ],
+            }
+        ]
+        repo = CourtsRepository(data)
+        courts = repo.get_all()
+        self.assertIn("court1", [c.name for c in courts])
+        self.assertNotIn("court1 – jurisdiction1", [c.name for c in courts])
+
+    def test_loads_all_courts_with_jurisdictions(self):
+        data = [
+            {
+                "name": "court_group",
+                "display_name": "court group 1",
+                "courts": [
+                    {"name": "court1", "jurisdictions": [{"name": "jurisdiction1"}]}
+                ],
+            }
+        ]
+        repo = CourtsRepository(data)
+        courts = repo.get_all(with_jurisdictions=True)
+        self.assertIn("court1", [c.name for c in courts])
+        self.assertIn("court1 – jurisdiction1", [c.name for c in courts])
+
     def test_loads_selectable_courts(self):
         data = [
             {
@@ -106,6 +153,26 @@ class TestCourtsRepository(unittest.TestCase):
         ]
         repo = CourtsRepository(data)
         self.assertEqual("Court 2", repo.get_by_code("court2").name)
+
+    def test_loads_court_with_jurisdiction_by_code(self):
+        data = [
+            {
+                "name": "court_group",
+                "courts": [
+                    {
+                        "code": "court1",
+                        "name": "Court 1",
+                        "jurisdictions": [
+                            {"code": "jurisdiction1", "name": "Jurisdiction 1"}
+                        ],
+                    }
+                ],
+            }
+        ]
+        repo = CourtsRepository(data)
+        self.assertEqual(
+            "Court 1 – Jurisdiction 1", repo.get_by_code("court1/jurisdiction1").name
+        )
 
     def test_raises_on_unknown_court_code(self):
         data = [
@@ -279,6 +346,112 @@ class TestCourt(unittest.TestCase):
     def test_end_year_default(self):
         court = Court({})
         self.assertEqual(date.today().year, court.end_year)
+
+    def test_get_jurisdiction(self):
+        court = Court(
+            {"jurisdictions": [{"code": "jurisdiction1", "name": "Jurisdiction 1"}]}
+        )
+        jurisdiction = court.get_jurisdiction("jurisdiction1")
+        self.assertEqual("Jurisdiction 1", jurisdiction.name)
+
+    def test_expand_jurisdictions(self):
+        court = Court(
+            {
+                "name": "Court 1",
+                "jurisdictions": [{"code": "jurisdiction1", "name": "Jurisdiction 1"}],
+            }
+        )
+        expanded = court.expand_jurisdictions()
+        self.assertIn("Court 1", [c.name for c in expanded])
+        self.assertIn("Court 1 – Jurisdiction 1", [c.name for c in expanded])
+        for c in expanded:
+            assert issubclass(type(c), Court)
+
+
+class TestCourtWithJurisdiction(unittest.TestCase):
+    def test_code(self):
+        # It appends the jurisdiction code to the court code
+        # separated with a slash
+        court = mock_with_properties({"code": "court_code"})
+        jurisdiction = mock_with_properties({"code": "jurisdiction_code"})
+        cwj = CourtWithJurisdiction(court, jurisdiction)
+        self.assertEqual(cwj.code, "court_code/jurisdiction_code")
+        court.mock_code.assert_called()
+        jurisdiction.mock_code.assert_called()
+
+    def test_name(self):
+        # It appends the jurisdiction name to the court name
+        # separated with an en-dash
+        court = mock_with_properties({"name": "court_name"})
+        jurisdiction = mock_with_properties({"name": "jurisdiction_name"})
+        cwj = CourtWithJurisdiction(court, jurisdiction)
+        self.assertEqual(cwj.name, "court_name – jurisdiction_name")
+        court.mock_name.assert_called()
+        jurisdiction.mock_name.assert_called()
+
+    def test_grouped_name(self):
+        # It returns the court grouped name
+        court = mock_with_properties({"grouped_name": "court_grouped_name"})
+        jurisdiction = mock_with_properties()
+        cwj = CourtWithJurisdiction(court, jurisdiction)
+        self.assertEqual(cwj.grouped_name, "court_grouped_name")
+        court.mock_grouped_name.assert_called()
+
+    def test_link(self):
+        # It returns the court link
+        court = mock_with_properties({"link": "court_link"})
+        jurisdiction = mock_with_properties()
+        cwj = CourtWithJurisdiction(court, jurisdiction)
+        self.assertEqual(cwj.link, "court_link")
+        court.mock_link.assert_called()
+
+    def test_ncn(self):
+        # It returns the court ncn
+        court = mock_with_properties({"ncn": "court_ncn"})
+        jurisdiction = mock_with_properties()
+        cwj = CourtWithJurisdiction(court, jurisdiction)
+        self.assertEqual(cwj.ncn, "court_ncn")
+        court.mock_ncn.assert_called()
+
+    def test_canonical_param(self):
+        # It returns the court canonical_param
+        court = mock_with_properties({"canonical_param": "court_canonical_param"})
+        jurisdiction = mock_with_properties()
+        cwj = CourtWithJurisdiction(court, jurisdiction)
+        self.assertEqual(cwj.canonical_param, "court_canonical_param")
+        court.mock_canonical_param.assert_called()
+
+    def param_aliases(self):
+        # It returns the court param_aliases
+        court = mock_with_properties({"param_aliases": "court_param_aliases"})
+        jurisdiction = mock_with_properties()
+        cwj = CourtWithJurisdiction(court, jurisdiction)
+        self.assertEqual(cwj.param_aliases, "court_param_aliases")
+        court.mock_param_aliases.assert_called()
+
+    def start_year(self):
+        # It returns the court start_year
+        court = mock_with_properties({"start_year": "court_start_year"})
+        jurisdiction = mock_with_properties()
+        cwj = CourtWithJurisdiction(court, jurisdiction)
+        self.assertEqual(cwj.start_year, "court_start_year")
+        court.mock_start_year.assert_called()
+
+    def end_year(self):
+        # It returns the court end_year
+        court = mock_with_properties({"end_year": "court_end_year"})
+        jurisdiction = mock_with_properties()
+        cwj = CourtWithJurisdiction(court, jurisdiction)
+        self.assertEqual(cwj.end_year, "court_end_year")
+        court.mock_end_year.assert_called()
+
+    def test_jurisdiction_prefix(self):
+        # It returns the jurisdiction prefix:
+        court = mock_with_properties()
+        jurisdiction = mock_with_properties({"prefix": "ABC"})
+        cwj = CourtWithJurisdiction(court, jurisdiction)
+        self.assertEqual(cwj.jurisdiction_prefix, "ABC")
+        jurisdiction.mock_prefix.assert_called()
 
 
 class TestCourtGroup(unittest.TestCase):
