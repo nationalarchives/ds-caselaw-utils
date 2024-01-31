@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog 1.0.0].
 
 ## [Unreleased]
 
+## [Release 1.4.0]
+
 - Add jurisdiction metadata to courts to support GRC subdivisions
 
 ## [Release 1.3.5]
@@ -122,7 +124,8 @@ The format is based on [Keep a Changelog 1.0.0].
 
 - Initial tagged release
 
-[unreleased]: https://github.com/nationalarchives/ds-caselaw-utils/compare/v1.3.3...HEAD
+[unreleased]: https://github.com/nationalarchives/ds-caselaw-utils/compare/v1.4.0...HEAD
+[release 1.4.0]: https://github.com/nationalarchives/ds-caselaw-utils/compare/v1.3.3...v1.4.0
 [release 1.3.3]: https://github.com/nationalarchives/ds-caselaw-utils/compare/v1.3.2...v1.3.3
 [release 1.3.2]: https://github.com/nationalarchives/ds-caselaw-utils/compare/v1.3.1...v1.3.2
 [release 1.3.1]: https://github.com/nationalarchives/ds-caselaw-utils/compare/v1.3.0...v1.3.1
