@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog 1.0.0].
 
 ## [Unreleased]
 
+- Fix bug where getting a nonexistent jurisdiction for a court raised an IndexError. Now we explicitly raise a CourtNotFoundError for unknown jurisdictions.
+
 ## [Release 1.4.0]
 
 - Add jurisdiction metadata to courts to support GRC subdivisions

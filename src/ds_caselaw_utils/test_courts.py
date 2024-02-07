@@ -174,6 +174,29 @@ class TestCourtsRepository(unittest.TestCase):
             "Court 1 – Jurisdiction 1", repo.get_by_code("court1/jurisdiction1").name
         )
 
+    def test_raises_error_for_nonexistent_jurisdictions(self):
+        data = [
+            {
+                "name": "court_group",
+                "courts": [
+                    {
+                        "code": "court1",
+                        "name": "Court 1",
+                        "jurisdictions": [
+                            {"code": "jurisdiction1", "name": "Jurisdiction 1"}
+                        ],
+                    }
+                ],
+            }
+        ]
+        repo = CourtsRepository(data)
+        self.assertRaises(
+            CourtNotFoundException, repo.get_by_code, "court1/jurisdiction2"
+        )
+        self.assertRaises(
+            CourtNotFoundException, repo.get_by_code, "court2/jurisdiction1"
+        )
+
     def test_raises_on_unknown_court_code(self):
         data = [
             {
@@ -353,6 +376,13 @@ class TestCourt(unittest.TestCase):
         )
         jurisdiction = court.get_jurisdiction("jurisdiction1")
         self.assertEqual("Jurisdiction 1", jurisdiction.name)
+
+    def test_get_nonexistent_jurisdiction(self):
+        court = Court(
+            {"jurisdictions": [{"code": "jurisdiction1", "name": "Jurisdiction 1"}]}
+        )
+        jurisdiction = court.get_jurisdiction("jurisdiction2")
+        self.assertIsNone(jurisdiction)
 
     def test_expand_jurisdictions(self):
         court = Court(
