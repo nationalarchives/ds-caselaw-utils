@@ -32,7 +32,7 @@ class Court:
         ]
 
     def get_jurisdiction(self, code):
-        return [j for j in self.jurisdictions if j.code == code][0]
+        return next((j for j in self.jurisdictions if j.code == code), None)
 
     def expand_jurisdictions(self):
         return [self] + [
@@ -130,11 +130,12 @@ class CourtsRepository:
 
     def get_court_with_jurisdiction_by_code(self, court_code, jursidiction_code):
         court = self.get_court_by_code(court_code)
-        jurisdiction = court.get_jurisdiction(jursidiction_code)
-        if jurisdiction is not None:
-            return CourtWithJurisdiction(court, jurisdiction)
-        else:
+        if court is None:
             raise CourtNotFoundException()
+        jurisdiction = court.get_jurisdiction(jursidiction_code)
+        if jurisdiction is None:
+            raise CourtNotFoundException()
+        return CourtWithJurisdiction(court, jurisdiction)
 
     def get_by_code(self, code):
         if "/" in code:
