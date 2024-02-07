@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog 1.0.0].
 
 ## [Unreleased]
 
+## [Release 1.4.1]
+
 - Fix bug where getting a nonexistent jurisdiction for a court raised an IndexError. Now we explicitly raise a CourtNotFoundError for unknown jurisdictions.
 
 ## [Release 1.4.0]
@@ -126,7 +128,8 @@ The format is based on [Keep a Changelog 1.0.0].
 
 - Initial tagged release
 
-[unreleased]: https://github.com/nationalarchives/ds-caselaw-utils/compare/v1.4.0...HEAD
+[unreleased]: https://github.com/nationalarchives/ds-caselaw-utils/compare/v1.4.1...HEAD
+[release 1.4.1]: https://github.com/nationalarchives/ds-caselaw-utils/compare/v1.4.0...v1.4.1
 [release 1.4.0]: https://github.com/nationalarchives/ds-caselaw-utils/compare/v1.3.3...v1.4.0
 [release 1.3.3]: https://github.com/nationalarchives/ds-caselaw-utils/compare/v1.3.2...v1.3.3
 [release 1.3.2]: https://github.com/nationalarchives/ds-caselaw-utils/compare/v1.3.1...v1.3.2
