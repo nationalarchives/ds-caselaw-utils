@@ -269,13 +269,6 @@
       end_year: 2022
       selectable: false
       listable: true
-    - code: EWHC-Chancery-Patents
-      grouped_name: Patents Court
-      name: High Court (Patents Court)
-      link: https://www.gov.uk/courts-tribunals/patents-court
-      ncn: \[(\d{4})\] (EWHC) (\d+) \((Pat)\)
-      selectable: false
-      listable: false
     - code: EWHC-QBD-Planning
       grouped_name: Planning Court
       name: High Court (Planning Court)
