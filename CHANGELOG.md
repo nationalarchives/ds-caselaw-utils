@@ -2,9 +2,9 @@
 
 All notable changes to this project will be documented in this file.
 
-The format is based on [Keep a Changelog 1.0.0].
+## [Release 1.4.2]
 
-## [Unreleased]
+- Remove redundant duplicate of patent court
 
 ## [Release 1.4.1]
 
@@ -127,32 +127,3 @@ The format is based on [Keep a Changelog 1.0.0].
 ## [Release 0.1.4]
 
 - Initial tagged release
-
-[unreleased]: https://github.com/nationalarchives/ds-caselaw-utils/compare/v1.4.1...HEAD
-[release 1.4.1]: https://github.com/nationalarchives/ds-caselaw-utils/compare/v1.4.0...v1.4.1
-[release 1.4.0]: https://github.com/nationalarchives/ds-caselaw-utils/compare/v1.3.3...v1.4.0
-[release 1.3.3]: https://github.com/nationalarchives/ds-caselaw-utils/compare/v1.3.2...v1.3.3
-[release 1.3.2]: https://github.com/nationalarchives/ds-caselaw-utils/compare/v1.3.1...v1.3.2
-[release 1.3.1]: https://github.com/nationalarchives/ds-caselaw-utils/compare/v1.3.0...v1.3.1
-[release 1.3.0]: https://github.com/nationalarchives/ds-caselaw-utils/compare/v1.2.1...v1.3.0
-[release 1.2.1]: https://github.com/nationalarchives/ds-caselaw-utils/compare/v1.2.0...v1.2.1
-[release 1.2.0]: https://github.com/nationalarchives/ds-caselaw-utils/compare/v1.1.0...v1.2.0
-[release 1.1.0]: https://github.com/nationalarchives/ds-caselaw-utils/compare/v1.0.2...v1.1.0
-[release 1.0.2]: https://github.com/nationalarchives/ds-caselaw-utils/compare/v1.0.1...v1.0.2
-[release 1.0.1]: https://github.com/nationalarchives/ds-caselaw-utils/compare/v1.0.0...v1.0.1
-[release 1.0.0]: https://github.com/nationalarchives/ds-caselaw-utils/compare/v0.5.0...v1.0.0
-[release 0.5.0]: https://github.com/nationalarchives/ds-caselaw-utils/compare/v0.5.0...v1.0.0
-[release 0.5.0]: https://github.com/nationalarchives/ds-caselaw-utils/compare/v0.4.5...v0.5.0
-[release 0.4.5]: https://github.com/nationalarchives/ds-caselaw-utils/compare/v0.4.4...v0.4.5
-[release 0.4.4]: https://github.com/nationalarchives/ds-caselaw-utils/compare/v0.4.3...v0.4.4
-[release 0.4.3]: https://github.com/nationalarchives/ds-caselaw-utils/compare/v0.4.2...v0.4.3
-[release 0.4.2]: https://github.com/nationalarchives/ds-caselaw-utils/compare/v0.4.1...v0.4.2
-[release 0.4.1]: https://github.com/nationalarchives/ds-caselaw-utils/compare/v0.4.0...v0.4.1
-[release 0.4.0]: https://github.com/nationalarchives/ds-caselaw-utils/compare/v0.3.2...v0.4.0
-[release 0.3.2]: https://github.com/nationalarchives/ds-caselaw-utils/compare/v0.3.1...v0.3.2
-[release 0.3.1]: https://github.com/nationalarchives/ds-caselaw-utils/compare/v0.3.0...v0.3.1
-[release 0.3.0]: https://github.com/nationalarchives/ds-caselaw-utils/compare/v0.2.0...v0.3.0
-[release 0.2.0]: https://github.com/nationalarchives/ds-caselaw-utils/compare/v0.1.6...v0.2.0
-[release 0.1.6]: https://github.com/nationalarchives/ds-caselaw-utils/compare/v0.1.4...v0.1.6
-[release 0.1.4]: https://github.com/nationalarchives/ds-caselaw-utils/releases/tag/v0.1.4
-[keep a changelog 1.0.0]: https://keepachangelog.com/en/1.0.0/
