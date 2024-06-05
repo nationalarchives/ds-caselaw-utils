@@ -319,7 +319,7 @@
       selectable: false
       listable: false
 - name: lower_courts
-  display_name: "Lower Courts"
+  display_name: "Other Courts"
   is_tribunal: false
   courts:
     - code: EWCOP
