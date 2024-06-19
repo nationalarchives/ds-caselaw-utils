@@ -331,8 +331,35 @@
       end_year: 2022
       selectable: true
       listable: true
+    - code: EWCOP-T1
+      name: Court of Protection (Tier 1 - district judges)
+      link: https://www.gov.uk/courts-tribunals/court-of-protection
+      ncn: \[(\d{4})\] (EWCOP) (T1) (\d+)
+      param: "ewcop/t1"
+      start_year: 2009
+      end_year: 2022
+      selectable: false
+      listable: false
+    - code: EWCOP-T2
+      name: Court of Protection (Tier 2 - circuit judges)
+      link: https://www.gov.uk/courts-tribunals/court-of-protection
+      ncn: \[(\d{4})\] (EWCOP) (T2) (\d+)
+      param: "ewcop/t2"
+      start_year: 2009
+      end_year: 2022
+      selectable: false
+      listable: false
+    - code: EWCOP-T3
+      name: Court of Protection (Tier 3 - high court judges)
+      link: https://www.gov.uk/courts-tribunals/court-of-protection
+      ncn: \[(\d{4})\] (EWCOP) (T3) (\d+)
+      param: "ewcop/t3"
+      start_year: 2009
+      end_year: 2022
+      selectable: false
+      listable: false
     - code: EWFC
-      name: Family Court
+      name: Family Court (high court judges)
       link: https://www.judiciary.uk/you-and-the-judiciary/going-to-court/family-law-courts/
       ncn: \[(\d{4})\] (EWFC) (\d+)
       param: "ewfc"
@@ -341,7 +368,7 @@
       selectable: true
       listable: true
     - code: "EWFC-B"
-      name: Family Court (B)
+      name: Family Court (B - district and circuit judges)
       # This is an artifact of how the Family Court creates tiers of importance.
       link: https://www.judiciary.uk/you-and-the-judiciary/going-to-court/family-law-courts/
       ncn: \[(\d{4})\] (EWFC) (B) (\d+)
