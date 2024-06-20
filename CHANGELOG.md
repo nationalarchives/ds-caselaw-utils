@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## [Release 1.5.0]
+
+- FCL91 - Change display name for Lower Courts to Other Courts
+- FCL120 - Allow (T1) to (T3) for EWCOP neutral citations
+
 ## [Release 1.4.2]
 
 - Remove redundant duplicate of patent court
