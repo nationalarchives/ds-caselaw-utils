@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [Release 1.5.1]
+
+- Add T1/T2/T3 to EWCOP neutral citation regex
+- Add IPT as a new court
+- Remove parenthetical information from Family Court
+
 ## [Release 1.5.0]
 
 - FCL91 - Change display name for Lower Courts to Other Courts
