@@ -378,6 +378,20 @@
       selectable: false
       listable: false
 
+- name: investigatory_powers_tribunal
+  display_name: ~
+  is_tribunal: true
+  courts:
+    - code: UKIPT
+      name: Investigatory Powers Tribunal
+      link: https://investigatorypowerstribunal.org.uk/about-the-tribunal/
+      ncn: \[(\d{4})\] (UKIPTrib) (\d+)
+      selectable: true
+      listable: true
+      param: "ukipt"
+      start_year: 2003
+      end_year: 2024
+
 - name: employment_appeal_tribunal
   display_name: ~
   is_tribunal: true
