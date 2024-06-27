@@ -359,7 +359,7 @@
       selectable: false
       listable: false
     - code: EWFC
-      name: Family Court (high court judges)
+      name: Family Court
       link: https://www.judiciary.uk/you-and-the-judiciary/going-to-court/family-law-courts/
       ncn: \[(\d{4})\] (EWFC) (\d+)
       param: "ewfc"
