@@ -30,9 +30,7 @@ class TestCourtsRepository(unittest.TestCase):
             {
                 "name": "court_group",
                 "display_name": "court group 1",
-                "courts": [
-                    {"name": "court1", "jurisdictions": [{"name": "jurisdiction1"}]}
-                ],
+                "courts": [{"name": "court1", "jurisdictions": [{"name": "jurisdiction1"}]}],
             }
         ]
         repo = CourtsRepository(data)
@@ -45,9 +43,7 @@ class TestCourtsRepository(unittest.TestCase):
             {
                 "name": "court_group",
                 "display_name": "court group 1",
-                "courts": [
-                    {"name": "court1", "jurisdictions": [{"name": "jurisdiction1"}]}
-                ],
+                "courts": [{"name": "court1", "jurisdictions": [{"name": "jurisdiction1"}]}],
             }
         ]
         repo = CourtsRepository(data)
@@ -162,17 +158,13 @@ class TestCourtsRepository(unittest.TestCase):
                     {
                         "code": "court1",
                         "name": "Court 1",
-                        "jurisdictions": [
-                            {"code": "jurisdiction1", "name": "Jurisdiction 1"}
-                        ],
+                        "jurisdictions": [{"code": "jurisdiction1", "name": "Jurisdiction 1"}],
                     }
                 ],
             }
         ]
         repo = CourtsRepository(data)
-        self.assertEqual(
-            "Court 1 – Jurisdiction 1", repo.get_by_code("court1/jurisdiction1").name
-        )
+        self.assertEqual("Court 1 – Jurisdiction 1", repo.get_by_code("court1/jurisdiction1").name)
 
     def test_raises_error_for_nonexistent_jurisdictions(self):
         data = [
@@ -182,20 +174,14 @@ class TestCourtsRepository(unittest.TestCase):
                     {
                         "code": "court1",
                         "name": "Court 1",
-                        "jurisdictions": [
-                            {"code": "jurisdiction1", "name": "Jurisdiction 1"}
-                        ],
+                        "jurisdictions": [{"code": "jurisdiction1", "name": "Jurisdiction 1"}],
                     }
                 ],
             }
         ]
         repo = CourtsRepository(data)
-        self.assertRaises(
-            CourtNotFoundException, repo.get_by_code, "court1/jurisdiction2"
-        )
-        self.assertRaises(
-            CourtNotFoundException, repo.get_by_code, "court2/jurisdiction1"
-        )
+        self.assertRaises(CourtNotFoundException, repo.get_by_code, "court1/jurisdiction2")
+        self.assertRaises(CourtNotFoundException, repo.get_by_code, "court2/jurisdiction1")
 
     def test_raises_on_unknown_court_code(self):
         data = [
@@ -229,12 +215,8 @@ class TestCourtsRepository(unittest.TestCase):
         ]
         repo = CourtsRepository(data)
         self.assertIn("court1", [c.canonical_param for c in repo.get_listable_courts()])
-        self.assertNotIn(
-            "court2", [c.canonical_param for c in repo.get_listable_courts()]
-        )
-        self.assertNotIn(
-            "court3", [c.canonical_param for c in repo.get_listable_courts()]
-        )
+        self.assertNotIn("court2", [c.canonical_param for c in repo.get_listable_courts()])
+        self.assertNotIn("court3", [c.canonical_param for c in repo.get_listable_courts()])
 
     def test_returns_listable_tribunals(self):
         data = [
@@ -255,15 +237,9 @@ class TestCourtsRepository(unittest.TestCase):
             },
         ]
         repo = CourtsRepository(data)
-        self.assertNotIn(
-            "court1", [c.canonical_param for c in repo.get_listable_tribunals()]
-        )
-        self.assertNotIn(
-            "court2", [c.canonical_param for c in repo.get_listable_tribunals()]
-        )
-        self.assertIn(
-            "court3", [c.canonical_param for c in repo.get_listable_tribunals()]
-        )
+        self.assertNotIn("court1", [c.canonical_param for c in repo.get_listable_tribunals()])
+        self.assertNotIn("court2", [c.canonical_param for c in repo.get_listable_tribunals()])
+        self.assertIn("court3", [c.canonical_param for c in repo.get_listable_tribunals()])
 
     def test_returns_grouped_selectable_courts(self):
         data = [
@@ -298,12 +274,8 @@ class TestCourtsRepository(unittest.TestCase):
         self.assertIn("Court group", [g.name for g in groups])
         self.assertNotIn("Tribunal group", [g.name for g in groups])
         self.assertIn("Selectable court", [c.name for g in groups for c in g.courts])
-        self.assertNotIn(
-            "Unselectable court", [c.name for g in groups for c in g.courts]
-        )
-        self.assertNotIn(
-            "Selectable tribunal", [c.name for g in groups for c in g.courts]
-        )
+        self.assertNotIn("Unselectable court", [c.name for g in groups for c in g.courts])
+        self.assertNotIn("Selectable tribunal", [c.name for g in groups for c in g.courts])
 
     def test_returns_grouped_selectable_tribunals(self):
         data = [
@@ -338,9 +310,7 @@ class TestCourtsRepository(unittest.TestCase):
         self.assertIn("Tribunal group", [g.name for g in groups])
         self.assertNotIn("Court group", [g.name for g in groups])
         self.assertIn("Selectable tribunal", [c.name for g in groups for c in g.courts])
-        self.assertNotIn(
-            "Unselectable tribunal", [c.name for g in groups for c in g.courts]
-        )
+        self.assertNotIn("Unselectable tribunal", [c.name for g in groups for c in g.courts])
         self.assertNotIn("Selectable court", [c.name for g in groups for c in g.courts])
 
 
@@ -371,16 +341,12 @@ class TestCourt(unittest.TestCase):
         self.assertEqual(date.today().year, court.end_year)
 
     def test_get_jurisdiction(self):
-        court = Court(
-            {"jurisdictions": [{"code": "jurisdiction1", "name": "Jurisdiction 1"}]}
-        )
+        court = Court({"jurisdictions": [{"code": "jurisdiction1", "name": "Jurisdiction 1"}]})
         jurisdiction = court.get_jurisdiction("jurisdiction1")
         self.assertEqual("Jurisdiction 1", jurisdiction.name)
 
     def test_get_nonexistent_jurisdiction(self):
-        court = Court(
-            {"jurisdictions": [{"code": "jurisdiction1", "name": "Jurisdiction 1"}]}
-        )
+        court = Court({"jurisdictions": [{"code": "jurisdiction1", "name": "Jurisdiction 1"}]})
         jurisdiction = court.get_jurisdiction("jurisdiction2")
         self.assertIsNone(jurisdiction)
 
