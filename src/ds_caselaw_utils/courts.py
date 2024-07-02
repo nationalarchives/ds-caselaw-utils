@@ -26,19 +26,13 @@ class Court:
         self.param_aliases = [data.get("param")] + (data.get("extra_params") or [])
         self.start_year = data.get("start_year")
         self.end_year = data.get("end_year") or date.today().year
-        self.jurisdictions = [
-            Jurisdiction(jurisdiction_data)
-            for jurisdiction_data in data.get("jurisdictions", [])
-        ]
+        self.jurisdictions = [Jurisdiction(jurisdiction_data) for jurisdiction_data in data.get("jurisdictions", [])]
 
     def get_jurisdiction(self, code):
         return next((j for j in self.jurisdictions if j.code == code), None)
 
     def expand_jurisdictions(self):
-        return [self] + [
-            CourtWithJurisdiction(self, jurisdiction)
-            for jurisdiction in self.jurisdictions
-        ]
+        return [self] + [CourtWithJurisdiction(self, jurisdiction) for jurisdiction in self.jurisdictions]
 
     def __repr__(self):
         return self.name
@@ -140,16 +134,12 @@ class CourtsRepository:
     def get_by_code(self, code):
         if "/" in code:
             (court_code, jurisdiction_code) = code.split("/")
-            return self.get_court_with_jurisdiction_by_code(
-                court_code, jurisdiction_code
-            )
+            return self.get_court_with_jurisdiction_by_code(court_code, jurisdiction_code)
         else:
             return self.get_court_by_code(code)
 
     def get_all(self, with_jurisdictions=False):
-        courts = [
-            Court(court) for category in self._data for court in category.get("courts")
-        ]
+        courts = [Court(court) for category in self._data for court in category.get("courts")]
         if with_jurisdictions:
             return [c for court in courts for c in court.expand_jurisdictions()]
         else:
@@ -166,11 +156,7 @@ class CourtsRepository:
     def get_selectable_groups(self):
         groups = []
         for category in self._data:
-            courts = [
-                Court(court)
-                for court in category.get("courts")
-                if court.get("selectable")
-            ]
+            courts = [Court(court) for court in category.get("courts") if court.get("selectable")]
             if len(courts) > 0:
                 groups.append(CourtGroup(category.get("display_name"), courts))
         return groups
@@ -179,11 +165,7 @@ class CourtsRepository:
         groups = []
         for category in self._data:
             if not category.get("is_tribunal"):
-                courts = [
-                    Court(court)
-                    for court in category.get("courts")
-                    if court.get("selectable")
-                ]
+                courts = [Court(court) for court in category.get("courts") if court.get("selectable")]
                 if len(courts) > 0:
                     groups.append(CourtGroup(category.get("display_name"), courts))
         return groups
@@ -192,11 +174,7 @@ class CourtsRepository:
         groups = []
         for category in self._data:
             if category.get("is_tribunal"):
-                courts = [
-                    Court(court)
-                    for court in category.get("courts")
-                    if court.get("selectable")
-                ]
+                courts = [Court(court) for court in category.get("courts") if court.get("selectable")]
                 if len(courts) > 0:
                     groups.append(CourtGroup(category.get("display_name"), courts))
         return groups
@@ -204,11 +182,7 @@ class CourtsRepository:
     def get_listable_groups(self):
         groups = []
         for category in self._data:
-            courts = [
-                Court(court)
-                for court in category.get("courts")
-                if court.get("listable")
-            ]
+            courts = [Court(court) for court in category.get("courts") if court.get("listable")]
             if len(courts) > 0:
                 groups.append(CourtGroup(category.get("display_name"), courts))
         return groups
