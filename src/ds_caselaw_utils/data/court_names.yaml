@@ -388,7 +388,7 @@
       ncn: \[(\d{4})\] (UKIPTrib) (\d+)
       selectable: false
       listable: false
-      param: "ukipt"
+      param: "ukiptrib"
       start_year: 2003
       end_year: 2024
 
