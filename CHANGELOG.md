@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## [Release 1.5.2]
+
+- [FCL-176] Tooling configuration audit
+- [FCL-134] Use ukiptrib as url, not ukipt
+
 ## [Release 1.5.1]
 
 - Add T1/T2/T3 to EWCOP neutral citation regex
