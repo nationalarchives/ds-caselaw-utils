@@ -20,7 +20,7 @@ repos:
       - id: ruff-format
 
   - repo: https://github.com/python-jsonschema/check-jsonschema
-    rev: 0.29.0
+    rev: 0.29.1
     hooks:
       - id: check-jsonschema
         files: ^src/ds_caselaw_utils/data/court_names.yaml$
