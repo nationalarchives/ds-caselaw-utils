@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## [Release 1.5.3]
+
+- [FCL-134] Make IPT visible in Public and Editor UIs
+
 ## [Release 1.5.2]
 
 - [FCL-176] Tooling configuration audit
