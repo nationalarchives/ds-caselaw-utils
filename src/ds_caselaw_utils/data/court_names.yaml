@@ -386,8 +386,8 @@
       name: Investigatory Powers Tribunal
       link: https://investigatorypowerstribunal.org.uk/about-the-tribunal/
       ncn: \[(\d{4})\] (UKIPTrib) (\d+)
-      selectable: false
-      listable: false
+      selectable: true
+      listable: true
       param: "ukiptrib"
       start_year: 2003
       end_year: 2024
