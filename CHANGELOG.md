@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## [Release 1.5.4]
+
+- [FCL-119] Add Crown and County Courts (invisible)
+
 ## [Release 1.5.3]
 
 - [FCL-134] Make IPT visible in Public and Editor UIs
