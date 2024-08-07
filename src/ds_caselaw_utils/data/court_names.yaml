@@ -377,6 +377,24 @@
       end_year: 2022
       selectable: false
       listable: false
+    - code: "EWCRC"
+      name: "Crown Court"
+      link: https://www.judiciary.uk/courts-and-tribunals/crown-court/
+      ncn: \[(\d{4})\] (EWCRC) (\d+)
+      param: "ewcrc"
+      start_year: 2024
+      end_year: 2024
+      selectable: false
+      listable: false
+    - code: "EWCC"
+      name: "County Court"
+      link: https://www.judiciary.uk/courts-and-tribunals/county-court/
+      ncn: \[(\d{4})\] (EWCC) (\d+)
+      param: "ewcc"
+      start_year: 2024
+      end_year: 2024
+      selectable: false
+      listable: false
 
 - name: investigatory_powers_tribunal
   display_name: ~
