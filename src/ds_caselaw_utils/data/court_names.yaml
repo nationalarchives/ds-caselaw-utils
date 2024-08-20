@@ -393,8 +393,8 @@
       param: "ewcc"
       start_year: 2024
       end_year: 2024
-      selectable: false
-      listable: false
+      selectable: true
+      listable: true
 
 - name: investigatory_powers_tribunal
   display_name: ~
