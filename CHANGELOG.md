@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## [Release 1.5.6]
+
+- Change Crown Courts to EWCRC
+- Make Crown Courts visible
+
 ## [Release 1.5.5]
 
 - [FCL-119] Make County Courts visible
