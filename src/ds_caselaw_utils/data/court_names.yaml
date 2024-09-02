@@ -377,11 +377,11 @@
       end_year: 2022
       selectable: false
       listable: false
-    - code: "EWCRC"
+    - code: "EWCR"
       name: "Crown Court"
       link: https://www.judiciary.uk/courts-and-tribunals/crown-court/
-      ncn: \[(\d{4})\] (EWCRC) (\d+)
-      param: "ewcrc"
+      ncn: \[(\d{4})\] (EWCR) (\d+)
+      param: "ewcr"
       start_year: 2024
       end_year: 2024
       selectable: false

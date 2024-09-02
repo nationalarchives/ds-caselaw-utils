@@ -17,6 +17,8 @@ class TestNeutralURL(unittest.TestCase):
         self.assertEqual(neutral_url("[2023] UKAIT 1"), "/ukait/2023/1")
         self.assertEqual(neutral_url("[2024] EWCOP 17 (T2)"), "/ewcop/t2/2024/17")
         self.assertEqual(neutral_url("[2000] UKIPTrib 99"), "/ukiptrib/2000/99")
+        self.assertEqual(neutral_url("[2000] EWCR 99"), "/ewcr/2000/99")
+        self.assertEqual(neutral_url("[2000] EWCC 99"), "/ewcc/2000/99")
 
     def test_bad_neutral_urls(self):
         self.assertEqual(neutral_url(""), None)
@@ -29,3 +31,4 @@ class TestNeutralURL(unittest.TestCase):
         self.assertEqual(neutral_url("[2022] EAT A"), None)
         self.assertEqual(neutral_url("[2022] NOTACOURT 1 TC"), None)
         self.assertEqual(neutral_url("[2022] EWHC 1 (T2)"), None)
+        self.assertEqual(neutral_url("[2000] EWCRC 99"), None)
