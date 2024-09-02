@@ -384,8 +384,8 @@
       param: "ewcr"
       start_year: 2024
       end_year: 2024
-      selectable: false
-      listable: false
+      selectable: true
+      listable: true
     - code: "EWCC"
       name: "County Court"
       link: https://www.judiciary.uk/courts-and-tribunals/county-court/
