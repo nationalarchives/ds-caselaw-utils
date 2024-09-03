@@ -322,6 +322,24 @@
   display_name: "Other Courts"
   is_tribunal: false
   courts:
+    - code: "EWCR"
+      name: "Crown Court"
+      link: https://www.judiciary.uk/courts-and-tribunals/crown-court/
+      ncn: \[(\d{4})\] (EWCR) (\d+)
+      param: "ewcr"
+      start_year: 2024
+      end_year: 2024
+      selectable: false
+      listable: false
+    - code: "EWCC"
+      name: "County Court"
+      link: https://www.judiciary.uk/courts-and-tribunals/county-court/
+      ncn: \[(\d{4})\] (EWCC) (\d+)
+      param: "ewcc"
+      start_year: 2024
+      end_year: 2024
+      selectable: true
+      listable: true
     - code: EWCOP
       name: Court of Protection
       link: https://www.gov.uk/courts-tribunals/court-of-protection
@@ -377,25 +395,7 @@
       end_year: 2022
       selectable: false
       listable: false
-    - code: "EWCR"
-      name: "Crown Court"
-      link: https://www.judiciary.uk/courts-and-tribunals/crown-court/
-      ncn: \[(\d{4})\] (EWCR) (\d+)
-      param: "ewcr"
-      start_year: 2024
-      end_year: 2024
-      selectable: true
-      listable: true
-    - code: "EWCC"
-      name: "County Court"
-      link: https://www.judiciary.uk/courts-and-tribunals/county-court/
-      ncn: \[(\d{4})\] (EWCC) (\d+)
-      param: "ewcc"
-      start_year: 2024
-      end_year: 2024
-      selectable: true
-      listable: true
-
+x
 - name: investigatory_powers_tribunal
   display_name: ~
   is_tribunal: true
