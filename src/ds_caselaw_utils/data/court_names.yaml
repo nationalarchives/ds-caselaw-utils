@@ -340,6 +340,25 @@
       end_year: 2024
       selectable: true
       listable: true
+    - code: EWFC
+      name: Family Court
+      link: https://www.judiciary.uk/you-and-the-judiciary/going-to-court/family-law-courts/
+      ncn: \[(\d{4})\] (EWFC) (\d+)
+      param: "ewfc"
+      start_year: 2009
+      end_year: 2022
+      selectable: true
+      listable: true
+    - code: "EWFC-B"
+      name: Family Court (B - district and circuit judges)
+      # This is an artifact of how the Family Court creates tiers of importance.
+      link: https://www.judiciary.uk/you-and-the-judiciary/going-to-court/family-law-courts/
+      ncn: \[(\d{4})\] (EWFC) (B) (\d+)
+      param: "ewfc/b"
+      start_year: 2009
+      end_year: 2022
+      selectable: false
+      listable: false
     - code: EWCOP
       name: Court of Protection
       link: https://www.gov.uk/courts-tribunals/court-of-protection
@@ -376,26 +395,7 @@
       end_year: 2022
       selectable: false
       listable: false
-    - code: EWFC
-      name: Family Court
-      link: https://www.judiciary.uk/you-and-the-judiciary/going-to-court/family-law-courts/
-      ncn: \[(\d{4})\] (EWFC) (\d+)
-      param: "ewfc"
-      start_year: 2009
-      end_year: 2022
-      selectable: true
-      listable: true
-    - code: "EWFC-B"
-      name: Family Court (B - district and circuit judges)
-      # This is an artifact of how the Family Court creates tiers of importance.
-      link: https://www.judiciary.uk/you-and-the-judiciary/going-to-court/family-law-courts/
-      ncn: \[(\d{4})\] (EWFC) (B) (\d+)
-      param: "ewfc/b"
-      start_year: 2009
-      end_year: 2022
-      selectable: false
-      listable: false
-x
+
 - name: investigatory_powers_tribunal
   display_name: ~
   is_tribunal: true
