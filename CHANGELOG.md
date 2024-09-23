@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## v1.5.7 (2024-09-23)
+
+### Fix
+
+- **FCL-299**: remove incorrect end_year values for courts
+
 ## [Release 1.5.6]
 
 - Change Crown Courts to EWCRC
