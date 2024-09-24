@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## v1.6.0 (2024-09-24)
+
+### Feat
+
+- **FCL-323**: make Crown Court listable and selectable
+
 ## v1.5.7 (2024-09-23)
 
 ### Fix
