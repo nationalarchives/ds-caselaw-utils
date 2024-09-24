@@ -25,11 +25,13 @@ with Path("courts.md").open("w") as f:
             f.write(f"\n## {group['name']}\n")
 
         f.write(
-            "\n| Name | Code | Param | Start | End |\n",
+            "\n| Name | Code | Param | Start | End | List? | Searchable? |\n",
         )
-        f.write("| --- | --- | --- | --- | --- |\n")
+        f.write("| ---- | ---- | ----- | ----- | --- | ----- | ----------- |\n")
 
-        for court in group["courts"]:
+        for court in sorted(
+            group["courts"], key=lambda x: (x["grouped_name"] if "grouped_name" in x else x["name"]) + x["code"]
+        ):
             f.write("| ")
             f.write(court["grouped_name"] if "grouped_name" in court else court["name"])
 
@@ -44,5 +46,11 @@ with Path("courts.md").open("w") as f:
 
             f.write(" | ")
             f.write(str(court["end_year"]) if "end_year" in court else "–")
+
+            f.write(" | ")
+            f.write("✅" if court["listable"] else "❌")
+
+            f.write(" | ")
+            f.write("✅" if court["selectable"] else "❌")
 
             f.write(" |\n")
