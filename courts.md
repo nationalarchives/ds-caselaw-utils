@@ -68,7 +68,7 @@
 | Court of Protection (Tier 2 - circuit judges) | EWCOP-T2 | ewcop/t2 | 2009 | – | ❌ | ❌ |
 | Court of Protection (Tier 3 - high court judges) | EWCOP-T3 | ewcop/t3 | 2009 | – | ❌ | ❌ |
 | Court of Protection | EWCOP | ewcop | 2009 | – | ✅ | ✅ |
-| Crown Court | EWCR | ewcr | 2024 | – | ❌ | ❌ |
+| Crown Court | EWCR | ewcr | 2024 | – | ✅ | ✅ |
 | Family Court (B - district and circuit judges) | EWFC-B | ewfc/b | 2009 | – | ❌ | ❌ |
 | Family Court | EWFC | ewfc | 2009 | – | ✅ | ✅ |
 
