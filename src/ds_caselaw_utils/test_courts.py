@@ -15,6 +15,7 @@ from .courts import (
     CourtWithJurisdiction,
     courts,
 )
+from .factory import CourtFactory, make_court_repo_valid
 
 
 def mock_with_properties(properties={}):
@@ -48,6 +49,7 @@ class TestCourtsRepository(unittest.TestCase):
                 "courts": [{"name": "court1", "jurisdictions": [{"name": "jurisdiction1"}]}],
             }
         ]
+        data = make_court_repo_valid(data)
         repo = CourtsRepository(data)
         courts = repo.get_all(with_jurisdictions=True)
         self.assertIn("court1", [c.name for c in courts])
@@ -318,43 +320,43 @@ class TestCourtsRepository(unittest.TestCase):
 
 class TestCourt(unittest.TestCase):
     def test_repr_string(self):
-        court = Court({"name": "court_name"})
+        court = CourtFactory({"name": "court_name"})
         self.assertEqual("court_name", str(court))
         self.assertEqual("court_name", repr(court))
 
     def test_grouped_name_explicit(self):
-        court = Court({"grouped_name": "court_name"})
+        court = CourtFactory({"grouped_name": "court_name"})
         self.assertEqual("court_name", court.grouped_name)
 
     def test_grouped_name_default(self):
-        court = Court({"name": "court_name"})
+        court = CourtFactory({"name": "court_name"})
         self.assertEqual("court_name", court.grouped_name)
 
     def test_param_aliases(self):
-        court = Court({"param": "param_1", "extra_params": ["param_2"]})
+        court = CourtFactory({"param": "param_1", "extra_params": ["param_2"]})
         self.assertEqual(["param_1", "param_2"], court.param_aliases)
 
     def test_end_year_explicit(self):
-        court = Court({"end_year": 1983})
+        court = CourtFactory({"end_year": 1983})
         self.assertEqual(1983, court.end_year)
 
     def test_end_year_default(self):
-        court = Court({})
+        court = CourtFactory({})
         self.assertEqual(date.today().year, court.end_year)
 
     def test_get_jurisdiction(self):
-        court = Court({"jurisdictions": [{"code": "jurisdiction1", "name": "Jurisdiction 1"}]})
+        court = CourtFactory({"jurisdictions": [{"code": "jurisdiction1", "name": "Jurisdiction 1"}]})
         jurisdiction = court.get_jurisdiction("jurisdiction1")
         assert jurisdiction
         self.assertEqual("Jurisdiction 1", jurisdiction.name)
 
     def test_get_nonexistent_jurisdiction(self):
-        court = Court({"jurisdictions": [{"code": "jurisdiction1", "name": "Jurisdiction 1"}]})
+        court = CourtFactory({"jurisdictions": [{"code": "jurisdiction1", "name": "Jurisdiction 1"}]})
         jurisdiction = court.get_jurisdiction("jurisdiction2")
         self.assertIsNone(jurisdiction)
 
     def test_expand_jurisdictions(self):
-        court = Court(
+        court = CourtFactory(
             {
                 "name": "Court 1",
                 "jurisdictions": [{"code": "jurisdiction1", "name": "Jurisdiction 1"}],
