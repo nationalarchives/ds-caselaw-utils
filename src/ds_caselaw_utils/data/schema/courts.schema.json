@@ -76,7 +76,9 @@
                   "code": {
                     "type": "string"
                   }
-                }
+                },
+                "required": ["prefix", "name", "code"],
+                "additionalProperties": false
               }
             }
           },
