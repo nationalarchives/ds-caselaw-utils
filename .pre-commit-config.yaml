@@ -19,6 +19,25 @@ repos:
     hooks:
       - id: ruff-format
 
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v1.11.2
+    hooks:
+      - id: mypy
+        name: mypy-src
+        additional_dependencies:
+          - types-PyYAML
+        args:
+          - --strict
+        files: ^(src/ds_caselaw_utils|scripts)
+        exclude: test_
+
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v1.11.2
+    hooks:
+      - id: mypy
+        name: mypy-tests
+        files: ^src/ds_caselaw_utils/test_
+
   - repo: https://github.com/python-jsonschema/check-jsonschema
     rev: 0.29.2
     hooks:
