@@ -7,8 +7,10 @@ from ruamel.yaml import YAML
 
 from .courts import (
     Court,
+    CourtCode,
     CourtGroup,
     CourtNotFoundException,
+    CourtParam,
     CourtsRepository,
     CourtWithJurisdiction,
     courts,
@@ -120,7 +122,7 @@ class TestCourtsRepository(unittest.TestCase):
             },
         ]
         repo = CourtsRepository(data)
-        self.assertEqual("Court 2", repo.get_by_param("court2").name)
+        self.assertEqual("Court 2", repo.get_by_param(CourtParam("court2")).name)
 
     def test_raises_on_unknown_court_param(self):
         data = [
@@ -148,7 +150,7 @@ class TestCourtsRepository(unittest.TestCase):
             },
         ]
         repo = CourtsRepository(data)
-        self.assertEqual("Court 2", repo.get_by_code("court2").name)
+        self.assertEqual("Court 2", repo.get_by_code(CourtCode("court2")).name)
 
     def test_loads_court_with_jurisdiction_by_code(self):
         data = [
@@ -164,7 +166,7 @@ class TestCourtsRepository(unittest.TestCase):
             }
         ]
         repo = CourtsRepository(data)
-        self.assertEqual("Court 1 – Jurisdiction 1", repo.get_by_code("court1/jurisdiction1").name)
+        self.assertEqual("Court 1 – Jurisdiction 1", repo.get_by_code(CourtCode("court1/jurisdiction1")).name)
 
     def test_raises_error_for_nonexistent_jurisdictions(self):
         data = [
@@ -343,6 +345,7 @@ class TestCourt(unittest.TestCase):
     def test_get_jurisdiction(self):
         court = Court({"jurisdictions": [{"code": "jurisdiction1", "name": "Jurisdiction 1"}]})
         jurisdiction = court.get_jurisdiction("jurisdiction1")
+        assert jurisdiction
         self.assertEqual("Jurisdiction 1", jurisdiction.name)
 
     def test_get_nonexistent_jurisdiction(self):
