@@ -44,7 +44,24 @@ class RawCourt(TypedDict, total=False):
     jurisdictions: List["RawJurisdiction"]
 
 
-RawCourtRepository = List["_RawCourtListItem"]
+class RawCourtGroup(TypedDict, total=False):
+    """ Raw Court Group. """
+
+    name: Required[str]
+    """ Required property """
+
+    display_name: Required[Union[str, None]]
+    """ Required property """
+
+    is_tribunal: Required[bool]
+    """ Required property """
+
+    courts: Required[List["RawCourt"]]
+    """ Required property """
+
+
+
+RawCourtRepository = List["RawCourtGroup"]
 """
 Raw Court List.
 
@@ -69,19 +86,4 @@ class RawJurisdiction(TypedDict, total=False):
 
 _RawCourtExtraParamsItem = str
 """ pattern: ^[a-z]{2,}(/[a-z]+)?$ """
-
-
-
-class _RawCourtListItem(TypedDict, total=False):
-    name: Required[str]
-    """ Required property """
-
-    display_name: Required[Union[str, None]]
-    """ Required property """
-
-    is_tribunal: Required[bool]
-    """ Required property """
-
-    courts: Required[List["RawCourt"]]
-    """ Required property """
 

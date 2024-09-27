@@ -6,6 +6,7 @@
   "type": "array",
   "items": {
     "type": "object",
+    "title": "Raw Court Group",
     "properties": {
       "name": {
         "type": "string"
