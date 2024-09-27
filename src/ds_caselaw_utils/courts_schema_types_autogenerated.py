@@ -1,7 +1,8 @@
 # Automatically generated file from a JSON schema
 
 
-from typing import List, Required, TypedDict, Union
+from typing import List, TypedDict, Union
+from typing_extensions import Required
 
 
 class RawCourt(TypedDict, total=False):
