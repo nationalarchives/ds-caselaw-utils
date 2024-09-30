@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## v1.7.0 (2024-09-30)
+
+### Feat
+
+- **FCL-343**: Add typing to utils
+
 ## v1.6.0 (2024-09-24)
 
 ### Feat
