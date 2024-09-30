@@ -1,11 +1,12 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://schema.caselaw.nationalarchives.gov.uk/courts.schema.json",
-  "title": "Courts",
+  "title": "Raw Court List",
   "description": "A list of courts",
   "type": "array",
   "items": {
     "type": "object",
+    "title": "Raw Court Group",
     "properties": {
       "name": {
         "type": "string"
@@ -20,6 +21,7 @@
         "type": "array",
         "items": {
           "type": "object",
+          "title": "Raw Court",
           "properties": {
             "code": {
               "type": "string",
@@ -65,6 +67,7 @@
             "jurisdictions": {
               "type": "array",
               "items": {
+                "title": "Raw Jurisdiction",
                 "type": "object",
                 "properties": {
                   "prefix": {
@@ -76,7 +79,9 @@
                   "code": {
                     "type": "string"
                   }
-                }
+                },
+                "required": ["prefix", "name", "code"],
+                "additionalProperties": false
               }
             }
           },

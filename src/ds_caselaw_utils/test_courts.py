@@ -5,10 +5,14 @@ from unittest.mock import MagicMock, PropertyMock
 
 from ruamel.yaml import YAML
 
+from ds_caselaw_utils.factory import CourtFactory, make_court_repo_valid
+
 from .courts import (
     Court,
+    CourtCode,
     CourtGroup,
     CourtNotFoundException,
+    CourtParam,
     CourtsRepository,
     CourtWithJurisdiction,
     courts,
@@ -30,10 +34,11 @@ class TestCourtsRepository(unittest.TestCase):
             {
                 "name": "court_group",
                 "display_name": "court group 1",
-                "courts": [{"name": "court1", "jurisdictions": [{"name": "jurisdiction1"}]}],
+                "courts": [{"name": "court1", "jurisdictions": [{"name": "jurisdiction1", "code": "code"}]}],
             }
         ]
-        repo = CourtsRepository(data)
+        valid_data = make_court_repo_valid(data)
+        repo = CourtsRepository(valid_data)
         courts = repo.get_all()
         self.assertIn("court1", [c.name for c in courts])
         self.assertNotIn("court1 – jurisdiction1", [c.name for c in courts])
@@ -43,10 +48,11 @@ class TestCourtsRepository(unittest.TestCase):
             {
                 "name": "court_group",
                 "display_name": "court group 1",
-                "courts": [{"name": "court1", "jurisdictions": [{"name": "jurisdiction1"}]}],
+                "courts": [{"name": "court1", "jurisdictions": [{"name": "jurisdiction1", "code": "code"}]}],
             }
         ]
-        repo = CourtsRepository(data)
+        valid_data = make_court_repo_valid(data)
+        repo = CourtsRepository(valid_data)
         courts = repo.get_all(with_jurisdictions=True)
         self.assertIn("court1", [c.name for c in courts])
         self.assertIn("court1 – jurisdiction1", [c.name for c in courts])
@@ -70,7 +76,8 @@ class TestCourtsRepository(unittest.TestCase):
                 "courts": [{"name": "court3", "selectable": False}],
             },
         ]
-        repo = CourtsRepository(data)
+        valid_data = make_court_repo_valid(data)
+        repo = CourtsRepository(valid_data)
         selectable = repo.get_selectable()
         self.assertIn("court1", [c.name for c in selectable])
         self.assertNotIn("court2", [c.name for c in selectable])
@@ -100,7 +107,8 @@ class TestCourtsRepository(unittest.TestCase):
                 "courts": [{"name": "court3", "listable": False}],
             },
         ]
-        repo = CourtsRepository(data)
+        valid_data = make_court_repo_valid(data)
+        repo = CourtsRepository(valid_data)
         groups = repo.get_listable_groups()
         self.assertIn("court group 1", [g.name for g in groups])
         self.assertNotIn("court group 2", [g.name for g in groups])
@@ -119,8 +127,9 @@ class TestCourtsRepository(unittest.TestCase):
                 "courts": [{"param": "court2", "name": "Court 2"}],
             },
         ]
-        repo = CourtsRepository(data)
-        self.assertEqual("Court 2", repo.get_by_param("court2").name)
+        valid_data = make_court_repo_valid(data)
+        repo = CourtsRepository(valid_data)
+        self.assertEqual("Court 2", repo.get_by_param(CourtParam("court2")).name)
 
     def test_raises_on_unknown_court_param(self):
         data = [
@@ -133,7 +142,8 @@ class TestCourtsRepository(unittest.TestCase):
                 "courts": [{"param": "court2", "name": "Court 2"}],
             },
         ]
-        repo = CourtsRepository(data)
+        valid_data = make_court_repo_valid(data)
+        repo = CourtsRepository(valid_data)
         self.assertRaises(CourtNotFoundException, repo.get_by_param, "court3")
 
     def test_loads_court_by_code(self):
@@ -147,8 +157,9 @@ class TestCourtsRepository(unittest.TestCase):
                 "courts": [{"code": "court2", "name": "Court 2"}],
             },
         ]
-        repo = CourtsRepository(data)
-        self.assertEqual("Court 2", repo.get_by_code("court2").name)
+        valid_data = make_court_repo_valid(data)
+        repo = CourtsRepository(valid_data)
+        self.assertEqual("Court 2", repo.get_by_code(CourtCode("court2")).name)
 
     def test_loads_court_with_jurisdiction_by_code(self):
         data = [
@@ -163,8 +174,9 @@ class TestCourtsRepository(unittest.TestCase):
                 ],
             }
         ]
-        repo = CourtsRepository(data)
-        self.assertEqual("Court 1 – Jurisdiction 1", repo.get_by_code("court1/jurisdiction1").name)
+        valid_data = make_court_repo_valid(data)
+        repo = CourtsRepository(valid_data)
+        self.assertEqual("Court 1 – Jurisdiction 1", repo.get_by_code(CourtCode("court1/jurisdiction1")).name)
 
     def test_raises_error_for_nonexistent_jurisdictions(self):
         data = [
@@ -179,7 +191,8 @@ class TestCourtsRepository(unittest.TestCase):
                 ],
             }
         ]
-        repo = CourtsRepository(data)
+        valid_data = make_court_repo_valid(data)
+        repo = CourtsRepository(valid_data)
         self.assertRaises(CourtNotFoundException, repo.get_by_code, "court1/jurisdiction2")
         self.assertRaises(CourtNotFoundException, repo.get_by_code, "court2/jurisdiction1")
 
@@ -194,7 +207,8 @@ class TestCourtsRepository(unittest.TestCase):
                 "courts": [{"code": "court2", "name": "Court 2"}],
             },
         ]
-        repo = CourtsRepository(data)
+        valid_data = make_court_repo_valid(data)
+        repo = CourtsRepository(valid_data)
         self.assertRaises(CourtNotFoundException, repo.get_by_code, "court3")
 
     def test_returns_listable_courts(self):
@@ -213,7 +227,8 @@ class TestCourtsRepository(unittest.TestCase):
                 "courts": [{"param": "court3", "listable": True, "name": "Court 3"}],
             },
         ]
-        repo = CourtsRepository(data)
+        valid_data = make_court_repo_valid(data)
+        repo = CourtsRepository(valid_data)
         self.assertIn("court1", [c.canonical_param for c in repo.get_listable_courts()])
         self.assertNotIn("court2", [c.canonical_param for c in repo.get_listable_courts()])
         self.assertNotIn("court3", [c.canonical_param for c in repo.get_listable_courts()])
@@ -236,7 +251,8 @@ class TestCourtsRepository(unittest.TestCase):
                 ],
             },
         ]
-        repo = CourtsRepository(data)
+        valid_data = make_court_repo_valid(data)
+        repo = CourtsRepository(valid_data)
         self.assertNotIn("court1", [c.canonical_param for c in repo.get_listable_tribunals()])
         self.assertNotIn("court2", [c.canonical_param for c in repo.get_listable_tribunals()])
         self.assertIn("court3", [c.canonical_param for c in repo.get_listable_tribunals()])
@@ -269,7 +285,8 @@ class TestCourtsRepository(unittest.TestCase):
                 ],
             },
         ]
-        repo = CourtsRepository(data)
+        valid_data = make_court_repo_valid(data)
+        repo = CourtsRepository(valid_data)
         groups = repo.get_grouped_selectable_courts()
         self.assertIn("Court group", [g.name for g in groups])
         self.assertNotIn("Tribunal group", [g.name for g in groups])
@@ -305,7 +322,8 @@ class TestCourtsRepository(unittest.TestCase):
                 ],
             },
         ]
-        repo = CourtsRepository(data)
+        valid_data = make_court_repo_valid(data)
+        repo = CourtsRepository(valid_data)
         groups = repo.get_grouped_selectable_tribunals()
         self.assertIn("Tribunal group", [g.name for g in groups])
         self.assertNotIn("Court group", [g.name for g in groups])
@@ -316,42 +334,43 @@ class TestCourtsRepository(unittest.TestCase):
 
 class TestCourt(unittest.TestCase):
     def test_repr_string(self):
-        court = Court({"name": "court_name"})
+        court = CourtFactory({"name": "court_name"})
         self.assertEqual("court_name", str(court))
         self.assertEqual("court_name", repr(court))
 
     def test_grouped_name_explicit(self):
-        court = Court({"grouped_name": "court_name"})
+        court = CourtFactory({"grouped_name": "court_name"})
         self.assertEqual("court_name", court.grouped_name)
 
     def test_grouped_name_default(self):
-        court = Court({"name": "court_name"})
+        court = CourtFactory({"name": "court_name"})
         self.assertEqual("court_name", court.grouped_name)
 
     def test_param_aliases(self):
-        court = Court({"param": "param_1", "extra_params": ["param_2"]})
+        court = CourtFactory({"param": "param_1", "extra_params": ["param_2"]})
         self.assertEqual(["param_1", "param_2"], court.param_aliases)
 
     def test_end_year_explicit(self):
-        court = Court({"end_year": 1983})
+        court = CourtFactory({"end_year": 1983})
         self.assertEqual(1983, court.end_year)
 
     def test_end_year_default(self):
-        court = Court({})
+        court = CourtFactory({})
         self.assertEqual(date.today().year, court.end_year)
 
     def test_get_jurisdiction(self):
-        court = Court({"jurisdictions": [{"code": "jurisdiction1", "name": "Jurisdiction 1"}]})
+        court = CourtFactory({"jurisdictions": [{"code": "jurisdiction1", "name": "Jurisdiction 1"}]})
         jurisdiction = court.get_jurisdiction("jurisdiction1")
+        assert jurisdiction
         self.assertEqual("Jurisdiction 1", jurisdiction.name)
 
     def test_get_nonexistent_jurisdiction(self):
-        court = Court({"jurisdictions": [{"code": "jurisdiction1", "name": "Jurisdiction 1"}]})
+        court = CourtFactory({"jurisdictions": [{"code": "jurisdiction1", "name": "Jurisdiction 1"}]})
         jurisdiction = court.get_jurisdiction("jurisdiction2")
         self.assertIsNone(jurisdiction)
 
     def test_expand_jurisdictions(self):
-        court = Court(
+        court = CourtFactory(
             {
                 "name": "Court 1",
                 "jurisdictions": [{"code": "jurisdiction1", "name": "Jurisdiction 1"}],
