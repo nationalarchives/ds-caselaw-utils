@@ -24,7 +24,7 @@ JurisdictionCode = NewType("JurisdictionCode", str)
 class Jurisdiction:
     def __init__(self, data: RawJurisdiction):
         self.code: JurisdictionCode = JurisdictionCode(data["code"])
-        self.name = data["name"]
+        self.name: str = data["name"]
         self.prefix: Optional[str] = data.get("prefix")
 
 
@@ -126,15 +126,15 @@ class CourtNotFoundException(Exception):
 
 class CourtsRepository:
     def __init__(self, data: RawCourtRepository):
-        self._data = data
-        self._byParam = {}
-        self._byCode = {}
+        self._data: RawCourtRepository = data
+        self._byParam: dict[CourtParam, Court] = {}
+        self._byCode: dict[CourtCode, Court] = {}
         for group in self._data:
             for courtData in group.get("courts", []):
                 court = Court(courtData)
                 if "param" in courtData:
-                    self._byParam[courtData.get("param")] = court
-                self._byCode[courtData["code"]] = court
+                    self._byParam[CourtParam(courtData["param"])] = court
+                self._byCode[CourtCode(courtData["code"])] = court
 
     def get_by_param(self, param: CourtParam) -> Court:
         try:
