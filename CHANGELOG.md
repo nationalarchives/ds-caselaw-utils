@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## v1.7.1 (2024-10-01)
+
+### Fix
+
+- **courts**: add additional type statements for stricter behaviour of courts repository
+
 ## v1.7.0 (2024-09-30)
 
 ### Feat
