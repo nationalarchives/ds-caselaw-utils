@@ -420,13 +420,13 @@ class TestCourtWithJurisdiction(unittest.TestCase):
         self.assertEqual(cwj.link, "court_link")
         court.mock_link.assert_called()
 
-    def test_ncn(self):
-        # It returns the court ncn
-        court = mock_with_properties({"ncn": "court_ncn"})
+    def test_ncn_pattern(self):
+        # It returns the court's NCN pattern
+        court = mock_with_properties({"ncn_pattern": "court_ncn"})
         jurisdiction = mock_with_properties()
         cwj = CourtWithJurisdiction(court, jurisdiction)
-        self.assertEqual(cwj.ncn, "court_ncn")
-        court.mock_ncn.assert_called()
+        self.assertEqual(cwj.ncn_pattern, "court_ncn")
+        court.mock_ncn_pattern.assert_called()
 
     def test_canonical_param(self):
         # It returns the court canonical_param
