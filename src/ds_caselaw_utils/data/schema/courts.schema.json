@@ -44,7 +44,9 @@
                 "pattern": "^[a-z]{2,}(/[a-z]+)?$"
               }
             },
-            "ncn": {
+            "ncn_pattern": {
+              "title": "Neutral Citation Pattern",
+              "description": "A regular expression pattern which matches valid NCNs from this court.",
               "type": "string"
             },
             "link": {

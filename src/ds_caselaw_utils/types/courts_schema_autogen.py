@@ -23,7 +23,13 @@ class RawCourt(TypedDict, total=False):
     """ pattern: ^[a-z]{2,}(?:/[a-z0-9]+)?$ """
 
     extra_params: List["_RawCourtExtraParamsItem"]
-    ncn: str
+    ncn_pattern: str
+    """
+    Neutral Citation Pattern.
+
+    A regular expression pattern which matches valid NCNs from this court.
+    """
+
     link: Required[str]
     """
     format: uri

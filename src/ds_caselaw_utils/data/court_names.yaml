@@ -5,7 +5,7 @@
     - code: UKSC
       name: United Kingdom Supreme Court
       link: https://www.supremecourt.uk/
-      ncn: \[(\d{4})\] (UKSC) (\d+)
+      ncn_pattern: \[(\d{4})\] (UKSC) (\d+)
       param: "uksc"
       start_year: 2014
       selectable: true
@@ -17,7 +17,7 @@
     - code: UKPC
       name: Privy Council
       link: https://www.jcpc.uk/
-      ncn: \[(\d{4})\] (UKPC) (\d+)
+      ncn_pattern: \[(\d{4})\] (UKPC) (\d+)
       param: "ukpc"
       start_year: 2014
       selectable: true
@@ -30,7 +30,7 @@
       grouped_name: "Civil Division"
       name: "Court of Appeal (Civil Division)"
       link: https://www.gov.uk/courts-tribunals/court-of-appeal-civil-division
-      ncn: \[(\d{4})\] (EWCA) (Civ) (\d+)
+      ncn_pattern: \[(\d{4})\] (EWCA) (Civ) (\d+)
       param: "ewca/civ"
       start_year: 2003
       selectable: true
@@ -39,7 +39,7 @@
       grouped_name: "Criminal Division"
       name: Court of Appeal (Criminal Division)
       link: https://www.gov.uk/courts-tribunals/court-of-appeal-criminal-division
-      ncn: \[(\d{4})\] (EWCA) (Crim) (\d+)
+      ncn_pattern: \[(\d{4})\] (EWCA) (Crim) (\d+)
       param: "ewca/crim"
       start_year: 2003
       selectable: true
@@ -52,7 +52,7 @@
       grouped_name: "Administrative Court"
       name: High Court (Administrative Court)
       link: https://www.gov.uk/courts-tribunals/administrative-court
-      ncn: \[(\d{4})\] (EWHC) (\d+) \((Admin)\)
+      ncn_pattern: \[(\d{4})\] (EWHC) (\d+) \((Admin)\)
       param: "ewhc/admin"
       start_year: 2003
       selectable: true
@@ -61,7 +61,7 @@
       grouped_name: "Administrative Court"
       name: High Court (Administrative Court)
       link: https://www.gov.uk/courts-tribunals/administrative-court
-      ncn: \[(\d{4})\] (EWHC) (\d+) \((Admin)\)
+      ncn_pattern: \[(\d{4})\] (EWHC) (\d+) \((Admin)\)
       param: "ewhc/admin"
       start_year: 2022
       selectable: false
@@ -70,7 +70,7 @@
       grouped_name: "Admiralty Court"
       name: High Court (Admiralty Division)
       link: https://www.gov.uk/courts-tribunals/admiralty-court
-      ncn: \[(\d{4})\] (EWHC) (\d+) \((Admlty)\)
+      ncn_pattern: \[(\d{4})\] (EWHC) (\d+) \((Admlty)\)
       param: "ewhc/admlty"
       start_year: 2003
       selectable: true
@@ -79,7 +79,7 @@
       grouped_name: "Admiralty Court"
       name: High Court (Admiralty Division)
       link: https://www.gov.uk/courts-tribunals/admiralty-court
-      ncn: \[(\d{4})\] (EWHC) (\d+) \((Admlty)\)
+      ncn_pattern: \[(\d{4})\] (EWHC) (\d+) \((Admlty)\)
       param: "ewhc/admlty"
       start_year: 2022
       selectable: false
@@ -118,7 +118,7 @@
       grouped_name: Chancery Division
       name: High Court (Chancery Division)
       link: https://www.gov.uk/courts-tribunals/chancery-division-of-the-high-court
-      ncn: \[(\d{4})\] (EWHC) (\d+) \((Ch)\)
+      ncn_pattern: \[(\d{4})\] (EWHC) (\d+) \((Ch)\)
       param: "ewhc/ch"
       start_year: 2003
       selectable: true
@@ -127,21 +127,21 @@
       grouped_name: Circuit Commercial Court
       name: High Court (Circuit Commercial Court)
       link: https://www.gov.uk/courts-tribunals/commercial-circuit-court
-      ncn: \[(\d{4})\] (EWHC) (\d+) \((Comm)\)
+      ncn_pattern: \[(\d{4})\] (EWHC) (\d+) \((Comm)\)
       selectable: false
       listable: false
     - code: EWHC-KBD-Commercial-Circuit
       grouped_name: Circuit Commercial Court
       name: High Court (Circuit Commercial Court)
       link: https://www.gov.uk/courts-tribunals/commercial-circuit-court
-      ncn: \[(\d{4})\] (EWHC) (\d+) \((Comm)\)
+      ncn_pattern: \[(\d{4})\] (EWHC) (\d+) \((Comm)\)
       selectable: false
       listable: false
     - code: EWHC-QBD-Commercial
       grouped_name: Commercial Court
       name: High Court (Commercial Court)
       link: https://www.gov.uk/courts-tribunals/commercial-court
-      ncn: \[(\d{4})\] (EWHC) (\d+) \((Comm)\)
+      ncn_pattern: \[(\d{4})\] (EWHC) (\d+) \((Comm)\)
       param: "ewhc/comm"
       start_year: 2003
       selectable: true
@@ -150,7 +150,7 @@
       grouped_name: Commercial Court
       name: High Court (Commercial Court)
       link: https://www.gov.uk/courts-tribunals/commercial-court
-      ncn: \[(\d{4})\] (EWHC) (\d+) \((Comm)\)
+      ncn_pattern: \[(\d{4})\] (EWHC) (\d+) \((Comm)\)
       param: "ewhc/comm"
       start_year: 2022
       selectable: false
@@ -159,7 +159,7 @@
       grouped_name: Family Division
       name: High Court (Family Division)
       link: https://www.gov.uk/courts-tribunals/family-division-of-the-high-court
-      ncn: \[(\d{4})\] (EWHC) (\d+) \((Fam)\)
+      ncn_pattern: \[(\d{4})\] (EWHC) (\d+) \((Fam)\)
       param: "ewhc/fam"
       start_year: 2003
       selectable: true
@@ -168,14 +168,14 @@
       grouped_name: Financial List
       name: High Court (Financial List)
       link: https://www.gov.uk/courts-tribunals/the-financial-list
-      ncn: \[(\d{4})\] (EWHC) (\d+) \((Comm)\)
+      ncn_pattern: \[(\d{4})\] (EWHC) (\d+) \((Comm)\)
       selectable: false
       listable: false
     - code: EWHC-KBD-Commercial-Financial
       grouped_name: Financial List
       name: High Court (Financial List)
       link: https://www.gov.uk/courts-tribunals/the-financial-list
-      ncn: \[(\d{4})\] (EWHC) (\d+) \((Comm)\)
+      ncn_pattern: \[(\d{4})\] (EWHC) (\d+) \((Comm)\)
       selectable: false
       listable: false
     - code: EWHC-Chancery-Financial
@@ -194,7 +194,7 @@
       grouped_name: Intellectual Property Enterprise Court
       name: High Court (Intellectual Property Enterprise Court)
       link: https://www.gov.uk/courts-tribunals/intellectual-property-enterprise-court
-      ncn: \[(\d{4})\] (EWHC) (\d+) \((IPEC)\)
+      ncn_pattern: \[(\d{4})\] (EWHC) (\d+) \((IPEC)\)
       param: "ewhc/ipec"
       start_year: 2003
       selectable: true
@@ -209,7 +209,7 @@
       grouped_name: King's / Queen's Bench Division
       name: High Court (King's / Queen's Bench Division)
       link: https://www.gov.uk/courts-tribunals/kings-bench-division-of-the-high-court
-      ncn: \[(\d{4})\] (EWHC) (\d+) \((KB)\)
+      ncn_pattern: \[(\d{4})\] (EWHC) (\d+) \((KB)\)
       param: "ewhc/kb"
       extra_params: ["ewhc/qb"]
       start_year: 2003
@@ -219,7 +219,7 @@
       grouped_name: King's Bench Division
       name: High Court (King's Bench Division)
       link: https://www.gov.uk/courts-tribunals/kings-bench-division-of-the-high-court
-      ncn: \[(\d{4})\] (EWHC) (\d+) \((KB)\)
+      ncn_pattern: \[(\d{4})\] (EWHC) (\d+) \((KB)\)
       param: "ewhc/kb"
       start_year: 2022
       selectable: false
@@ -228,7 +228,7 @@
       grouped_name: Mercantile Court
       name: High Court (Mercantile Court)
       link: https://www.gov.uk/courts-tribunals/intellectual-property-enterprise-court
-      ncn: \[(\d{4})\] (EWHC) (\d+) \((IPEC)\)
+      ncn_pattern: \[(\d{4})\] (EWHC) (\d+) \((IPEC)\)
       param: "ewhc/mercantile"
       start_year: 2008
       end_year: 2014
@@ -238,7 +238,7 @@
       grouped_name: Patents Court
       name: High Court (Patents Court)
       link: https://www.gov.uk/courts-tribunals/patents-court
-      ncn: \[(\d{4})\] (EWHC) (\d+) \((Pat)\)
+      ncn_pattern: \[(\d{4})\] (EWHC) (\d+) \((Pat)\)
       param: "ewhc/pat"
       start_year: 2003
       selectable: true
@@ -247,7 +247,7 @@
       grouped_name: Queen's Bench Division
       name: High Court (Queen's Bench Division)
       link: https://www.gov.uk/courts-tribunals/queens-bench-division-of-the-high-court
-      ncn: \[(\d{4})\] (EWHC) (\d+) \((QB)\)
+      ncn_pattern: \[(\d{4})\] (EWHC) (\d+) \((QB)\)
       param: "ewhc/qb"
       start_year: 2003
       end_year: 2022
@@ -275,7 +275,7 @@
       grouped_name: Senior Courts Costs Office
       name: High Court (Senior Court Costs Office)
       link: https://www.gov.uk/courts-tribunals/senior-courts-costs-office
-      ncn: \[(\d{4})\] (EWHC) (\d+) \((SCCO)\)
+      ncn_pattern: \[(\d{4})\] (EWHC) (\d+) \((SCCO)\)
       param: "ewhc/scco"
       extra_params: ["ewhc/costs"]
       start_year: 2003
@@ -285,7 +285,7 @@
       grouped_name: Technology and Construction Court
       name: High Court (Technology and Construction Court)
       link: https://www.gov.uk/courts-tribunals/technology-and-construction-court
-      ncn: \[(\d{4})\] (EWHC) (\d+) \((TCC)\)
+      ncn_pattern: \[(\d{4})\] (EWHC) (\d+) \((TCC)\)
       param: "ewhc/tcc"
       start_year: 2003
       selectable: true
@@ -294,7 +294,7 @@
       grouped_name: Technology and Construction Court
       name: High Court (Technology and Construction Court)
       link: https://www.gov.uk/courts-tribunals/technology-and-construction-court
-      ncn: \[(\d{4})\] (EWHC) (\d+) \((TCC)\)
+      ncn_pattern: \[(\d{4})\] (EWHC) (\d+) \((TCC)\)
       param: "ewhc/tcc"
       start_year: 2022
       selectable: false
@@ -306,7 +306,7 @@
     - code: "EWCR"
       name: "Crown Court"
       link: https://www.judiciary.uk/courts-and-tribunals/crown-court/
-      ncn: \[(\d{4})\] (EWCR) (\d+)
+      ncn_pattern: \[(\d{4})\] (EWCR) (\d+)
       param: "ewcr"
       start_year: 2024
       selectable: true
@@ -314,7 +314,7 @@
     - code: "EWCC"
       name: "County Court"
       link: https://www.judiciary.uk/courts-and-tribunals/county-court/
-      ncn: \[(\d{4})\] (EWCC) (\d+)
+      ncn_pattern: \[(\d{4})\] (EWCC) (\d+)
       param: "ewcc"
       start_year: 2024
       selectable: true
@@ -322,7 +322,7 @@
     - code: EWFC
       name: Family Court
       link: https://www.judiciary.uk/you-and-the-judiciary/going-to-court/family-law-courts/
-      ncn: \[(\d{4})\] (EWFC) (\d+)
+      ncn_pattern: \[(\d{4})\] (EWFC) (\d+)
       param: "ewfc"
       start_year: 2009
       selectable: true
@@ -331,7 +331,7 @@
       name: Family Court (B - district and circuit judges)
       # This is an artifact of how the Family Court creates tiers of importance.
       link: https://www.judiciary.uk/you-and-the-judiciary/going-to-court/family-law-courts/
-      ncn: \[(\d{4})\] (EWFC) (B) (\d+)
+      ncn_pattern: \[(\d{4})\] (EWFC) (B) (\d+)
       param: "ewfc/b"
       start_year: 2009
       selectable: false
@@ -339,7 +339,7 @@
     - code: EWCOP
       name: Court of Protection
       link: https://www.gov.uk/courts-tribunals/court-of-protection
-      ncn: \[(\d{4})\] (EWCOP) (\d+)
+      ncn_pattern: \[(\d{4})\] (EWCOP) (\d+)
       param: "ewcop"
       start_year: 2009
       selectable: true
@@ -347,7 +347,7 @@
     - code: EWCOP-T1
       name: Court of Protection (Tier 1 - district judges)
       link: https://www.gov.uk/courts-tribunals/court-of-protection
-      ncn: \[(\d{4})\] (EWCOP) (T1) (\d+)
+      ncn_pattern: \[(\d{4})\] (EWCOP) (T1) (\d+)
       param: "ewcop/t1"
       start_year: 2009
       selectable: false
@@ -355,7 +355,7 @@
     - code: EWCOP-T2
       name: Court of Protection (Tier 2 - circuit judges)
       link: https://www.gov.uk/courts-tribunals/court-of-protection
-      ncn: \[(\d{4})\] (EWCOP) (T2) (\d+)
+      ncn_pattern: \[(\d{4})\] (EWCOP) (T2) (\d+)
       param: "ewcop/t2"
       start_year: 2009
       selectable: false
@@ -363,7 +363,7 @@
     - code: EWCOP-T3
       name: Court of Protection (Tier 3 - high court judges)
       link: https://www.gov.uk/courts-tribunals/court-of-protection
-      ncn: \[(\d{4})\] (EWCOP) (T3) (\d+)
+      ncn_pattern: \[(\d{4})\] (EWCOP) (T3) (\d+)
       param: "ewcop/t3"
       start_year: 2009
       selectable: false
@@ -376,7 +376,7 @@
     - code: UKIPT
       name: Investigatory Powers Tribunal
       link: https://investigatorypowerstribunal.org.uk/about-the-tribunal/
-      ncn: \[(\d{4})\] (UKIPTrib) (\d+)
+      ncn_pattern: \[(\d{4})\] (UKIPTrib) (\d+)
       selectable: true
       listable: true
       param: "ukiptrib"
@@ -389,7 +389,7 @@
     - code: EAT
       name: Employment Appeal Tribunal
       link: https://www.gov.uk/courts-tribunals/employment-appeal-tribunal
-      ncn: \[(\d{4})\] (EAT) (\d+)
+      ncn_pattern: \[(\d{4})\] (EAT) (\d+)
       selectable: true
       listable: true
       param: "eat"
@@ -402,7 +402,7 @@
       grouped_name: Administrative Appeals Chamber
       name: Upper Tribunal (Administrative Appeals Chamber)
       link: https://www.gov.uk/courts-tribunals/upper-tribunal-administrative-appeals-chamber
-      ncn: \[(\d{4})\] (UKUT) (\d+) \((AAC)\)
+      ncn_pattern: \[(\d{4})\] (UKUT) (\d+) \((AAC)\)
       selectable: true
       listable: true
       param: "ukut/aac"
@@ -411,7 +411,7 @@
       grouped_name: Immigration and Asylum Chamber
       name: Upper Tribunal (Immigration and Asylum Chamber)
       link: https://www.gov.uk/courts-tribunals/upper-tribunal-immigration-and-asylum-chamber
-      ncn: \[(\d{4})\] (UKUT) (\d+) \((IAC)\)
+      ncn_pattern: \[(\d{4})\] (UKUT) (\d+) \((IAC)\)
       selectable: true
       listable: true
       param: "ukut/iac"
@@ -423,14 +423,14 @@
       param: "ukait"
       name: Asylum & Immigration Tribunal
       link: https://www.gov.uk/courts-tribunals/upper-tribunal-immigration-and-asylum-chamber
-      ncn: \[(\d{4})\] (UKAIT) (\d+)
+      ncn_pattern: \[(\d{4})\] (UKAIT) (\d+)
       start_year: 2003
       end_year: 2010
     - code: UKUT-LC
       grouped_name: Lands Chamber
       name: Upper Tribunal (Lands Chamber)
       link: https://www.gov.uk/courts-tribunals/upper-tribunal-lands-chamber
-      ncn: \[(\d{4})\] (UKUT) (\d+) \((LC)\)
+      ncn_pattern: \[(\d{4})\] (UKUT) (\d+) \((LC)\)
       selectable: true
       listable: true
       param: "ukut/lc"
@@ -439,7 +439,7 @@
       grouped_name: Tax and Chancery Chamber
       name: Upper Tribunal (Tax and Chancery Chamber)
       link: https://www.gov.uk/courts-tribunals/upper-tribunal-tax-and-chancery-chamber
-      ncn: \[(\d{4})\] (UKUT) (\d+) \((TCC)\)
+      ncn_pattern: \[(\d{4})\] (UKUT) (\d+) \((TCC)\)
       selectable: true
       listable: true
       param: "ukut/tcc"
@@ -460,7 +460,7 @@
       name: First-tier Tribunal (General Regulatory Chamber)
       param: "ukftt/grc"
       link: https://www.gov.uk/courts-tribunals/first-tier-tribunal-general-regulatory-chamber
-      ncn: \[(\d{4})\] (UKFTT) (\d+) \((GRC)\)
+      ncn_pattern: \[(\d{4})\] (UKFTT) (\d+) \((GRC)\)
       start_year: 2022
       selectable: true
       listable: true
@@ -514,7 +514,7 @@
       grouped_name: Tax Chamber
       name: First-tier Tribunal (Tax Chamber)
       link: https://www.gov.uk/courts-tribunals/first-tier-tribunal-tax
-      ncn: \[(\d{4})\] (UKFTT) (\d+) \((TC)\)
+      ncn_pattern: \[(\d{4})\] (UKFTT) (\d+) \((TC)\)
       param: "ukftt/tc"
       start_year: 2022
       selectable: true
