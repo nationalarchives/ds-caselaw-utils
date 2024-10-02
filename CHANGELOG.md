@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file.
 
+## v2.0.0 (2024-10-02)
+
+### BREAKING CHANGE
+
+- `Court.ncn` is now `Court.ncn_pattern`, and now returns a `NeutralCitationPattern` which is a subtype of `re.Pattern[str]`.
+- Existing calls to `neutral_url()` will need to be made type-aware in all downstream projects where typechecking is used.
+
+### Feat
+
+- **Court**: make it clearer what Court.ncn actually means
+- **types**: add new types for NCN-related strings
+
+### Fix
+
+- **courts**: add additional type statements for stricter behaviour of courts repository
+
+### Refactor
+
+- **types**: move autogen court types to new types submodule
+
 ## v1.7.0 (2024-09-30)
 
 ### Feat
