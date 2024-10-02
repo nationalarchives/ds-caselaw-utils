@@ -6,7 +6,7 @@ Get metada data for the courts covered by the service
 
 import pathlib
 from datetime import date
-from typing import NewType, Optional
+from typing import Optional
 
 from ruamel.yaml import YAML
 
@@ -16,9 +16,7 @@ from ds_caselaw_utils.types.courts_schema_autogen import (
     RawJurisdiction,
 )
 
-CourtCode = NewType("CourtCode", str)
-CourtParam = NewType("CourtParam", str)
-JurisdictionCode = NewType("JurisdictionCode", str)
+from .types import CourtCode, CourtParam, JurisdictionCode, NeutralCitationString
 
 
 class Jurisdiction:
@@ -36,7 +34,7 @@ class Court:
         self.name: str = data["name"]
         self.grouped_name: str = data.get("grouped_name") or data["name"]
         self.link: str = data["link"]
-        self.ncn: Optional[str] = data.get("ncn")
+        self.ncn: Optional[NeutralCitationString] = NeutralCitationString(data["ncn"]) if "ncn" in data else None
         if "param" in data:
             self.canonical_param = CourtParam(data["param"])
             self.param_aliases = [CourtParam(data["param"])] + [
@@ -85,7 +83,7 @@ class CourtWithJurisdiction(Court):
         return self.court.link
 
     @property
-    def ncn(self) -> Optional[str]:
+    def ncn(self) -> Optional[NeutralCitationString]:
         return self.court.ncn
 
     @property
