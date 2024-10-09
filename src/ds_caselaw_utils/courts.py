@@ -120,6 +120,9 @@ class CourtGroup:
         """Is this group displayed in the PUI?"""
         return self.name is not None
 
+    def __repr__(self) -> str:
+        return f"CourtGroup({self.name!r}, {self.courts!r})"
+
 
 class CourtNotFoundException(Exception):
     pass
@@ -136,6 +139,9 @@ class CourtsRepository:
                 if "param" in courtData:
                     self._byParam[CourtParam(courtData["param"])] = court
                 self._byCode[CourtCode(courtData["code"])] = court
+
+    def __repr__(self) -> str:
+        return f"CourtsRepository({self._data!r})"
 
     def get_by_param(self, param: CourtParam) -> Court:
         try:
