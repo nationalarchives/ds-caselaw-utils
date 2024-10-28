@@ -331,6 +331,21 @@ class TestCourtsRepository(unittest.TestCase):
         self.assertNotIn("Unselectable tribunal", [c.name for g in groups for c in g.courts])
         self.assertNotIn("Selectable court", [c.name for g in groups for c in g.courts])
 
+    def test_repr(self):
+        data = [
+            {
+                "name": "group1",
+                "display_name": "Court group",
+                "is_tribunal": False,
+                "courts": [
+                    {"param": "court1", "selectable": True, "name": "Selectable court"},
+                ],
+            }
+        ]
+        valid_data = make_court_repo_valid(data)
+        repo = CourtsRepository(valid_data)
+        assert "'name': 'group1', 'display_name': 'Court group'" in str(repo)
+
 
 class TestCourt(unittest.TestCase):
     def test_repr_string(self):
@@ -477,6 +492,10 @@ class TestCourtGroup(unittest.TestCase):
     def test_dont_display_heading_when_no_display_name(self):
         group = CourtGroup(None, [])
         assert not group.display_heading
+
+    def test_repr(self):
+        group = CourtGroup("name", [])
+        assert str(group) == "CourtGroup('name', [])"
 
 
 class TestCourts(unittest.TestCase):
