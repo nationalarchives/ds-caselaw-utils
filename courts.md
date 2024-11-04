@@ -70,7 +70,7 @@
 | Court of Protection | EWCOP | ewcop | 2009 | – | ✅ | ✅ |
 | Crown Court | EWCR | ewcr | 2024 | – | ✅ | ✅ |
 | Family Court (B - district and circuit judges) | EWFC-B | ewfc/b | 2009 | – | ❌ | ❌ |
-| Family Court | EWFC | ewfc | 2009 | – | ✅ | ✅ |
+| Family Court (high court judges) | EWFC | ewfc | 2009 | – | ✅ | ✅ |
 
 ## investigatory_powers_tribunal
 
