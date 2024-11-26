@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## v2.0.1 (2024-11-25)
+
+### Fix
+
+- **neutral_url**: neutral_url no longer returns URIs with a leading slash
+
 ## v2.0.0 (2024-10-02)
 
 ### BREAKING CHANGE
