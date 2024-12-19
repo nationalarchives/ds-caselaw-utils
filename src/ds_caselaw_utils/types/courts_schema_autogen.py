@@ -1,7 +1,7 @@
 # Automatically generated file from a JSON schema
 
 
-from typing import List, TypedDict, Union
+from typing import TypedDict, Union
 from typing_extensions import Required
 
 
@@ -22,7 +22,7 @@ class RawCourt(TypedDict, total=False):
     param: str
     """ pattern: ^[a-z]{2,}(?:/[a-z0-9]+)?$ """
 
-    extra_params: List["_RawCourtExtraParamsItem"]
+    extra_params: list["_RawCourtExtraParamsItem"]
     ncn_pattern: str
     """
     Neutral Citation Pattern.
@@ -47,7 +47,7 @@ class RawCourt(TypedDict, total=False):
     selectable: Required[bool]
     """ Required property """
 
-    jurisdictions: List["RawJurisdiction"]
+    jurisdictions: list["RawJurisdiction"]
 
 
 class RawCourtGroup(TypedDict, total=False):
@@ -62,12 +62,12 @@ class RawCourtGroup(TypedDict, total=False):
     is_tribunal: Required[bool]
     """ Required property """
 
-    courts: Required[List["RawCourt"]]
+    courts: Required[list["RawCourt"]]
     """ Required property """
 
 
 
-RawCourtRepository = List["RawCourtGroup"]
+RawCourtRepository = list["RawCourtGroup"]
 """
 Raw Court List.
 
