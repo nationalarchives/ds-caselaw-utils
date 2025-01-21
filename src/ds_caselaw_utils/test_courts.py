@@ -1,7 +1,7 @@
 import pathlib
 import unittest
 from datetime import date
-from unittest.mock import MagicMock, PropertyMock
+from unittest.mock import MagicMock, PropertyMock, mock_open, patch
 
 from ruamel.yaml import YAML
 
@@ -396,6 +396,19 @@ class TestCourt(unittest.TestCase):
         self.assertIn("Court 1 – Jurisdiction 1", [c.name for c in expanded])
         for c in expanded:
             assert issubclass(type(c), Court)
+
+    def test_description_text_as_html_if_no_canonical_param(self):
+        court = CourtFactory({"param": "test"})
+        assert court.description_text_as_html is None
+
+    def test_description_text_as_html_if_no_file(self):
+        court = CourtFactory({"param": "test"})
+        assert court.description_text_as_html is None
+
+    def test_description_text_as_html_if_file(self):
+        court = CourtFactory({"param": "test"})
+        with patch("pathlib.Path.is_file", True), patch("builtins.open", mock_open(read_data="**Test** description.")):
+            assert court.description_text_as_html == "<p><strong>Test</strong> description.</p>\n"
 
 
 class TestCourtWithJurisdiction(unittest.TestCase):

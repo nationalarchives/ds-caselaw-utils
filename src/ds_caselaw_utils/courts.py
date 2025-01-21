@@ -6,9 +6,12 @@ Get metadata for the courts covered by the service
 
 import pathlib
 from datetime import date
+from functools import cached_property
 from re import compile
 from typing import Optional
 
+from markdown_it import MarkdownIt
+from mdit_py_plugins.attrs import attrs_plugin
 from ruamel.yaml import YAML
 
 from ds_caselaw_utils.types.courts_schema_autogen import (
@@ -18,6 +21,8 @@ from ds_caselaw_utils.types.courts_schema_autogen import (
 )
 
 from .types import CourtCode, CourtParam, JurisdictionCode, NeutralCitationPattern
+
+md = MarkdownIt("commonmark", {"breaks": True, "html": True}).use(attrs_plugin)
 
 
 class Jurisdiction:
@@ -58,6 +63,19 @@ class Court:
 
     def expand_jurisdictions(self) -> list["Court"]:
         return [self] + [CourtWithJurisdiction(self, jurisdiction) for jurisdiction in self.jurisdictions]
+
+    @cached_property
+    def description_text_as_html(self) -> Optional[str]:
+        if not self.canonical_param:
+            return None
+
+        filename = self.canonical_param.replace("/", "_")
+        description_md_file_path = pathlib.Path(__file__).parent / f"data/descriptions/{filename}.md"
+        try:
+            with open(description_md_file_path) as file:
+                return str(md.render(file.read()))
+        except FileNotFoundError:
+            return None
 
     def __repr__(self) -> str:
         return self.name
