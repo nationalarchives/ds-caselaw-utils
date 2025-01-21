@@ -1,14 +1,17 @@
 # mypy: disable-error-code="override"
 
 """
-Get metada data for the courts covered by the service
+Get metadata for the courts covered by the service
 """
 
 import pathlib
 from datetime import date
+from functools import cached_property
 from re import compile
 from typing import Optional
 
+from markdown_it import MarkdownIt
+from mdit_py_plugins.attrs import attrs_plugin
 from ruamel.yaml import YAML
 
 from ds_caselaw_utils.types.courts_schema_autogen import (
@@ -18,6 +21,8 @@ from ds_caselaw_utils.types.courts_schema_autogen import (
 )
 
 from .types import CourtCode, CourtParam, JurisdictionCode, NeutralCitationPattern
+
+md = MarkdownIt("commonmark", {"breaks": True, "html": True}).use(attrs_plugin)
 
 
 class Jurisdiction:
@@ -58,6 +63,28 @@ class Court:
 
     def expand_jurisdictions(self) -> list["Court"]:
         return [self] + [CourtWithJurisdiction(self, jurisdiction) for jurisdiction in self.jurisdictions]
+
+    def _render_markdown_text(self, type: str) -> Optional[str]:
+        if not self.canonical_param:
+            return None
+
+        filename = self.canonical_param.replace("/", "_")
+        description_md_file_path = pathlib.Path(__file__).parent / f"data/markdown/{type}/{filename}.md"
+        try:
+            with open(description_md_file_path) as file:
+                return str(md.render(file.read()))
+        except FileNotFoundError:
+            return None
+
+    @cached_property
+    def description_text_as_html(self) -> Optional[str]:
+        """Get the description of the court (where present)."""
+        return self._render_markdown_text("description")
+
+    @cached_property
+    def historic_documents_support_text_as_html(self) -> Optional[str]:
+        """Get support information (where present) on accessing historic court documents not held in FCL."""
+        return self._render_markdown_text("historic_docs")
 
     def __repr__(self) -> str:
         return self.name

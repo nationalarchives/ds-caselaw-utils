@@ -41,6 +41,7 @@ repos:
         additional_dependencies:
           - types-PyYAML
           - ruamel.yaml
+          - markdown-it-py
         args:
           - --strict
         files: ^(src/ds_caselaw_utils|scripts)
