@@ -1,7 +1,7 @@
 # mypy: disable-error-code="override"
 
 """
-Get metada data for the courts covered by the service
+Get metadata for the courts covered by the service
 """
 
 import pathlib
