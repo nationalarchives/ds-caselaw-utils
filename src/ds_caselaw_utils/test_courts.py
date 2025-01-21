@@ -418,6 +418,14 @@ class TestCourt(unittest.TestCase):
         assert court.description_text_as_html == "<p>Description.</p>"
         mock_render.assert_called_once_with("description")
 
+    @patch("ds_caselaw_utils.courts.Court._render_markdown_text")
+    def test_old_documents_support_text_as_html(self, mock_render):
+        court = CourtFactory({"param": "test"})
+        mock_render.return_value = "<p>Support text.</p>"
+
+        assert court.old_documents_support_text_as_html == "<p>Support text.</p>"
+        mock_render.assert_called_once_with("old_docs")
+
 
 class TestCourtWithJurisdiction(unittest.TestCase):
     def test_code(self):

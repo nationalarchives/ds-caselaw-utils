@@ -1,0 +1,1 @@
+You can read more about how to find older Privy Council and Judicial Committee of the Privy Council records held by The National Archives in the [Privy Council research guide](https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/privy-council-since-1386/){target="\_blank"}.

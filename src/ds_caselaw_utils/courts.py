@@ -80,6 +80,10 @@ class Court:
     def description_text_as_html(self) -> Optional[str]:
         return self._render_markdown_text("description")
 
+    @cached_property
+    def old_documents_support_text_as_html(self) -> Optional[str]:
+        return self._render_markdown_text("old_docs")
+
     def __repr__(self) -> str:
         return self.name
 
