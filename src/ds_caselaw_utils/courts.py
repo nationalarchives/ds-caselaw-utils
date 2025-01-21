@@ -64,18 +64,21 @@ class Court:
     def expand_jurisdictions(self) -> list["Court"]:
         return [self] + [CourtWithJurisdiction(self, jurisdiction) for jurisdiction in self.jurisdictions]
 
-    @cached_property
-    def description_text_as_html(self) -> Optional[str]:
+    def _render_markdown_text(self, type: str) -> Optional[str]:
         if not self.canonical_param:
             return None
 
         filename = self.canonical_param.replace("/", "_")
-        description_md_file_path = pathlib.Path(__file__).parent / f"data/descriptions/{filename}.md"
+        description_md_file_path = pathlib.Path(__file__).parent / f"data/markdown/{type}/{filename}.md"
         try:
             with open(description_md_file_path) as file:
                 return str(md.render(file.read()))
         except FileNotFoundError:
             return None
+
+    @cached_property
+    def description_text_as_html(self) -> Optional[str]:
+        return self._render_markdown_text("description")
 
     def __repr__(self) -> str:
         return self.name

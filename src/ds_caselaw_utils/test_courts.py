@@ -397,18 +397,26 @@ class TestCourt(unittest.TestCase):
         for c in expanded:
             assert issubclass(type(c), Court)
 
-    def test_description_text_as_html_if_no_canonical_param(self):
+    def test_render_markdown_text_if_no_canonical_param(self):
         court = CourtFactory({"param": "test"})
         assert court.description_text_as_html is None
 
-    def test_description_text_as_html_if_no_file(self):
+    def test_render_markdown_text_if_no_file(self):
         court = CourtFactory({"param": "test"})
         assert court.description_text_as_html is None
 
-    def test_description_text_as_html_if_file(self):
+    def test_render_markdown_text_if_file(self):
         court = CourtFactory({"param": "test"})
         with patch("pathlib.Path.is_file", True), patch("builtins.open", mock_open(read_data="**Test** description.")):
-            assert court.description_text_as_html == "<p><strong>Test</strong> description.</p>\n"
+            assert court._render_markdown_text("test") == "<p><strong>Test</strong> description.</p>\n"
+
+    @patch("ds_caselaw_utils.courts.Court._render_markdown_text")
+    def test_description_text_as_html(self, mock_render):
+        court = CourtFactory({"param": "test"})
+        mock_render.return_value = "<p>Description.</p>"
+
+        assert court.description_text_as_html == "<p>Description.</p>"
+        mock_render.assert_called_once_with("description")
 
 
 class TestCourtWithJurisdiction(unittest.TestCase):
