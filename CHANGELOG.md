@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file.
 
+## v2.1.0 (2025-01-21)
+
+### Feat
+
+- **Court**: add support text for old documents as HTML
+- **Court**: add court descriptions as HTML
+
+### Fix
+
+- **deps**: update dependency ruamel.yaml to v0.18.10
+- **deps**: update dependency ruamel.yaml to v0.18.8
+- **deps**: update dependency ruamel.yaml to v0.18.7
+
+### Refactor
+
+- **Court**: make Markdown loading/rendering reusable
+
 ## v2.0.1 (2024-11-25)
 
 ### Fix
