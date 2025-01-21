@@ -78,11 +78,13 @@ class Court:
 
     @cached_property
     def description_text_as_html(self) -> Optional[str]:
+        """Get the description of the court (where present)."""
         return self._render_markdown_text("description")
 
     @cached_property
-    def old_documents_support_text_as_html(self) -> Optional[str]:
-        return self._render_markdown_text("old_docs")
+    def historic_documents_support_text_as_html(self) -> Optional[str]:
+        """Get support information (where present) on accessing historic court documents not held in FCL."""
+        return self._render_markdown_text("historic_docs")
 
     def __repr__(self) -> str:
         return self.name
