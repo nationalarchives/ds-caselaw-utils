@@ -1,0 +1,7 @@
+The Commercial Court is a specialist court within the King’s Bench Division of the High Court. It is also one of the Business and Property Courts of the High Court of Justice. It handles large complex national and international business disputes that may involve issues such as commercial contracts, financial instruments, transportation of goods, and digital assets. It is based in the Rolls Building in London and cases are heard by specialist High Court judges.
+
+The Circuit Commercial Court (previously known as the Mercantile Court) is closely associated with the Commercial Court. It is also part of the broader business and property courts of the High Court of Justice but it deals with smaller, less complex business disputes. It operates in district registries across England and Wales where cases are heard by specialist senior circuit judges. [You can find cases decided by the Mercantile Court here](https://caselaw.nationalarchives.gov.uk/judgments/search?query=&from_day=&from_month=&from_year=&to_day=&to_month=&to_year=&court=ewhc%2Fmercantile&party=&judge=){target="\_blank"}.
+
+This court began to regularly transfer judgments to The National Archives in 2022. The oldest judgment from this court included in Find Case Law is from 2003.
+
+You can read more about [the Commercial Court on the Judiciary website](https://www.judiciary.uk/courts-and-tribunals/business-and-property-courts/commercial-court/){target="\_blank"}.

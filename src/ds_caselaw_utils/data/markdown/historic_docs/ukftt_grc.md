@@ -1,0 +1,1 @@
+You may be able to find older General Regulatory Chamber decisions [on the Courts and Tribunals Judiciary website](https://www.judiciary.uk/courts-and-tribunals/tribunals/first-tier-tribunal/general-regulatory-chamber/general-regulatory-chamber-decisions/){target="\_blank"}.

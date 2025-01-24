@@ -1,0 +1,1 @@
+You can read more about how to find older Admiralty Court records in the research guide [High court of Admiralty](https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/high-court-admiralty-records/){target="\_blank"}.

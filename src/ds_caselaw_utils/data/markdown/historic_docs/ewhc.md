@@ -1,0 +1,1 @@
+You can read more about how to find older civil court cases records in the research guide [Civil court cases: an overview](https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/civil-court-cases-overview/){target="\_blank"}.

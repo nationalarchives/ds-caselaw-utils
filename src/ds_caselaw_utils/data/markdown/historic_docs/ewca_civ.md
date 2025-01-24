@@ -1,0 +1,1 @@
+You can read more about how to find older Court of Appeal (civil) justice records in the research guide [Civil court cases: an overview](https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/civil-courts-appeal-cases-after-1875/){target="\_blank"}.
