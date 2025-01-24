@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## v2.2.0 (2025-01-24)
+
+### Feat
+
+- **Court**: add description data for all courts
+- **Court**: add historical document data for all courts
+
 ## v2.1.0 (2025-01-21)
 
 ### Feat
