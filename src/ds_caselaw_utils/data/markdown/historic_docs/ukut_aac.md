@@ -1,0 +1,1 @@
+You may be able to find older Administrative Appeals Chamber decisions on [the Courts and Tribunals Judiciary website](https://www.judiciary.uk/courts-and-tribunals/tribunals/upper-tribunal/upper-tribunal-administrative-appeals-chamber/administrative-appeals-chamber-decisions/){target="\_blank"}.

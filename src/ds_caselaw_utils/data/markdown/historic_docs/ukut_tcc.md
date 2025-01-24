@@ -1,0 +1,1 @@
+You may be able to find older Tax and Chancery Chamber decisions [on the Courts and Tribunals Judiciary website](https://www.judiciary.uk/courts-and-tribunals/tribunals/upper-tribunal/upper-tribunal-tax-and-chancery-chamber/tax-and-chancery-chamber-decisions/){target="\_blank"}.

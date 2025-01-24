@@ -1,0 +1,1 @@
+You may be able to find older Lands Chamber decisions [on the Courts and Tribunals Judiciary website](https://www.judiciary.uk/courts-and-tribunals/tribunals/upper-tribunal/upper-tribunal-lands-chamber/upper-tribunal-lands-chamber-decisions/){target="\_blank"}.
