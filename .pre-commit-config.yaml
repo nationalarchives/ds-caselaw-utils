@@ -83,7 +83,7 @@ repos:
         exclude: courts\.md
 
   - repo: https://github.com/commitizen-tools/commitizen
-    rev: v4.1.0
+    rev: v4.1.1
     hooks:
       - id: commitizen
       - id: commitizen-branch
