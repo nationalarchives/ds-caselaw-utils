@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## v2.2.1 (2025-01-31)
+
+### Feat
+
+- **Court**: updating court descriptions
+
 ## v2.2.0 (2025-01-24)
 
 ### Feat
