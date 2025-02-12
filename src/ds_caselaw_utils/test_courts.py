@@ -15,6 +15,7 @@ from .courts import (
     CourtParam,
     CourtsRepository,
     CourtWithJurisdiction,
+    InstitutionType,
     courts,
 )
 
@@ -34,6 +35,7 @@ class TestCourtsRepository(unittest.TestCase):
             {
                 "name": "court_group",
                 "display_name": "court group 1",
+                "is_tribunal": False,
                 "courts": [{"name": "court1", "jurisdictions": [{"name": "jurisdiction1", "code": "code"}]}],
             }
         ]
@@ -48,6 +50,7 @@ class TestCourtsRepository(unittest.TestCase):
             {
                 "name": "court_group",
                 "display_name": "court group 1",
+                "is_tribunal": False,
                 "courts": [{"name": "court1", "jurisdictions": [{"name": "jurisdiction1", "code": "code"}]}],
             }
         ]
@@ -62,6 +65,7 @@ class TestCourtsRepository(unittest.TestCase):
             {
                 "name": "court_group",
                 "display_name": "court group 1",
+                "is_tribunal": False,
                 "courts": [
                     {
                         "name": "court1",
@@ -73,6 +77,7 @@ class TestCourtsRepository(unittest.TestCase):
             {
                 "name": "court_group2",
                 "display_name": "court group 2",
+                "is_tribunal": False,
                 "courts": [{"name": "court3", "selectable": False}],
             },
         ]
@@ -93,6 +98,7 @@ class TestCourtsRepository(unittest.TestCase):
             {
                 "name": "court_group1",
                 "display_name": "court group 1",
+                "is_tribunal": False,
                 "courts": [
                     {
                         "name": "court1",
@@ -104,6 +110,7 @@ class TestCourtsRepository(unittest.TestCase):
             {
                 "name": "court_group2",
                 "display_name": "court group 2",
+                "is_tribunal": False,
                 "courts": [{"name": "court3", "listable": False}],
             },
         ]
@@ -120,10 +127,12 @@ class TestCourtsRepository(unittest.TestCase):
         data = [
             {
                 "name": "court_group1",
+                "is_tribunal": False,
                 "courts": [{"param": "court1", "name": "Court 1"}],
             },
             {
                 "name": "court_group2",
+                "is_tribunal": False,
                 "courts": [{"param": "court2", "name": "Court 2"}],
             },
         ]
@@ -135,10 +144,12 @@ class TestCourtsRepository(unittest.TestCase):
         data = [
             {
                 "name": "court_group1",
+                "is_tribunal": False,
                 "courts": [{"param": "court1", "name": "Court 1"}],
             },
             {
                 "name": "court_group2",
+                "is_tribunal": False,
                 "courts": [{"param": "court2", "name": "Court 2"}],
             },
         ]
@@ -150,10 +161,12 @@ class TestCourtsRepository(unittest.TestCase):
         data = [
             {
                 "name": "court_group1",
+                "is_tribunal": False,
                 "courts": [{"code": "court1", "name": "Court 1"}],
             },
             {
                 "name": "court_group2",
+                "is_tribunal": False,
                 "courts": [{"code": "court2", "name": "Court 2"}],
             },
         ]
@@ -165,6 +178,7 @@ class TestCourtsRepository(unittest.TestCase):
         data = [
             {
                 "name": "court_group",
+                "is_tribunal": False,
                 "courts": [
                     {
                         "code": "court1",
@@ -182,6 +196,7 @@ class TestCourtsRepository(unittest.TestCase):
         data = [
             {
                 "name": "court_group",
+                "is_tribunal": False,
                 "courts": [
                     {
                         "code": "court1",
@@ -200,10 +215,12 @@ class TestCourtsRepository(unittest.TestCase):
         data = [
             {
                 "name": "court_group1",
+                "is_tribunal": False,
                 "courts": [{"code": "court1", "name": "Court 1"}],
             },
             {
                 "name": "court_group2",
+                "is_tribunal": False,
                 "courts": [{"code": "court2", "name": "Court 2"}],
             },
         ]
@@ -346,6 +363,30 @@ class TestCourtsRepository(unittest.TestCase):
         repo = CourtsRepository(valid_data)
         assert "'name': 'group1', 'display_name': 'Court group'" in str(repo)
 
+    def test_identifies_institution_type(self):
+        data = [
+            {
+                "name": "courts",
+                "is_tribunal": False,
+                "courts": [
+                    {"param": "court", "listable": True, "name": "Court"},
+                ],
+            },
+            {
+                "name": "tribunals",
+                "is_tribunal": True,
+                "courts": [
+                    {"param": "tribunal", "listable": True, "name": "Tribunal"},
+                ],
+            },
+        ]
+        valid_data = make_court_repo_valid(data)
+        repo = CourtsRepository(valid_data)
+        institutions = repo.get_all()
+
+        assert institutions[0].type is InstitutionType.COURT
+        assert institutions[1].type is InstitutionType.TRIBUNAL
+
 
 class TestCourt(unittest.TestCase):
     def test_repr_string(self):
@@ -372,6 +413,14 @@ class TestCourt(unittest.TestCase):
     def test_end_year_default(self):
         court = CourtFactory({})
         self.assertEqual(date.today().year, court.end_year)
+
+    def test_type_when_court(self):
+        court = CourtFactory({})
+        assert court.type is InstitutionType.COURT
+
+    def test_type_when_tribunal(self):
+        court = CourtFactory({}, type=InstitutionType.TRIBUNAL)
+        assert court.type is InstitutionType.TRIBUNAL
 
     def test_get_jurisdiction(self):
         court = CourtFactory({"jurisdictions": [{"code": "jurisdiction1", "name": "Jurisdiction 1"}]})

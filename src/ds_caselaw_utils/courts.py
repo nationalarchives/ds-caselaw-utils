@@ -6,6 +6,7 @@ Get metadata for the courts covered by the service
 
 import pathlib
 from datetime import date
+from enum import Enum
 from functools import cached_property
 from re import compile
 from typing import Optional
@@ -25,6 +26,11 @@ from .types import CourtCode, CourtParam, JurisdictionCode, NeutralCitationPatte
 md = MarkdownIt("commonmark", {"breaks": True, "html": True}).use(attrs_plugin)
 
 
+class InstitutionType(Enum):
+    COURT = "court"
+    TRIBUNAL = "tribunal"
+
+
 class Jurisdiction:
     def __init__(self, data: RawJurisdiction):
         self.code: JurisdictionCode = JurisdictionCode(data["code"])
@@ -33,7 +39,7 @@ class Jurisdiction:
 
 
 class Court:
-    def __init__(self, data: RawCourt) -> None:
+    def __init__(self, data: RawCourt, type: InstitutionType) -> None:
         self.canonical_param: Optional[CourtParam]
         self.param_aliases: list[CourtParam]
         self.code: CourtCode = CourtCode(data["code"])
@@ -51,6 +57,8 @@ class Court:
         else:
             self.canonical_param = None
             self.param_aliases = []
+
+        self.type = type
 
         self.start_year: Optional[int] = data.get("start_year")
         self.end_year: int = data.get("end_year") or date.today().year
@@ -162,7 +170,9 @@ class CourtsRepository:
         self._byCode: dict[CourtCode, Court] = {}
         for group in self._data:
             for courtData in group.get("courts", []):
-                court = Court(courtData)
+                court = Court(
+                    courtData, type=InstitutionType.TRIBUNAL if group["is_tribunal"] else InstitutionType.COURT
+                )
                 if "param" in courtData:
                     self._byParam[CourtParam(courtData["param"])] = court
                 self._byCode[CourtCode(courtData["code"])] = court
@@ -201,7 +211,11 @@ class CourtsRepository:
             return self.get_court_by_code(code)
 
     def get_all(self, with_jurisdictions: bool = False) -> list[Court]:
-        courts = [Court(court) for category in self._data for court in category.get("courts", [])]
+        courts = [
+            Court(court, type=InstitutionType.TRIBUNAL if category["is_tribunal"] else InstitutionType.COURT)
+            for category in self._data
+            for court in category.get("courts", [])
+        ]
         if with_jurisdictions:
             return [c for court in courts for c in court.expand_jurisdictions()]
         else:
@@ -212,13 +226,21 @@ class CourtsRepository:
         for category in self._data:
             for court in category.get("courts", []):
                 if court["selectable"]:
-                    courts.append(Court(court))
+                    courts.append(
+                        Court(
+                            court, type=InstitutionType.TRIBUNAL if category["is_tribunal"] else InstitutionType.COURT
+                        )
+                    )
         return courts
 
     def get_selectable_groups(self) -> list[CourtGroup]:
         groups = []
         for category in self._data:
-            courts = [Court(court) for court in category.get("courts", []) if court["selectable"]]
+            courts = [
+                Court(court, type=InstitutionType.TRIBUNAL if category["is_tribunal"] else InstitutionType.COURT)
+                for court in category.get("courts", [])
+                if court["selectable"]
+            ]
             if len(courts) > 0:
                 groups.append(CourtGroup(category.get("display_name"), courts))
         return groups
@@ -227,7 +249,11 @@ class CourtsRepository:
         groups = []
         for category in self._data:
             if not category.get("is_tribunal"):
-                courts = [Court(court) for court in category.get("courts", []) if court["selectable"]]
+                courts = [
+                    Court(court, type=InstitutionType.COURT)
+                    for court in category.get("courts", [])
+                    if court["selectable"]
+                ]
                 if len(courts) > 0:
                     groups.append(CourtGroup(category.get("display_name"), courts))
         return groups
@@ -236,7 +262,11 @@ class CourtsRepository:
         groups = []
         for category in self._data:
             if category.get("is_tribunal"):
-                courts = [Court(court) for court in category.get("courts", []) if court["selectable"]]
+                courts = [
+                    Court(court, InstitutionType.TRIBUNAL)
+                    for court in category.get("courts", [])
+                    if court["selectable"]
+                ]
                 if len(courts) > 0:
                     groups.append(CourtGroup(category.get("display_name"), courts))
         return groups
@@ -244,7 +274,11 @@ class CourtsRepository:
     def get_listable_groups(self) -> list[CourtGroup]:
         groups = []
         for category in self._data:
-            courts = [Court(court) for court in category.get("courts", []) if court["listable"]]
+            courts = [
+                Court(court, type=InstitutionType.TRIBUNAL if category["is_tribunal"] else InstitutionType.COURT)
+                for court in category.get("courts", [])
+                if court["listable"]
+            ]
             if len(courts) > 0:
                 groups.append(CourtGroup(category.get("display_name"), courts))
         return groups
@@ -255,7 +289,7 @@ class CourtsRepository:
             if not group.get("is_tribunal"):
                 for court in group.get("courts", []):
                     if court["listable"]:
-                        courts.append(Court(court))
+                        courts.append(Court(court, InstitutionType.COURT))
         return courts
 
     def get_listable_tribunals(self) -> list[Court]:
@@ -264,7 +298,7 @@ class CourtsRepository:
             if group.get("is_tribunal"):
                 for court in group.get("courts", []):
                     if court["listable"]:
-                        courts.append(Court(court))
+                        courts.append(Court(court, InstitutionType.TRIBUNAL))
         return courts
 
 
