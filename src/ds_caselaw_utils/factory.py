@@ -1,13 +1,13 @@
 import typing
 
-from .courts import Court
+from .courts import Court, InstitutionType
 from .types.courts_schema_autogen import RawCourt, RawCourtRepository
 
 
 class CourtFactory(Court):
-    def __init__(self, data):
+    def __init__(self, data, type=InstitutionType.COURT):
         data = make_court_valid(data)
-        super().__init__(data)
+        super().__init__(data, type)
 
 
 def make_court_valid(data) -> RawCourt:
