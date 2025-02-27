@@ -13,7 +13,7 @@ python import name: `ds_caselaw_utils`
 
 ## Examples
 
-```
+```python
 from ds_caselaw_utils import neutral_url
 neutral_url("[2022] EAT 1")  # '/eat/2022/4'
 
@@ -34,41 +34,38 @@ courts.get_listable_courts() # returns a list of all *courts* (ie not tribunals)
 
 courts.get_listable_tribunals() # return a list of all *tribunals*  which are
                                 # whitelisted to be listed publicly
-
-
 ```
 
 The list of courts is defined in `src/ds_caselaw_utils/data/court_names.yml`. The format is as follows:
 
-```
+```yaml
 - name: high_court # Internal name of a group of courts to be displayed together
   display_name: "High Court" # An optional public facing name for this group.
   is_tribunal: false # Whether this group contains courts or tribunals
   courts: # List of courts to be displayed under this group
-    -
-        # An internal code for this court:
-        code: EWHC-SeniorCourtsCosts
-         # The public facing name of the court:
-        name: High Court (Senior Courts Costs Office)
-        # An optional alternative wording for use when displayed in grouped format (defaults to 'name'):
-        grouped_name: Senior Court Costs Office
-        # A URL to link to for more information on this court:
-        link: https://www.gov.uk/courts-tribunals/senior-courts-costs-office
-        # A regex matching neutral citations for this court's judgments:
-        ncn: \[(\d{4})\] (EWHC) (\d+) \((SCCO)\)
-        # The canonical parameter value used in searches for this court:
-        param: 'ewhc/scco'
-        # Any additional parameter aliases which display judgments from this court:
-        extra_params: ['ewhc/costs']
-        # The year of the first judgment we have on file for this court:
-        start_year: 2003
-        # The year of the last judgment we have on file for this court
-        # (optional, defaults to current year):
-        end_year: ~
-        # Whether to expose this court publicly as selectable in search filters:
-        selectable: true
-        # Whether to expose this court publicly in listings:
-        listable: true
+    - # An internal code for this court:
+      code: EWHC-SeniorCourtsCosts
+      # The public facing name of the court:
+      name: High Court (Senior Courts Costs Office)
+      # An optional alternative wording for use when displayed in grouped format (defaults to 'name'):
+      grouped_name: Senior Court Costs Office
+      # A URL to link to for more information on this court:
+      link: https://www.gov.uk/courts-tribunals/senior-courts-costs-office
+      # A regex matching neutral citations for this court's judgments:
+      ncn: \[(\d{4})\] (EWHC) (\d+) \((SCCO)\)
+      # The canonical parameter value used in searches for this court:
+      param: "ewhc/scco"
+      # Any additional parameter aliases which display judgments from this court:
+      extra_params: ["ewhc/costs"]
+      # The year of the first judgment we have on file for this court:
+      start_year: 2003
+      # The year of the last judgment we have on file for this court
+      # (optional, defaults to current year):
+      end_year: ~
+      # Whether to expose this court publicly as selectable in search filters:
+      selectable: true
+      # Whether to expose this court publicly in listings:
+      listable: true
 ```
 
 ## Testing
