@@ -1,5 +1,5 @@
 name: Run linter & unit tests
-
+permissions: {}
 on: push
 
 jobs:
@@ -8,6 +8,8 @@ jobs:
     steps:
       - name: Checkout Code Repository
         uses: actions/checkout@v4
+        with:
+          persist-credentials: false
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -23,6 +25,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@main
+        with:
+          persist-credentials: false
       - name: Set up Python 3.9
         uses: actions/setup-python@v5
         with:
