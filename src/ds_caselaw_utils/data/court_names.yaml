@@ -519,3 +519,14 @@
       start_year: 2022
       selectable: true
       listable: true
+- name: historic_tribunals
+  display_name: Historic Tribunals
+  is_tribunal: true
+  courts:
+    - code: UKIST
+      name: Immigration Services Tribunal
+      link: https://webarchive.nationalarchives.gov.uk/ukgwa/https://immigrationservices.decisions.tribunals.gov.uk/Aspx/default.aspx
+      start_year: 2001
+      end_year: 2010
+      selectable: true
+      listable: false
