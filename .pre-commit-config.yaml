@@ -89,3 +89,7 @@ repos:
       - id: commitizen-branch
         stages:
           - pre-push
+  - repo: https://github.com/woodruffw/zizmor-pre-commit
+    rev: v1.5.1
+    hooks:
+      - id: zizmor
