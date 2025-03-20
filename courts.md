@@ -101,3 +101,9 @@
 | Employment Tribunal | ET | – | 2022 | – | ❌ | ❌ |
 | General Regulatory Chamber | UKFTT-GRC | ukftt/grc | 2022 | – | ✅ | ✅ |
 | Tax Chamber | UKFTT-TC | ukftt/tc | 2022 | – | ✅ | ✅ |
+
+## Historic Tribunals (historic_tribunals)
+
+| Name | Code | Param | Start | End | List? | Searchable? |
+| ---- | ---- | ----- | ----- | --- | ----- | ----------- |
+| Immigration Services Tribunal | UKIST | – | 2001 | 2010 | ❌ | ✅ |
