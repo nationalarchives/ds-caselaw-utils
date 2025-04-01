@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## v2.4.0 (2025-03-31)
+
+### Feat
+
+- Add new UKIST tribunal
+
 ## v2.3.0 (2025-02-25)
 
 ### Feat
