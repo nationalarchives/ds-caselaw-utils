@@ -17,7 +17,7 @@ markdown-it-py = "^3.0.0"
 mdit-py-plugins = "^0.4.2"
 
 [tool.poetry.group.dev.dependencies]
-pytest = "^8.3.3"
+pytest = "8.3.5"
 
 [tool.ruff]
 line-length = 120
