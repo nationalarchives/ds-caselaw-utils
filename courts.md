@@ -106,4 +106,4 @@
 
 | Name | Code | Param | Start | End | List? | Searchable? |
 | ---- | ---- | ----- | ----- | --- | ----- | ----------- |
-| Immigration Services Tribunal | UKIST | – | 2001 | 2010 | ❌ | ✅ |
+| Immigration Services Tribunal | UKIST | ukist | 2001 | 2010 | ❌ | ✅ |

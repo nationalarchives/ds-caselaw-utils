@@ -6,7 +6,25 @@ from typing_extensions import Required
 
 
 class RawCourt(TypedDict, total=False):
-    """ Raw Court. """
+    """
+    Raw Court.
+
+    allOf:
+      - if:
+          properties:
+            selectable:
+              const: true
+        then:
+          required:
+          - param
+      - if:
+          properties:
+            listable:
+              const: true
+        then:
+          required:
+          - param
+    """
 
     code: Required[str]
     """

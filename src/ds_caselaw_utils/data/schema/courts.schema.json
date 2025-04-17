@@ -88,7 +88,17 @@
             }
           },
           "required": ["code", "name", "link", "listable", "selectable"],
-          "additionalProperties": false
+          "additionalProperties": false,
+          "allOf": [
+            {
+              "if": { "properties": { "selectable": { "const": true } } },
+              "then": { "required": ["param"] }
+            },
+            {
+              "if": { "properties": { "listable": { "const": true } } },
+              "then": { "required": ["param"] }
+            }
+          ]
         }
       }
     },

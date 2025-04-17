@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## Unreleased
+
+### Fix
+
+- make params obligatory where courts are selectable or listable
+
 ## v2.4.0 (2025-03-31)
 
 ### Feat
