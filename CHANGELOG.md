@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## v2.4.2 (2025-04-22)
+
+### Fix
+
+- Mercantile court has wrong NCN pattern
+
 ## v2.4.1 (2025-04-22)
 
 ### Fix
