@@ -7,7 +7,7 @@
   ['^\[(\d{4})\] (UKSC|UKPC|UKIPTrib) (\d+)$', [2, 1, 3]],
   ['^\[(\d{4})\] (EWCA) (Civ|Crim) (\d+)$', [2, 3, 1, 4]],
   [
-    '^\[(\d{4})\] (EWHC) (\d+) \((Admin|Admlty|Ch|Comm|Costs|Fam|IPEC|Pat|QB|KB|SCCO|TCC)\)$',
+    '^\[(\d{4})\] (EWHC) (\d+) \((Admin|Admlty|Ch|Comm|Costs|Fam|IPEC|Pat|QB|KB|SCCO|TCC|Mercantile)\)$',
     [2, 4, 1, 3],
   ],
   ['^\[(\d{4})\] (EWFC|EWCOP|EWCC|EWCR) (\d+)$', [2, 1, 3]],

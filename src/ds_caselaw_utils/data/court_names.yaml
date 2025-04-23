@@ -228,7 +228,7 @@
       grouped_name: Mercantile Court
       name: High Court (Mercantile Court)
       link: https://www.gov.uk/courts-tribunals/intellectual-property-enterprise-court
-      ncn_pattern: \[(\d{4})\] (EWHC) (\d+) \((IPEC)\)
+      ncn_pattern: \[(\d{4})\] (EWHC) (\d+) \((Mercantile)\)
       param: "ewhc/mercantile"
       start_year: 2008
       end_year: 2014
