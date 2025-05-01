@@ -22,7 +22,7 @@
 | Civil Division | EWCA-Civil | ewca/civ | 2003 | – | ✅ | ✅ |
 | Criminal Division | EWCA-Criminal | ewca/crim | 2003 | – | ✅ | ✅ |
 
-## High Court (England & Wales) (high_court)
+## High Court (England and Wales) (high_court)
 
 | Name | Code | Param | Start | End | List? | Searchable? |
 | ---- | ---- | ----- | ----- | --- | ----- | ----------- |
