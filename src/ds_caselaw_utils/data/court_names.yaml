@@ -45,7 +45,7 @@
       selectable: true
       listable: true
 - name: high_court
-  display_name: "High Court (England & Wales)"
+  display_name: "High Court (England and Wales)"
   is_tribunal: false
   courts:
     - code: EWHC-QBD-Admin
