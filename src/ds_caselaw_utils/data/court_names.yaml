@@ -531,3 +531,11 @@
       end_year: 2010
       selectable: true
       listable: false
+    - code: UKFTT-Credit
+      name: Consumer Credit Appeals Tribunal
+      param: ukftt/credit
+      link: https://webarchive.nationalarchives.gov.uk/ukgwa/https://consumercreditappeals.decisions.tribunals.gov.uk/
+      start_year: 2008
+      end_year: 2013
+      selectable: true
+      listable: false
