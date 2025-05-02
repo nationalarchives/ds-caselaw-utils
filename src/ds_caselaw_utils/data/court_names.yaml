@@ -539,3 +539,10 @@
       end_year: 2013
       selectable: true
       listable: false
+    - code: UKFTT-Estate
+      name: Estate Agents Tribunal
+      param: ukftt/estate
+      link: https://webarchive.nationalarchives.gov.uk/ukgwa/20130206050212/https://www.justice.gov.uk/tribunals/estate-agents
+      end_year: 2009
+      selectable: true
+      listable: false
