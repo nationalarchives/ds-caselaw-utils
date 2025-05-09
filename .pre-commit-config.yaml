@@ -22,7 +22,7 @@ repos:
     hooks:
       - id: jsonschema-gentypes
         files: src/ds_caselaw_utils/data/schema/courts.schema.json
-        language_version: python3
+        language_version: python3.11
 
   - repo: https://github.com/astral-sh/ruff-pre-commit
     rev: v0.11.7
@@ -44,6 +44,7 @@ repos:
           - markdown-it-py
         args:
           - --strict
+          - --python-version=3.11
         files: ^(src/ds_caselaw_utils|scripts)
         exclude: (?:test_|factory.py)
 
@@ -52,6 +53,8 @@ repos:
     hooks:
       - id: mypy
         name: mypy-tests
+        args:
+          - --python-version=3.11
         files: ^src/ds_caselaw_utils/test_
 
   - repo: https://github.com/python-jsonschema/check-jsonschema
