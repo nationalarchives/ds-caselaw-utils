@@ -11,7 +11,7 @@ with open("src/ds_caselaw_utils/data/court_names.yaml", "r") as stream:
 
 print("Building list of courts...")
 
-with Path("courts.md").open("w") as f:
+with Path("courts.md").open("w", encoding="utf-8") as f:
     f.write("# Courts in configuration file\n")
     f.write("\n")
     f.write(
