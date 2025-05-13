@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## v2.4.4 (2025-05-13)
+
+### Fix
+
+- Replace & in court names with "and"
+
 ## v2.4.3 (2025-04-23)
 
 ### Fix
