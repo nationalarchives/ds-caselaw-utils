@@ -7,7 +7,7 @@
       link: https://www.supremecourt.uk/
       ncn_pattern: \[(\d{4})\] (UKSC) (\d+)
       param: "uksc"
-      start_year: 2014
+      start_year: 2009
       selectable: true
       listable: true
 - name: privy_council
@@ -19,7 +19,7 @@
       link: https://www.jcpc.uk/
       ncn_pattern: \[(\d{4})\] (UKPC) (\d+)
       param: "ukpc"
-      start_year: 2014
+      start_year: 2009
       selectable: true
       listable: true
 - name: court_of_appeal
@@ -32,7 +32,7 @@
       link: https://www.gov.uk/courts-tribunals/court-of-appeal-civil-division
       ncn_pattern: \[(\d{4})\] (EWCA) (Civ) (\d+)
       param: "ewca/civ"
-      start_year: 2003
+      start_year: 2001
       selectable: true
       listable: true
     - code: EWCA-Criminal
@@ -196,7 +196,7 @@
       link: https://www.gov.uk/courts-tribunals/intellectual-property-enterprise-court
       ncn_pattern: \[(\d{4})\] (EWHC) (\d+) \((IPEC)\)
       param: "ewhc/ipec"
-      start_year: 2003
+      start_year: 2013
       selectable: true
       listable: true
     - code: EWHC-Chancery-IntellectualProperty
@@ -296,7 +296,7 @@
       link: https://www.gov.uk/courts-tribunals/technology-and-construction-court
       ncn_pattern: \[(\d{4})\] (EWHC) (\d+) \((TCC)\)
       param: "ewhc/tcc"
-      start_year: 2022
+      start_year: 2003
       selectable: false
       listable: false
 - name: lower_courts
@@ -308,7 +308,7 @@
       link: https://www.judiciary.uk/courts-and-tribunals/crown-court/
       ncn_pattern: \[(\d{4})\] (EWCR) (\d+)
       param: "ewcr"
-      start_year: 2024
+      start_year: 2020
       selectable: true
       listable: true
     - code: "EWCC"
@@ -316,7 +316,7 @@
       link: https://www.judiciary.uk/courts-and-tribunals/county-court/
       ncn_pattern: \[(\d{4})\] (EWCC) (\d+)
       param: "ewcc"
-      start_year: 2024
+      start_year: 2019
       selectable: true
       listable: true
     - code: EWFC
@@ -324,7 +324,7 @@
       link: https://www.judiciary.uk/you-and-the-judiciary/going-to-court/family-law-courts/
       ncn_pattern: \[(\d{4})\] (EWFC) (\d+)
       param: "ewfc"
-      start_year: 2009
+      start_year: 2014
       selectable: true
       listable: true
     - code: "EWFC-B"
@@ -380,7 +380,7 @@
       selectable: true
       listable: true
       param: "ukiptrib"
-      start_year: 2024
+      start_year: 2023
 
 - name: employment_appeal_tribunal
   display_name: ~
@@ -406,7 +406,7 @@
       selectable: true
       listable: true
       param: "ukut/aac"
-      start_year: 2022
+      start_year: 2011
     - code: UKUT-IAC
       grouped_name: Immigration and Asylum Chamber
       name: Upper Tribunal (Immigration and Asylum Chamber)
@@ -416,7 +416,7 @@
       listable: true
       param: "ukut/iac"
       extra_params: ["ukait"]
-      start_year: 2003
+      start_year: 2007
     - code: UKAIT
       selectable: false
       listable: false
@@ -434,7 +434,7 @@
       selectable: true
       listable: true
       param: "ukut/lc"
-      start_year: 2015
+      start_year: 2014
     - code: UKUT-TCC
       grouped_name: Tax and Chancery Chamber
       name: Upper Tribunal (Tax and Chancery Chamber)
@@ -443,7 +443,7 @@
       selectable: true
       listable: true
       param: "ukut/tcc"
-      start_year: 2017
+      start_year: 2016
 - name: first_tier_tribunals
   display_name: "First-tier Tribunals"
   is_tribunal: true
@@ -461,7 +461,7 @@
       param: "ukftt/grc"
       link: https://www.gov.uk/courts-tribunals/first-tier-tribunal-general-regulatory-chamber
       ncn_pattern: \[(\d{4})\] (UKFTT) (\d+) \((GRC)\)
-      start_year: 2022
+      start_year: 2019
       selectable: true
       listable: true
       jurisdictions:
@@ -516,7 +516,7 @@
       link: https://www.gov.uk/courts-tribunals/first-tier-tribunal-tax
       ncn_pattern: \[(\d{4})\] (UKFTT) (\d+) \((TC)\)
       param: "ukftt/tc"
-      start_year: 2022
+      start_year: 2019
       selectable: true
       listable: true
 - name: historic_tribunals

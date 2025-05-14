@@ -80,12 +80,17 @@ The environment you develop this repo in requires the following to be installed:
 
 - Run `pre-commit install` inside the root directory of the repo to install the git hooks defined in `.pre-commit-config.yaml`.
 
-## Testing
-
 ```bash
 $ poetry shell
-$ cd src/ds_caselaw_utils
-$ python -m unittest
+$ poetry install
+```
+
+## Testing
+
+While in a poetry shell:
+
+```bash
+$ poetry run pytest
 ```
 
 ## Building

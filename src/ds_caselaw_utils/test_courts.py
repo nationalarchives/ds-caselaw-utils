@@ -459,6 +459,22 @@ class TestCourt(unittest.TestCase):
         with patch("pathlib.Path.is_file", True), patch("builtins.open", mock_open(read_data="**Test** description.")):
             assert court._render_markdown_text("test") == "<p><strong>Test</strong> description.</p>\n"
 
+    def test_render_markdown_text_with_context(self):
+        court = CourtFactory({"param": "test", "name": "test name", "start_year": 2000, "end_year": 2025})
+        with (
+            patch("pathlib.Path.is_file", True),
+            patch(
+                "builtins.open",
+                mock_open(
+                    read_data="**Test** description.\n - Name: {name}\n - Start year: {start_year}\n - End year: {end_year}"
+                ),
+            ),
+        ):
+            assert (
+                court._render_markdown_text("test")
+                == "<p><strong>Test</strong> description.</p>\n<ul>\n<li>Name: test name</li>\n<li>Start year: 2000</li>\n<li>End year: 2025</li>\n</ul>\n"
+            )
+
     @patch("ds_caselaw_utils.courts.Court._render_markdown_text")
     def test_description_text_as_html(self, mock_render):
         court = CourtFactory({"param": "test"})

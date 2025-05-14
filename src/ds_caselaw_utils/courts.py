@@ -80,7 +80,11 @@ class Court:
         description_md_file_path = pathlib.Path(__file__).parent / f"data/markdown/{type}/{filename}.md"
         try:
             with open(description_md_file_path) as file:
-                return str(md.render(file.read()))
+                context = {"name": self.name, "start_year": self.start_year, "end_year": self.end_year}
+
+                template = file.read()
+                template = template.format(**context)
+                return str(md.render(template))
         except FileNotFoundError:
             return None
 
