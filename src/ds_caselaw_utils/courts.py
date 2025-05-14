@@ -9,7 +9,7 @@ from datetime import date
 from enum import Enum
 from functools import cached_property
 from re import compile
-from typing import Optional
+from typing import Any, Dict, Optional
 
 from markdown_it import MarkdownIt
 from mdit_py_plugins.attrs import attrs_plugin
@@ -72,7 +72,7 @@ class Court:
     def expand_jurisdictions(self) -> list["Court"]:
         return [self] + [CourtWithJurisdiction(self, jurisdiction) for jurisdiction in self.jurisdictions]
 
-    def _render_markdown_text(self, type: str) -> Optional[str]:
+    def render_markdown_text(self, type: str, context: Dict[str, Any] = {}) -> Optional[str]:
         if not self.canonical_param:
             return None
 
@@ -80,10 +80,11 @@ class Court:
         description_md_file_path = pathlib.Path(__file__).parent / f"data/markdown/{type}/{filename}.md"
         try:
             with open(description_md_file_path) as file:
-                context = {"name": self.name, "start_year": self.start_year, "end_year": self.end_year}
+                default_context = {"name": self.name, "start_year": self.start_year, "end_year": self.end_year}
+                template_context = {**default_context, **context}
 
                 template = file.read()
-                template = template.format(**context)
+                template = template.format(**template_context)
                 return str(md.render(template))
         except FileNotFoundError:
             return None
@@ -91,12 +92,12 @@ class Court:
     @cached_property
     def description_text_as_html(self) -> Optional[str]:
         """Get the description of the court (where present)."""
-        return self._render_markdown_text("description")
+        return self.render_markdown_text("description")
 
     @cached_property
     def historic_documents_support_text_as_html(self) -> Optional[str]:
         """Get support information (where present) on accessing historic court documents not held in FCL."""
-        return self._render_markdown_text("historic_docs")
+        return self.render_markdown_text("historic_docs")
 
     def __repr__(self) -> str:
         return self.name
