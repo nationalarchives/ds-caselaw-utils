@@ -26,6 +26,11 @@ from .types import CourtCode, CourtParam, JurisdictionCode, NeutralCitationPatte
 md = MarkdownIt("commonmark", {"breaks": True, "html": True}).use(attrs_plugin)
 
 
+class FormatMapDict(dict[str, Any]):
+    def __missing__(self, key: str) -> str:
+        return "{" + key + "}"
+
+
 class InstitutionType(Enum):
     COURT = "court"
     TRIBUNAL = "tribunal"
@@ -84,7 +89,7 @@ class Court:
                 template_context = {**default_context, **context}
 
                 template = file.read()
-                template = template.format(**template_context)
+                template = template.format_map(FormatMapDict(template_context))
                 return str(md.render(template))
         except FileNotFoundError:
             return None
