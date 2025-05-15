@@ -466,13 +466,13 @@ class TestCourt(unittest.TestCase):
             patch(
                 "builtins.open",
                 mock_open(
-                    read_data="**Test** description.\n - Name: {name}\n - Start year: {start_year}\n - End year: {end_year}"
+                    read_data="**Test** description.\n - Name: {name}\n - Start year: {start_year}\n - End year: {end_year}\n - Do not replace: {do_not_replace}"
                 ),
             ),
         ):
             assert (
                 court.render_markdown_text("test")
-                == "<p><strong>Test</strong> description.</p>\n<ul>\n<li>Name: test name</li>\n<li>Start year: 2000</li>\n<li>End year: 2025</li>\n</ul>\n"
+                == "<p><strong>Test</strong> description.</p>\n<ul>\n<li>Name: test name</li>\n<li>Start year: 2000</li>\n<li>End year: 2025</li>\n<li>Do not replace: {do_not_replace}</li>\n</ul>\n"
             )
 
     @patch("ds_caselaw_utils.courts.Court.render_markdown_text")
