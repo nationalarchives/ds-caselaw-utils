@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## v2.4.5 (2025-05-15)
+
+### Feat
+
+- Allow court descriptions take contextual data
+- Updates the court start_date data
+
 ## v2.4.4 (2025-05-13)
 
 ### Fix
