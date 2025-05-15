@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## v2.4.6 (2025-05-15)
+
+### Fix
+
+- Handle markdown with {target='blank'} when formatting
+
 ## v2.4.5 (2025-05-15)
 
 ### Feat
