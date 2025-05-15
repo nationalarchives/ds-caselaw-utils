@@ -457,9 +457,25 @@ class TestCourt(unittest.TestCase):
     def test_render_markdown_text_if_file(self):
         court = CourtFactory({"param": "test"})
         with patch("pathlib.Path.is_file", True), patch("builtins.open", mock_open(read_data="**Test** description.")):
-            assert court._render_markdown_text("test") == "<p><strong>Test</strong> description.</p>\n"
+            assert court.render_markdown_text("test") == "<p><strong>Test</strong> description.</p>\n"
 
-    @patch("ds_caselaw_utils.courts.Court._render_markdown_text")
+    def test_render_markdown_text_with_context(self):
+        court = CourtFactory({"param": "test", "name": "test name", "start_year": 2000, "end_year": 2025})
+        with (
+            patch("pathlib.Path.is_file", True),
+            patch(
+                "builtins.open",
+                mock_open(
+                    read_data="**Test** description.\n - Name: {name}\n - Start year: {start_year}\n - End year: {end_year}"
+                ),
+            ),
+        ):
+            assert (
+                court.render_markdown_text("test")
+                == "<p><strong>Test</strong> description.</p>\n<ul>\n<li>Name: test name</li>\n<li>Start year: 2000</li>\n<li>End year: 2025</li>\n</ul>\n"
+            )
+
+    @patch("ds_caselaw_utils.courts.Court.render_markdown_text")
     def test_description_text_as_html(self, mock_render):
         court = CourtFactory({"param": "test"})
         mock_render.return_value = "<p>Description.</p>"
@@ -467,7 +483,7 @@ class TestCourt(unittest.TestCase):
         assert court.description_text_as_html == "<p>Description.</p>"
         mock_render.assert_called_once_with("description")
 
-    @patch("ds_caselaw_utils.courts.Court._render_markdown_text")
+    @patch("ds_caselaw_utils.courts.Court.render_markdown_text")
     def test_historic_documents_support_text_as_html(self, mock_render):
         court = CourtFactory({"param": "test"})
         mock_render.return_value = "<p>Support text.</p>"

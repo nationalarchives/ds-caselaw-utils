@@ -2,6 +2,6 @@ The Administrative Appeals Chamber is responsible for dealing with appeals again
 
 They also handle applications for judicial review of decisions made by First-Tier Tribunal (Criminal Injuries Compensation) and other first-tier tribunals where there is no right of appeal.
 
-This tribunal began to regularly transfer decisions to The National Archives in 2022. The oldest decision from this tribunal included in Find Case Law is from 2004.
+This tribunal began to regularly transfer decisions to The National Archives in 2022. The oldest decision from this tribunal included in Find Case Law is from {start_year}.
 
 You can read more about it on the Administrative Appeals Chamber on the [HM Courts and Tribunals Service website](https://www.gov.uk/courts-tribunals/upper-tribunal-administrative-appeals-chamber){target="\_blank"}.
