@@ -543,6 +543,7 @@
       name: Estate Agents Tribunal
       param: ukftt/estate
       link: https://webarchive.nationalarchives.gov.uk/ukgwa/20130206050212/https://www.justice.gov.uk/tribunals/estate-agents
-      end_year: 2009
+      start_year: 2009
+      end_year: 2010
       selectable: true
       listable: false
