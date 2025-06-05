@@ -88,6 +88,9 @@
             }
           },
           "required": ["code", "name", "link", "listable", "selectable"],
+          "dependentRequired": {
+            "end_year": ["start_year"]
+          },
           "additionalProperties": false,
           "allOf": [
             {
