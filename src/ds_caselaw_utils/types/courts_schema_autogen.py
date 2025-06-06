@@ -9,6 +9,9 @@ class RawCourt(TypedDict, total=False):
     """
     Raw Court.
 
+    dependentRequired:
+      end_year:
+      - start_year
     allOf:
       - if:
           properties:

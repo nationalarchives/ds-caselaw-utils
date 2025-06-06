@@ -107,5 +107,5 @@
 | Name | Code | Param | Start | End | List? | Searchable? |
 | ---- | ---- | ----- | ----- | --- | ----- | ----------- |
 | Consumer Credit Appeals Tribunal | UKFTT-Credit | ukftt/credit | 2008 | 2013 | ❌ | ✅ |
-| Estate Agents Tribunal | UKFTT-Estate | ukftt/estate | – | 2009 | ❌ | ✅ |
+| Estate Agents Tribunal | UKFTT-Estate | ukftt/estate | 2009 | 2010 | ❌ | ✅ |
 | Immigration Services Tribunal | UKIST | ukist | 2001 | 2010 | ❌ | ✅ |
