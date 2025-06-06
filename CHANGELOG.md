@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## v2.4.7 (2025-06-06)
+
+### Fix
+
+- Fix estate agent tribunal dates
+
 ## v2.4.6 (2025-05-15)
 
 ### Fix
