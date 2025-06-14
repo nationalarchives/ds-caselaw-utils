@@ -18,7 +18,7 @@ repos:
   # There is a bug with upstream which means the imports are
   # not sorted -- this should do for now
   - repo: https://github.com/camptocamp/jsonschema-gentypes
-    rev: 2.11.0
+    rev: 2.12.0
     hooks:
       - id: jsonschema-gentypes
         files: src/ds_caselaw_utils/data/schema/courts.schema.json
