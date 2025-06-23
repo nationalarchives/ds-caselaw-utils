@@ -382,8 +382,8 @@
       param: "ukiptrib"
       start_year: 2023
 
-- name: employment_appeal_tribunal
-  display_name: ~
+- name: employment
+  display_name: Employment
   is_tribunal: true
   courts:
     - code: EAT
@@ -394,6 +394,16 @@
       listable: true
       param: "eat"
       start_year: 2021
+    - code: ET
+      grouped_name: Employment Tribunal
+      name: First-tier Tribunal (Employment Tribunal)
+      link: https://www.gov.uk/courts-tribunals/employment-tribunal
+      param: "et"
+      # ncn_pattern: no NCN
+      start_year: 2022
+      selectable: false
+      listable: false
+
 - name: upper_tribunals
   display_name: "Upper Tribunals"
   is_tribunal: true
@@ -448,13 +458,6 @@
   display_name: "First-tier Tribunals"
   is_tribunal: true
   courts:
-    - code: ET
-      grouped_name: Employment Tribunal
-      name: First-tier Tribunal (Employment Tribunal)
-      link: https://www.gov.uk/courts-tribunals/employment-tribunal
-      start_year: 2022
-      selectable: false
-      listable: false
     - code: UKFTT-GRC
       grouped_name: General Regulatory Chamber
       name: First-tier Tribunal (General Regulatory Chamber)
