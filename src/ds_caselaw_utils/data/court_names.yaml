@@ -401,8 +401,8 @@
       param: "et"
       # ncn_pattern: no NCN
       start_year: 2022
-      selectable: false
-      listable: false
+      selectable: true
+      listable: true
 
 - name: upper_tribunals
   display_name: "Upper Tribunals"

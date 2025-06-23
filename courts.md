@@ -83,7 +83,7 @@
 | Name | Code | Param | Start | End | List? | Searchable? |
 | ---- | ---- | ----- | ----- | --- | ----- | ----------- |
 | Employment Appeal Tribunal | EAT | eat | 2021 | – | ✅ | ✅ |
-| Employment Tribunal | ET | et | 2022 | – | ❌ | ❌ |
+| Employment Tribunal | ET | et | 2022 | – | ✅ | ✅ |
 
 ## Upper Tribunals (upper_tribunals)
 
