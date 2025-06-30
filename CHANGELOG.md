@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## v2.4.8 (2025-06-16)
+
+### Fix
+
+- Employment Tribunal (ET) is not a First Tier Tribunal
+
 ## v2.4.7 (2025-06-06)
 
 ### Fix
