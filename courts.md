@@ -78,11 +78,12 @@
 | ---- | ---- | ----- | ----- | --- | ----- | ----------- |
 | Investigatory Powers Tribunal | UKIPT | ukiptrib | 2023 | – | ✅ | ✅ |
 
-## employment_appeal_tribunal
+## Employment (employment)
 
 | Name | Code | Param | Start | End | List? | Searchable? |
 | ---- | ---- | ----- | ----- | --- | ----- | ----------- |
 | Employment Appeal Tribunal | EAT | eat | 2021 | – | ✅ | ✅ |
+| Employment Tribunal | ET | et | 2022 | – | ✅ | ✅ |
 
 ## Upper Tribunals (upper_tribunals)
 
@@ -98,7 +99,6 @@
 
 | Name | Code | Param | Start | End | List? | Searchable? |
 | ---- | ---- | ----- | ----- | --- | ----- | ----------- |
-| Employment Tribunal | ET | – | 2022 | – | ❌ | ❌ |
 | General Regulatory Chamber | UKFTT-GRC | ukftt/grc | 2019 | – | ✅ | ✅ |
 | Tax Chamber | UKFTT-TC | ukftt/tc | 2019 | – | ✅ | ✅ |
 
