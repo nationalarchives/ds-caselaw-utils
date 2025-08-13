@@ -530,7 +530,7 @@
       start_year: 2001
       end_year: 2010
       selectable: true
-      listable: false
+      listable: true
     - code: UKFTT-Credit
       name: Consumer Credit Appeals Tribunal
       param: ukftt/credit
@@ -538,7 +538,7 @@
       start_year: 2008
       end_year: 2013
       selectable: true
-      listable: false
+      listable: true
     - code: UKFTT-Estate
       name: Estate Agents Tribunal
       param: ukftt/estate
@@ -546,7 +546,7 @@
       start_year: 2009
       end_year: 2010
       selectable: true
-      listable: false
+      listable: true
     - code: FTT-Claims
       name: Claims Management Services Tribunal
       param: ftt/claims
@@ -554,7 +554,7 @@
       start_year: 2006
       end_year: 2010
       selectable: true
-      listable: false
+      listable: true
     - code: FTT-Transport
       name: Transport Tribunal
       param: ftt/transport
@@ -562,4 +562,4 @@
       start_year: 2000
       end_year: 2010
       selectable: true
-      listable: false
+      listable: true
