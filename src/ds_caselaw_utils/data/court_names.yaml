@@ -530,7 +530,7 @@
       start_year: 2001
       end_year: 2010
       selectable: true
-      listable: false
+      listable: true
     - code: UKFTT-Credit
       name: Consumer Credit Appeals Tribunal
       param: ukftt/credit
@@ -538,7 +538,7 @@
       start_year: 2008
       end_year: 2013
       selectable: true
-      listable: false
+      listable: true
     - code: UKFTT-Estate
       name: Estate Agents Tribunal
       param: ukftt/estate
@@ -546,4 +546,20 @@
       start_year: 2009
       end_year: 2010
       selectable: true
-      listable: false
+      listable: true
+    - code: FTT-Claims
+      name: Claims Management Services Tribunal
+      param: ftt/claims
+      link: https://webarchive.nationalarchives.gov.uk/ukgwa/20200626120017/http:/claimsmanagement.decisions.tribunals.gov.uk/
+      start_year: 2006
+      end_year: 2010
+      selectable: true
+      listable: true
+    - code: FTT-Transport
+      name: Transport Tribunal
+      param: ftt/transport
+      link: https://webarchive.nationalarchives.gov.uk/ukgwa/20160811143636/http://www.transporttribunal.gov.uk/Aspx/Default.aspx
+      start_year: 2000
+      end_year: 2010
+      selectable: true
+      listable: true

@@ -106,6 +106,8 @@
 
 | Name | Code | Param | Start | End | List? | Searchable? |
 | ---- | ---- | ----- | ----- | --- | ----- | ----------- |
-| Consumer Credit Appeals Tribunal | UKFTT-Credit | ukftt/credit | 2008 | 2013 | ❌ | ✅ |
-| Estate Agents Tribunal | UKFTT-Estate | ukftt/estate | 2009 | 2010 | ❌ | ✅ |
-| Immigration Services Tribunal | UKIST | ukist | 2001 | 2010 | ❌ | ✅ |
+| Claims Management Services Tribunal | FTT-Claims | ftt/claims | 2006 | 2010 | ✅ | ✅ |
+| Consumer Credit Appeals Tribunal | UKFTT-Credit | ukftt/credit | 2008 | 2013 | ✅ | ✅ |
+| Estate Agents Tribunal | UKFTT-Estate | ukftt/estate | 2009 | 2010 | ✅ | ✅ |
+| Immigration Services Tribunal | UKIST | ukist | 2001 | 2010 | ✅ | ✅ |
+| Transport Tribunal | FTT-Transport | ftt/transport | 2000 | 2010 | ✅ | ✅ |
