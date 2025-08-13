@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## v2.5.0 (2025-08-13)
+
+### Feat
+
+- Add court definitions and descriptions for FTT-Claims and FTT-Transport
+
+### Fix
+
+- Make all existing historic tribunals listable
+
 ## v2.4.7 (2025-06-06)
 
 ### Fix
