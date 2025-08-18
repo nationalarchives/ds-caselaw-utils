@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## v2.6.0 (2025-08-18)
+
+### Feat
+
+- Add Land Registration Division (Property Chamber) and Primary Health Lists
+
 ## v2.5.0 (2025-08-13)
 
 ### Feat
