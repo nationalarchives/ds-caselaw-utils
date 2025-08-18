@@ -72,7 +72,7 @@ The list of courts is defined in `src/ds_caselaw_utils/data/court_names.yml`. Th
 
 The environment you develop this repo in requires the following to be installed:
 
-- `python 3.9` (as the project is pinned to python 3.9)
+- `python 3.12` (as the project is pinned to python 3.12)
 - `poetry` (as this is used for depdenency management and virtual environment management)
 - `pre-commit` (to install git hooks defined in `.pre-commit-config.yaml`)
 

@@ -1,8 +1,7 @@
 # Automatically generated file from a JSON schema
 
 
-from typing import TypedDict, Union
-from typing_extensions import Required
+from typing import Required, TypedDict
 
 
 class RawCourt(TypedDict, total=False):
@@ -77,7 +76,7 @@ class RawCourtGroup(TypedDict, total=False):
     name: Required[str]
     """ Required property """
 
-    display_name: Required[Union[str, None]]
+    display_name: Required[str | None]
     """ Required property """
 
     is_tribunal: Required[bool]
