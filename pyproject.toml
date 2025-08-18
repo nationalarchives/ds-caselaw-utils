@@ -13,8 +13,8 @@ readme = "README.md"
 python = "^3.12"
 "ruamel.yaml" = "^0.18.0"
 typing-extensions = "^4.12.2"
-markdown-it-py = "^3.0.0"
-mdit-py-plugins = "^0.4.2"
+markdown-it-py = "^4.0.0"
+mdit-py-plugins = "^0.5.0"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "8.4.1"
