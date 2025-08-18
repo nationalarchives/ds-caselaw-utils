@@ -1,0 +1,3 @@
+The majority of the work of the Land Registration Division - Property Chamber consists of the determination of matters referred to it by HM Land Registry under s. 73(7) of the Land Registration Act 2002. Where an application made to HM Land Registry is disputed and the Registry considers the objection to an application not to be groundless, the matter will be referred to the Land Registration Division for determination.
+
+You can read more about the work of the tribunal on its website [Land Registration Division - Courts and Tribunals Judiciary](https://www.judiciary.uk/courts-and-tribunals/tribunals/first-tier-tribunal/property-chamber/land-registration-division/).
