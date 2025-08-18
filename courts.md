@@ -100,6 +100,8 @@
 | ---- | ---- | ----- | ----- | --- | ----- | ----------- |
 | Employment Tribunal | ET | – | 2022 | – | ❌ | ❌ |
 | General Regulatory Chamber | UKFTT-GRC | ukftt/grc | 2019 | – | ✅ | ✅ |
+| Land Registration Division (Property Chamber) | FTT-PC | ftt/pc | – | – | ❌ | ✅ |
+| Primary Health Lists | FTT-PHL | ftt/phl | – | – | ❌ | ✅ |
 | Tax Chamber | UKFTT-TC | ukftt/tc | 2019 | – | ✅ | ✅ |
 
 ## Historic Tribunals (historic_tribunals)

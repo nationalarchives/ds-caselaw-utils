@@ -519,6 +519,18 @@
       start_year: 2019
       selectable: true
       listable: true
+    - code: FTT-PC
+      name: Land Registration Division (Property Chamber)
+      param: ftt/pc
+      link: https://www.judiciary.uk/courts-and-tribunals/tribunals/first-tier-tribunal/property-chamber/land-registration-division/
+      selectable: true
+      listable: false
+    - code: FTT-PHL
+      name: Primary Health Lists
+      param: ftt/phl
+      link: https://www.judiciary.uk/courts-and-tribunals/tribunals/first-tier-tribunal/health-education-and-social-care-chamber/special-educational-needs-and-disability-care-standards-and-primary-health-lists-send/primary-health-lists/
+      selectable: true
+      listable: false
 - name: historic_tribunals
   display_name: Historic Tribunals
   is_tribunal: true
