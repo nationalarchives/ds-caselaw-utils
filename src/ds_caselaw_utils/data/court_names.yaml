@@ -522,6 +522,7 @@
     - code: FTT-PC
       name: Land Registration Division (Property Chamber)
       param: ftt/pc
+      ncn_pattern: \[(\d{4})\] (UKFTT) (\d+) \((PC)\)
       link: https://www.judiciary.uk/courts-and-tribunals/tribunals/first-tier-tribunal/property-chamber/land-registration-division/
       selectable: true
       listable: false

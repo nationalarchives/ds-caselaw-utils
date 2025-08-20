@@ -16,6 +16,7 @@ class TestNeutralURL:
             ("[2022] EAT 1", "eat/2022/1"),
             ("[2022] UKFTT 1 (TC)", "ukftt/tc/2022/1"),
             ("[2022] UKFTT 1 (GRC)", "ukftt/grc/2022/1"),
+            ("[2025] UKFTT 1 (PC)", "ukftt/pc/2025/1"),
             ("[2022] EWHC 1 (KB)", "ewhc/kb/2022/1"),
             ("[2023] UKAIT 1", "ukait/2023/1"),
             ("[2024] EWCOP 17 (T2)", "ewcop/t2/2024/17"),
