@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## Unreleased
+
+### Feat
+
+- support Land Registry (PC) NCNs
+
 ## v2.6.0 (2025-08-18)
 
 ### Feat
