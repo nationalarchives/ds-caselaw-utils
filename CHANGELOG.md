@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## Unreleased
+## v2.7.0 (2025-08-26)
 
 ### Feat
 
