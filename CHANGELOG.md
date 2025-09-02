@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## v2.7.1 (2025-09-02)
+
+### Fix
+
+- Update historic tribunal URLs
+
 ## v2.7.0 (2025-08-26)
 
 ### Feat
