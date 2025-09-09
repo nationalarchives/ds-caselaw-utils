@@ -1,0 +1,3 @@
+The Care Standards tribunal is responsible for handling appeals against decisions by the Secretary of State for Education, the Secretary of State for Health, Care Quality Commission, Ofsted or the Care Council of Wales which exclude, remove or suspend you from a register to work with or care for children or vulnerable adults. They are part of the Health, Education and Social Care Chamber, one of 7 chambers of the First-tier Tribunal which settles legal disputes and is structured around particular areas of law.
+
+You can read more about it on the [First-tier Tribunal (Care Standards) website](https://www.gov.uk/courts-tribunals/first-tier-tribunal-care-standards){target="\_blank"}.

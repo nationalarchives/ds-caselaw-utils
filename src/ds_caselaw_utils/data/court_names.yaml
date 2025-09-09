@@ -448,6 +448,13 @@
   display_name: "First-tier Tribunals"
   is_tribunal: true
   courts:
+    - code: UKFTT-HESC
+      name: Care Standards
+      link: https://www.gov.uk/courts-tribunals/first-tier-tribunal-care-standards
+      param: "ukftt/hesc"
+      start_year: 1985
+      selectable: true
+      listable: true
     - code: ET
       grouped_name: Employment Tribunal
       name: First-tier Tribunal (Employment Tribunal)

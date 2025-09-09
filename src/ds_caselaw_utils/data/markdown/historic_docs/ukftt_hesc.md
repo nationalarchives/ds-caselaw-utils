@@ -1,0 +1,1 @@
+All decisions from this tribunal were transferred to the National Archives in 2025. To view an archived version of the decisions of this tribunal from 1985-2025 visit the [UK Government Web Archive](https://webarchive.nationalarchives.gov.uk/ukgwa/20250916/https://carestandards.decisions.tribunals.gov.uk/Public/search.aspx).
