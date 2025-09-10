@@ -4,6 +4,7 @@
 Get metadata for the courts covered by the service
 """
 
+import itertools
 import pathlib
 from datetime import date
 from enum import Enum
@@ -310,6 +311,16 @@ class CourtsRepository:
                     if court["listable"]:
                         courts.append(Court(court, InstitutionType.TRIBUNAL))
         return courts
+
+    @property
+    def converter_regexes(self) -> tuple[str, str]:
+        """Return regex like "uksc|ukftt" and "crim|civ" suitable for URL parsing in editor/public ui"""
+        params = tuple(itertools.chain.from_iterable([court.param_aliases for court in self.get_all()]))
+        court_set = set([court for param in params if (court := param.partition("/")[0])])
+        subdivision_set = set([subdivision for param in params if (subdivision := param.partition("/")[2])])
+        court_regex = "|".join(sorted(court_set))
+        subdivision_regex = "|".join(sorted(subdivision_set))
+        return (court_regex, subdivision_regex)
 
 
 yaml = YAML()

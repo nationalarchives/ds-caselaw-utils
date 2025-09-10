@@ -387,6 +387,33 @@ class TestCourtsRepository(unittest.TestCase):
         assert institutions[0].type is InstitutionType.COURT
         assert institutions[1].type is InstitutionType.TRIBUNAL
 
+    def test_converter_regex(self):
+        data = [
+            {
+                "name": "court_group1",
+                "is_tribunal": False,
+                "courts": [{"param": "court1/jam", "name": "Court 1 Jam"}],
+            },
+            {
+                "name": "court_group2",
+                "is_tribunal": False,
+                "courts": [{"param": "court2/jam", "name": "Court 2 Jam"}],
+            },
+            {
+                "name": "court_group3",
+                "is_tribunal": False,
+                "courts": [{"param": "court2/eggs", "name": "Court 2 Eggs", "extra_params": ["court3/bacon"]}],
+            },
+            {
+                "name": "court_group4",
+                "is_tribunal": False,
+                "courts": [{"name": "Has no params"}],
+            },
+        ]
+        valid_data = make_court_repo_valid(data)
+        repo = CourtsRepository(valid_data)
+        assert repo.converter_regexes == ("court1|court2|court3", "bacon|eggs|jam")
+
 
 class TestCourt(unittest.TestCase):
     def test_repr_string(self):
