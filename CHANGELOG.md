@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## v2.8.0 (2025-09-11)
+
+- support Care Standards (HEIC) NCNs
+
 ## v2.7.1 (2025-09-02)
 
 ### Fix
