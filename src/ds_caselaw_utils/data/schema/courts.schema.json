@@ -49,6 +49,17 @@
               "description": "A regular expression pattern which matches valid NCNs from this court.",
               "type": "string"
             },
+            "ncn_examples": {
+              "title": "Neutral Citation examples",
+              "description": "An array of example NCNs for this court.",
+              "type": "array",
+              "items": {
+                "title": "Neutral Citation Number",
+                "description": "An example Neutral Citation Number, matching our expected generic NCN pattern.",
+                "type": "string",
+                "pattern": "^\\[([0-9]{4})\\] ([a-zA-Z]+)(?: ([a-zA-Z]+))? ([0-9]+)(?: \\(([a-zA-Z0-9]+)\\))?$"
+              }
+            },
             "link": {
               "type": "string",
               "format": "uri"
@@ -89,7 +100,9 @@
           },
           "required": ["code", "name", "link", "listable", "selectable"],
           "dependentRequired": {
-            "end_year": ["start_year"]
+            "end_year": ["start_year"],
+            "ncn_pattern": ["ncn_examples"],
+            "ncn_examples": ["ncn_pattern"]
           },
           "additionalProperties": false,
           "allOf": [
