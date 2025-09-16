@@ -38,4 +38,4 @@ jobs:
       - name: Install libraries
         run: poetry install
       - name: Run tests
-        run: cd src && poetry run python -m unittest
+        run: cd src && poetry run pytest
