@@ -21,6 +21,8 @@ repos:
     rev: 2.12.0
     hooks:
       - id: jsonschema-gentypes
+        additional_dependencies:
+          - "jsonschema-gentypes[validation]"
         files: src/ds_caselaw_utils/data/schema/courts.schema.json
         language_version: python3.12
 
