@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## v2.8.1 (2025-09-16)
+
+### Fix
+
+- fix missing NCN-URL conversion pattern for UKFTT-HESC
+
 ## v2.8.0 (2025-09-11)
 
 - support Care Standards (HEIC) NCNs

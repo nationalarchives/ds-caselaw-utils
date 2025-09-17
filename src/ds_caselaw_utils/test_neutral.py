@@ -22,7 +22,7 @@ class TestNeutralURL:
             ("[2024] EWCOP 17 (T2)", "ewcop/t2/2024/17"),
             ("[2000] UKIPTrib 99", "ukiptrib/2000/99"),
             ("[2000] EWCR 99", "ewcr/2000/99"),
-            ("[1999] UKFTT 1 (HESC)", "ukfft/hesc/1999/1"),
+            ("[1999] UKFTT 1 (HESC)", "ukftt/hesc/1999/1"),
         ],
     )
     def test_good_neutral_urls(self, ncn, expected_uri):
