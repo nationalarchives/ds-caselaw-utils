@@ -387,7 +387,7 @@
       name: Family Court (B - district and circuit judges)
       # This is an artifact of how the Family Court creates tiers of importance.
       link: https://www.judiciary.uk/you-and-the-judiciary/going-to-court/family-law-courts/
-      ncn_pattern: \[(\d{4})\] (EWFC) (B) (\d+)
+      ncn_pattern: \[(\d{4})\] (EWFC) (\d+) \(B\)
       ncn_examples:
         - "[2025] EWFC 79 (B)"
       param: "ewfc/b"
@@ -407,7 +407,7 @@
     - code: EWCOP-T1
       name: Court of Protection (Tier 1 - district judges)
       link: https://www.gov.uk/courts-tribunals/court-of-protection
-      ncn_pattern: \[(\d{4})\] (EWCOP) (T1) (\d+)
+      ncn_pattern: \[(\d{4})\] (EWCOP) (\d+) \(T1\)
       ncn_examples:
         - "[2024] EWCOP 51 (T1)"
       param: "ewcop/t1"
@@ -417,7 +417,7 @@
     - code: EWCOP-T2
       name: Court of Protection (Tier 2 - circuit judges)
       link: https://www.gov.uk/courts-tribunals/court-of-protection
-      ncn_pattern: \[(\d{4})\] (EWCOP) (T2) (\d+)
+      ncn_pattern: \[(\d{4})\] (EWCOP) (\d+) \(T2\)
       ncn_examples:
         - "[2023] EWCOP 75 (T2)"
       param: "ewcop/t2"
@@ -427,7 +427,7 @@
     - code: EWCOP-T3
       name: Court of Protection (Tier 3 - high court judges)
       link: https://www.gov.uk/courts-tribunals/court-of-protection
-      ncn_pattern: \[(\d{4})\] (EWCOP) (T3) (\d+)
+      ncn_pattern: \[(\d{4})\] (EWCOP) (\d+) \(T3\)
       ncn_examples:
         - "[2024] EWCOP 44 (T3)"
       param: "ewcop/t3"
