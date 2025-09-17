@@ -5,112 +5,112 @@
 
 ## supreme_court
 
-| Name | Code | Param | Start | End | List? | Searchable? |
-| ---- | ---- | ----- | ----- | --- | ----- | ----------- |
-| United Kingdom Supreme Court | UKSC | uksc | 2009 | – | ✅ | ✅ |
+| Name | Code | Param | Example NCNs | Start | End | List? | Searchable? |
+| ---- | ---- | ----- | ------------ | ----- | --- | ----- | ----------- |
+| United Kingdom Supreme Court | UKSC | uksc | [2013] UKSC 42 | 2009 | – | ✅ | ✅ |
 
 ## privy_council
 
-| Name | Code | Param | Start | End | List? | Searchable? |
-| ---- | ---- | ----- | ----- | --- | ----- | ----------- |
-| Privy Council | UKPC | ukpc | 2009 | – | ✅ | ✅ |
+| Name | Code | Param | Example NCNs | Start | End | List? | Searchable? |
+| ---- | ---- | ----- | ------------ | ----- | --- | ----- | ----------- |
+| Privy Council | UKPC | ukpc | [2011] UKPC 25 | 2009 | – | ✅ | ✅ |
 
 ## Court of Appeal (court_of_appeal)
 
-| Name | Code | Param | Start | End | List? | Searchable? |
-| ---- | ---- | ----- | ----- | --- | ----- | ----------- |
-| Civil Division | EWCA-Civil | ewca/civ | 2001 | – | ✅ | ✅ |
-| Criminal Division | EWCA-Criminal | ewca/crim | 2003 | – | ✅ | ✅ |
+| Name | Code | Param | Example NCNs | Start | End | List? | Searchable? |
+| ---- | ---- | ----- | ------------ | ----- | --- | ----- | ----------- |
+| Civil Division | EWCA-Civil | ewca/civ | [2008] EWCA Civ 649 | 2001 | – | ✅ | ✅ |
+| Criminal Division | EWCA-Criminal | ewca/crim | [2014] EWCA Crim 420 | 2003 | – | ✅ | ✅ |
 
 ## High Court (England and Wales) (high_court)
 
-| Name | Code | Param | Start | End | List? | Searchable? |
-| ---- | ---- | ----- | ----- | --- | ----- | ----------- |
-| Administrative Court | EWHC-KBD-Admin | ewhc/admin | 2022 | – | ❌ | ❌ |
-| Administrative Court | EWHC-QBD-Admin | ewhc/admin | 2003 | – | ✅ | ✅ |
-| Admiralty Court | EWHC-KBD-Admiralty | ewhc/admlty | 2022 | – | ❌ | ❌ |
-| Admiralty Court | EWHC-QBD-Admiralty | ewhc/admlty | 2003 | – | ✅ | ✅ |
-| Business List | EWHC-Chancery-Business | – | – | – | ❌ | ❌ |
-| Business and Property Courts | EWHC-Chancery-BusinessAndProperty | – | – | – | ❌ | ❌ |
-| Business and Property Courts | EWHC-KBD-BusinessAndProperty | – | – | – | ❌ | ❌ |
-| Business and Property Courts | EWHC-QBD-BusinessAndProperty | – | – | – | ❌ | ❌ |
-| Chancery Division | EWHC-Chancery | ewhc/ch | 2003 | – | ✅ | ✅ |
-| Circuit Commercial Court | EWHC-KBD-Commercial-Circuit | – | – | – | ❌ | ❌ |
-| Circuit Commercial Court | EWHC-QBD-Commercial-Circuit | – | – | – | ❌ | ❌ |
-| Commercial Court | EWHC-KBD-Commercial | ewhc/comm | 2022 | – | ❌ | ❌ |
-| Commercial Court | EWHC-QBD-Commercial | ewhc/comm | 2003 | – | ✅ | ✅ |
-| Family Division | EWHC-Family | ewhc/fam | 2003 | – | ✅ | ✅ |
-| Financial List | EWHC-Chancery-Financial | – | – | – | ❌ | ❌ |
-| Financial List | EWHC-KBD-Commercial-Financial | – | – | – | ❌ | ❌ |
-| Financial List | EWHC-QBD-Commercial-Financial | – | – | – | ❌ | ❌ |
-| High Court (Chancery Appeals) | EWHC-Chancery-Appeals | – | – | – | ❌ | ❌ |
-| Insolvency and Companies List | EWHC-Chancery-InsolvencyAndCompanies | – | – | – | ❌ | ❌ |
-| Intellectual Property Enterprise Court | EWHC-Chancery-IPEC | ewhc/ipec | 2013 | – | ✅ | ✅ |
-| Intellectual Property List | EWHC-Chancery-IntellectualProperty | – | – | – | ❌ | ❌ |
-| King's / Queen's Bench Division | EWHC-KBD | ewhc/kb | 2003 | – | ❌ | ✅ |
-| King's Bench Division | EWHC-KBD | ewhc/kb | 2022 | – | ✅ | ❌ |
-| Mercantile Court | EWHC-Mercantile | ewhc/mercantile | 2008 | 2014 | ✅ | ✅ |
-| Patents Court | EWHC-Chancery-Patents | ewhc/pat | 2003 | – | ✅ | ✅ |
-| Planning Court | EWHC-KBD-Planning | – | – | – | ❌ | ❌ |
-| Planning Court | EWHC-QBD-Planning | – | – | – | ❌ | ❌ |
-| Property, Trusts and Probate List | EWHC-Chancery-PropertyTrustsProbate | – | – | – | ❌ | ❌ |
-| Queen's Bench Division | EWHC-QBD | ewhc/qb | 2003 | 2022 | ✅ | ❌ |
-| Senior Courts Costs Office | EWHC-SeniorCourtsCosts | ewhc/scco | 2003 | – | ✅ | ✅ |
-| Technology and Construction Court | EWHC-KBD-TCC | ewhc/tcc | 2003 | – | ❌ | ❌ |
-| Technology and Construction Court | EWHC-QBD-TCC | ewhc/tcc | 2003 | – | ✅ | ✅ |
+| Name | Code | Param | Example NCNs | Start | End | List? | Searchable? |
+| ---- | ---- | ----- | ------------ | ----- | --- | ----- | ----------- |
+| Administrative Court | EWHC-KBD-Admin | ewhc/admin | [2025] EWHC 2152 (Admin) | 2022 | – | ❌ | ❌ |
+| Administrative Court | EWHC-QBD-Admin | ewhc/admin | [2009] EWHC 995 (Admin) | 2003 | – | ✅ | ✅ |
+| Admiralty Court | EWHC-KBD-Admiralty | ewhc/admlty | [2024] EWHC 16 (Admlty) | 2022 | – | ❌ | ❌ |
+| Admiralty Court | EWHC-QBD-Admiralty | ewhc/admlty | [2018] EWHC 82 (Admlty) | 2003 | – | ✅ | ✅ |
+| Business List | EWHC-Chancery-Business | – | – | – | – | ❌ | ❌ |
+| Business and Property Courts | EWHC-Chancery-BusinessAndProperty | – | – | – | – | ❌ | ❌ |
+| Business and Property Courts | EWHC-KBD-BusinessAndProperty | – | – | – | – | ❌ | ❌ |
+| Business and Property Courts | EWHC-QBD-BusinessAndProperty | – | – | – | – | ❌ | ❌ |
+| Chancery Division | EWHC-Chancery | ewhc/ch | [2016] EWHC 2142 (Ch) | 2003 | – | ✅ | ✅ |
+| Circuit Commercial Court | EWHC-KBD-Commercial-Circuit | – | [2023] EWHC 2168 (Comm) | – | – | ❌ | ❌ |
+| Circuit Commercial Court | EWHC-QBD-Commercial-Circuit | – | [2021] EWHC 286 (Comm) | – | – | ❌ | ❌ |
+| Commercial Court | EWHC-KBD-Commercial | ewhc/comm | [2024] EWHC 789 (Comm) | 2022 | – | ❌ | ❌ |
+| Commercial Court | EWHC-QBD-Commercial | ewhc/comm | [2011] EWHC 68 (Comm) | 2003 | – | ✅ | ✅ |
+| Family Division | EWHC-Family | ewhc/fam | [2013] EWHC 3158 (Fam) | 2003 | – | ✅ | ✅ |
+| Financial List | EWHC-Chancery-Financial | – | – | – | – | ❌ | ❌ |
+| Financial List | EWHC-KBD-Commercial-Financial | – | [2025] EWHC 1881 (Comm) | – | – | ❌ | ❌ |
+| Financial List | EWHC-QBD-Commercial-Financial | – | [2014] EWHC 3156 (Comm) | – | – | ❌ | ❌ |
+| High Court (Chancery Appeals) | EWHC-Chancery-Appeals | – | – | – | – | ❌ | ❌ |
+| Insolvency and Companies List | EWHC-Chancery-InsolvencyAndCompanies | – | – | – | – | ❌ | ❌ |
+| Intellectual Property Enterprise Court | EWHC-Chancery-IPEC | ewhc/ipec | [2014] EWHC 349 (IPEC) | 2013 | – | ✅ | ✅ |
+| Intellectual Property List | EWHC-Chancery-IntellectualProperty | – | – | – | – | ❌ | ❌ |
+| King's / Queen's Bench Division | EWHC-KBD | ewhc/kb | [2022] EWHC 2387 (KB) | 2003 | – | ❌ | ✅ |
+| King's Bench Division | EWHC-KBD | ewhc/kb | [2024] EWHC 285 (KB) | 2022 | – | ✅ | ❌ |
+| Mercantile Court | EWHC-Mercantile | ewhc/mercantile | [2014] EWHC 1195 (Mercantile) | 2008 | 2014 | ✅ | ✅ |
+| Patents Court | EWHC-Chancery-Patents | ewhc/pat | [2015] EWHC 3163 (Pat) | 2003 | – | ✅ | ✅ |
+| Planning Court | EWHC-KBD-Planning | – | – | – | – | ❌ | ❌ |
+| Planning Court | EWHC-QBD-Planning | – | – | – | – | ❌ | ❌ |
+| Property, Trusts and Probate List | EWHC-Chancery-PropertyTrustsProbate | – | – | – | – | ❌ | ❌ |
+| Queen's Bench Division | EWHC-QBD | ewhc/qb | [2019] EWHC 2488 (QB) | 2003 | 2022 | ✅ | ❌ |
+| Senior Courts Costs Office | EWHC-SeniorCourtsCosts | ewhc/scco | [2022] EWHC 3349 (SCCO) | 2003 | – | ✅ | ✅ |
+| Technology and Construction Court | EWHC-KBD-TCC | ewhc/tcc | [2024] EWHC 802 (TCC) | 2003 | – | ❌ | ❌ |
+| Technology and Construction Court | EWHC-QBD-TCC | ewhc/tcc | [2014] EWHC 1800 (TCC) | 2003 | – | ✅ | ✅ |
 
 ## Other Courts (lower_courts)
 
-| Name | Code | Param | Start | End | List? | Searchable? |
-| ---- | ---- | ----- | ----- | --- | ----- | ----------- |
-| County Court | EWCC | ewcc | 2019 | – | ✅ | ✅ |
-| Court of Protection (Tier 1 - district judges) | EWCOP-T1 | ewcop/t1 | 2009 | – | ❌ | ❌ |
-| Court of Protection (Tier 2 - circuit judges) | EWCOP-T2 | ewcop/t2 | 2009 | – | ❌ | ❌ |
-| Court of Protection (Tier 3 - high court judges) | EWCOP-T3 | ewcop/t3 | 2009 | – | ❌ | ❌ |
-| Court of Protection | EWCOP | ewcop | 2009 | – | ✅ | ✅ |
-| Crown Court | EWCR | ewcr | 2020 | – | ✅ | ✅ |
-| Family Court (B - district and circuit judges) | EWFC-B | ewfc/b | 2009 | – | ❌ | ❌ |
-| Family Court | EWFC | ewfc | 2014 | – | ✅ | ✅ |
+| Name | Code | Param | Example NCNs | Start | End | List? | Searchable? |
+| ---- | ---- | ----- | ------------ | ----- | --- | ----- | ----------- |
+| County Court | EWCC | ewcc | [2025] EWCC 26 | 2019 | – | ✅ | ✅ |
+| Court of Protection (Tier 1 - district judges) | EWCOP-T1 | ewcop/t1 | [2024] EWCOP 51 (T1) | 2009 | – | ❌ | ❌ |
+| Court of Protection (Tier 2 - circuit judges) | EWCOP-T2 | ewcop/t2 | [2023] EWCOP 75 (T2) | 2009 | – | ❌ | ❌ |
+| Court of Protection (Tier 3 - high court judges) | EWCOP-T3 | ewcop/t3 | [2024] EWCOP 44 (T3) | 2009 | – | ❌ | ❌ |
+| Court of Protection | EWCOP | ewcop | [2016] EWCOP 11 | 2009 | – | ✅ | ✅ |
+| Crown Court | EWCR | ewcr | [2025] EWCR 3 | 2020 | – | ✅ | ✅ |
+| Family Court (B - district and circuit judges) | EWFC-B | ewfc/b | [2025] EWFC 79 (B) | 2009 | – | ❌ | ❌ |
+| Family Court | EWFC | ewfc | [2024] EWFC 141 | 2014 | – | ✅ | ✅ |
 
 ## investigatory_powers_tribunal
 
-| Name | Code | Param | Start | End | List? | Searchable? |
-| ---- | ---- | ----- | ----- | --- | ----- | ----------- |
-| Investigatory Powers Tribunal | UKIPT | ukiptrib | 2023 | – | ✅ | ✅ |
+| Name | Code | Param | Example NCNs | Start | End | List? | Searchable? |
+| ---- | ---- | ----- | ------------ | ----- | --- | ----- | ----------- |
+| Investigatory Powers Tribunal | UKIPT | ukiptrib | [2023] UKIPTrib 11 | 2023 | – | ✅ | ✅ |
 
 ## employment_appeal_tribunal
 
-| Name | Code | Param | Start | End | List? | Searchable? |
-| ---- | ---- | ----- | ----- | --- | ----- | ----------- |
-| Employment Appeal Tribunal | EAT | eat | 2021 | – | ✅ | ✅ |
+| Name | Code | Param | Example NCNs | Start | End | List? | Searchable? |
+| ---- | ---- | ----- | ------------ | ----- | --- | ----- | ----------- |
+| Employment Appeal Tribunal | EAT | eat | [2024] EAT 100 | 2021 | – | ✅ | ✅ |
 
 ## Upper Tribunals (upper_tribunals)
 
-| Name | Code | Param | Start | End | List? | Searchable? |
-| ---- | ---- | ----- | ----- | --- | ----- | ----------- |
-| Administrative Appeals Chamber | UKUT-AAC | ukut/aac | 2011 | – | ✅ | ✅ |
-| Asylum & Immigration Tribunal | UKAIT | ukait | 2003 | 2010 | ❌ | ❌ |
-| Immigration and Asylum Chamber | UKUT-IAC | ukut/iac | 2007 | – | ✅ | ✅ |
-| Lands Chamber | UKUT-LC | ukut/lc | 2014 | – | ✅ | ✅ |
-| Tax and Chancery Chamber | UKUT-TCC | ukut/tcc | 2016 | – | ✅ | ✅ |
+| Name | Code | Param | Example NCNs | Start | End | List? | Searchable? |
+| ---- | ---- | ----- | ------------ | ----- | --- | ----- | ----------- |
+| Administrative Appeals Chamber | UKUT-AAC | ukut/aac | [2024] UKUT 326 (AAC) | 2011 | – | ✅ | ✅ |
+| Asylum & Immigration Tribunal | UKAIT | ukait | [2009] UKAIT 10 | 2003 | 2010 | ❌ | ❌ |
+| Immigration and Asylum Chamber | UKUT-IAC | ukut/iac | [2016] UKUT 562 (IAC) | 2007 | – | ✅ | ✅ |
+| Lands Chamber | UKUT-LC | ukut/lc | [2017] UKUT 135 (LC) | 2014 | – | ✅ | ✅ |
+| Tax and Chancery Chamber | UKUT-TCC | ukut/tcc | [2017] UKUT 504 (TCC) | 2016 | – | ✅ | ✅ |
 
 ## First-tier Tribunals (first_tier_tribunals)
 
-| Name | Code | Param | Start | End | List? | Searchable? |
-| ---- | ---- | ----- | ----- | --- | ----- | ----------- |
-| Care Standards | UKFTT-HESC | ukftt/hesc | 1985 | – | ✅ | ✅ |
-| Employment Tribunal | ET | – | 2022 | – | ❌ | ❌ |
-| General Regulatory Chamber | UKFTT-GRC | ukftt/grc | 2019 | – | ✅ | ✅ |
-| Land Registration Division (Property Chamber) | FTT-PC | ftt/pc | – | – | ❌ | ✅ |
-| Primary Health Lists | FTT-PHL | ftt/phl | – | – | ❌ | ✅ |
-| Tax Chamber | UKFTT-TC | ukftt/tc | 2019 | – | ✅ | ✅ |
+| Name | Code | Param | Example NCNs | Start | End | List? | Searchable? |
+| ---- | ---- | ----- | ------------ | ----- | --- | ----- | ----------- |
+| Care Standards | UKFTT-HESC | ukftt/hesc | [2025] UKFTT 1104 (HESC) | 1985 | – | ✅ | ✅ |
+| Employment Tribunal | ET | – | – | 2022 | – | ❌ | ❌ |
+| General Regulatory Chamber | UKFTT-GRC | ukftt/grc | [2024] UKFTT 1069 (GRC) | 2019 | – | ✅ | ✅ |
+| Land Registration Division (Property Chamber) | FTT-PC | ftt/pc | [2025] UKFTT 1077 (PC) | – | – | ❌ | ✅ |
+| Primary Health Lists | FTT-PHL | ftt/phl | – | – | – | ❌ | ✅ |
+| Tax Chamber | UKFTT-TC | ukftt/tc | [2022] UKFTT 159 (TC) | 2019 | – | ✅ | ✅ |
 
 ## Historic Tribunals (historic_tribunals)
 
-| Name | Code | Param | Start | End | List? | Searchable? |
-| ---- | ---- | ----- | ----- | --- | ----- | ----------- |
-| Claims Management Services Tribunal | FTT-Claims | ftt/claims | 2006 | 2010 | ✅ | ✅ |
-| Consumer Credit Appeals Tribunal | UKFTT-Credit | ukftt/credit | 2008 | 2013 | ✅ | ✅ |
-| Estate Agents Tribunal | UKFTT-Estate | ukftt/estate | 2009 | 2010 | ✅ | ✅ |
-| Immigration Services Tribunal | UKIST | ukist | 2001 | 2010 | ✅ | ✅ |
-| Transport Tribunal | FTT-Transport | ftt/transport | 2000 | 2010 | ✅ | ✅ |
+| Name | Code | Param | Example NCNs | Start | End | List? | Searchable? |
+| ---- | ---- | ----- | ------------ | ----- | --- | ----- | ----------- |
+| Claims Management Services Tribunal | FTT-Claims | ftt/claims | – | 2006 | 2010 | ✅ | ✅ |
+| Consumer Credit Appeals Tribunal | UKFTT-Credit | ukftt/credit | – | 2008 | 2013 | ✅ | ✅ |
+| Estate Agents Tribunal | UKFTT-Estate | ukftt/estate | – | 2009 | 2010 | ✅ | ✅ |
+| Immigration Services Tribunal | UKIST | ukist | – | 2001 | 2010 | ✅ | ✅ |
+| Transport Tribunal | FTT-Transport | ftt/transport | – | 2000 | 2010 | ✅ | ✅ |

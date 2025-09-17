@@ -26,9 +26,9 @@ with Path("courts.md").open("w", encoding="utf-8") as f:
             f.write(f"\n## {group['name']}\n")
 
         f.write(
-            "\n| Name | Code | Param | Start | End | List? | Searchable? |\n",
+            "\n| Name | Code | Param | Example NCNs | Start | End | List? | Searchable? |\n",
         )
-        f.write("| ---- | ---- | ----- | ----- | --- | ----- | ----------- |\n")
+        f.write("| ---- | ---- | ----- | ------------ | ----- | --- | ----- | ----------- |\n")
 
         for court in sorted(
             group["courts"], key=lambda x: (x["grouped_name"] if "grouped_name" in x else x["name"]) + x["code"]
@@ -41,6 +41,14 @@ with Path("courts.md").open("w", encoding="utf-8") as f:
 
             f.write(" | ")
             f.write(court["param"] if "param" in court else "–")
+
+            f.write(" | ")
+            f.write(
+                # \xa0 is a non-breaking space
+                ", ".join([str(ncn).replace(" ", "\xa0") for ncn in court["ncn_examples"]])
+                if "ncn_examples" in court
+                else "–"
+            )
 
             f.write(" | ")
             f.write(str(court["start_year"]) if "start_year" in court else "–")

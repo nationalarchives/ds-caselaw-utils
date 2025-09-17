@@ -4,6 +4,17 @@
 from typing import Required, TypedDict
 
 
+NeutralCitationNumber = str
+"""
+Neutral Citation Number.
+
+An example Neutral Citation Number, matching our expected generic NCN pattern.
+
+pattern: ^\[([0-9]{4})\] ([a-zA-Z]+)(?: ([a-zA-Z]+))? ([0-9]+)(?: \(([a-zA-Z0-9]+)\))?$
+"""
+
+
+
 class RawCourt(TypedDict, total=False):
     """
     Raw Court.
@@ -11,6 +22,10 @@ class RawCourt(TypedDict, total=False):
     dependentRequired:
       end_year:
       - start_year
+      ncn_examples:
+      - ncn_pattern
+      ncn_pattern:
+      - ncn_examples
     allOf:
       - if:
           properties:
@@ -48,6 +63,13 @@ class RawCourt(TypedDict, total=False):
     Neutral Citation Pattern.
 
     A regular expression pattern which matches valid NCNs from this court.
+    """
+
+    ncn_examples: list["NeutralCitationNumber"]
+    """
+    Neutral Citation examples.
+
+    An array of example NCNs for this court.
     """
 
     link: Required[str]

@@ -537,6 +537,14 @@ class TestCourtWithJurisdiction(unittest.TestCase):
         self.assertEqual(cwj.ncn_pattern, "court_ncn")
         court.mock_ncn_pattern.assert_called()
 
+    def test_ncn_examples(self):
+        # It returns the court's NCN examples
+        court = mock_with_properties({"ncn_examples": ["[2025] UKSC 123"]})
+        jurisdiction = mock_with_properties()
+        cwj = CourtWithJurisdiction(court, jurisdiction)
+        self.assertEqual(cwj.ncn_examples, ["[2025] UKSC 123"])
+        court.mock_ncn_examples.assert_called()
+
     def test_canonical_param(self):
         # It returns the court canonical_param
         court = mock_with_properties({"canonical_param": "court_canonical_param"})
