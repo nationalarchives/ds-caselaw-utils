@@ -54,6 +54,7 @@ class Court:
         self.ncn_pattern: Optional[NeutralCitationPattern] = (
             NeutralCitationPattern(compile(data["ncn_pattern"])) if "ncn_pattern" in data else None
         )
+        self.ncn_examples: Optional[list[str]] = data["ncn_examples"] if "ncn_examples" in data else None
         if "param" in data:
             self.canonical_param = CourtParam(data["param"])
             self.param_aliases = [CourtParam(data["param"])] + [
@@ -133,6 +134,10 @@ class CourtWithJurisdiction(Court):
     @property
     def ncn_pattern(self) -> Optional[NeutralCitationPattern]:
         return self.court.ncn_pattern
+
+    @property
+    def ncn_examples(self) -> Optional[list[str]]:
+        return self.court.ncn_examples
 
     @property
     def canonical_param(self) -> Optional[CourtParam]:
