@@ -590,6 +590,9 @@
         - code: InformationRights
           prefix: EA
           name: Information Rights
+        - code: NitrateVulnerableZones
+          prefix: NVZ
+          name: Nitrate Vulnerable Zones
         - code: Pensions
           prefix: PEN
           name: Pensions
