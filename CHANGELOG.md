@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## v2.8.2 (2025-10-03)
+
+- Add NVZ (Nitrate Vulnerable Zones) to GRC jurisdictions
+
 ## v2.8.1 (2025-09-16)
 
 ### Fix
