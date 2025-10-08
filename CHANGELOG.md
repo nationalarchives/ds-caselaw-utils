@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## v2.9.0 (2025-10-08)
+
+- Add SIAC (Special Immigration Appeals Commission) tribunal
+
 ## v2.8.2 (2025-10-03)
 
 - Add NVZ (Nitrate Vulnerable Zones) to GRC jurisdictions
