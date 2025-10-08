@@ -78,6 +78,12 @@
 | ---- | ---- | ----- | ------------ | ----- | --- | ----- | ----------- |
 | Investigatory Powers Tribunal | UKIPT | ukiptrib | [2023] UKIPTrib 11 | 2023 | – | ✅ | ✅ |
 
+## special_immigration_appeals_commission
+
+| Name | Code | Param | Example NCNs | Start | End | List? | Searchable? |
+| ---- | ---- | ----- | ------------ | ----- | --- | ----- | ----------- |
+| Special Immigration Appeals Commission | SIAC | siac | – | 2003 | – | ✅ | ✅ |
+
 ## employment_appeal_tribunal
 
 | Name | Code | Param | Example NCNs | Start | End | List? | Searchable? |
