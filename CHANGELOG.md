@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## v2.10.0 (2025-10-14)
+
+- Add PAAC and POAC tribunals
+- Add forgotten SIAC blurbs
+
 ## v2.9.0 (2025-10-08)
 
 - Add SIAC (Special Immigration Appeals Commission) tribunal
