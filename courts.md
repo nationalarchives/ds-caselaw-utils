@@ -84,6 +84,18 @@
 | ---- | ---- | ----- | ------------ | ----- | --- | ----- | ----------- |
 | Special Immigration Appeals Commission | SIAC | siac | – | 2003 | – | ✅ | ✅ |
 
+## proscribed_organisations_appeal_commission
+
+| Name | Code | Param | Example NCNs | Start | End | List? | Searchable? |
+| ---- | ---- | ----- | ------------ | ----- | --- | ----- | ----------- |
+| Proscribed Organisations Appeal Commission | POAC | poac | – | 2003 | – | ✅ | ✅ |
+
+## pathogens_access_appeal_commission
+
+| Name | Code | Param | Example NCNs | Start | End | List? | Searchable? |
+| ---- | ---- | ----- | ------------ | ----- | --- | ----- | ----------- |
+| Pathogens Access Appeal Commission | PAAC | paac | – | 2003 | – | ✅ | ✅ |
+
 ## employment_appeal_tribunal
 
 | Name | Code | Param | Example NCNs | Start | End | List? | Searchable? |
