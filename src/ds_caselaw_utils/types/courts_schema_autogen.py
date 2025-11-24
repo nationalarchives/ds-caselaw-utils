@@ -5,7 +5,7 @@ from typing import Required, TypedDict
 
 
 NeutralCitationNumber = str
-"""
+r"""
 Neutral Citation Number.
 
 An example Neutral Citation Number, matching our expected generic NCN pattern.
