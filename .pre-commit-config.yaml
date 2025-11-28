@@ -92,6 +92,6 @@ repos:
         stages:
           - pre-push
   - repo: https://github.com/woodruffw/zizmor-pre-commit
-    rev: v1.16.3
+    rev: v1.17.0
     hooks:
       - id: zizmor
