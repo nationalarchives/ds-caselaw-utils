@@ -5,7 +5,7 @@ from typing import Required, TypedDict
 
 
 NeutralCitationNumber = str
-"""
+r"""
 Neutral Citation Number.
 
 An example Neutral Citation Number, matching our expected generic NCN pattern.
@@ -16,7 +16,7 @@ pattern: ^\[([0-9]{4})\] ([a-zA-Z]+)(?: ([a-zA-Z]+))? ([0-9]+)(?: \(([a-zA-Z0-9]
 
 
 class RawCourt(TypedDict, total=False):
-    """
+    r"""
     Raw Court.
 
     dependentRequired:
@@ -44,73 +44,73 @@ class RawCourt(TypedDict, total=False):
     """
 
     code: Required[str]
-    """
+    r"""
     pattern: ^[A-Za-z]{2,}(-[A-Za-z0-9]+)*$
 
     Required property
     """
 
     name: Required[str]
-    """ Required property """
+    r""" Required property """
 
     grouped_name: str
     param: str
-    """ pattern: ^[a-z]{2,}(?:/[a-z0-9]+)?$ """
+    r""" pattern: ^[a-z]{2,}(?:/[a-z0-9]+)?$ """
 
     extra_params: list["_RawCourtExtraParamsItem"]
     ncn_pattern: str
-    """
+    r"""
     Neutral Citation Pattern.
 
     A regular expression pattern which matches valid NCNs from this court.
     """
 
     ncn_examples: list["NeutralCitationNumber"]
-    """
+    r"""
     Neutral Citation examples.
 
     An array of example NCNs for this court.
     """
 
     link: Required[str]
-    """
+    r"""
     format: uri
 
     Required property
     """
 
     start_year: int
-    """ minimum: 1066 """
+    r""" minimum: 1066 """
 
     end_year: int
     listable: Required[bool]
-    """ Required property """
+    r""" Required property """
 
     selectable: Required[bool]
-    """ Required property """
+    r""" Required property """
 
     jurisdictions: list["RawJurisdiction"]
 
 
 class RawCourtGroup(TypedDict, total=False):
-    """ Raw Court Group. """
+    r""" Raw Court Group. """
 
     name: Required[str]
-    """ Required property """
+    r""" Required property """
 
     display_name: Required[str | None]
-    """ Required property """
+    r""" Required property """
 
     is_tribunal: Required[bool]
-    """ Required property """
+    r""" Required property """
 
     courts: Required[list["RawCourt"]]
-    """ Required property """
+    r""" Required property """
 
 
 
 RawCourtRepository = list["RawCourtGroup"]
-"""
+r"""
 Raw Court List.
 
 A list of courts
@@ -119,19 +119,19 @@ A list of courts
 
 
 class RawJurisdiction(TypedDict, total=False):
-    """ Raw Jurisdiction. """
+    r""" Raw Jurisdiction. """
 
     prefix: Required[str]
-    """ Required property """
+    r""" Required property """
 
     name: Required[str]
-    """ Required property """
+    r""" Required property """
 
     code: Required[str]
-    """ Required property """
+    r""" Required property """
 
 
 
 _RawCourtExtraParamsItem = str
-""" pattern: ^[a-z]{2,}(/[a-z]+)?$ """
+r""" pattern: ^[a-z]{2,}(/[a-z]+)?$ """
 
