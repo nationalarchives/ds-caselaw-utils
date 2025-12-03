@@ -30,6 +30,9 @@
             "name": {
               "type": "string"
             },
+            "long_name": {
+              "type": "string"
+            },
             "grouped_name": {
               "type": "string"
             },
