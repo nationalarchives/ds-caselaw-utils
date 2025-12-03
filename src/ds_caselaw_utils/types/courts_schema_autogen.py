@@ -53,6 +53,7 @@ class RawCourt(TypedDict, total=False):
     name: Required[str]
     r""" Required property """
 
+    long_name: str
     grouped_name: str
     param: str
     r""" pattern: ^[a-z]{2,}(?:/[a-z0-9]+)?$ """
