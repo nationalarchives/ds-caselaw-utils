@@ -52,6 +52,7 @@ class Court:
         self.long_name: str = data.get("long_name") or data["name"]
         self.grouped_name: str = data.get("grouped_name") or data["name"]
         self.link: str = data["link"]
+        self.identifier_iri: str = data.get("identifier_iri") or data["link"]
         self.ncn_pattern: Optional[NeutralCitationPattern] = (
             NeutralCitationPattern(compile(data["ncn_pattern"])) if "ncn_pattern" in data else None
         )
@@ -131,6 +132,10 @@ class CourtWithJurisdiction(Court):
     @property
     def link(self) -> str:
         return self.court.link
+
+    @property
+    def identifier_iri(self) -> str:
+        return self.court.identifier_iri
 
     @property
     def ncn_pattern(self) -> Optional[NeutralCitationPattern]:

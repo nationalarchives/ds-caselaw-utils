@@ -544,6 +544,7 @@
       name: Asylum & Immigration Tribunal
       long_name: United Kingdom Asylum & Immigration Tribunal
       link: https://www.gov.uk/courts-tribunals/upper-tribunal-immigration-and-asylum-chamber
+      identifier_iri: http://www.tribunals.gov.uk/ImmigrationAsylum/
       ncn_pattern: \[(\d{4})\] (UKAIT) (\d+)
       ncn_examples:
         - "[2009] UKAIT 10"
