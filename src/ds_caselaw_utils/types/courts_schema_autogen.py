@@ -80,6 +80,9 @@ class RawCourt(TypedDict, total=False):
     Required property
     """
 
+    identifier_iri: str
+    r""" format: uri """
+
     start_year: int
     r""" minimum: 1066 """
 
