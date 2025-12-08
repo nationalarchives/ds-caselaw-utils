@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## v2.10.0 (2025-12-08)
+
+- Add long name and identifier iris to data to support stub XML in Editor UI as well as parser
+
 ## v2.9.0 (2025-10-08)
 
 - Add SIAC (Special Immigration Appeals Commission) tribunal
