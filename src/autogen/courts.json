@@ -1,0 +1,1038 @@
+[
+  {
+    "name": "supreme_court",
+    "display_name": null,
+    "is_tribunal": false,
+    "courts": [
+      {
+        "code": "UKSC",
+        "name": "United Kingdom Supreme Court",
+        "long_name": "The Supreme Court",
+        "link": "https://www.supremecourt.uk/",
+        "ncn_pattern": "\\[(\\d{4})\\] (UKSC) (\\d+)",
+        "ncn_examples": [
+          "[2013] UKSC 42"
+        ],
+        "param": "uksc",
+        "start_year": 2009,
+        "selectable": true,
+        "listable": true,
+        "identifier_iri": "https://www.supremecourt.uk/"
+      }
+    ]
+  },
+  {
+    "name": "privy_council",
+    "display_name": null,
+    "is_tribunal": false,
+    "courts": [
+      {
+        "code": "UKPC",
+        "name": "Privy Council",
+        "long_name": "The Judicial Committee of the Privy Council",
+        "link": "https://www.jcpc.uk/",
+        "ncn_pattern": "\\[(\\d{4})\\] (UKPC) (\\d+)",
+        "ncn_examples": [
+          "[2011] UKPC 25"
+        ],
+        "param": "ukpc",
+        "start_year": 2009,
+        "selectable": true,
+        "listable": true,
+        "identifier_iri": "https://www.jcpc.uk/"
+      }
+    ]
+  },
+  {
+    "name": "court_of_appeal",
+    "display_name": "Court of Appeal",
+    "is_tribunal": false,
+    "courts": [
+      {
+        "code": "EWCA-Civil",
+        "grouped_name": "Civil Division",
+        "name": "Court of Appeal (Civil Division)",
+        "long_name": "The Court of Appeal of England and Wales (Civil Division)",
+        "link": "https://www.gov.uk/courts-tribunals/court-of-appeal-civil-division",
+        "ncn_pattern": "\\[(\\d{4})\\] (EWCA) (Civ) (\\d+)",
+        "ncn_examples": [
+          "[2008] EWCA Civ 649"
+        ],
+        "param": "ewca/civ",
+        "start_year": 2001,
+        "selectable": true,
+        "listable": true,
+        "identifier_iri": "https://www.gov.uk/courts-tribunals/court-of-appeal-civil-division"
+      },
+      {
+        "code": "EWCA-Criminal",
+        "grouped_name": "Criminal Division",
+        "name": "Court of Appeal (Criminal Division)",
+        "long_name": "The Court of Appeal of England and Wales (Criminal Division)",
+        "link": "https://www.gov.uk/courts-tribunals/court-of-appeal-criminal-division",
+        "ncn_pattern": "\\[(\\d{4})\\] (EWCA) (Crim) (\\d+)",
+        "ncn_examples": [
+          "[2014] EWCA Crim 420"
+        ],
+        "param": "ewca/crim",
+        "start_year": 2003,
+        "selectable": true,
+        "listable": true,
+        "identifier_iri": "https://www.gov.uk/courts-tribunals/court-of-appeal-criminal-division"
+      }
+    ]
+  },
+  {
+    "name": "high_court",
+    "display_name": "High Court (England and Wales)",
+    "is_tribunal": false,
+    "courts": [
+      {
+        "code": "EWHC-QBD-Admin",
+        "grouped_name": "Administrative Court",
+        "name": "High Court (Administrative Court)",
+        "long_name": "The Administrative Court (Queen's Bench Division)",
+        "link": "https://www.gov.uk/courts-tribunals/administrative-court",
+        "ncn_pattern": "\\[(\\d{4})\\] (EWHC) (\\d+) \\((Admin)\\)",
+        "ncn_examples": [
+          "[2009] EWHC 995 (Admin)"
+        ],
+        "param": "ewhc/admin",
+        "start_year": 2003,
+        "selectable": true,
+        "listable": true,
+        "identifier_iri": "https://www.gov.uk/courts-tribunals/administrative-court"
+      },
+      {
+        "code": "EWHC-KBD-Admin",
+        "grouped_name": "Administrative Court",
+        "name": "High Court (Administrative Court)",
+        "long_name": "The Administrative Court (Queen's Bench Division)",
+        "link": "https://www.gov.uk/courts-tribunals/administrative-court",
+        "ncn_pattern": "\\[(\\d{4})\\] (EWHC) (\\d+) \\((Admin)\\)",
+        "ncn_examples": [
+          "[2025] EWHC 2152 (Admin)"
+        ],
+        "param": "ewhc/admin",
+        "start_year": 2022,
+        "selectable": false,
+        "listable": false,
+        "identifier_iri": "https://www.gov.uk/courts-tribunals/administrative-court"
+      },
+      {
+        "code": "EWHC-QBD-Admiralty",
+        "grouped_name": "Admiralty Court",
+        "name": "High Court (Admiralty Division)",
+        "long_name": "The Business and Property Courts (Admiralty Court)",
+        "link": "https://www.gov.uk/courts-tribunals/admiralty-court",
+        "ncn_pattern": "\\[(\\d{4})\\] (EWHC) (\\d+) \\((Admlty)\\)",
+        "ncn_examples": [
+          "[2018] EWHC 82 (Admlty)"
+        ],
+        "param": "ewhc/admlty",
+        "start_year": 2003,
+        "selectable": true,
+        "listable": true,
+        "identifier_iri": "https://www.gov.uk/courts-tribunals/admiralty-court"
+      },
+      {
+        "code": "EWHC-KBD-Admiralty",
+        "grouped_name": "Admiralty Court",
+        "name": "High Court (Admiralty Division)",
+        "long_name": "The Business and Property Courts (Admiralty Court)",
+        "link": "https://www.gov.uk/courts-tribunals/admiralty-court",
+        "ncn_pattern": "\\[(\\d{4})\\] (EWHC) (\\d+) \\((Admlty)\\)",
+        "ncn_examples": [
+          "[2024] EWHC 16 (Admlty)"
+        ],
+        "param": "ewhc/admlty",
+        "start_year": 2022,
+        "selectable": false,
+        "listable": false,
+        "identifier_iri": "https://www.gov.uk/courts-tribunals/admiralty-court"
+      },
+      {
+        "code": "EWHC-QBD-BusinessAndProperty",
+        "grouped_name": "Business and Property Courts",
+        "name": "High Court (Business and Property Courts)",
+        "link": "https://www.gov.uk/courts-tribunals/the-business-and-property-courts",
+        "selectable": false,
+        "listable": false,
+        "identifier_iri": "https://www.gov.uk/courts-tribunals/the-business-and-property-courts"
+      },
+      {
+        "code": "EWHC-KBD-BusinessAndProperty",
+        "grouped_name": "Business and Property Courts",
+        "name": "High Courts (Business and Property Courts)",
+        "link": "https://www.gov.uk/courts-tribunals/the-business-and-property-courts",
+        "selectable": false,
+        "listable": false,
+        "identifier_iri": "https://www.gov.uk/courts-tribunals/the-business-and-property-courts"
+      },
+      {
+        "code": "EWHC-Chancery-BusinessAndProperty",
+        "grouped_name": "Business and Property Courts",
+        "name": "High Court (Business and Property Courts)",
+        "long_name": "The Business and Property Courts (Chancery Division)",
+        "link": "https://www.gov.uk/courts-tribunals/the-business-and-property-courts",
+        "selectable": false,
+        "listable": false,
+        "identifier_iri": "https://www.gov.uk/courts-tribunals/the-business-and-property-courts"
+      },
+      {
+        "code": "EWHC-Chancery-Business",
+        "grouped_name": "Business List",
+        "name": "High Court (Business List)",
+        "long_name": "The Business and Property Courts (Business List)",
+        "link": "https://www.gov.uk/courts-tribunals/the-business-list",
+        "selectable": false,
+        "listable": false,
+        "identifier_iri": "https://www.gov.uk/courts-tribunals/the-business-list"
+      },
+      {
+        "code": "EWHC-Chancery-Appeals",
+        "name": "Chancery Appeals",
+        "grouped_name": "High Court (Chancery Appeals)",
+        "long_name": "The Business and Property Courts (Chancery Appeals)",
+        "link": "https://www.gov.uk/courts-tribunals/chancery-division-of-the-high-court",
+        "selectable": false,
+        "listable": false,
+        "identifier_iri": "https://www.gov.uk/courts-tribunals/chancery-division-of-the-high-court"
+      },
+      {
+        "code": "EWHC-Chancery",
+        "grouped_name": "Chancery Division",
+        "name": "High Court (Chancery Division)",
+        "link": "https://www.gov.uk/courts-tribunals/chancery-division-of-the-high-court",
+        "ncn_pattern": "\\[(\\d{4})\\] (EWHC) (\\d+) \\((Ch)\\)",
+        "ncn_examples": [
+          "[2016] EWHC 2142 (Ch)"
+        ],
+        "param": "ewhc/ch",
+        "start_year": 2003,
+        "selectable": true,
+        "listable": true,
+        "identifier_iri": "https://www.gov.uk/courts-tribunals/chancery-division-of-the-high-court"
+      },
+      {
+        "code": "EWHC-QBD-Commercial-Circuit",
+        "grouped_name": "Circuit Commercial Court",
+        "name": "High Court (Circuit Commercial Court)",
+        "long_name": "The Business and Property Courts (The Financial List) (QBD)",
+        "link": "https://www.gov.uk/courts-tribunals/commercial-circuit-court",
+        "ncn_pattern": "\\[(\\d{4})\\] (EWHC) (\\d+) \\((Comm)\\)",
+        "ncn_examples": [
+          "[2021] EWHC 286 (Comm)"
+        ],
+        "selectable": false,
+        "listable": false,
+        "identifier_iri": "https://www.gov.uk/courts-tribunals/commercial-circuit-court"
+      },
+      {
+        "code": "EWHC-KBD-Commercial-Circuit",
+        "grouped_name": "Circuit Commercial Court",
+        "name": "High Court (Circuit Commercial Court)",
+        "long_name": "The Business and Property Courts (Circuit Commercial Court)",
+        "link": "https://www.gov.uk/courts-tribunals/commercial-circuit-court",
+        "ncn_pattern": "\\[(\\d{4})\\] (EWHC) (\\d+) \\((Comm)\\)",
+        "ncn_examples": [
+          "[2023] EWHC 2168 (Comm)"
+        ],
+        "selectable": false,
+        "listable": false,
+        "identifier_iri": "https://www.gov.uk/courts-tribunals/commercial-circuit-court"
+      },
+      {
+        "code": "EWHC-QBD-Commercial",
+        "grouped_name": "Commercial Court",
+        "name": "High Court (Commercial Court)",
+        "long_name": "The Business and Property Courts (Circuit Commercial Court)",
+        "link": "https://www.gov.uk/courts-tribunals/commercial-court",
+        "ncn_pattern": "\\[(\\d{4})\\] (EWHC) (\\d+) \\((Comm)\\)",
+        "ncn_examples": [
+          "[2011] EWHC 68 (Comm)"
+        ],
+        "param": "ewhc/comm",
+        "start_year": 2003,
+        "selectable": true,
+        "listable": true,
+        "identifier_iri": "https://www.gov.uk/courts-tribunals/commercial-court"
+      },
+      {
+        "code": "EWHC-KBD-Commercial",
+        "grouped_name": "Commercial Court",
+        "name": "High Court (Commercial Court)",
+        "link": "https://www.gov.uk/courts-tribunals/commercial-court",
+        "ncn_pattern": "\\[(\\d{4})\\] (EWHC) (\\d+) \\((Comm)\\)",
+        "ncn_examples": [
+          "[2024] EWHC 789 (Comm)"
+        ],
+        "param": "ewhc/comm",
+        "start_year": 2022,
+        "selectable": false,
+        "listable": false,
+        "identifier_iri": "https://www.gov.uk/courts-tribunals/commercial-court"
+      },
+      {
+        "code": "EWHC-Family",
+        "grouped_name": "Family Division",
+        "name": "High Court (Family Division)",
+        "link": "https://www.gov.uk/courts-tribunals/family-division-of-the-high-court",
+        "ncn_pattern": "\\[(\\d{4})\\] (EWHC) (\\d+) \\((Fam)\\)",
+        "ncn_examples": [
+          "[2013] EWHC 3158 (Fam)"
+        ],
+        "param": "ewhc/fam",
+        "start_year": 2003,
+        "selectable": true,
+        "listable": true,
+        "identifier_iri": "https://www.gov.uk/courts-tribunals/family-division-of-the-high-court"
+      },
+      {
+        "code": "EWHC-QBD-Commercial-Financial",
+        "grouped_name": "Financial List",
+        "name": "High Court (Financial List)",
+        "link": "https://www.gov.uk/courts-tribunals/the-financial-list",
+        "ncn_pattern": "\\[(\\d{4})\\] (EWHC) (\\d+) \\((Comm)\\)",
+        "ncn_examples": [
+          "[2014] EWHC 3156 (Comm)"
+        ],
+        "selectable": false,
+        "listable": false,
+        "identifier_iri": "https://www.gov.uk/courts-tribunals/the-financial-list"
+      },
+      {
+        "code": "EWHC-KBD-Commercial-Financial",
+        "grouped_name": "Financial List",
+        "name": "High Court (Financial List)",
+        "long_name": "The Business and Property Courts (The Financial List) (KBD)",
+        "link": "https://www.gov.uk/courts-tribunals/the-financial-list",
+        "ncn_pattern": "\\[(\\d{4})\\] (EWHC) (\\d+) \\((Comm)\\)",
+        "ncn_examples": [
+          "[2025] EWHC 1881 (Comm)"
+        ],
+        "selectable": false,
+        "listable": false,
+        "identifier_iri": "https://www.gov.uk/courts-tribunals/the-financial-list"
+      },
+      {
+        "code": "EWHC-Chancery-Financial",
+        "grouped_name": "Financial List",
+        "name": "High Court (Financial List)",
+        "long_name": "The Business and Property Courts (Insolvency and Companies List)",
+        "link": "https://www.gov.uk/courts-tribunals/the-financial-list",
+        "selectable": false,
+        "listable": false,
+        "identifier_iri": "https://www.gov.uk/courts-tribunals/the-financial-list"
+      },
+      {
+        "code": "EWHC-Chancery-InsolvencyAndCompanies",
+        "grouped_name": "Insolvency and Companies List",
+        "name": "High Court (Insolvency and Companies List)",
+        "long_name": "The Business and Property Courts (Insolvency and Companies List)",
+        "link": "https://www.gov.uk/courts-tribunals/insolvency-list",
+        "selectable": false,
+        "listable": false,
+        "identifier_iri": "https://www.gov.uk/courts-tribunals/insolvency-list"
+      },
+      {
+        "code": "EWHC-Chancery-IPEC",
+        "grouped_name": "Intellectual Property Enterprise Court",
+        "name": "High Court (Intellectual Property Enterprise Court)",
+        "long_name": "The Business and Property Courts (Intellectual Property Enterprise Court)",
+        "link": "https://www.gov.uk/courts-tribunals/intellectual-property-enterprise-court",
+        "ncn_pattern": "\\[(\\d{4})\\] (EWHC) (\\d+) \\((IPEC)\\)",
+        "ncn_examples": [
+          "[2014] EWHC 349 (IPEC)"
+        ],
+        "param": "ewhc/ipec",
+        "start_year": 2013,
+        "selectable": true,
+        "listable": true,
+        "identifier_iri": "https://www.gov.uk/courts-tribunals/intellectual-property-enterprise-court"
+      },
+      {
+        "code": "EWHC-Chancery-IntellectualProperty",
+        "grouped_name": "Intellectual Property List",
+        "name": "High Court (Intellectual Property List)",
+        "long_name": "The Business and Property Courts (Intellectual Property List)",
+        "link": "https://www.gov.uk/courts-tribunals/the-intellectual-property-list",
+        "selectable": false,
+        "listable": false,
+        "identifier_iri": "https://www.gov.uk/courts-tribunals/the-intellectual-property-list"
+      },
+      {
+        "code": "EWHC-KBD",
+        "grouped_name": "King's / Queen's Bench Division",
+        "name": "High Court (King's / Queen's Bench Division)",
+        "link": "https://www.gov.uk/courts-tribunals/kings-bench-division-of-the-high-court",
+        "ncn_pattern": "\\[(\\d{4})\\] (EWHC) (\\d+) \\((KB)\\)",
+        "ncn_examples": [
+          "[2022] EWHC 2387 (KB)"
+        ],
+        "param": "ewhc/kb",
+        "extra_params": [
+          "ewhc/qb"
+        ],
+        "start_year": 2003,
+        "selectable": true,
+        "listable": false,
+        "identifier_iri": "https://www.gov.uk/courts-tribunals/kings-bench-division-of-the-high-court"
+      },
+      {
+        "code": "EWHC-KBD",
+        "grouped_name": "King's Bench Division",
+        "name": "High Court (King's Bench Division)",
+        "link": "https://www.gov.uk/courts-tribunals/kings-bench-division-of-the-high-court",
+        "ncn_pattern": "\\[(\\d{4})\\] (EWHC) (\\d+) \\((KB)\\)",
+        "ncn_examples": [
+          "[2024] EWHC 285 (KB)"
+        ],
+        "param": "ewhc/kb",
+        "start_year": 2022,
+        "selectable": false,
+        "listable": true,
+        "identifier_iri": "https://www.gov.uk/courts-tribunals/kings-bench-division-of-the-high-court"
+      },
+      {
+        "code": "EWHC-Mercantile",
+        "grouped_name": "Mercantile Court",
+        "name": "High Court (Mercantile Court)",
+        "link": "https://www.gov.uk/courts-tribunals/intellectual-property-enterprise-court",
+        "ncn_pattern": "\\[(\\d{4})\\] (EWHC) (\\d+) \\((Mercantile)\\)",
+        "ncn_examples": [
+          "[2014] EWHC 1195 (Mercantile)"
+        ],
+        "param": "ewhc/mercantile",
+        "start_year": 2008,
+        "end_year": 2014,
+        "selectable": true,
+        "listable": true,
+        "identifier_iri": "https://www.gov.uk/courts-tribunals/intellectual-property-enterprise-court"
+      },
+      {
+        "code": "EWHC-Chancery-Patents",
+        "grouped_name": "Patents Court",
+        "name": "High Court (Patents Court)",
+        "long_name": "The Business and Property Courts (Patents Court)",
+        "link": "https://www.gov.uk/courts-tribunals/patents-court",
+        "ncn_pattern": "\\[(\\d{4})\\] (EWHC) (\\d+) \\((Pat)\\)",
+        "ncn_examples": [
+          "[2015] EWHC 3163 (Pat)"
+        ],
+        "param": "ewhc/pat",
+        "start_year": 2003,
+        "selectable": true,
+        "listable": true,
+        "identifier_iri": "https://www.gov.uk/courts-tribunals/patents-court"
+      },
+      {
+        "code": "EWHC-QBD",
+        "grouped_name": "Queen's Bench Division",
+        "name": "High Court (Queen's Bench Division)",
+        "link": "https://www.gov.uk/courts-tribunals/queens-bench-division-of-the-high-court",
+        "ncn_pattern": "\\[(\\d{4})\\] (EWHC) (\\d+) \\((QB)\\)",
+        "ncn_examples": [
+          "[2019] EWHC 2488 (QB)"
+        ],
+        "param": "ewhc/qb",
+        "start_year": 2003,
+        "end_year": 2022,
+        "selectable": false,
+        "listable": true,
+        "identifier_iri": "https://www.gov.uk/courts-tribunals/queens-bench-division-of-the-high-court"
+      },
+      {
+        "code": "EWHC-QBD-Planning",
+        "grouped_name": "Planning Court",
+        "name": "High Court (Planning Court)",
+        "link": "https://www.gov.uk/courts-tribunals/planning-court",
+        "selectable": false,
+        "listable": false,
+        "identifier_iri": "https://www.gov.uk/courts-tribunals/planning-court"
+      },
+      {
+        "code": "EWHC-KBD-Planning",
+        "grouped_name": "Planning Court",
+        "name": "High Court (Planning Court)",
+        "link": "https://www.gov.uk/courts-tribunals/planning-court",
+        "selectable": false,
+        "listable": false,
+        "identifier_iri": "https://www.gov.uk/courts-tribunals/planning-court"
+      },
+      {
+        "code": "EWHC-Chancery-PropertyTrustsProbate",
+        "grouped_name": "Property, Trusts and Probate List",
+        "name": "High Court (Property, Trusts and Probate List)",
+        "long_name": "The Business and Property Courts (Property, Trusts and Probate List)",
+        "link": "https://www.gov.uk/courts-tribunals/the-property-trusts-and-probate-list",
+        "selectable": false,
+        "listable": false,
+        "identifier_iri": "https://www.gov.uk/courts-tribunals/the-property-trusts-and-probate-list"
+      },
+      {
+        "code": "EWHC-SeniorCourtsCosts",
+        "grouped_name": "Senior Courts Costs Office",
+        "name": "High Court (Senior Court Costs Office)",
+        "long_name": "The England and Wales High Court (Senior Courts Costs Office)",
+        "link": "https://www.gov.uk/courts-tribunals/senior-courts-costs-office",
+        "ncn_pattern": "\\[(\\d{4})\\] (EWHC) (\\d+) \\((SCCO)\\)",
+        "ncn_examples": [
+          "[2022] EWHC 3349 (SCCO)"
+        ],
+        "param": "ewhc/scco",
+        "extra_params": [
+          "ewhc/costs"
+        ],
+        "start_year": 2003,
+        "selectable": true,
+        "listable": true,
+        "identifier_iri": "https://www.gov.uk/courts-tribunals/senior-courts-costs-office"
+      },
+      {
+        "code": "EWHC-QBD-TCC",
+        "grouped_name": "Technology and Construction Court",
+        "name": "High Court (Technology and Construction Court)",
+        "long_name": "The Business and Property Courts (Technology and Construction Court)",
+        "link": "https://www.gov.uk/courts-tribunals/technology-and-construction-court",
+        "ncn_pattern": "\\[(\\d{4})\\] (EWHC) (\\d+) \\((TCC)\\)",
+        "ncn_examples": [
+          "[2014] EWHC 1800 (TCC)"
+        ],
+        "param": "ewhc/tcc",
+        "start_year": 2003,
+        "selectable": true,
+        "listable": true,
+        "identifier_iri": "https://www.gov.uk/courts-tribunals/technology-and-construction-court"
+      },
+      {
+        "code": "EWHC-KBD-TCC",
+        "grouped_name": "Technology and Construction Court",
+        "name": "High Court (Technology and Construction Court)",
+        "long_name": "The Business and Property Courts (Technology and Construction Court)",
+        "link": "https://www.gov.uk/courts-tribunals/technology-and-construction-court",
+        "ncn_pattern": "\\[(\\d{4})\\] (EWHC) (\\d+) \\((TCC)\\)",
+        "ncn_examples": [
+          "[2024] EWHC 802 (TCC)"
+        ],
+        "param": "ewhc/tcc",
+        "start_year": 2003,
+        "selectable": false,
+        "listable": false,
+        "identifier_iri": "https://www.gov.uk/courts-tribunals/technology-and-construction-court"
+      }
+    ]
+  },
+  {
+    "name": "lower_courts",
+    "display_name": "Other Courts",
+    "is_tribunal": false,
+    "courts": [
+      {
+        "code": "EWCR",
+        "name": "Crown Court",
+        "long_name": "The Crown Court",
+        "link": "https://www.judiciary.uk/courts-and-tribunals/crown-court/",
+        "ncn_pattern": "\\[(\\d{4})\\] (EWCR) (\\d+)",
+        "ncn_examples": [
+          "[2025] EWCR 3"
+        ],
+        "param": "ewcr",
+        "start_year": 2020,
+        "selectable": true,
+        "listable": true,
+        "identifier_iri": "https://www.judiciary.uk/courts-and-tribunals/crown-court/"
+      },
+      {
+        "code": "EWCC",
+        "name": "County Court",
+        "long_name": "The County Court",
+        "link": "https://www.judiciary.uk/courts-and-tribunals/county-court/",
+        "ncn_pattern": "\\[(\\d{4})\\] (EWCC) (\\d+)",
+        "ncn_examples": [
+          "[2025] EWCC 26"
+        ],
+        "param": "ewcc",
+        "start_year": 2019,
+        "selectable": true,
+        "listable": true,
+        "identifier_iri": "https://www.judiciary.uk/courts-and-tribunals/county-court/"
+      },
+      {
+        "code": "EWFC",
+        "name": "Family Court",
+        "long_name": "The Family Court",
+        "link": "https://www.judiciary.uk/you-and-the-judiciary/going-to-court/family-law-courts/",
+        "ncn_pattern": "\\[(\\d{4})\\] (EWFC) (\\d+)",
+        "ncn_examples": [
+          "[2024] EWFC 141"
+        ],
+        "param": "ewfc",
+        "start_year": 2014,
+        "selectable": true,
+        "listable": true,
+        "identifier_iri": "https://www.judiciary.uk/you-and-the-judiciary/going-to-court/family-law-courts/"
+      },
+      {
+        "code": "EWFC-B",
+        "name": "Family Court (B - district and circuit judges)",
+        "long_name": "The Family Court (B cases)",
+        "link": "https://www.judiciary.uk/you-and-the-judiciary/going-to-court/family-law-courts/",
+        "ncn_pattern": "\\[(\\d{4})\\] (EWFC) (\\d+) \\(B\\)",
+        "ncn_examples": [
+          "[2025] EWFC 79 (B)"
+        ],
+        "param": "ewfc/b",
+        "start_year": 2009,
+        "selectable": false,
+        "listable": false,
+        "identifier_iri": "https://www.judiciary.uk/you-and-the-judiciary/going-to-court/family-law-courts/"
+      },
+      {
+        "code": "EWCOP",
+        "name": "Court of Protection",
+        "long_name": "The Court of Protection",
+        "link": "https://www.gov.uk/courts-tribunals/court-of-protection",
+        "ncn_pattern": "\\[(\\d{4})\\] (EWCOP) (\\d+)",
+        "ncn_examples": [
+          "[2016] EWCOP 11"
+        ],
+        "param": "ewcop",
+        "start_year": 2009,
+        "selectable": true,
+        "listable": true,
+        "identifier_iri": "https://www.gov.uk/courts-tribunals/court-of-protection"
+      },
+      {
+        "code": "EWCOP-T1",
+        "name": "Court of Protection (Tier 1 - district judges)",
+        "long_name": "The Court of Protection (Tier 1 cases)",
+        "link": "https://www.gov.uk/courts-tribunals/court-of-protection",
+        "ncn_pattern": "\\[(\\d{4})\\] (EWCOP) (\\d+) \\(T1\\)",
+        "ncn_examples": [
+          "[2024] EWCOP 51 (T1)"
+        ],
+        "param": "ewcop/t1",
+        "start_year": 2009,
+        "selectable": false,
+        "listable": false,
+        "identifier_iri": "https://www.gov.uk/courts-tribunals/court-of-protection"
+      },
+      {
+        "code": "EWCOP-T2",
+        "name": "Court of Protection (Tier 2 - circuit judges)",
+        "long_name": "The Court of Protection (Tier 2 cases)",
+        "link": "https://www.gov.uk/courts-tribunals/court-of-protection",
+        "ncn_pattern": "\\[(\\d{4})\\] (EWCOP) (\\d+) \\(T2\\)",
+        "ncn_examples": [
+          "[2023] EWCOP 75 (T2)"
+        ],
+        "param": "ewcop/t2",
+        "start_year": 2009,
+        "selectable": false,
+        "listable": false,
+        "identifier_iri": "https://www.gov.uk/courts-tribunals/court-of-protection"
+      },
+      {
+        "code": "EWCOP-T3",
+        "name": "Court of Protection (Tier 3 - high court judges)",
+        "long_name": "The Court of Protection (Tier 3 cases)",
+        "link": "https://www.gov.uk/courts-tribunals/court-of-protection",
+        "ncn_pattern": "\\[(\\d{4})\\] (EWCOP) (\\d+) \\(T3\\)",
+        "ncn_examples": [
+          "[2024] EWCOP 44 (T3)"
+        ],
+        "param": "ewcop/t3",
+        "start_year": 2009,
+        "selectable": false,
+        "listable": false,
+        "identifier_iri": "https://www.gov.uk/courts-tribunals/court-of-protection"
+      }
+    ]
+  },
+  {
+    "name": "investigatory_powers_tribunal",
+    "display_name": null,
+    "is_tribunal": true,
+    "courts": [
+      {
+        "code": "UKIPT",
+        "name": "Investigatory Powers Tribunal",
+        "long_name": "The Investigatory Powers Tribunal",
+        "link": "https://investigatorypowerstribunal.org.uk/about-the-tribunal/",
+        "ncn_pattern": "\\[(\\d{4})\\] (UKIPTrib) (\\d+)",
+        "ncn_examples": [
+          "[2023] UKIPTrib 11"
+        ],
+        "selectable": true,
+        "listable": true,
+        "param": "ukiptrib",
+        "start_year": 2023,
+        "identifier_iri": "https://investigatorypowerstribunal.org.uk/about-the-tribunal/"
+      }
+    ]
+  },
+  {
+    "name": "special_immigration_appeals_commission",
+    "display_name": null,
+    "is_tribunal": true,
+    "courts": [
+      {
+        "code": "SIAC",
+        "name": "Special Immigration Appeals Commission",
+        "link": "https://webarchive.nationalarchives.gov.uk/ukgwa/https://siac.decisions.tribunals.gov.uk/",
+        "selectable": true,
+        "listable": true,
+        "param": "siac",
+        "start_year": 2003,
+        "identifier_iri": "https://webarchive.nationalarchives.gov.uk/ukgwa/https://siac.decisions.tribunals.gov.uk/"
+      }
+    ]
+  },
+  {
+    "name": "employment_appeal_tribunal",
+    "display_name": null,
+    "is_tribunal": true,
+    "courts": [
+      {
+        "code": "EAT",
+        "name": "Employment Appeal Tribunal",
+        "long_name": "Employment Appeal Tribunal",
+        "link": "https://www.gov.uk/courts-tribunals/employment-appeal-tribunal",
+        "ncn_pattern": "\\[(\\d{4})\\] (EAT) (\\d+)",
+        "ncn_examples": [
+          "[2024] EAT 100"
+        ],
+        "selectable": true,
+        "listable": true,
+        "param": "eat",
+        "start_year": 2021,
+        "identifier_iri": "https://www.gov.uk/courts-tribunals/employment-appeal-tribunal"
+      }
+    ]
+  },
+  {
+    "name": "upper_tribunals",
+    "display_name": "Upper Tribunals",
+    "is_tribunal": true,
+    "courts": [
+      {
+        "code": "UKUT-AAC",
+        "grouped_name": "Administrative Appeals Chamber",
+        "name": "Upper Tribunal (Administrative Appeals Chamber)",
+        "long_name": "United Kingdom Upper Tribunal (Administrative Appeals Chamber)",
+        "link": "https://www.gov.uk/courts-tribunals/upper-tribunal-administrative-appeals-chamber",
+        "ncn_pattern": "\\[(\\d{4})\\] (UKUT) (\\d+) \\((AAC)\\)",
+        "ncn_examples": [
+          "[2024] UKUT 326 (AAC)"
+        ],
+        "selectable": true,
+        "listable": true,
+        "param": "ukut/aac",
+        "start_year": 2011,
+        "identifier_iri": "https://www.gov.uk/courts-tribunals/upper-tribunal-administrative-appeals-chamber"
+      },
+      {
+        "code": "UKUT-IAC",
+        "grouped_name": "Immigration and Asylum Chamber",
+        "name": "Upper Tribunal (Immigration and Asylum Chamber)",
+        "long_name": "United Kingdom Upper Tribunal (Immigration and Asylum Chamber)",
+        "link": "https://www.gov.uk/courts-tribunals/upper-tribunal-immigration-and-asylum-chamber",
+        "ncn_pattern": "\\[(\\d{4})\\] (UKUT) (\\d+) \\((IAC)\\)",
+        "ncn_examples": [
+          "[2016] UKUT 562 (IAC)"
+        ],
+        "selectable": true,
+        "listable": true,
+        "param": "ukut/iac",
+        "extra_params": [
+          "ukait"
+        ],
+        "start_year": 2007,
+        "identifier_iri": "https://www.gov.uk/courts-tribunals/upper-tribunal-immigration-and-asylum-chamber"
+      },
+      {
+        "code": "UKAIT",
+        "selectable": false,
+        "listable": false,
+        "param": "ukait",
+        "name": "Asylum & Immigration Tribunal",
+        "long_name": "United Kingdom Asylum & Immigration Tribunal",
+        "link": "https://www.gov.uk/courts-tribunals/upper-tribunal-immigration-and-asylum-chamber",
+        "identifier_iri": "http://www.tribunals.gov.uk/ImmigrationAsylum/",
+        "ncn_pattern": "\\[(\\d{4})\\] (UKAIT) (\\d+)",
+        "ncn_examples": [
+          "[2009] UKAIT 10"
+        ],
+        "start_year": 2003,
+        "end_year": 2010
+      },
+      {
+        "code": "UKUT-LC",
+        "grouped_name": "Lands Chamber",
+        "name": "Upper Tribunal (Lands Chamber)",
+        "long_name": "United Kingdom Upper Tribunal (Lands Chamber)",
+        "link": "https://www.gov.uk/courts-tribunals/upper-tribunal-lands-chamber",
+        "ncn_pattern": "\\[(\\d{4})\\] (UKUT) (\\d+) \\((LC)\\)",
+        "ncn_examples": [
+          "[2017] UKUT 135 (LC)"
+        ],
+        "selectable": true,
+        "listable": true,
+        "param": "ukut/lc",
+        "start_year": 2014,
+        "identifier_iri": "https://www.gov.uk/courts-tribunals/upper-tribunal-lands-chamber"
+      },
+      {
+        "code": "UKUT-TCC",
+        "grouped_name": "Tax and Chancery Chamber",
+        "name": "Upper Tribunal (Tax and Chancery Chamber)",
+        "long_name": "United Kingdom Upper Tribunal (Tax and Chancery Chamber)",
+        "link": "https://www.gov.uk/courts-tribunals/upper-tribunal-tax-and-chancery-chamber",
+        "ncn_pattern": "\\[(\\d{4})\\] (UKUT) (\\d+) \\((TCC)\\)",
+        "ncn_examples": [
+          "[2017] UKUT 504 (TCC)"
+        ],
+        "selectable": true,
+        "listable": true,
+        "param": "ukut/tcc",
+        "start_year": 2016,
+        "identifier_iri": "https://www.gov.uk/courts-tribunals/upper-tribunal-tax-and-chancery-chamber"
+      }
+    ]
+  },
+  {
+    "name": "first_tier_tribunals",
+    "display_name": "First-tier Tribunals",
+    "is_tribunal": true,
+    "courts": [
+      {
+        "code": "UKFTT-HESC",
+        "name": "Care Standards",
+        "link": "https://www.gov.uk/courts-tribunals/first-tier-tribunal-care-standards",
+        "ncn_pattern": "\\[(\\d{4})\\] (UKFTT) (\\d+) \\((HESC)\\)",
+        "ncn_examples": [
+          "[2025] UKFTT 1104 (HESC)"
+        ],
+        "param": "ukftt/hesc",
+        "start_year": 1985,
+        "selectable": true,
+        "listable": true,
+        "identifier_iri": "https://www.gov.uk/courts-tribunals/first-tier-tribunal-care-standards"
+      },
+      {
+        "code": "ET",
+        "grouped_name": "Employment Tribunal",
+        "name": "First-tier Tribunal (Employment Tribunal)",
+        "long_name": "The Employment Tribunal",
+        "link": "https://www.gov.uk/courts-tribunals/employment-tribunal",
+        "start_year": 2022,
+        "selectable": false,
+        "listable": false,
+        "identifier_iri": "https://www.gov.uk/courts-tribunals/employment-tribunal"
+      },
+      {
+        "code": "UKFTT-GRC",
+        "grouped_name": "General Regulatory Chamber",
+        "name": "First-tier Tribunal (General Regulatory Chamber)",
+        "long_name": "United Kingdom First-tier Tribunal (General Regulatory Chamber)",
+        "param": "ukftt/grc",
+        "link": "https://www.gov.uk/courts-tribunals/first-tier-tribunal-general-regulatory-chamber",
+        "ncn_pattern": "\\[(\\d{4})\\] (UKFTT) (\\d+) \\((GRC)\\)",
+        "ncn_examples": [
+          "[2024] UKFTT 1069 (GRC)"
+        ],
+        "start_year": 2019,
+        "selectable": true,
+        "listable": true,
+        "jurisdictions": [
+          {
+            "code": "Charity",
+            "prefix": "CA",
+            "name": "Charity"
+          },
+          {
+            "code": "CommunityRightToBid",
+            "prefix": "CR",
+            "name": "Community Right to Bid"
+          },
+          {
+            "code": "NetworkInformationSystems",
+            "prefix": "NIS",
+            "name": "Electronic Communications, Postal Services, and Network Information Systems"
+          },
+          {
+            "code": "Environment",
+            "prefix": "NV",
+            "name": "Environment"
+          },
+          {
+            "code": "EstateAgents",
+            "prefix": "EEA",
+            "name": "Estate Agents"
+          },
+          {
+            "code": "ExamBoards",
+            "prefix": "EB",
+            "name": "Exam Boards"
+          },
+          {
+            "code": "FoodSafety",
+            "prefix": "FD",
+            "name": "Food Safety"
+          },
+          {
+            "code": "Gambling",
+            "prefix": "GA",
+            "name": "Gambling"
+          },
+          {
+            "code": "ImmigrationServices",
+            "prefix": "IMS",
+            "name": "Immigration Services"
+          },
+          {
+            "code": "IndividualElectoralRegulation",
+            "prefix": "IR",
+            "name": "Individual Electoral Regulation"
+          },
+          {
+            "code": "InformationRights",
+            "prefix": "EA",
+            "name": "Information Rights"
+          },
+          {
+            "code": "NitrateVulnerableZones",
+            "prefix": "NVZ",
+            "name": "Nitrate Vulnerable Zones"
+          },
+          {
+            "code": "Pensions",
+            "prefix": "PEN",
+            "name": "Pensions"
+          },
+          {
+            "code": "StandardsAndLicensing",
+            "prefix": "PR",
+            "name": "Standards & Licensing"
+          },
+          {
+            "code": "Transport",
+            "prefix": "D",
+            "name": "Transport"
+          },
+          {
+            "code": "WelfareOfAnimals",
+            "prefix": "WA",
+            "name": "Welfare of Animals"
+          }
+        ],
+        "identifier_iri": "https://www.gov.uk/courts-tribunals/first-tier-tribunal-general-regulatory-chamber"
+      },
+      {
+        "code": "UKFTT-TC",
+        "grouped_name": "Tax Chamber",
+        "name": "First-tier Tribunal (Tax Chamber)",
+        "long_name": "United Kingdom First-tier Tribunal (Tax)",
+        "link": "https://www.gov.uk/courts-tribunals/first-tier-tribunal-tax",
+        "ncn_pattern": "\\[(\\d{4})\\] (UKFTT) (\\d+) \\((TC)\\)",
+        "ncn_examples": [
+          "[2022] UKFTT 159 (TC)"
+        ],
+        "param": "ukftt/tc",
+        "start_year": 2019,
+        "selectable": true,
+        "listable": true,
+        "identifier_iri": "https://www.gov.uk/courts-tribunals/first-tier-tribunal-tax"
+      },
+      {
+        "code": "FTT-PC",
+        "name": "Land Registration Division (Property Chamber)",
+        "param": "ftt/pc",
+        "ncn_pattern": "\\[(\\d{4})\\] (UKFTT) (\\d+) \\((PC)\\)",
+        "ncn_examples": [
+          "[2025] UKFTT 1077 (PC)"
+        ],
+        "link": "https://www.judiciary.uk/courts-and-tribunals/tribunals/first-tier-tribunal/property-chamber/land-registration-division/",
+        "selectable": true,
+        "listable": false,
+        "identifier_iri": "https://www.judiciary.uk/courts-and-tribunals/tribunals/first-tier-tribunal/property-chamber/land-registration-division/"
+      },
+      {
+        "code": "FTT-PHL",
+        "name": "Primary Health Lists",
+        "param": "ftt/phl",
+        "link": "https://www.judiciary.uk/courts-and-tribunals/tribunals/first-tier-tribunal/health-education-and-social-care-chamber/special-educational-needs-and-disability-care-standards-and-primary-health-lists-send/primary-health-lists/",
+        "selectable": true,
+        "listable": false,
+        "identifier_iri": "https://www.judiciary.uk/courts-and-tribunals/tribunals/first-tier-tribunal/health-education-and-social-care-chamber/special-educational-needs-and-disability-care-standards-and-primary-health-lists-send/primary-health-lists/"
+      }
+    ]
+  },
+  {
+    "name": "historic_tribunals",
+    "display_name": "Historic Tribunals",
+    "is_tribunal": true,
+    "courts": [
+      {
+        "code": "UKIST",
+        "name": "Immigration Services Tribunal",
+        "long_name": "The Immigation Services Tribunal",
+        "param": "ukist",
+        "link": "https://webarchive.nationalarchives.gov.uk/ukgwa/https://immigrationservices.decisions.tribunals.gov.uk/Aspx/default.aspx",
+        "start_year": 2001,
+        "end_year": 2010,
+        "selectable": true,
+        "listable": true,
+        "identifier_iri": "https://webarchive.nationalarchives.gov.uk/ukgwa/https://immigrationservices.decisions.tribunals.gov.uk/Aspx/default.aspx"
+      },
+      {
+        "code": "UKFTT-Credit",
+        "name": "Consumer Credit Appeals Tribunal",
+        "long_name": "Consumer Credit Appeals Tribunal",
+        "param": "ukftt/credit",
+        "link": "https://webarchive.nationalarchives.gov.uk/ukgwa/https://consumercreditappeals.decisions.tribunals.gov.uk/",
+        "start_year": 2008,
+        "end_year": 2013,
+        "selectable": true,
+        "listable": true,
+        "identifier_iri": "https://webarchive.nationalarchives.gov.uk/ukgwa/https://consumercreditappeals.decisions.tribunals.gov.uk/"
+      },
+      {
+        "code": "UKFTT-Estate",
+        "name": "Estate Agents Tribunal",
+        "long_name": "Estate Agents Tribunal",
+        "param": "ukftt/estate",
+        "link": "https://webarchive.nationalarchives.gov.uk/ukgwa/20130206050212/https://www.justice.gov.uk/tribunals/estate-agents",
+        "start_year": 2009,
+        "end_year": 2010,
+        "selectable": true,
+        "listable": true,
+        "identifier_iri": "https://webarchive.nationalarchives.gov.uk/ukgwa/20130206050212/https://www.justice.gov.uk/tribunals/estate-agents"
+      },
+      {
+        "code": "FTT-Claims",
+        "name": "Claims Management Services Tribunal",
+        "long_name": "Claims Management Services Tribunal",
+        "param": "ftt/claims",
+        "link": "https://webarchive.nationalarchives.gov.uk/ukgwa/20200626120017/http:/claimsmanagement.decisions.tribunals.gov.uk/",
+        "start_year": 2006,
+        "end_year": 2010,
+        "selectable": true,
+        "listable": true,
+        "identifier_iri": "https://webarchive.nationalarchives.gov.uk/ukgwa/20200626120017/http:/claimsmanagement.decisions.tribunals.gov.uk/"
+      },
+      {
+        "code": "FTT-Transport",
+        "name": "Transport Tribunal",
+        "param": "ftt/transport",
+        "link": "https://webarchive.nationalarchives.gov.uk/ukgwa/20160811143636/http://www.transporttribunal.gov.uk/Aspx/Default.aspx",
+        "start_year": 2000,
+        "end_year": 2010,
+        "selectable": true,
+        "listable": true,
+        "identifier_iri": "https://webarchive.nationalarchives.gov.uk/ukgwa/20160811143636/http://www.transporttribunal.gov.uk/Aspx/Default.aspx"
+      }
+    ]
+  }
+]

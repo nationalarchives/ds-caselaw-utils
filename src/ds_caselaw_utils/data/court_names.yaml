@@ -4,6 +4,7 @@
   courts:
     - code: UKSC
       name: United Kingdom Supreme Court
+      long_name: The Supreme Court
       link: https://www.supremecourt.uk/
       ncn_pattern: \[(\d{4})\] (UKSC) (\d+)
       ncn_examples:
@@ -18,6 +19,7 @@
   courts:
     - code: UKPC
       name: Privy Council
+      long_name: The Judicial Committee of the Privy Council
       link: https://www.jcpc.uk/
       ncn_pattern: \[(\d{4})\] (UKPC) (\d+)
       ncn_examples:
@@ -33,6 +35,7 @@
     - code: EWCA-Civil
       grouped_name: "Civil Division"
       name: "Court of Appeal (Civil Division)"
+      long_name: The Court of Appeal of England and Wales (Civil Division)
       link: https://www.gov.uk/courts-tribunals/court-of-appeal-civil-division
       ncn_pattern: \[(\d{4})\] (EWCA) (Civ) (\d+)
       ncn_examples:
@@ -44,6 +47,7 @@
     - code: EWCA-Criminal
       grouped_name: "Criminal Division"
       name: Court of Appeal (Criminal Division)
+      long_name: The Court of Appeal of England and Wales (Criminal Division)
       link: https://www.gov.uk/courts-tribunals/court-of-appeal-criminal-division
       ncn_pattern: \[(\d{4})\] (EWCA) (Crim) (\d+)
       ncn_examples:
@@ -59,6 +63,7 @@
     - code: EWHC-QBD-Admin
       grouped_name: "Administrative Court"
       name: High Court (Administrative Court)
+      long_name: The Administrative Court (Queen's Bench Division)
       link: https://www.gov.uk/courts-tribunals/administrative-court
       ncn_pattern: \[(\d{4})\] (EWHC) (\d+) \((Admin)\)
       ncn_examples:
@@ -70,6 +75,7 @@
     - code: EWHC-KBD-Admin
       grouped_name: "Administrative Court"
       name: High Court (Administrative Court)
+      long_name: The Administrative Court (Queen's Bench Division)
       link: https://www.gov.uk/courts-tribunals/administrative-court
       ncn_pattern: \[(\d{4})\] (EWHC) (\d+) \((Admin)\)
       ncn_examples:
@@ -81,6 +87,7 @@
     - code: EWHC-QBD-Admiralty
       grouped_name: "Admiralty Court"
       name: High Court (Admiralty Division)
+      long_name: The Business and Property Courts (Admiralty Court)
       link: https://www.gov.uk/courts-tribunals/admiralty-court
       ncn_pattern: \[(\d{4})\] (EWHC) (\d+) \((Admlty)\)
       ncn_examples:
@@ -92,6 +99,7 @@
     - code: EWHC-KBD-Admiralty
       grouped_name: "Admiralty Court"
       name: High Court (Admiralty Division)
+      long_name: The Business and Property Courts (Admiralty Court)
       link: https://www.gov.uk/courts-tribunals/admiralty-court
       ncn_pattern: \[(\d{4})\] (EWHC) (\d+) \((Admlty)\)
       ncn_examples:
@@ -115,18 +123,21 @@
     - code: EWHC-Chancery-BusinessAndProperty
       grouped_name: Business and Property Courts
       name: High Court (Business and Property Courts)
+      long_name: The Business and Property Courts (Chancery Division)
       link: https://www.gov.uk/courts-tribunals/the-business-and-property-courts
       selectable: false
       listable: false
     - code: EWHC-Chancery-Business
       grouped_name: Business List
       name: High Court (Business List)
+      long_name: The Business and Property Courts (Business List)
       link: https://www.gov.uk/courts-tribunals/the-business-list
       selectable: false
       listable: false
     - code: EWHC-Chancery-Appeals
       name: Chancery Appeals
       grouped_name: High Court (Chancery Appeals)
+      long_name: The Business and Property Courts (Chancery Appeals)
       link: https://www.gov.uk/courts-tribunals/chancery-division-of-the-high-court
       selectable: false
       listable: false
@@ -144,6 +155,7 @@
     - code: EWHC-QBD-Commercial-Circuit
       grouped_name: Circuit Commercial Court
       name: High Court (Circuit Commercial Court)
+      long_name: The Business and Property Courts (The Financial List) (QBD)
       link: https://www.gov.uk/courts-tribunals/commercial-circuit-court
       ncn_pattern: \[(\d{4})\] (EWHC) (\d+) \((Comm)\)
       ncn_examples:
@@ -153,6 +165,7 @@
     - code: EWHC-KBD-Commercial-Circuit
       grouped_name: Circuit Commercial Court
       name: High Court (Circuit Commercial Court)
+      long_name: The Business and Property Courts (Circuit Commercial Court)
       link: https://www.gov.uk/courts-tribunals/commercial-circuit-court
       ncn_pattern: \[(\d{4})\] (EWHC) (\d+) \((Comm)\)
       ncn_examples:
@@ -162,6 +175,7 @@
     - code: EWHC-QBD-Commercial
       grouped_name: Commercial Court
       name: High Court (Commercial Court)
+      long_name: The Business and Property Courts (Circuit Commercial Court)
       link: https://www.gov.uk/courts-tribunals/commercial-court
       ncn_pattern: \[(\d{4})\] (EWHC) (\d+) \((Comm)\)
       ncn_examples:
@@ -204,6 +218,7 @@
     - code: EWHC-KBD-Commercial-Financial
       grouped_name: Financial List
       name: High Court (Financial List)
+      long_name: The Business and Property Courts (The Financial List) (KBD)
       link: https://www.gov.uk/courts-tribunals/the-financial-list
       ncn_pattern: \[(\d{4})\] (EWHC) (\d+) \((Comm)\)
       ncn_examples:
@@ -213,18 +228,21 @@
     - code: EWHC-Chancery-Financial
       grouped_name: Financial List
       name: High Court (Financial List)
+      long_name: The Business and Property Courts (Insolvency and Companies List)
       link: https://www.gov.uk/courts-tribunals/the-financial-list
       selectable: false
       listable: false
     - code: EWHC-Chancery-InsolvencyAndCompanies
       grouped_name: Insolvency and Companies List
       name: High Court (Insolvency and Companies List)
+      long_name: The Business and Property Courts (Insolvency and Companies List)
       link: https://www.gov.uk/courts-tribunals/insolvency-list
       selectable: false
       listable: false
     - code: EWHC-Chancery-IPEC
       grouped_name: Intellectual Property Enterprise Court
       name: High Court (Intellectual Property Enterprise Court)
+      long_name: The Business and Property Courts (Intellectual Property Enterprise Court)
       link: https://www.gov.uk/courts-tribunals/intellectual-property-enterprise-court
       ncn_pattern: \[(\d{4})\] (EWHC) (\d+) \((IPEC)\)
       ncn_examples:
@@ -236,6 +254,7 @@
     - code: EWHC-Chancery-IntellectualProperty
       grouped_name: Intellectual Property List
       name: High Court (Intellectual Property List)
+      long_name: The Business and Property Courts (Intellectual Property List)
       link: https://www.gov.uk/courts-tribunals/the-intellectual-property-list
       selectable: false
       listable: false
@@ -277,6 +296,7 @@
     - code: EWHC-Chancery-Patents
       grouped_name: Patents Court
       name: High Court (Patents Court)
+      long_name: The Business and Property Courts (Patents Court)
       link: https://www.gov.uk/courts-tribunals/patents-court
       ncn_pattern: \[(\d{4})\] (EWHC) (\d+) \((Pat)\)
       ncn_examples:
@@ -312,12 +332,14 @@
     - code: EWHC-Chancery-PropertyTrustsProbate
       grouped_name: Property, Trusts and Probate List
       name: High Court (Property, Trusts and Probate List)
+      long_name: The Business and Property Courts (Property, Trusts and Probate List)
       link: https://www.gov.uk/courts-tribunals/the-property-trusts-and-probate-list
       selectable: false
       listable: false
     - code: EWHC-SeniorCourtsCosts
       grouped_name: Senior Courts Costs Office
       name: High Court (Senior Court Costs Office)
+      long_name: The England and Wales High Court (Senior Courts Costs Office)
       link: https://www.gov.uk/courts-tribunals/senior-courts-costs-office
       ncn_pattern: \[(\d{4})\] (EWHC) (\d+) \((SCCO)\)
       ncn_examples:
@@ -330,6 +352,7 @@
     - code: EWHC-QBD-TCC
       grouped_name: Technology and Construction Court
       name: High Court (Technology and Construction Court)
+      long_name: The Business and Property Courts (Technology and Construction Court)
       link: https://www.gov.uk/courts-tribunals/technology-and-construction-court
       ncn_pattern: \[(\d{4})\] (EWHC) (\d+) \((TCC)\)
       ncn_examples:
@@ -341,6 +364,7 @@
     - code: EWHC-KBD-TCC
       grouped_name: Technology and Construction Court
       name: High Court (Technology and Construction Court)
+      long_name: The Business and Property Courts (Technology and Construction Court)
       link: https://www.gov.uk/courts-tribunals/technology-and-construction-court
       ncn_pattern: \[(\d{4})\] (EWHC) (\d+) \((TCC)\)
       ncn_examples:
@@ -355,6 +379,7 @@
   courts:
     - code: "EWCR"
       name: "Crown Court"
+      long_name: The Crown Court
       link: https://www.judiciary.uk/courts-and-tribunals/crown-court/
       ncn_pattern: \[(\d{4})\] (EWCR) (\d+)
       ncn_examples:
@@ -365,6 +390,7 @@
       listable: true
     - code: "EWCC"
       name: "County Court"
+      long_name: The County Court
       link: https://www.judiciary.uk/courts-and-tribunals/county-court/
       ncn_pattern: \[(\d{4})\] (EWCC) (\d+)
       ncn_examples:
@@ -375,6 +401,7 @@
       listable: true
     - code: EWFC
       name: Family Court
+      long_name: The Family Court
       link: https://www.judiciary.uk/you-and-the-judiciary/going-to-court/family-law-courts/
       ncn_pattern: \[(\d{4})\] (EWFC) (\d+)
       ncn_examples:
@@ -385,6 +412,7 @@
       listable: true
     - code: "EWFC-B"
       name: Family Court (B - district and circuit judges)
+      long_name: The Family Court (B cases)
       # This is an artifact of how the Family Court creates tiers of importance.
       link: https://www.judiciary.uk/you-and-the-judiciary/going-to-court/family-law-courts/
       ncn_pattern: \[(\d{4})\] (EWFC) (\d+) \(B\)
@@ -396,6 +424,7 @@
       listable: false
     - code: EWCOP
       name: Court of Protection
+      long_name: The Court of Protection
       link: https://www.gov.uk/courts-tribunals/court-of-protection
       ncn_pattern: \[(\d{4})\] (EWCOP) (\d+)
       ncn_examples:
@@ -406,6 +435,7 @@
       listable: true
     - code: EWCOP-T1
       name: Court of Protection (Tier 1 - district judges)
+      long_name: The Court of Protection (Tier 1 cases)
       link: https://www.gov.uk/courts-tribunals/court-of-protection
       ncn_pattern: \[(\d{4})\] (EWCOP) (\d+) \(T1\)
       ncn_examples:
@@ -416,6 +446,7 @@
       listable: false
     - code: EWCOP-T2
       name: Court of Protection (Tier 2 - circuit judges)
+      long_name: The Court of Protection (Tier 2 cases)
       link: https://www.gov.uk/courts-tribunals/court-of-protection
       ncn_pattern: \[(\d{4})\] (EWCOP) (\d+) \(T2\)
       ncn_examples:
@@ -426,6 +457,7 @@
       listable: false
     - code: EWCOP-T3
       name: Court of Protection (Tier 3 - high court judges)
+      long_name: The Court of Protection (Tier 3 cases)
       link: https://www.gov.uk/courts-tribunals/court-of-protection
       ncn_pattern: \[(\d{4})\] (EWCOP) (\d+) \(T3\)
       ncn_examples:
@@ -441,6 +473,7 @@
   courts:
     - code: UKIPT
       name: Investigatory Powers Tribunal
+      long_name: The Investigatory Powers Tribunal
       link: https://investigatorypowerstribunal.org.uk/about-the-tribunal/
       ncn_pattern: \[(\d{4})\] (UKIPTrib) (\d+)
       ncn_examples:
@@ -466,6 +499,7 @@
   courts:
     - code: EAT
       name: Employment Appeal Tribunal
+      long_name: Employment Appeal Tribunal
       link: https://www.gov.uk/courts-tribunals/employment-appeal-tribunal
       ncn_pattern: \[(\d{4})\] (EAT) (\d+)
       ncn_examples:
@@ -481,6 +515,7 @@
     - code: UKUT-AAC
       grouped_name: Administrative Appeals Chamber
       name: Upper Tribunal (Administrative Appeals Chamber)
+      long_name: United Kingdom Upper Tribunal (Administrative Appeals Chamber)
       link: https://www.gov.uk/courts-tribunals/upper-tribunal-administrative-appeals-chamber
       ncn_pattern: \[(\d{4})\] (UKUT) (\d+) \((AAC)\)
       ncn_examples:
@@ -492,6 +527,7 @@
     - code: UKUT-IAC
       grouped_name: Immigration and Asylum Chamber
       name: Upper Tribunal (Immigration and Asylum Chamber)
+      long_name: United Kingdom Upper Tribunal (Immigration and Asylum Chamber)
       link: https://www.gov.uk/courts-tribunals/upper-tribunal-immigration-and-asylum-chamber
       ncn_pattern: \[(\d{4})\] (UKUT) (\d+) \((IAC)\)
       ncn_examples:
@@ -506,7 +542,9 @@
       listable: false
       param: "ukait"
       name: Asylum & Immigration Tribunal
+      long_name: United Kingdom Asylum & Immigration Tribunal
       link: https://www.gov.uk/courts-tribunals/upper-tribunal-immigration-and-asylum-chamber
+      identifier_iri: http://www.tribunals.gov.uk/ImmigrationAsylum/
       ncn_pattern: \[(\d{4})\] (UKAIT) (\d+)
       ncn_examples:
         - "[2009] UKAIT 10"
@@ -515,6 +553,7 @@
     - code: UKUT-LC
       grouped_name: Lands Chamber
       name: Upper Tribunal (Lands Chamber)
+      long_name: United Kingdom Upper Tribunal (Lands Chamber)
       link: https://www.gov.uk/courts-tribunals/upper-tribunal-lands-chamber
       ncn_pattern: \[(\d{4})\] (UKUT) (\d+) \((LC)\)
       ncn_examples:
@@ -526,6 +565,7 @@
     - code: UKUT-TCC
       grouped_name: Tax and Chancery Chamber
       name: Upper Tribunal (Tax and Chancery Chamber)
+      long_name: United Kingdom Upper Tribunal (Tax and Chancery Chamber)
       link: https://www.gov.uk/courts-tribunals/upper-tribunal-tax-and-chancery-chamber
       ncn_pattern: \[(\d{4})\] (UKUT) (\d+) \((TCC)\)
       ncn_examples:
@@ -551,6 +591,7 @@
     - code: ET
       grouped_name: Employment Tribunal
       name: First-tier Tribunal (Employment Tribunal)
+      long_name: The Employment Tribunal
       link: https://www.gov.uk/courts-tribunals/employment-tribunal
       start_year: 2022
       selectable: false
@@ -558,6 +599,7 @@
     - code: UKFTT-GRC
       grouped_name: General Regulatory Chamber
       name: First-tier Tribunal (General Regulatory Chamber)
+      long_name: United Kingdom First-tier Tribunal (General Regulatory Chamber)
       param: "ukftt/grc"
       link: https://www.gov.uk/courts-tribunals/first-tier-tribunal-general-regulatory-chamber
       ncn_pattern: \[(\d{4})\] (UKFTT) (\d+) \((GRC)\)
@@ -618,6 +660,7 @@
     - code: UKFTT-TC
       grouped_name: Tax Chamber
       name: First-tier Tribunal (Tax Chamber)
+      long_name: United Kingdom First-tier Tribunal (Tax)
       link: https://www.gov.uk/courts-tribunals/first-tier-tribunal-tax
       ncn_pattern: \[(\d{4})\] (UKFTT) (\d+) \((TC)\)
       ncn_examples:
@@ -647,6 +690,7 @@
   courts:
     - code: UKIST
       name: Immigration Services Tribunal
+      long_name: The Immigation Services Tribunal
       param: ukist
       link: https://webarchive.nationalarchives.gov.uk/ukgwa/https://immigrationservices.decisions.tribunals.gov.uk/Aspx/default.aspx
       start_year: 2001
@@ -655,6 +699,7 @@
       listable: true
     - code: UKFTT-Credit
       name: Consumer Credit Appeals Tribunal
+      long_name: Consumer Credit Appeals Tribunal
       param: ukftt/credit
       link: https://webarchive.nationalarchives.gov.uk/ukgwa/https://consumercreditappeals.decisions.tribunals.gov.uk/
       start_year: 2008
@@ -663,6 +708,7 @@
       listable: true
     - code: UKFTT-Estate
       name: Estate Agents Tribunal
+      long_name: Estate Agents Tribunal
       param: ukftt/estate
       link: https://webarchive.nationalarchives.gov.uk/ukgwa/20130206050212/https://www.justice.gov.uk/tribunals/estate-agents
       start_year: 2009
@@ -671,6 +717,7 @@
       listable: true
     - code: FTT-Claims
       name: Claims Management Services Tribunal
+      long_name: Claims Management Services Tribunal
       param: ftt/claims
       link: https://webarchive.nationalarchives.gov.uk/ukgwa/20200626120017/http:/claimsmanagement.decisions.tribunals.gov.uk/
       start_year: 2006
