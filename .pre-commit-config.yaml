@@ -86,7 +86,7 @@ repos:
         exclude: courts\.md|autogen/\.*
 
   - repo: https://github.com/commitizen-tools/commitizen
-    rev: v4.10.0
+    rev: v4.10.1
     hooks:
       - id: commitizen
       - id: commitizen-branch
