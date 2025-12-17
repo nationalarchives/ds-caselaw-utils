@@ -58,7 +58,7 @@ repos:
         files: ^src/ds_caselaw_utils/test_
 
   - repo: https://github.com/python-jsonschema/check-jsonschema
-    rev: 0.35.0
+    rev: 0.36.0
     hooks:
       - id: check-jsonschema
         files: ^src/ds_caselaw_utils/data/court_names.yaml$
