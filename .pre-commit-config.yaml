@@ -16,17 +16,6 @@ repos:
       - id: no-commit-to-branch
       - id: trailing-whitespace
 
-  # There is a bug with upstream which means the imports are
-  # not sorted -- this should do for now
-  - repo: https://github.com/camptocamp/jsonschema-gentypes
-    rev: 2.13.0
-    hooks:
-      - id: jsonschema-gentypes
-        additional_dependencies:
-          - "jsonschema-gentypes[validation]"
-        files: schemas/.*\.schema\.json
-        language_version: python3.12
-
   - repo: https://github.com/astral-sh/ruff-pre-commit
     rev: v0.14.9
     hooks:
@@ -61,9 +50,22 @@ repos:
     rev: 0.36.0
     hooks:
       - id: check-jsonschema
+        name: Check all JSON Schema files are valid schemas
+        files: schemas/.*\.schema\.json
+        args: ["--check-metaschema"]
+      - id: check-jsonschema
         name: Check courts data matches schema
         files: ^src/ds_caselaw_utils/data/court_names.yaml$
         args: ["--schemafile", "schemas/courts/courts.schema.json"]
+
+  - repo: https://github.com/camptocamp/jsonschema-gentypes
+    rev: 2.13.0
+    hooks:
+      - id: jsonschema-gentypes
+        additional_dependencies:
+          - "jsonschema-gentypes[validation]"
+        files: schemas/.*\.schema\.json
+        language_version: python3.12
 
   - repo: local
     hooks:
