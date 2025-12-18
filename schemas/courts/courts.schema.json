@@ -1,6 +1,5 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://schema.caselaw.nationalarchives.gov.uk/courts.schema.json",
   "title": "Raw Court List",
   "description": "A list of courts",
   "type": "array",
