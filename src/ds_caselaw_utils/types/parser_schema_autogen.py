@@ -15,8 +15,10 @@ format: date
 
 
 
-# | Parser metadata.
-ParserMetadata = TypedDict('ParserMetadata', {
+# | Parser process metadata.
+# | 
+# | Metadata about a document or its processing which has been generated or collated as a result of the Find Case Law parsing process.
+ParserProcessMetadata = TypedDict('ParserProcessMetadata', {
     # | Type of document.
     # | 
     # | Must be one of the document types supported by Find Case Law.

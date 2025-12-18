@@ -1,24 +1,26 @@
-# Parser metadata
+# Parser process metadata
 
-- [1. Property `Parser metadata > documentType`](#documentType)
-- [2. Property `Parser metadata > uri`](#uri)
-- [3. Property `Parser metadata > court`](#court)
-- [4. Property `Parser metadata > cite`](#cite)
-- [5. Property `Parser metadata > date`](#date)
-  - [5.1. Property `Parser metadata > date > oneOf > Date not provided`](#date_oneOf_i0)
-  - [5.2. Property `Parser metadata > date > oneOf > Date of document publication`](#date_oneOf_i1)
-- [6. Property `Parser metadata > name`](#name)
-- [7. Property `Parser metadata > attachments`](#attachments)
-- [8. Property `Parser metadata > error-messages`](#error-messages)
-- [9. Property `Parser metadata > extensions`](#extensions)
+- [1. Property `Parser process metadata > documentType`](#documentType)
+- [2. Property `Parser process metadata > uri`](#uri)
+- [3. Property `Parser process metadata > court`](#court)
+- [4. Property `Parser process metadata > cite`](#cite)
+- [5. Property `Parser process metadata > date`](#date)
+  - [5.1. Property `Parser process metadata > date > oneOf > Date not provided`](#date_oneOf_i0)
+  - [5.2. Property `Parser process metadata > date > oneOf > Date of document publication`](#date_oneOf_i1)
+- [6. Property `Parser process metadata > name`](#name)
+- [7. Property `Parser process metadata > attachments`](#attachments)
+- [8. Property `Parser process metadata > error-messages`](#error-messages)
+- [9. Property `Parser process metadata > extensions`](#extensions)
 
-**Title:** Parser metadata
+**Title:** Parser process metadata
 
 |                           |             |
 | ------------------------- | ----------- |
 | **Type**                  | `object`    |
 | **Required**              | No          |
 | **Additional properties** | Not allowed |
+
+**Description:** Metadata about a document or its processing which has been generated or collated as a result of the Find Case Law parsing process.
 
 | Property                             | Pattern | Type             | Deprecated | Definition | Title/Description |
 | ------------------------------------ | ------- | ---------------- | ---------- | ---------- | ----------------- |
@@ -32,7 +34,7 @@
 | - [error-messages](#error-messages ) | No      | array            | No         | -          | -                 |
 | - [extensions](#extensions )         | No      | null             | No         | -          | -                 |
 
-## <a name="documentType"></a>1. Property `Parser metadata > documentType`
+## <a name="documentType"></a>1. Property `Parser process metadata > documentType`
 
 **Title:** Type of document
 
@@ -47,7 +49,7 @@ Must be one of:
 * "judgment"
 * "pressSummary"
 
-## <a name="uri"></a>2. Property `Parser metadata > uri`
+## <a name="uri"></a>2. Property `Parser process metadata > uri`
 
 |              |          |
 | ------------ | -------- |
@@ -55,21 +57,21 @@ Must be one of:
 | **Required** | No       |
 | **Format**   | `uri`    |
 
-## <a name="court"></a>3. Property `Parser metadata > court`
+## <a name="court"></a>3. Property `Parser process metadata > court`
 
 |              |          |
 | ------------ | -------- |
 | **Type**     | `string` |
 | **Required** | No       |
 
-## <a name="cite"></a>4. Property `Parser metadata > cite`
+## <a name="cite"></a>4. Property `Parser process metadata > cite`
 
 |              |                  |
 | ------------ | ---------------- |
 | **Type**     | `string or null` |
 | **Required** | No               |
 
-## <a name="date"></a>5. Property `Parser metadata > date`
+## <a name="date"></a>5. Property `Parser process metadata > date`
 
 |                           |                  |
 | ------------------------- | ---------------- |
@@ -82,7 +84,7 @@ Must be one of:
 | [Date not provided](#date_oneOf_i0)            |
 | [Date of document publication](#date_oneOf_i1) |
 
-### <a name="date_oneOf_i0"></a>5.1. Property `Parser metadata > date > oneOf > Date not provided`
+### <a name="date_oneOf_i0"></a>5.1. Property `Parser process metadata > date > oneOf > Date not provided`
 
 **Title:** Date not provided
 
@@ -91,7 +93,7 @@ Must be one of:
 | **Type**     | `null` |
 | **Required** | No     |
 
-### <a name="date_oneOf_i1"></a>5.2. Property `Parser metadata > date > oneOf > Date of document publication`
+### <a name="date_oneOf_i1"></a>5.2. Property `Parser process metadata > date > oneOf > Date of document publication`
 
 **Title:** Date of document publication
 
@@ -101,7 +103,7 @@ Must be one of:
 | **Required** | No       |
 | **Format**   | `date`   |
 
-## <a name="name"></a>6. Property `Parser metadata > name`
+## <a name="name"></a>6. Property `Parser process metadata > name`
 
 **Title:** Name of document
 
@@ -110,7 +112,7 @@ Must be one of:
 | **Type**     | `string` |
 | **Required** | No       |
 
-## <a name="attachments"></a>7. Property `Parser metadata > attachments`
+## <a name="attachments"></a>7. Property `Parser process metadata > attachments`
 
 |              |         |
 | ------------ | ------- |
@@ -125,7 +127,7 @@ Must be one of:
 | **Additional items** | False              |
 | **Tuple validation** | N/A                |
 
-## <a name="error-messages"></a>8. Property `Parser metadata > error-messages`
+## <a name="error-messages"></a>8. Property `Parser process metadata > error-messages`
 
 |              |         |
 | ------------ | ------- |
@@ -140,7 +142,7 @@ Must be one of:
 | **Additional items** | False              |
 | **Tuple validation** | N/A                |
 
-## <a name="extensions"></a>9. Property `Parser metadata > extensions`
+## <a name="extensions"></a>9. Property `Parser process metadata > extensions`
 
 |              |        |
 | ------------ | ------ |

@@ -1,7 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
-  "title": "Parser metadata",
+  "title": "Parser process metadata",
+  "description": "Metadata about a document or its processing which has been generated or collated as a result of the Find Case Law parsing process.",
   "properties": {
     "documentType": {
       "title": "Type of document",

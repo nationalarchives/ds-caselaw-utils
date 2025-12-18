@@ -1,22 +1,22 @@
-# Metadata
+# Parsed document metadata
 
-- [1. Property `Metadata > parameters`](#parameters)
-  - [1.1. Property `Metadata > parameters > PARSER`](#parameters_PARSER)
-    - [1.1.1. Property `Metadata > parameters > PARSER > documentType`](#parameters_PARSER_documentType)
-    - [1.1.2. Property `Metadata > parameters > PARSER > uri`](#parameters_PARSER_uri)
-    - [1.1.3. Property `Metadata > parameters > PARSER > court`](#parameters_PARSER_court)
-    - [1.1.4. Property `Metadata > parameters > PARSER > cite`](#parameters_PARSER_cite)
-    - [1.1.5. Property `Metadata > parameters > PARSER > date`](#parameters_PARSER_date)
-      - [1.1.5.1. Property `Metadata > parameters > PARSER > date > oneOf > Date not provided`](#parameters_PARSER_date_oneOf_i0)
-      - [1.1.5.2. Property `Metadata > parameters > PARSER > date > oneOf > Date of document publication`](#parameters_PARSER_date_oneOf_i1)
-    - [1.1.6. Property `Metadata > parameters > PARSER > name`](#parameters_PARSER_name)
-    - [1.1.7. Property `Metadata > parameters > PARSER > attachments`](#parameters_PARSER_attachments)
-    - [1.1.8. Property `Metadata > parameters > PARSER > error-messages`](#parameters_PARSER_error-messages)
-    - [1.1.9. Property `Metadata > parameters > PARSER > extensions`](#parameters_PARSER_extensions)
-  - [1.2. Property `Metadata > parameters > TDR`](#parameters_TDR)
-  - [1.3. Property `Metadata > parameters > TRE`](#parameters_TRE)
+- [1. Property `Parsed document metadata > parameters`](#parameters)
+  - [1.1. Property `Parsed document metadata > parameters > PARSER`](#parameters_PARSER)
+    - [1.1.1. Property `Parsed document metadata > parameters > PARSER > documentType`](#parameters_PARSER_documentType)
+    - [1.1.2. Property `Parsed document metadata > parameters > PARSER > uri`](#parameters_PARSER_uri)
+    - [1.1.3. Property `Parsed document metadata > parameters > PARSER > court`](#parameters_PARSER_court)
+    - [1.1.4. Property `Parsed document metadata > parameters > PARSER > cite`](#parameters_PARSER_cite)
+    - [1.1.5. Property `Parsed document metadata > parameters > PARSER > date`](#parameters_PARSER_date)
+      - [1.1.5.1. Property `Parsed document metadata > parameters > PARSER > date > oneOf > Date not provided`](#parameters_PARSER_date_oneOf_i0)
+      - [1.1.5.2. Property `Parsed document metadata > parameters > PARSER > date > oneOf > Date of document publication`](#parameters_PARSER_date_oneOf_i1)
+    - [1.1.6. Property `Parsed document metadata > parameters > PARSER > name`](#parameters_PARSER_name)
+    - [1.1.7. Property `Parsed document metadata > parameters > PARSER > attachments`](#parameters_PARSER_attachments)
+    - [1.1.8. Property `Parsed document metadata > parameters > PARSER > error-messages`](#parameters_PARSER_error-messages)
+    - [1.1.9. Property `Parsed document metadata > parameters > PARSER > extensions`](#parameters_PARSER_extensions)
+  - [1.2. Property `Parsed document metadata > parameters > TDR`](#parameters_TDR)
+  - [1.3. Property `Parsed document metadata > parameters > TRE`](#parameters_TRE)
 
-**Title:** Metadata
+**Title:** Parsed document metadata
 
 |                           |             |
 | ------------------------- | ----------- |
@@ -28,7 +28,7 @@
 | ---------------------------- | ------- | ------ | ---------- | ---------- | ----------------- |
 | + [parameters](#parameters ) | No      | object | No         | -          | -                 |
 
-## <a name="parameters"></a>1. Property `Metadata > parameters`
+## <a name="parameters"></a>1. Property `Parsed document metadata > parameters`
 
 |                           |             |
 | ------------------------- | ----------- |
@@ -36,15 +36,15 @@
 | **Required**              | Yes         |
 | **Additional properties** | Not allowed |
 
-| Property                        | Pattern | Type   | Deprecated | Definition             | Title/Description |
-| ------------------------------- | ------- | ------ | ---------- | ---------------------- | ----------------- |
-| + [PARSER](#parameters_PARSER ) | No      | object | No         | In parser.schema.json# | Parser metadata   |
-| - [TDR](#parameters_TDR )       | No      | object | No         | -                      | -                 |
-| + [TRE](#parameters_TRE )       | No      | object | No         | -                      | -                 |
+| Property                        | Pattern | Type   | Deprecated | Definition             | Title/Description       |
+| ------------------------------- | ------- | ------ | ---------- | ---------------------- | ----------------------- |
+| + [PARSER](#parameters_PARSER ) | No      | object | No         | In parser.schema.json# | Parser process metadata |
+| - [TDR](#parameters_TDR )       | No      | object | No         | -                      | TDR process metadata    |
+| + [TRE](#parameters_TRE )       | No      | object | No         | -                      | TRE process metadata    |
 
-### <a name="parameters_PARSER"></a>1.1. Property `Metadata > parameters > PARSER`
+### <a name="parameters_PARSER"></a>1.1. Property `Parsed document metadata > parameters > PARSER`
 
-**Title:** Parser metadata
+**Title:** Parser process metadata
 
 |                           |                     |
 | ------------------------- | ------------------- |
@@ -52,6 +52,8 @@
 | **Required**              | Yes                 |
 | **Additional properties** | Not allowed         |
 | **Defined in**            | parser.schema.json# |
+
+**Description:** Metadata about a document or its processing which has been generated or collated as a result of the Find Case Law parsing process.
 
 | Property                                               | Pattern | Type             | Deprecated | Definition | Title/Description |
 | ------------------------------------------------------ | ------- | ---------------- | ---------- | ---------- | ----------------- |
@@ -65,7 +67,7 @@
 | - [error-messages](#parameters_PARSER_error-messages ) | No      | array            | No         | -          | -                 |
 | - [extensions](#parameters_PARSER_extensions )         | No      | null             | No         | -          | -                 |
 
-#### <a name="parameters_PARSER_documentType"></a>1.1.1. Property `Metadata > parameters > PARSER > documentType`
+#### <a name="parameters_PARSER_documentType"></a>1.1.1. Property `Parsed document metadata > parameters > PARSER > documentType`
 
 **Title:** Type of document
 
@@ -80,7 +82,7 @@ Must be one of:
 * "judgment"
 * "pressSummary"
 
-#### <a name="parameters_PARSER_uri"></a>1.1.2. Property `Metadata > parameters > PARSER > uri`
+#### <a name="parameters_PARSER_uri"></a>1.1.2. Property `Parsed document metadata > parameters > PARSER > uri`
 
 |              |          |
 | ------------ | -------- |
@@ -88,21 +90,21 @@ Must be one of:
 | **Required** | No       |
 | **Format**   | `uri`    |
 
-#### <a name="parameters_PARSER_court"></a>1.1.3. Property `Metadata > parameters > PARSER > court`
+#### <a name="parameters_PARSER_court"></a>1.1.3. Property `Parsed document metadata > parameters > PARSER > court`
 
 |              |          |
 | ------------ | -------- |
 | **Type**     | `string` |
 | **Required** | No       |
 
-#### <a name="parameters_PARSER_cite"></a>1.1.4. Property `Metadata > parameters > PARSER > cite`
+#### <a name="parameters_PARSER_cite"></a>1.1.4. Property `Parsed document metadata > parameters > PARSER > cite`
 
 |              |                  |
 | ------------ | ---------------- |
 | **Type**     | `string or null` |
 | **Required** | No               |
 
-#### <a name="parameters_PARSER_date"></a>1.1.5. Property `Metadata > parameters > PARSER > date`
+#### <a name="parameters_PARSER_date"></a>1.1.5. Property `Parsed document metadata > parameters > PARSER > date`
 
 |                           |                  |
 | ------------------------- | ---------------- |
@@ -115,7 +117,7 @@ Must be one of:
 | [Date not provided](#parameters_PARSER_date_oneOf_i0)            |
 | [Date of document publication](#parameters_PARSER_date_oneOf_i1) |
 
-##### <a name="parameters_PARSER_date_oneOf_i0"></a>1.1.5.1. Property `Metadata > parameters > PARSER > date > oneOf > Date not provided`
+##### <a name="parameters_PARSER_date_oneOf_i0"></a>1.1.5.1. Property `Parsed document metadata > parameters > PARSER > date > oneOf > Date not provided`
 
 **Title:** Date not provided
 
@@ -124,7 +126,7 @@ Must be one of:
 | **Type**     | `null` |
 | **Required** | No     |
 
-##### <a name="parameters_PARSER_date_oneOf_i1"></a>1.1.5.2. Property `Metadata > parameters > PARSER > date > oneOf > Date of document publication`
+##### <a name="parameters_PARSER_date_oneOf_i1"></a>1.1.5.2. Property `Parsed document metadata > parameters > PARSER > date > oneOf > Date of document publication`
 
 **Title:** Date of document publication
 
@@ -134,7 +136,7 @@ Must be one of:
 | **Required** | No       |
 | **Format**   | `date`   |
 
-#### <a name="parameters_PARSER_name"></a>1.1.6. Property `Metadata > parameters > PARSER > name`
+#### <a name="parameters_PARSER_name"></a>1.1.6. Property `Parsed document metadata > parameters > PARSER > name`
 
 **Title:** Name of document
 
@@ -143,7 +145,7 @@ Must be one of:
 | **Type**     | `string` |
 | **Required** | No       |
 
-#### <a name="parameters_PARSER_attachments"></a>1.1.7. Property `Metadata > parameters > PARSER > attachments`
+#### <a name="parameters_PARSER_attachments"></a>1.1.7. Property `Parsed document metadata > parameters > PARSER > attachments`
 
 |              |         |
 | ------------ | ------- |
@@ -158,7 +160,7 @@ Must be one of:
 | **Additional items** | False              |
 | **Tuple validation** | N/A                |
 
-#### <a name="parameters_PARSER_error-messages"></a>1.1.8. Property `Metadata > parameters > PARSER > error-messages`
+#### <a name="parameters_PARSER_error-messages"></a>1.1.8. Property `Parsed document metadata > parameters > PARSER > error-messages`
 
 |              |         |
 | ------------ | ------- |
@@ -173,14 +175,16 @@ Must be one of:
 | **Additional items** | False              |
 | **Tuple validation** | N/A                |
 
-#### <a name="parameters_PARSER_extensions"></a>1.1.9. Property `Metadata > parameters > PARSER > extensions`
+#### <a name="parameters_PARSER_extensions"></a>1.1.9. Property `Parsed document metadata > parameters > PARSER > extensions`
 
 |              |        |
 | ------------ | ------ |
 | **Type**     | `null` |
 | **Required** | No     |
 
-### <a name="parameters_TDR"></a>1.2. Property `Metadata > parameters > TDR`
+### <a name="parameters_TDR"></a>1.2. Property `Parsed document metadata > parameters > TDR`
+
+**Title:** TDR process metadata
 
 |                           |                  |
 | ------------------------- | ---------------- |
@@ -188,13 +192,19 @@ Must be one of:
 | **Required**              | No               |
 | **Additional properties** | Any type allowed |
 
-### <a name="parameters_TRE"></a>1.3. Property `Metadata > parameters > TRE`
+**Description:** Metadata about a document or its processing which has been added as part of the TDR upload process.
+
+### <a name="parameters_TRE"></a>1.3. Property `Parsed document metadata > parameters > TRE`
+
+**Title:** TRE process metadata
 
 |                           |                  |
 | ------------------------- | ---------------- |
 | **Type**                  | `object`         |
 | **Required**              | Yes              |
 | **Additional properties** | Any type allowed |
+
+**Description:** Metadata about a document or its processing which has been added as part of the TRE workflow.
 
 ----------------------------------------------------------------------------------------------------------------------------
 Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans)
