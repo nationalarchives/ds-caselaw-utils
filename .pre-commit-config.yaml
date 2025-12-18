@@ -10,20 +10,23 @@ repos:
       - id: check-xml
       - id: check-yaml
       - id: end-of-file-fixer
-        exclude: autogen/\.*
+        exclude: autogen/\.*|types/.*autogen\.py
       - id: forbid-submodules
       - id: mixed-line-ending
       - id: no-commit-to-branch
       - id: trailing-whitespace
+        exclude: types/.*autogen\.py
 
   - repo: https://github.com/astral-sh/ruff-pre-commit
     rev: v0.14.9
     hooks:
-      - id: ruff
+      - id: ruff-check
         args:
           - --fix
           - --exit-non-zero-on-fix
+        exclude: types/.*autogen\.py
       - id: ruff-format
+        exclude: types/.*autogen\.py
 
   - repo: https://github.com/python-jsonschema/check-jsonschema
     rev: 0.36.0
@@ -48,6 +51,18 @@ repos:
           [
             "--json-schema=schemas/courts/courts.schema.json",
             "--python=src/ds_caselaw_utils/types/courts_schema_autogen.py",
+          ]
+        language_version: python3.12
+        always_run: true
+        pass_filenames: false
+      - id: jsonschema-gentypes
+        name: Generate types file for parser metadata
+        additional_dependencies:
+          - "jsonschema-gentypes[validation]"
+        args:
+          [
+            "--json-schema=schemas/parser-metadata/parser.schema.json",
+            "--python=src/ds_caselaw_utils/types/parser_schema_autogen.py",
           ]
         language_version: python3.12
         always_run: true

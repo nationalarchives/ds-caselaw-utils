@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "title": "Metadata",
+  "properties": {
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "PARSER": {
+          "$ref": "parser.schema.json#"
+        },
+        "TDR": {
+          "type": "object"
+        },
+        "TRE": {
+          "type": "object"
+        }
+      },
+      "required": ["PARSER", "TRE"],
+      "additionalProperties": false
+    }
+  },
+  "required": ["parameters"],
+  "additionalProperties": false
+}

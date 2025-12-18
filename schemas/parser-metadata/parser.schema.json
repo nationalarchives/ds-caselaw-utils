@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "title": "Parser metadata",
+  "properties": {
+    "documentType": {
+      "title": "Type of document",
+      "description": "Must be one of the document types supported by Find Case Law.",
+      "type": "string",
+      "enum": ["judgment", "pressSummary"]
+    },
+    "uri": {
+      "type": "string",
+      "format": "uri"
+    },
+    "court": {
+      "type": "string"
+    },
+    "cite": {
+      "type": ["string", "null"]
+    },
+    "date": {
+      "oneOf": [
+        {
+          "title": "Date not provided",
+          "type": "null"
+        },
+        {
+          "title": "Date of document publication",
+          "type": "string",
+          "format": "date"
+        }
+      ]
+    },
+    "name": {
+      "title": "Name of document",
+      "type": "string"
+    },
+    "attachments": {
+      "type": "array"
+    },
+    "error-messages": {
+      "type": "array"
+    },
+    "extensions": {
+      "type": "null"
+    }
+  },
+  "required": [],
+  "additionalProperties": false
+}
