@@ -7,8 +7,8 @@
     - [1.1.3. Property `Parsed document metadata > parameters > PARSER > court`](#parameters_PARSER_court)
     - [1.1.4. Property `Parsed document metadata > parameters > PARSER > cite`](#parameters_PARSER_cite)
     - [1.1.5. Property `Parsed document metadata > parameters > PARSER > date`](#parameters_PARSER_date)
-      - [1.1.5.1. Property `Parsed document metadata > parameters > PARSER > date > oneOf > Date not provided`](#parameters_PARSER_date_oneOf_i0)
-      - [1.1.5.2. Property `Parsed document metadata > parameters > PARSER > date > oneOf > Date of document publication`](#parameters_PARSER_date_oneOf_i1)
+      - [1.1.5.1. Property `Parsed document metadata > parameters > PARSER > date > oneOf > Null`](#parameters_PARSER_date_oneOf_i0)
+      - [1.1.5.2. Property `Parsed document metadata > parameters > PARSER > date > oneOf > Date`](#parameters_PARSER_date_oneOf_i1)
     - [1.1.6. Property `Parsed document metadata > parameters > PARSER > name`](#parameters_PARSER_name)
     - [1.1.7. Property `Parsed document metadata > parameters > PARSER > attachments`](#parameters_PARSER_attachments)
     - [1.1.8. Property `Parsed document metadata > parameters > PARSER > error-messages`](#parameters_PARSER_error-messages)
@@ -55,17 +55,17 @@
 
 **Description:** Metadata about a document or its processing which has been generated or collated as a result of the Find Case Law parsing process.
 
-| Property                                               | Pattern | Type             | Deprecated | Definition | Title/Description |
-| ------------------------------------------------------ | ------- | ---------------- | ---------- | ---------- | ----------------- |
-| - [documentType](#parameters_PARSER_documentType )     | No      | enum (of string) | No         | -          | Type of document  |
-| - [uri](#parameters_PARSER_uri )                       | No      | string           | No         | -          | -                 |
-| - [court](#parameters_PARSER_court )                   | No      | string           | No         | -          | -                 |
-| - [cite](#parameters_PARSER_cite )                     | No      | string or null   | No         | -          | -                 |
-| - [date](#parameters_PARSER_date )                     | No      | Combination      | No         | -          | -                 |
-| - [name](#parameters_PARSER_name )                     | No      | string           | No         | -          | Name of document  |
-| - [attachments](#parameters_PARSER_attachments )       | No      | array            | No         | -          | -                 |
-| - [error-messages](#parameters_PARSER_error-messages ) | No      | array            | No         | -          | -                 |
-| - [extensions](#parameters_PARSER_extensions )         | No      | null             | No         | -          | -                 |
+| Property                                               | Pattern | Type             | Deprecated | Definition | Title/Description   |
+| ------------------------------------------------------ | ------- | ---------------- | ---------- | ---------- | ------------------- |
+| + [documentType](#parameters_PARSER_documentType )     | No      | enum (of string) | No         | -          | Type of document    |
+| - [uri](#parameters_PARSER_uri )                       | No      | string           | No         | -          | Document URI        |
+| - [court](#parameters_PARSER_court )                   | No      | string           | No         | -          | Court               |
+| - [cite](#parameters_PARSER_cite )                     | No      | string or null   | No         | -          | Citation            |
+| - [date](#parameters_PARSER_date )                     | No      | Combination      | No         | -          | Date of publication |
+| - [name](#parameters_PARSER_name )                     | No      | string           | No         | -          | Name of document    |
+| - [attachments](#parameters_PARSER_attachments )       | No      | array            | No         | -          | Attachments         |
+| - [error-messages](#parameters_PARSER_error-messages ) | No      | array            | No         | -          | -                   |
+| - [extensions](#parameters_PARSER_extensions )         | No      | null             | No         | -          | -                   |
 
 #### <a name="parameters_PARSER_documentType"></a>1.1.1. Property `Parsed document metadata > parameters > PARSER > documentType`
 
@@ -74,7 +74,7 @@
 |              |                    |
 | ------------ | ------------------ |
 | **Type**     | `enum (of string)` |
-| **Required** | No                 |
+| **Required** | Yes                |
 
 **Description:** Must be one of the document types supported by Find Case Law.
 
@@ -84,6 +84,8 @@ Must be one of:
 
 #### <a name="parameters_PARSER_uri"></a>1.1.2. Property `Parsed document metadata > parameters > PARSER > uri`
 
+**Title:** Document URI
+
 |              |          |
 | ------------ | -------- |
 | **Type**     | `string` |
@@ -92,12 +94,16 @@ Must be one of:
 
 #### <a name="parameters_PARSER_court"></a>1.1.3. Property `Parsed document metadata > parameters > PARSER > court`
 
+**Title:** Court
+
 |              |          |
 | ------------ | -------- |
 | **Type**     | `string` |
 | **Required** | No       |
 
 #### <a name="parameters_PARSER_cite"></a>1.1.4. Property `Parsed document metadata > parameters > PARSER > cite`
+
+**Title:** Citation
 
 |              |                  |
 | ------------ | ---------------- |
@@ -106,29 +112,31 @@ Must be one of:
 
 #### <a name="parameters_PARSER_date"></a>1.1.5. Property `Parsed document metadata > parameters > PARSER > date`
 
+**Title:** Date of publication
+
 |                           |                  |
 | ------------------------- | ---------------- |
 | **Type**                  | `combining`      |
 | **Required**              | No               |
 | **Additional properties** | Any type allowed |
 
-| One of(Option)                                                   |
-| ---------------------------------------------------------------- |
-| [Date not provided](#parameters_PARSER_date_oneOf_i0)            |
-| [Date of document publication](#parameters_PARSER_date_oneOf_i1) |
+| One of(Option)                           |
+| ---------------------------------------- |
+| [Null](#parameters_PARSER_date_oneOf_i0) |
+| [Date](#parameters_PARSER_date_oneOf_i1) |
 
-##### <a name="parameters_PARSER_date_oneOf_i0"></a>1.1.5.1. Property `Parsed document metadata > parameters > PARSER > date > oneOf > Date not provided`
+##### <a name="parameters_PARSER_date_oneOf_i0"></a>1.1.5.1. Property `Parsed document metadata > parameters > PARSER > date > oneOf > Null`
 
-**Title:** Date not provided
+**Title:** Null
 
 |              |        |
 | ------------ | ------ |
 | **Type**     | `null` |
 | **Required** | No     |
 
-##### <a name="parameters_PARSER_date_oneOf_i1"></a>1.1.5.2. Property `Parsed document metadata > parameters > PARSER > date > oneOf > Date of document publication`
+##### <a name="parameters_PARSER_date_oneOf_i1"></a>1.1.5.2. Property `Parsed document metadata > parameters > PARSER > date > oneOf > Date`
 
-**Title:** Date of document publication
+**Title:** Date
 
 |              |          |
 | ------------ | -------- |
@@ -145,12 +153,18 @@ Must be one of:
 | **Type**     | `string` |
 | **Required** | No       |
 
+**Description:** The title of the document for indexing purposes. May be different from the exact text which appears in the document.
+
 #### <a name="parameters_PARSER_attachments"></a>1.1.7. Property `Parsed document metadata > parameters > PARSER > attachments`
+
+**Title:** Attachments
 
 |              |         |
 | ------------ | ------- |
 | **Type**     | `array` |
 | **Required** | No      |
+
+**Description:** A list of attachments to the document.
 
 |                      | Array restrictions |
 | -------------------- | ------------------ |

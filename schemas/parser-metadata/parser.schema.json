@@ -11,23 +11,27 @@
       "enum": ["judgment", "pressSummary"]
     },
     "uri": {
+      "title": "Document URI",
       "type": "string",
       "format": "uri"
     },
     "court": {
+      "title": "Court",
       "type": "string"
     },
     "cite": {
+      "title": "Citation",
       "type": ["string", "null"]
     },
     "date": {
+      "title": "Date of publication",
       "oneOf": [
         {
-          "title": "Date not provided",
+          "title": "Null",
           "type": "null"
         },
         {
-          "title": "Date of document publication",
+          "title": "Date",
           "type": "string",
           "format": "date"
         }
@@ -35,9 +39,12 @@
     },
     "name": {
       "title": "Name of document",
+      "description": "The title of the document for indexing purposes. May be different from the exact text which appears in the document.",
       "type": "string"
     },
     "attachments": {
+      "title": "Attachments",
+      "description": "A list of attachments to the document.",
       "type": "array"
     },
     "error-messages": {
@@ -47,6 +54,6 @@
       "type": "null"
     }
   },
-  "required": [],
+  "required": ["documentType"],
   "additionalProperties": false
 }
