@@ -24,7 +24,7 @@ repos:
       - id: jsonschema-gentypes
         additional_dependencies:
           - "jsonschema-gentypes[validation]"
-        files: src/ds_caselaw_utils/data/schema/courts.schema.json
+        files: schemas/.*\.schema\.json
         language_version: python3.12
 
   - repo: https://github.com/astral-sh/ruff-pre-commit
@@ -61,12 +61,19 @@ repos:
     rev: 0.36.0
     hooks:
       - id: check-jsonschema
+        name: Check courts data matches schema
         files: ^src/ds_caselaw_utils/data/court_names.yaml$
-        args:
-          [
-            "--schemafile",
-            "src/ds_caselaw_utils/data/schema/courts.schema.json",
-          ]
+        args: ["--schemafile", "schemas/courts/courts.schema.json"]
+
+  - repo: local
+    hooks:
+      - id: build-schema-docs
+        name: Generate documentation for JSON Schemas
+        entry: bash scripts/build_schema_docs
+        language: python
+        additional_dependencies: [json-schema-for-humans]
+        always_run: true
+        pass_filenames: false
 
   - repo: local
     hooks:
@@ -83,7 +90,7 @@ repos:
     hooks:
       - id: prettier
         types_or: [yaml, json, xml, markdown, scss, javascript]
-        exclude: courts\.md|autogen/\.*
+        exclude: courts\.md|autogen/\.*|schemas/.*\.md
 
   - repo: https://github.com/commitizen-tools/commitizen
     rev: v4.10.1

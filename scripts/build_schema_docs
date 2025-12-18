@@ -1,0 +1,1 @@
+generate-schema-doc --config-file jsfh-conf.yaml schemas/courts/courts.schema.json schemas/courts/courts-schema.md
