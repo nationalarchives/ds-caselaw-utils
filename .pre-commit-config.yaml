@@ -25,27 +25,6 @@ repos:
           - --exit-non-zero-on-fix
       - id: ruff-format
 
-  - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v1.19.1
-    hooks:
-      - id: mypy
-        name: mypy-src
-        additional_dependencies:
-          - types-PyYAML
-          - ruamel.yaml
-          - markdown-it-py
-        args:
-          - --strict
-        files: ^(src/ds_caselaw_utils|scripts)
-        exclude: (?:test_|factory.py)
-
-  - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v1.19.1
-    hooks:
-      - id: mypy
-        name: mypy-tests
-        files: ^src/ds_caselaw_utils/test_
-
   - repo: https://github.com/python-jsonschema/check-jsonschema
     rev: 0.36.0
     hooks:
@@ -62,10 +41,17 @@ repos:
     rev: 2.13.0
     hooks:
       - id: jsonschema-gentypes
+        name: Generate types file for court data
         additional_dependencies:
           - "jsonschema-gentypes[validation]"
-        files: schemas/.*\.schema\.json
+        args:
+          [
+            "--json-schema=schemas/courts/courts.schema.json",
+            "--python=src/ds_caselaw_utils/types/courts_schema_autogen.py",
+          ]
         language_version: python3.12
+        always_run: true
+        pass_filenames: false
 
   - repo: local
     hooks:
@@ -86,6 +72,27 @@ repos:
         additional_dependencies: [pyyaml]
         always_run: true
         pass_filenames: false
+
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v1.19.1
+    hooks:
+      - id: mypy
+        name: mypy-src
+        additional_dependencies:
+          - types-PyYAML
+          - ruamel.yaml
+          - markdown-it-py
+        args:
+          - --strict
+        files: ^(src/ds_caselaw_utils|scripts)
+        exclude: (?:test_|factory.py)
+
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v1.19.1
+    hooks:
+      - id: mypy
+        name: mypy-tests
+        files: ^src/ds_caselaw_utils/test_
 
   - repo: https://github.com/pre-commit/mirrors-prettier
     rev: v4.0.0-alpha.8
