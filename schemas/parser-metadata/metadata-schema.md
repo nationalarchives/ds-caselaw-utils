@@ -30,17 +30,17 @@
 
 ## <a name="parameters"></a>1. Property `Parsed document metadata > parameters`
 
-|                           |             |
-| ------------------------- | ----------- |
-| **Type**                  | `object`    |
-| **Required**              | Yes         |
-| **Additional properties** | Not allowed |
+|                           |                  |
+| ------------------------- | ---------------- |
+| **Type**                  | `object`         |
+| **Required**              | Yes              |
+| **Additional properties** | Any type allowed |
 
 | Property                        | Pattern | Type   | Deprecated | Definition             | Title/Description       |
 | ------------------------------- | ------- | ------ | ---------- | ---------------------- | ----------------------- |
 | + [PARSER](#parameters_PARSER ) | No      | object | No         | In parser.schema.json# | Parser process metadata |
 | - [TDR](#parameters_TDR )       | No      | object | No         | -                      | TDR process metadata    |
-| + [TRE](#parameters_TRE )       | No      | object | No         | -                      | TRE process metadata    |
+| - [TRE](#parameters_TRE )       | No      | object | No         | -                      | TRE process metadata    |
 
 ### <a name="parameters_PARSER"></a>1.1. Property `Parsed document metadata > parameters > PARSER`
 
@@ -201,7 +201,7 @@ Must be one of:
 |                           |                  |
 | ------------------------- | ---------------- |
 | **Type**                  | `object`         |
-| **Required**              | Yes              |
+| **Required**              | No               |
 | **Additional properties** | Any type allowed |
 
 **Description:** Metadata about a document or its processing which has been added as part of the TRE workflow.

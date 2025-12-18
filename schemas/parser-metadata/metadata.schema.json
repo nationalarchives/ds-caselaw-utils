@@ -20,8 +20,7 @@
           "type": "object"
         }
       },
-      "required": ["PARSER", "TRE"],
-      "additionalProperties": false
+      "required": ["PARSER"]
     }
   },
   "required": ["parameters"],
