@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "title": "Parser process metadata",
+  "description": "Metadata about a document or its processing which has been generated or collated as a result of the Find Case Law parsing process.",
+  "properties": {
+    "documentType": {
+      "title": "Type of document",
+      "description": "Must be one of the document types supported by Find Case Law.",
+      "type": "string",
+      "enum": ["judgment", "pressSummary"]
+    },
+    "uri": {
+      "title": "Document URI",
+      "type": "string",
+      "format": "uri"
+    },
+    "court": {
+      "title": "Court",
+      "type": "string"
+    },
+    "cite": {
+      "title": "Citation",
+      "type": ["string", "null"]
+    },
+    "date": {
+      "title": "Date of publication",
+      "oneOf": [
+        {
+          "title": "Null",
+          "type": "null"
+        },
+        {
+          "title": "Date",
+          "type": "string",
+          "format": "date"
+        }
+      ]
+    },
+    "name": {
+      "title": "Name of document",
+      "description": "The title of the document for indexing purposes. May be different from the exact text which appears in the document.",
+      "type": "string"
+    },
+    "attachments": {
+      "title": "Attachments",
+      "description": "A list of attachments to the document.",
+      "type": "array"
+    },
+    "error-messages": {
+      "type": "array"
+    },
+    "extensions": {
+      "type": "null"
+    }
+  },
+  "required": ["documentType"],
+  "additionalProperties": false
+}
