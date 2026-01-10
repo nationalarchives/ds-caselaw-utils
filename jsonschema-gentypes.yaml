@@ -5,13 +5,7 @@ headers: >
 #   - - black
 #   - - isort
 generate:
-  - # JSON schema file path
-    source: src/ds_caselaw_utils/data/schema/courts.schema.json
-    # Python file path
-    destination: src/ds_caselaw_utils/types/courts_schema_autogen.py
-    # The name of the root element
-    root_name: RawCourtRepository
-    # Argument passed to the API
+  - # Arguments passed to the API
     api_arguments:
       additional_properties: Only explicit
     # Rename an element
