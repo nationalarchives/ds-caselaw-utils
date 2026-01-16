@@ -77,6 +77,10 @@ class Court:
     def get_jurisdiction(self, code: str) -> Optional[Jurisdiction]:
         return next((j for j in self.jurisdictions if j.code == code), None)
 
+    @property
+    def ontology_iri(self) -> str:
+        return f"https://caselaw.nationalarchives.gov.uk/akn/ontology/organization/{self.code.lower()}"
+
     def expand_jurisdictions(self) -> list["Court"]:
         return [self] + [CourtWithJurisdiction(self, jurisdiction) for jurisdiction in self.jurisdictions]
 

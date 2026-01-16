@@ -71,5 +71,8 @@ with open("src/autogen/courts.json", "w") as f:
         for court in group["courts"]:
             if "identifier_iri" not in court:
                 court["identifier_iri"] = court["link"]
+            court["ontology_iri"] = (
+                f"https://caselaw.nationalarchives.gov.uk/akn/ontology/organization/{court['code'].lower()}"
+            )
 
     json.dump(groups, fp=f, indent=2)
