@@ -9,6 +9,11 @@
   - [5.2. Property `Parser process metadata > date > oneOf > Date`](#date_oneOf_i1)
 - [6. Property `Parser process metadata > name`](#name)
 - [7. Property `Parser process metadata > attachments`](#attachments)
+  - [7.1. Property `Parser process metadata > attachments > oneOf > Null`](#attachments_oneOf_i0)
+  - [7.2. Property `Parser process metadata > attachments > oneOf > Array of attachments`](#attachments_oneOf_i1)
+    - [7.2.1. Parser process metadata > attachments > oneOf > Array of attachments > item 1 items](#attachments_oneOf_i1_items)
+      - [7.2.1.1. Property `Parser process metadata > attachments > oneOf > Array of attachments > item 1 items > name`](#attachments_oneOf_i1_items_name)
+      - [7.2.1.2. Property `Parser process metadata > attachments > oneOf > Array of attachments > item 1 items > link`](#attachments_oneOf_i1_items_link)
 - [8. Property `Parser process metadata > error-messages`](#error-messages)
 - [9. Property `Parser process metadata > extensions`](#extensions)
 
@@ -22,17 +27,17 @@
 
 **Description:** Metadata about a document or its processing which has been generated or collated as a result of the Find Case Law parsing process.
 
-| Property                             | Pattern | Type             | Deprecated | Definition | Title/Description   |
-| ------------------------------------ | ------- | ---------------- | ---------- | ---------- | ------------------- |
-| + [documentType](#documentType )     | No      | enum (of string) | No         | -          | Type of document    |
-| - [uri](#uri )                       | No      | string           | No         | -          | Document URI        |
-| - [court](#court )                   | No      | string           | No         | -          | Court               |
-| - [cite](#cite )                     | No      | string or null   | No         | -          | Citation            |
-| - [date](#date )                     | No      | Combination      | No         | -          | Date of publication |
-| - [name](#name )                     | No      | string           | No         | -          | Name of document    |
-| - [attachments](#attachments )       | No      | array            | No         | -          | Attachments         |
-| - [error-messages](#error-messages ) | No      | array            | No         | -          | -                   |
-| - [extensions](#extensions )         | No      | null             | No         | -          | -                   |
+| Property                             | Pattern | Type             | Deprecated | Definition | Title/Description |
+| ------------------------------------ | ------- | ---------------- | ---------- | ---------- | ----------------- |
+| + [documentType](#documentType )     | No      | enum (of string) | No         | -          | Type of document  |
+| - [uri](#uri )                       | No      | string or null   | No         | -          | Document URI      |
+| - [court](#court )                   | No      | string           | No         | -          | Court             |
+| - [cite](#cite )                     | No      | string or null   | No         | -          | Citation          |
+| - [date](#date )                     | No      | Combination      | No         | -          | Date of document  |
+| - [name](#name )                     | No      | string           | No         | -          | Name of document  |
+| - [attachments](#attachments )       | No      | Combination      | No         | -          | Attachments       |
+| - [error-messages](#error-messages ) | No      | array            | No         | -          | Error messages    |
+| - [extensions](#extensions )         | No      | null or object   | No         | -          | -                 |
 
 ## <a name="documentType"></a>1. Property `Parser process metadata > documentType`
 
@@ -43,9 +48,8 @@
 | **Type**     | `enum (of string)` |
 | **Required** | Yes                |
 
-**Description:** Must be one of the document types supported by Find Case Law.
-
 Must be one of:
+* "decision"
 * "judgment"
 * "pressSummary"
 
@@ -53,11 +57,11 @@ Must be one of:
 
 **Title:** Document URI
 
-|              |          |
-| ------------ | -------- |
-| **Type**     | `string` |
-| **Required** | No       |
-| **Format**   | `uri`    |
+|              |                  |
+| ------------ | ---------------- |
+| **Type**     | `string or null` |
+| **Required** | No               |
+| **Format**   | `uri`            |
 
 ## <a name="court"></a>3. Property `Parser process metadata > court`
 
@@ -67,6 +71,8 @@ Must be one of:
 | ------------ | -------- |
 | **Type**     | `string` |
 | **Required** | No       |
+
+**Description:** An FCL court identifier code. Must be one of the values in the [list of courts](https://github.com/nationalarchives/ds-caselaw-utils/blob/main/courts.md).
 
 ## <a name="cite"></a>4. Property `Parser process metadata > cite`
 
@@ -79,13 +85,15 @@ Must be one of:
 
 ## <a name="date"></a>5. Property `Parser process metadata > date`
 
-**Title:** Date of publication
+**Title:** Date of document
 
 |                           |                  |
 | ------------------------- | ---------------- |
 | **Type**                  | `combining`      |
 | **Required**              | No               |
 | **Additional properties** | Any type allowed |
+
+**Description:** The primary date of the document. Usually publication date, hand-down date, decision date or similar.
 
 | One of(Option)         |
 | ---------------------- |
@@ -126,12 +134,36 @@ Must be one of:
 
 **Title:** Attachments
 
-|              |         |
-| ------------ | ------- |
-| **Type**     | `array` |
-| **Required** | No      |
+|                           |                  |
+| ------------------------- | ---------------- |
+| **Type**                  | `combining`      |
+| **Required**              | No               |
+| **Additional properties** | Any type allowed |
 
 **Description:** A list of attachments to the document.
+
+| One of(Option)                                |
+| --------------------------------------------- |
+| [Null](#attachments_oneOf_i0)                 |
+| [Array of attachments](#attachments_oneOf_i1) |
+
+### <a name="attachments_oneOf_i0"></a>7.1. Property `Parser process metadata > attachments > oneOf > Null`
+
+**Title:** Null
+
+|              |        |
+| ------------ | ------ |
+| **Type**     | `null` |
+| **Required** | No     |
+
+### <a name="attachments_oneOf_i1"></a>7.2. Property `Parser process metadata > attachments > oneOf > Array of attachments`
+
+**Title:** Array of attachments
+
+|              |                   |
+| ------------ | ----------------- |
+| **Type**     | `array of object` |
+| **Required** | No                |
 
 |                      | Array restrictions |
 | -------------------- | ------------------ |
@@ -139,14 +171,49 @@ Must be one of:
 | **Max items**        | N/A                |
 | **Items unicity**    | False              |
 | **Additional items** | False              |
-| **Tuple validation** | N/A                |
+| **Tuple validation** | See below          |
+
+| Each item of this array must be             | Description |
+| ------------------------------------------- | ----------- |
+| [item 1 items](#attachments_oneOf_i1_items) | -           |
+
+#### <a name="attachments_oneOf_i1_items"></a>7.2.1. Parser process metadata > attachments > oneOf > Array of attachments > item 1 items
+
+|                           |                  |
+| ------------------------- | ---------------- |
+| **Type**                  | `object`         |
+| **Required**              | No               |
+| **Additional properties** | Any type allowed |
+
+| Property                                    | Pattern | Type   | Deprecated | Definition | Title/Description |
+| ------------------------------------------- | ------- | ------ | ---------- | ---------- | ----------------- |
+| + [name](#attachments_oneOf_i1_items_name ) | No      | string | No         | -          | -                 |
+| + [link](#attachments_oneOf_i1_items_link ) | No      | string | No         | -          | -                 |
+
+##### <a name="attachments_oneOf_i1_items_name"></a>7.2.1.1. Property `Parser process metadata > attachments > oneOf > Array of attachments > item 1 items > name`
+
+|              |          |
+| ------------ | -------- |
+| **Type**     | `string` |
+| **Required** | Yes      |
+
+##### <a name="attachments_oneOf_i1_items_link"></a>7.2.1.2. Property `Parser process metadata > attachments > oneOf > Array of attachments > item 1 items > link`
+
+|              |          |
+| ------------ | -------- |
+| **Type**     | `string` |
+| **Required** | Yes      |
 
 ## <a name="error-messages"></a>8. Property `Parser process metadata > error-messages`
+
+**Title:** Error messages
 
 |              |         |
 | ------------ | ------- |
 | **Type**     | `array` |
 | **Required** | No      |
+
+**Description:** A list of error messages raised whilst parsing this document.
 
 |                      | Array restrictions |
 | -------------------- | ------------------ |
@@ -158,10 +225,10 @@ Must be one of:
 
 ## <a name="extensions"></a>9. Property `Parser process metadata > extensions`
 
-|              |        |
-| ------------ | ------ |
-| **Type**     | `null` |
-| **Required** | No     |
+|              |                  |
+| ------------ | ---------------- |
+| **Type**     | `null or object` |
+| **Required** | No               |
 
 ----------------------------------------------------------------------------------------------------------------------------
 Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans)

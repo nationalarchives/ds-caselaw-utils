@@ -6,17 +6,17 @@
   "properties": {
     "documentType": {
       "title": "Type of document",
-      "description": "Must be one of the document types supported by Find Case Law.",
       "type": "string",
-      "enum": ["judgment", "pressSummary"]
+      "enum": ["decision", "judgment", "pressSummary"]
     },
     "uri": {
       "title": "Document URI",
-      "type": "string",
+      "type": ["string", "null"],
       "format": "uri"
     },
     "court": {
       "title": "Court",
+      "description": "An FCL court identifier code. Must be one of the values in the [list of courts](https://github.com/nationalarchives/ds-caselaw-utils/blob/main/courts.md).",
       "type": "string"
     },
     "cite": {
@@ -24,7 +24,8 @@
       "type": ["string", "null"]
     },
     "date": {
-      "title": "Date of publication",
+      "title": "Date of document",
+      "description": "The primary date of the document. Usually publication date, hand-down date, decision date or similar.",
       "oneOf": [
         {
           "title": "Null",
@@ -45,13 +46,36 @@
     "attachments": {
       "title": "Attachments",
       "description": "A list of attachments to the document.",
-      "type": "array"
+      "oneOf": [
+        {
+          "title": "Null",
+          "type": "null"
+        },
+        {
+          "title": "Array of attachments",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "link": {
+                "type": "string"
+              }
+            },
+            "required": ["name", "link"]
+          }
+        }
+      ]
     },
     "error-messages": {
+      "title": "Error messages",
+      "description": "A list of error messages raised whilst parsing this document.",
       "type": "array"
     },
     "extensions": {
-      "type": "null"
+      "type": ["null", "object"]
     }
   },
   "required": ["documentType"],

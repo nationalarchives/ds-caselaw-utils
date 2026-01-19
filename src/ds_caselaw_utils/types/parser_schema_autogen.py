@@ -1,4 +1,9 @@
-from typing import Literal, Required, TypeAlias, TypedDict, Union
+from typing import Any, Literal, Required, TypeAlias, TypedDict, Union
+
+
+ArrayOfAttachments = list["_ArrayOfAttachmentsItem"]
+r""" Array of attachments. """
+
 
 
 Citation = str | None
@@ -15,7 +20,21 @@ format: date
 
 
 
+DocumentUri = str | None
+r"""
+Document URI.
+
+format: uri
+"""
+
+
+
 Null: TypeAlias = None
+r""" Null. """
+
+
+
+Null0: TypeAlias = None
 r""" Null. """
 
 
@@ -26,19 +45,21 @@ r""" Null. """
 ParserProcessMetadata = TypedDict('ParserProcessMetadata', {
     # | Type of document.
     # | 
-    # | Must be one of the document types supported by Find Case Law.
-    # | 
     # | Required property
     'documentType': Required["TypeOfDocument"],
     # | Document URI.
     # | 
     # | format: uri
-    'uri': str,
+    'uri': "DocumentUri",
     # | Court.
+    # | 
+    # | An FCL court identifier code. Must be one of the values in the [list of courts](https://github.com/nationalarchives/ds-caselaw-utils/blob/main/courts.md).
     'court': str,
     # | Citation.
     'cite': "Citation",
-    # | Date of publication.
+    # | Date of document.
+    # | 
+    # | The primary date of the document. Usually publication date, hand-down date, decision date or similar.
     # | 
     # | Aggregation type: oneOf
     # | Subtype: "Null", "Date"
@@ -51,22 +72,34 @@ ParserProcessMetadata = TypedDict('ParserProcessMetadata', {
     # | 
     # | A list of attachments to the document.
     # | 
-    # | WARNING: we get an array without any items
-    'attachments': None,
+    # | Aggregation type: oneOf
+    # | Subtype: "Null0", "ArrayOfAttachments"
+    'attachments': Union["Null0", "ArrayOfAttachments"],
+    # | Error messages.
+    # | 
+    # | A list of error messages raised whilst parsing this document.
+    # | 
     # | WARNING: we get an array without any items
     'error-messages': None,
-    'extensions': None,
+    'extensions': None | dict[str, Any],
 }, total=False)
 
 
-TypeOfDocument = Literal['judgment'] | Literal['pressSummary']
-r"""
-Type of document.
-
-Must be one of the document types supported by Find Case Law.
-"""
+TypeOfDocument = Literal['decision'] | Literal['judgment'] | Literal['pressSummary']
+r""" Type of document. """
+TYPEOFDOCUMENT_DECISION: Literal['decision'] = "decision"
+r"""The values for the 'Type of document' enum"""
 TYPEOFDOCUMENT_JUDGMENT: Literal['judgment'] = "judgment"
 r"""The values for the 'Type of document' enum"""
 TYPEOFDOCUMENT_PRESSSUMMARY: Literal['pressSummary'] = "pressSummary"
 r"""The values for the 'Type of document' enum"""
+
+
+
+class _ArrayOfAttachmentsItem(TypedDict, total=False):
+    name: Required[str]
+    r""" Required property """
+
+    link: Required[str]
+    r""" Required property """
 
