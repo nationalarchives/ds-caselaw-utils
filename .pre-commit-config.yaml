@@ -10,31 +10,83 @@ repos:
       - id: check-xml
       - id: check-yaml
       - id: end-of-file-fixer
-        exclude: autogen/\.*
+        exclude: autogen/\.*|types/.*autogen\.py
       - id: forbid-submodules
       - id: mixed-line-ending
       - id: no-commit-to-branch
       - id: trailing-whitespace
-
-  # There is a bug with upstream which means the imports are
-  # not sorted -- this should do for now
-  - repo: https://github.com/camptocamp/jsonschema-gentypes
-    rev: 2.13.0
-    hooks:
-      - id: jsonschema-gentypes
-        additional_dependencies:
-          - "jsonschema-gentypes[validation]"
-        files: schemas/.*\.schema\.json
-        language_version: python3.12
+        exclude: types/.*autogen\.py
 
   - repo: https://github.com/astral-sh/ruff-pre-commit
     rev: v0.14.13
     hooks:
-      - id: ruff
+      - id: ruff-check
         args:
           - --fix
           - --exit-non-zero-on-fix
+        exclude: types/.*autogen\.py
       - id: ruff-format
+        exclude: types/.*autogen\.py
+
+  - repo: https://github.com/python-jsonschema/check-jsonschema
+    rev: 0.36.0
+    hooks:
+      - id: check-jsonschema
+        name: Check all JSON Schema files are valid schemas
+        files: schemas/.*\.schema\.json
+        args: ["--check-metaschema"]
+      - id: check-jsonschema
+        name: Check courts data matches schema
+        files: ^src/ds_caselaw_utils/data/court_names.yaml$
+        args: ["--schemafile", "schemas/courts/courts.schema.json"]
+
+  - repo: https://github.com/camptocamp/jsonschema-gentypes
+    rev: 2.13.0
+    hooks:
+      - id: jsonschema-gentypes
+        name: Generate types file for court data
+        additional_dependencies:
+          - "jsonschema-gentypes[validation]"
+        args:
+          [
+            "--json-schema=schemas/courts/courts.schema.json",
+            "--python=src/ds_caselaw_utils/types/courts_schema_autogen.py",
+          ]
+        language_version: python3.12
+        always_run: true
+        pass_filenames: false
+      - id: jsonschema-gentypes
+        name: Generate types file for parser metadata
+        additional_dependencies:
+          - "jsonschema-gentypes[validation]"
+        args:
+          [
+            "--json-schema=schemas/parser-metadata/parser.schema.json",
+            "--python=src/ds_caselaw_utils/types/parser_schema_autogen.py",
+          ]
+        language_version: python3.12
+        always_run: true
+        pass_filenames: false
+
+  - repo: local
+    hooks:
+      - id: build-schema-docs
+        name: Generate documentation for JSON Schemas
+        entry: bash scripts/build_schema_docs
+        language: python
+        additional_dependencies: [json-schema-for-humans]
+        always_run: true
+        pass_filenames: false
+
+  - repo: local
+    hooks:
+      - id: check_courts_list
+        name: build_courts_list
+        entry: scripts/build_courts_list
+        language: python
+        additional_dependencies: [pyyaml]
+        always_run: true
+        pass_filenames: false
 
   - repo: https://github.com/pre-commit/mirrors-mypy
     rev: v1.19.1
@@ -56,34 +108,6 @@ repos:
       - id: mypy
         name: mypy-tests
         files: ^src/ds_caselaw_utils/test_
-
-  - repo: https://github.com/python-jsonschema/check-jsonschema
-    rev: 0.36.0
-    hooks:
-      - id: check-jsonschema
-        name: Check courts data matches schema
-        files: ^src/ds_caselaw_utils/data/court_names.yaml$
-        args: ["--schemafile", "schemas/courts/courts.schema.json"]
-
-  - repo: local
-    hooks:
-      - id: build-schema-docs
-        name: Generate documentation for JSON Schemas
-        entry: bash scripts/build_schema_docs
-        language: python
-        additional_dependencies: [json-schema-for-humans]
-        always_run: true
-        pass_filenames: false
-
-  - repo: local
-    hooks:
-      - id: check_courts_list
-        name: build_courts_list
-        entry: scripts/build_courts_list
-        language: python
-        additional_dependencies: [pyyaml]
-        always_run: true
-        pass_filenames: false
 
   - repo: https://github.com/pre-commit/mirrors-prettier
     rev: v4.0.0-alpha.8

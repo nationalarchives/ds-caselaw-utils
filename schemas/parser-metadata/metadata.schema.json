@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "title": "Parsed document metadata",
+  "properties": {
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "PARSER": {
+          "$ref": "parser.schema.json#"
+        },
+        "INGESTER_OPTIONS": {
+          "$ref": "ingester_options.schema.json#"
+        },
+        "TDR": {
+          "title": "TDR process metadata",
+          "description": "Metadata about a document or its processing which has been added as part of the TDR upload process.",
+          "type": "object"
+        },
+        "TRE": {
+          "title": "TRE process metadata",
+          "description": "Metadata about a document or its processing which has been added as part of the TRE workflow.",
+          "type": "object"
+        }
+      },
+      "required": ["PARSER"]
+    }
+  },
+  "required": ["parameters"]
+}

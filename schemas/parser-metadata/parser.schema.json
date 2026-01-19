@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "title": "Parser process metadata",
+  "description": "Metadata about a document or its processing which has been generated or collated as a result of the Find Case Law parsing process.",
+  "properties": {
+    "documentType": {
+      "title": "Type of document",
+      "type": "string",
+      "enum": ["decision", "judgment", "pressSummary"]
+    },
+    "uri": {
+      "title": "Document URI",
+      "type": ["string", "null"],
+      "format": "uri"
+    },
+    "court": {
+      "title": "Court",
+      "description": "An FCL court identifier code. Must be one of the values in the [list of courts](https://github.com/nationalarchives/ds-caselaw-utils/blob/main/courts.md).",
+      "type": "string"
+    },
+    "cite": {
+      "title": "Citation",
+      "type": ["string", "null"]
+    },
+    "date": {
+      "title": "Date of document",
+      "description": "The primary date of the document. Usually publication date, hand-down date, decision date or similar.",
+      "oneOf": [
+        {
+          "title": "Null",
+          "type": "null"
+        },
+        {
+          "title": "Date",
+          "type": "string",
+          "format": "date"
+        }
+      ]
+    },
+    "name": {
+      "title": "Name of document",
+      "description": "The title of the document for indexing purposes. May be different from the exact text which appears in the document.",
+      "type": "string"
+    },
+    "attachments": {
+      "title": "Attachments",
+      "description": "A list of attachments to the document.",
+      "oneOf": [
+        {
+          "title": "Null",
+          "type": "null"
+        },
+        {
+          "title": "Array of attachments",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "link": {
+                "type": "string"
+              }
+            },
+            "required": ["name", "link"]
+          }
+        }
+      ]
+    },
+    "error-messages": {
+      "title": "Error messages",
+      "description": "A list of error messages raised whilst parsing this document.",
+      "type": "array"
+    },
+    "extensions": {
+      "type": ["null", "object"]
+    }
+  },
+  "required": ["documentType"],
+  "additionalProperties": false
+}

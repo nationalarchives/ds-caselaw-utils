@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "title": "Parsed document metadata",
+  "properties": {
+    "auto_publish": {
+      "title": "Auto-publish document",
+      "description": "Should the ingester bypass the editorial approval process and automatically publish this document?",
+      "type": "boolean"
+    },
+    "source_document": {
+      "description": "Information about the source file which was parsed.",
+      "type": "object",
+      "properties": {
+        "format": {
+          "title": "Docuent format",
+          "description": "The MIME type of the source file.",
+          "type": "string"
+        },
+        "file_hash": {
+          "title": "File hash",
+          "description": "The SHA256 hash of the source file.",
+          "type": "string",
+          "pattern": "^[A-Fa-f0-9]{64}$"
+        }
+      },
+      "required": ["format", "file_hash"]
+    }
+  }
+}

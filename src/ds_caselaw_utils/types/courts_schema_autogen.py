@@ -1,6 +1,3 @@
-# Automatically generated file from a JSON schema
-
-
 from typing import Required, TypedDict
 
 
@@ -115,7 +112,7 @@ class RawCourtGroup(TypedDict, total=False):
 
 RawCourtRepository = list["RawCourtGroup"]
 r"""
-Raw Court List.
+Raw Court Repository.
 
 A list of courts
 """

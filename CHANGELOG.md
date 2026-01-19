@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file.
 
+## Unreleased
+
+### BREAKING CHANGE
+
+- The location of the courts.schema.json file has changed, although the contents are identical.
+
+### Feat
+
+- add new tool for quickly checking examples of metadata files against the schema
+- add new schema for expected metadata output from the parser
+- improve framing of the courts data schema
+
+### Fix
+
+- further refinements to parser metadata schemas
+- clarify required/additional properties for parser metadata
+- remove incorrect $id value from courts schema
+
 ## v2.10.0 (2025-12-08)
 
 - Add long name and identifier iris to data to support stub XML in Editor UI as well as parser
