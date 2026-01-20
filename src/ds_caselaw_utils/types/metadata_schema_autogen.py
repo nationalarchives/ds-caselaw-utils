@@ -39,6 +39,29 @@ r""" Null. """
 
 
 
+class ParsedDocumentMetadata(TypedDict, total=False):
+    r""" Parsed document metadata. """
+
+    auto_publish: bool
+    r"""
+    Auto-publish document.
+
+    Should the ingester bypass the editorial approval process and automatically publish this document?
+    """
+
+    source_document: "_ParsedDocumentMetadataSourceDocument"
+    r""" Information about the source file which was parsed. """
+
+
+
+class ParsedDocumentMetadata0(TypedDict, total=False):
+    r""" Parsed document metadata. """
+
+    parameters: Required["_ParsedDocumentMetadataParameters"]
+    r""" Required property """
+
+
+
 # | Parser process metadata.
 # | 
 # | Metadata about a document or its processing which has been generated or collated as a result of the Find Case Law parsing process.
@@ -104,4 +127,58 @@ class _ArrayOfAttachmentsItem(TypedDict, total=False):
 
     link: Required[str]
     r""" Required property """
+
+
+
+class _ParsedDocumentMetadataParameters(TypedDict, total=False):
+    PARSER: Required["ParserProcessMetadata"]
+    r"""
+    Parser process metadata.
+
+    Metadata about a document or its processing which has been generated or collated as a result of the Find Case Law parsing process.
+
+    Required property
+    """
+
+    INGESTER_OPTIONS: "ParsedDocumentMetadata"
+    r""" Parsed document metadata. """
+
+    TDR: dict[str, Any]
+    r"""
+    TDR process metadata.
+
+    Metadata about a document or its processing which has been added as part of the TDR upload process.
+    """
+
+    TRE: dict[str, Any]
+    r"""
+    TRE process metadata.
+
+    Metadata about a document or its processing which has been added as part of the TRE workflow.
+    """
+
+
+
+class _ParsedDocumentMetadataSourceDocument(TypedDict, total=False):
+    r""" Information about the source file which was parsed. """
+
+    format: Required[str]
+    r"""
+    Docuent format.
+
+    The MIME type of the source file.
+
+    Required property
+    """
+
+    file_hash: Required[str]
+    r"""
+    File hash.
+
+    The SHA256 hash of the source file.
+
+    pattern: ^[A-Fa-f0-9]{64}$
+
+    Required property
+    """
 
