@@ -76,6 +76,9 @@
     },
     "extensions": {
       "type": ["null", "object"]
+    },
+    "jurisdictionShortNames": {
+      "type": "array"
     }
   },
   "required": ["documentType"],
