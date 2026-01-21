@@ -117,7 +117,11 @@
       "items": {
         "type": "object",
         "properties": {
-          "id": { "title": "Identifier", "description": "", "type": "string" },
+          "id": {
+            "title": "Identifier",
+            "description": "",
+            "type": "string"
+          },
           "name": {
             "title": "Metadata name",
             "description": "The name of this piece of metadata",
@@ -142,7 +146,39 @@
             "format": "datetime"
           }
         },
-        "required": ["name", "value", "source", "timestamp"]
+        "required": ["name", "value", "source", "timestamp"],
+        "allOf": [
+          {
+            "if": { "properties": { "name": { "const": "title" } } },
+            "then": { "properties": { "value": { "type": "string" } } }
+          },
+          {
+            "if": { "properties": { "name": { "const": "headnote" } } },
+            "then": { "properties": { "value": { "type": "string" } } }
+          },
+          {
+            "if": { "properties": { "name": { "const": "category" } } },
+            "then": {
+              "properties": {
+                "value": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "title": "Category name",
+                      "type": "string"
+                    },
+                    "parent": {
+                      "title": "Category parent",
+                      "description": "If this is a subcategory, the name of the parent category",
+                      "type": ["string", "null"]
+                    }
+                  },
+                  "required": ["name", "parent"]
+                }
+              }
+            }
+          }
+        ]
       }
     },
     "xml_contains_document_text": {

@@ -213,6 +213,47 @@ class _ArrayOfAttachmentsItem(TypedDict, total=False):
 
 
 class _MetadataFieldsItem(TypedDict, total=False):
+    r"""
+    allOf:
+      - if:
+          properties:
+            name:
+              const: title
+        then:
+          properties:
+            value:
+              type: string
+      - if:
+          properties:
+            name:
+              const: headnote
+        then:
+          properties:
+            value:
+              type: string
+      - if:
+          properties:
+            name:
+              const: category
+        then:
+          properties:
+            value:
+              properties:
+                name:
+                  title: Category name
+                  type: string
+                parent:
+                  description: If this is a subcategory, the name of the parent category
+                  title: Category parent
+                  type:
+                  - string
+                  - 'null'
+              required:
+              - name
+              - parent
+              type: object
+    """
+
     id: str
     r"""
     Identifier.
