@@ -1,3 +1,3 @@
-This commission deals with appeals if you're banned from accessing a laboratory or other facility containing dangerous substances on national security grounds.
+This commission hears appeals against directions made under the regime controlling access to dangerous substances established under the Anti-terrorism, Crime and Security Act 2001.
 
-You can read more about it on [the Pathogens Access Appeals Commission website](https://www.gov.uk/guidance/appeal-to-the-pathogens-access-appeals-commission).
+You can read more about it on the [Pathogens Access Appeal Commission website](https://www.gov.uk/guidance/appeal-to-the-pathogens-access-appeals-commission).

@@ -488,11 +488,10 @@
   courts:
     - code: SIAC
       name: Special Immigration Appeals Commission
-      link: https://webarchive.nationalarchives.gov.uk/ukgwa/https://siac.decisions.tribunals.gov.uk/
+      link: https://www.gov.uk/guidance/appeal-to-the-special-immigration-appeals-commission
       selectable: true
       listable: true
       param: "siac"
-      start_year: 2003
 - name: proscribed_organisations_appeal_commission
   display_name: ~
   is_tribunal: true
@@ -500,11 +499,10 @@
     - code: POAC
       name: Proscribed Organisations Appeal Commission
 
-      link: https://webarchive.nationalarchives.gov.uk/ukgwa/https://siac.decisions.tribunals.gov.uk/
+      link: https://www.gov.uk/guidance/appeal-to-the-special-immigration-appeals-commission
       selectable: true
       listable: true
       param: "poac"
-      start_year: 2003
 - name: pathogens_access_appeal_commission
   display_name: ~
   is_tribunal: true
@@ -512,12 +510,10 @@
     - code: PAAC
       name: Pathogens Access Appeal Commission
 
-      link: https://webarchive.nationalarchives.gov.uk/ukgwa/https://siac.decisions.tribunals.gov.uk/
+      link: https://www.gov.uk/guidance/appeal-to-the-pathogens-access-appeals-commission
       selectable: true
       listable: true
       param: "paac"
-      start_year: 2003
-
 - name: employment_appeal_tribunal
   display_name: ~
   is_tribunal: true
