@@ -82,13 +82,17 @@
     },
     "primary_source": {
       "title": "Primary source file",
-      "description": "Information about the primary source file which was parsed.",
+      "description": "Information about the primary source file which was parsed. This should usually be describing a document file such as a `.docx` or a `.pdf`, and not a container format such as `.zip`.",
       "type": "object",
       "properties": {
         "filename": {
           "name": "Filename",
-          "description": "The name of the file which was parsed.",
-          "type": "string"
+          "description": "The filename (including extension) of the file which was parsed.",
+          "type": "string",
+          "examples": [
+            "Foo v Bar [2026] UKSC 123.docx",
+            "Judgment v Judgement.pdf"
+          ]
         },
         "sha256": {
           "name": "SHA256 hash",
@@ -99,7 +103,11 @@
         "mimetype": {
           "name": "MIME type",
           "description": "The MIME type of the file.",
-          "type": "string"
+          "type": "string",
+          "examples": [
+            "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+            "application/pdf"
+          ]
         },
         "route": {
           "name": "Route",
@@ -119,8 +127,9 @@
         "properties": {
           "id": {
             "title": "Identifier",
-            "description": "",
-            "type": "string"
+            "description": "A UUID for this piece of metadata.\n\nA new UUID should be generated only if the metadata value has changed; if there is an existing piece of metadata with the same source and same value the existing `id` should be used.",
+            "type": "string",
+            "format": "uuid"
           },
           "name": {
             "title": "Metadata name",

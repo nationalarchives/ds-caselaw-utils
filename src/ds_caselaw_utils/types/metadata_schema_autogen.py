@@ -133,7 +133,7 @@ ParserProcessMetadata = TypedDict('ParserProcessMetadata', {
     'jurisdictionShortNames': None,
     # | Primary source file.
     # | 
-    # | Information about the primary source file which was parsed.
+    # | Information about the primary source file which was parsed. This should usually be describing a document file such as a `.docx` or a `.pdf`, and not a container format such as `.zip`.
     'primary_source': "PrimarySourceFile",
     # | Metadata fields.
     # | 
@@ -150,14 +150,17 @@ class PrimarySourceFile(TypedDict, total=False):
     r"""
     Primary source file.
 
-    Information about the primary source file which was parsed.
+    Information about the primary source file which was parsed. This should usually be describing a document file such as a `.docx` or a `.pdf`, and not a container format such as `.zip`.
     """
 
     filename: Required[str]
     r"""
-    The name of the file which was parsed.
+    The filename (including extension) of the file which was parsed.
 
     name: Filename
+    examples:
+      - Foo v Bar [2026] UKSC 123.docx
+      - Judgment v Judgement.pdf
 
     Required property
     """
@@ -177,6 +180,9 @@ class PrimarySourceFile(TypedDict, total=False):
     The MIME type of the file.
 
     name: MIME type
+    examples:
+      - application/vnd.openxmlformats-officedocument.wordprocessingml.document
+      - application/pdf
 
     Required property
     """
@@ -258,7 +264,11 @@ class _MetadataFieldsItem(TypedDict, total=False):
     r"""
     Identifier.
 
+    A UUID for this piece of metadata.
 
+    A new UUID should be generated only if the metadata value has changed; if there is an existing piece of metadata with the same source and same value the existing `id` should be used.
+
+    format: uuid
     """
 
     name: Required[str]

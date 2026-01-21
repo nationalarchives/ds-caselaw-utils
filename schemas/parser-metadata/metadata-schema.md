@@ -323,14 +323,14 @@ Must be one of:
 | **Required**              | No               |
 | **Additional properties** | Any type allowed |
 
-**Description:** Information about the primary source file which was parsed.
+**Description:** Information about the primary source file which was parsed. This should usually be describing a document file such as a `.docx` or a `.pdf`, and not a container format such as `.zip`.
 
-| Property                                                  | Pattern | Type             | Deprecated | Definition | Title/Description                                  |
-| --------------------------------------------------------- | ------- | ---------------- | ---------- | ---------- | -------------------------------------------------- |
-| + [filename](#parameters_PARSER_primary_source_filename ) | No      | string           | No         | -          | The name of the file which was parsed.             |
-| + [sha256](#parameters_PARSER_primary_source_sha256 )     | No      | string           | No         | -          | The SHA256 hash of the file.                       |
-| + [mimetype](#parameters_PARSER_primary_source_mimetype ) | No      | string           | No         | -          | The MIME type of the file.                         |
-| + [route](#parameters_PARSER_primary_source_route )       | No      | enum (of string) | No         | -          | The route which the file took to reach the parser. |
+| Property                                                  | Pattern | Type             | Deprecated | Definition | Title/Description                                                |
+| --------------------------------------------------------- | ------- | ---------------- | ---------- | ---------- | ---------------------------------------------------------------- |
+| + [filename](#parameters_PARSER_primary_source_filename ) | No      | string           | No         | -          | The filename (including extension) of the file which was parsed. |
+| + [sha256](#parameters_PARSER_primary_source_sha256 )     | No      | string           | No         | -          | The SHA256 hash of the file.                                     |
+| + [mimetype](#parameters_PARSER_primary_source_mimetype ) | No      | string           | No         | -          | The MIME type of the file.                                       |
+| + [route](#parameters_PARSER_primary_source_route )       | No      | enum (of string) | No         | -          | The route which the file took to reach the parser.               |
 
 ##### <a name="parameters_PARSER_primary_source_filename"></a>1.1.11.1. Property `Parsed document metadata > parameters > PARSER > primary_source > filename`
 
@@ -339,7 +339,17 @@ Must be one of:
 | **Type**     | `string` |
 | **Required** | Yes      |
 
-**Description:** The name of the file which was parsed.
+**Description:** The filename (including extension) of the file which was parsed.
+
+**Examples:**
+
+```json
+"Foo v Bar [2026] UKSC 123.docx"
+```
+
+```json
+"Judgment v Judgement.pdf"
+```
 
 ##### <a name="parameters_PARSER_primary_source_sha256"></a>1.1.11.2. Property `Parsed document metadata > parameters > PARSER > primary_source > sha256`
 
@@ -362,6 +372,16 @@ Must be one of:
 | **Required** | Yes      |
 
 **Description:** The MIME type of the file.
+
+**Examples:**
+
+```json
+"application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+```
+
+```json
+"application/pdf"
+```
 
 ##### <a name="parameters_PARSER_primary_source_route"></a>1.1.11.4. Property `Parsed document metadata > parameters > PARSER > primary_source > route`
 
@@ -537,6 +557,11 @@ Must be one of:
 | ------------ | -------- |
 | **Type**     | `string` |
 | **Required** | No       |
+| **Format**   | `uuid`   |
+
+**Description:** A UUID for this piece of metadata.
+
+A new UUID should be generated only if the metadata value has changed; if there is an existing piece of metadata with the same source and same value the existing `id` should be used.
 
 ###### <a name="parameters_PARSER_metadata_fields_items_name"></a>1.1.12.1.5. Property `Parsed document metadata > parameters > PARSER > metadata_fields > metadata_fields items > name`
 
