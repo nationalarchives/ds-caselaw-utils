@@ -122,23 +122,23 @@
 | **Required**              | No          |
 | **Additional properties** | Not allowed |
 
-| Property                                                | Pattern | Type            | Deprecated | Definition | Title/Description         |
-| ------------------------------------------------------- | ------- | --------------- | ---------- | ---------- | ------------------------- |
-| + [code](#items_courts_items_code )                     | No      | string          | No         | -          | -                         |
-| + [name](#items_courts_items_name )                     | No      | string          | No         | -          | -                         |
-| - [long_name](#items_courts_items_long_name )           | No      | string          | No         | -          | -                         |
-| - [grouped_name](#items_courts_items_grouped_name )     | No      | string          | No         | -          | -                         |
-| - [param](#items_courts_items_param )                   | No      | string          | No         | -          | -                         |
-| - [extra_params](#items_courts_items_extra_params )     | No      | array of string | No         | -          | -                         |
-| - [ncn_pattern](#items_courts_items_ncn_pattern )       | No      | string          | No         | -          | Neutral Citation Pattern  |
-| - [ncn_examples](#items_courts_items_ncn_examples )     | No      | array of string | No         | -          | Neutral Citation examples |
-| + [link](#items_courts_items_link )                     | No      | string          | No         | -          | -                         |
-| - [identifier_iri](#items_courts_items_identifier_iri ) | No      | string          | No         | -          | -                         |
-| - [start_year](#items_courts_items_start_year )         | No      | integer         | No         | -          | -                         |
-| - [end_year](#items_courts_items_end_year )             | No      | integer         | No         | -          | -                         |
-| + [listable](#items_courts_items_listable )             | No      | boolean         | No         | -          | -                         |
-| + [selectable](#items_courts_items_selectable )         | No      | boolean         | No         | -          | -                         |
-| - [jurisdictions](#items_courts_items_jurisdictions )   | No      | array of object | No         | -          | -                         |
+| Property                                                | Pattern | Type            | Deprecated | Definition | Title/Description                                                                 |
+| ------------------------------------------------------- | ------- | --------------- | ---------- | ---------- | --------------------------------------------------------------------------------- |
+| + [code](#items_courts_items_code )                     | No      | string          | No         | -          | Court Code                                                                        |
+| + [name](#items_courts_items_name )                     | No      | string          | No         | -          | Name                                                                              |
+| - [long_name](#items_courts_items_long_name )           | No      | string          | No         | -          | Long Name                                                                         |
+| - [grouped_name](#items_courts_items_grouped_name )     | No      | string          | No         | -          | -                                                                                 |
+| - [param](#items_courts_items_param )                   | No      | string          | No         | -          | Search parameter                                                                  |
+| - [extra_params](#items_courts_items_extra_params )     | No      | array of string | No         | -          | Extra parameters                                                                  |
+| - [ncn_pattern](#items_courts_items_ncn_pattern )       | No      | string          | No         | -          | Neutral Citation Pattern                                                          |
+| - [ncn_examples](#items_courts_items_ncn_examples )     | No      | array of string | No         | -          | Neutral Citation examples                                                         |
+| + [link](#items_courts_items_link )                     | No      | string          | No         | -          | -                                                                                 |
+| - [identifier_iri](#items_courts_items_identifier_iri ) | No      | string          | No         | -          | -                                                                                 |
+| - [start_year](#items_courts_items_start_year )         | No      | integer         | No         | -          | Start year                                                                        |
+| - [end_year](#items_courts_items_end_year )             | No      | integer         | No         | -          | End year                                                                          |
+| + [listable](#items_courts_items_listable )             | No      | boolean         | No         | -          | Should this court appear in public lists of courts supported by Find Case Law?    |
+| + [selectable](#items_courts_items_selectable )         | No      | boolean         | No         | -          | Should this court appear as a selectable option in the list of searchable courts? |
+| - [jurisdictions](#items_courts_items_jurisdictions )   | No      | array of object | No         | -          | -                                                                                 |
 
 | All of(Requirement)                    |
 | -------------------------------------- |
@@ -185,10 +185,14 @@
 
 ##### <a name="items_courts_items_code"></a>1.4.1.3. Property `Raw Court Repository > Raw Court Group > courts > Raw Court > code`
 
+**Title:** Court Code
+
 |              |          |
 | ------------ | -------- |
 | **Type**     | `string` |
 | **Required** | Yes      |
+
+**Description:** A unique code (within Find Case Law) to identify this court entity. Courts which exist only as internal proxy entities should be prefixed with `TNA`.
 
 | Restrictions                      |                                                                                                                                   |
 | --------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
@@ -196,17 +200,25 @@
 
 ##### <a name="items_courts_items_name"></a>1.4.1.4. Property `Raw Court Repository > Raw Court Group > courts > Raw Court > name`
 
+**Title:** Name
+
 |              |          |
 | ------------ | -------- |
 | **Type**     | `string` |
 | **Required** | Yes      |
 
+**Description:** The name of this court as it will commonly appear on Find Case Law.
+
 ##### <a name="items_courts_items_long_name"></a>1.4.1.5. Property `Raw Court Repository > Raw Court Group > courts > Raw Court > long_name`
+
+**Title:** Long Name
 
 |              |          |
 | ------------ | -------- |
 | **Type**     | `string` |
 | **Required** | No       |
+
+**Description:** Optionally, the formal name of this court where it differs from the `name`.
 
 ##### <a name="items_courts_items_grouped_name"></a>1.4.1.6. Property `Raw Court Repository > Raw Court Group > courts > Raw Court > grouped_name`
 
@@ -217,10 +229,14 @@
 
 ##### <a name="items_courts_items_param"></a>1.4.1.7. Property `Raw Court Repository > Raw Court Group > courts > Raw Court > param`
 
+**Title:** Search parameter
+
 |              |          |
 | ------------ | -------- |
 | **Type**     | `string` |
 | **Required** | No       |
+
+**Description:** The primary value for the `court` parameter to use when searching for this court.
 
 | Restrictions                      |                                                                                                                                 |
 | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
@@ -228,10 +244,14 @@
 
 ##### <a name="items_courts_items_extra_params"></a>1.4.1.8. Property `Raw Court Repository > Raw Court Group > courts > Raw Court > extra_params`
 
+**Title:** Extra parameters
+
 |              |                   |
 | ------------ | ----------------- |
 | **Type**     | `array of string` |
 | **Required** | No                |
+
+**Description:** A list of additional parameters which, if they appear as a `court` parameter in search, will be mapped to this court.
 
 |                      | Array restrictions |
 | -------------------- | ------------------ |
@@ -323,10 +343,14 @@
 
 ##### <a name="items_courts_items_start_year"></a>1.4.1.13. Property `Raw Court Repository > Raw Court Group > courts > Raw Court > start_year`
 
+**Title:** Start year
+
 |              |           |
 | ------------ | --------- |
 | **Type**     | `integer` |
 | **Required** | No        |
+
+**Description:** The default start year of the document holding range for this court in Find Case Law.
 
 | Restrictions |           |
 | ------------ | --------- |
@@ -334,10 +358,14 @@
 
 ##### <a name="items_courts_items_end_year"></a>1.4.1.14. Property `Raw Court Repository > Raw Court Group > courts > Raw Court > end_year`
 
+**Title:** End year
+
 |              |           |
 | ------------ | --------- |
 | **Type**     | `integer` |
 | **Required** | No        |
+
+**Description:** If this court no longer publishes documents, the default end year of the document holding range for this court in Find Case Law.
 
 ##### <a name="items_courts_items_listable"></a>1.4.1.15. Property `Raw Court Repository > Raw Court Group > courts > Raw Court > listable`
 
@@ -346,12 +374,16 @@
 | **Type**     | `boolean` |
 | **Required** | Yes       |
 
+**Description:** Should this court appear in public lists of courts supported by Find Case Law?
+
 ##### <a name="items_courts_items_selectable"></a>1.4.1.16. Property `Raw Court Repository > Raw Court Group > courts > Raw Court > selectable`
 
 |              |           |
 | ------------ | --------- |
 | **Type**     | `boolean` |
 | **Required** | Yes       |
+
+**Description:** Should this court appear as a selectable option in the list of searchable courts?
 
 ##### <a name="items_courts_items_jurisdictions"></a>1.4.1.17. Property `Raw Court Repository > Raw Court Group > courts > Raw Court > jurisdictions`
 

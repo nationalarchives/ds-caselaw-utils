@@ -23,23 +23,33 @@
           "title": "Raw Court",
           "properties": {
             "code": {
+              "title": "Court Code",
+              "description": "A unique code (within Find Case Law) to identify this court entity. Courts which exist only as internal proxy entities should be prefixed with `TNA`.",
               "type": "string",
               "pattern": "^[A-Za-z]{2,}(-[A-Za-z0-9]+)*$"
             },
             "name": {
+              "title": "Name",
+              "description": "The name of this court as it will commonly appear on Find Case Law.",
               "type": "string"
             },
             "long_name": {
+              "title": "Long Name",
+              "description": "Optionally, the formal name of this court where it differs from the `name`.",
               "type": "string"
             },
             "grouped_name": {
               "type": "string"
             },
             "param": {
+              "title": "Search parameter",
+              "description": "The primary value for the `court` parameter to use when searching for this court.",
               "type": "string",
               "pattern": "^[a-z]{2,}(?:/[a-z0-9]+)?$"
             },
             "extra_params": {
+              "title": "Extra parameters",
+              "description": "A list of additional parameters which, if they appear as a `court` parameter in search, will be mapped to this court.",
               "type": "array",
               "items": {
                 "type": "string",
@@ -71,16 +81,24 @@
               "format": "uri"
             },
             "start_year": {
+              "title": "Start year",
+              "description": "The default start year of the document holding range for this court in Find Case Law.",
               "type": "integer",
               "minimum": 1066
             },
             "end_year": {
+              "title": "End year",
+              "description": "If this court no longer publishes documents, the default end year of the document holding range for this court in Find Case Law.",
               "type": "integer"
             },
             "listable": {
+              "name": "Listable",
+              "description": "Should this court appear in public lists of courts supported by Find Case Law?",
               "type": "boolean"
             },
             "selectable": {
+              "name": "Selectable",
+              "description": "Should this court appear as a selectable option in the list of searchable courts?",
               "type": "boolean"
             },
             "jurisdictions": {

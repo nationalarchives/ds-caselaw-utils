@@ -42,20 +42,48 @@ class RawCourt(TypedDict, total=False):
 
     code: Required[str]
     r"""
+    Court Code.
+
+    A unique code (within Find Case Law) to identify this court entity. Courts which exist only as internal proxy entities should be prefixed with `TNA`.
+
     pattern: ^[A-Za-z]{2,}(-[A-Za-z0-9]+)*$
 
     Required property
     """
 
     name: Required[str]
-    r""" Required property """
+    r"""
+    Name.
+
+    The name of this court as it will commonly appear on Find Case Law.
+
+    Required property
+    """
 
     long_name: str
+    r"""
+    Long Name.
+
+    Optionally, the formal name of this court where it differs from the `name`.
+    """
+
     grouped_name: str
     param: str
-    r""" pattern: ^[a-z]{2,}(?:/[a-z0-9]+)?$ """
+    r"""
+    Search parameter.
 
-    extra_params: list["_RawCourtExtraParamsItem"]
+    The primary value for the `court` parameter to use when searching for this court.
+
+    pattern: ^[a-z]{2,}(?:/[a-z0-9]+)?$
+    """
+
+    extra_params: list["_ExtraParametersItem"]
+    r"""
+    Extra parameters.
+
+    A list of additional parameters which, if they appear as a `court` parameter in search, will be mapped to this court.
+    """
+
     ncn_pattern: str
     r"""
     Neutral Citation Pattern.
@@ -81,14 +109,38 @@ class RawCourt(TypedDict, total=False):
     r""" format: uri """
 
     start_year: int
-    r""" minimum: 1066 """
+    r"""
+    Start year.
+
+    The default start year of the document holding range for this court in Find Case Law.
+
+    minimum: 1066
+    """
 
     end_year: int
+    r"""
+    End year.
+
+    If this court no longer publishes documents, the default end year of the document holding range for this court in Find Case Law.
+    """
+
     listable: Required[bool]
-    r""" Required property """
+    r"""
+    Should this court appear in public lists of courts supported by Find Case Law?
+
+    name: Listable
+
+    Required property
+    """
 
     selectable: Required[bool]
-    r""" Required property """
+    r"""
+    Should this court appear as a selectable option in the list of searchable courts?
+
+    name: Selectable
+
+    Required property
+    """
 
     jurisdictions: list["RawJurisdiction"]
 
@@ -133,6 +185,6 @@ class RawJurisdiction(TypedDict, total=False):
 
 
 
-_RawCourtExtraParamsItem = str
+_ExtraParametersItem = str
 r""" pattern: ^[a-z]{2,}(/[a-z]+)?$ """
 
