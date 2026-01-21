@@ -17,6 +17,19 @@
 - [8. Property `Parser process metadata > error-messages`](#error-messages)
 - [9. Property `Parser process metadata > extensions`](#extensions)
 - [10. Property `Parser process metadata > jurisdictionShortNames`](#jurisdictionShortNames)
+- [11. Property `Parser process metadata > primary_source`](#primary_source)
+  - [11.1. Property `Parser process metadata > primary_source > filename`](#primary_source_filename)
+  - [11.2. Property `Parser process metadata > primary_source > sha256`](#primary_source_sha256)
+  - [11.3. Property `Parser process metadata > primary_source > mimetype`](#primary_source_mimetype)
+  - [11.4. Property `Parser process metadata > primary_source > route`](#primary_source_route)
+- [12. Property `Parser process metadata > metadata_fields`](#metadata_fields)
+  - [12.1. Parser process metadata > metadata_fields > metadata_fields items](#metadata_fields_items)
+    - [12.1.1. Property `Parser process metadata > metadata_fields > metadata_fields items > id`](#metadata_fields_items_id)
+    - [12.1.2. Property `Parser process metadata > metadata_fields > metadata_fields items > name`](#metadata_fields_items_name)
+    - [12.1.3. Property `Parser process metadata > metadata_fields > metadata_fields items > value`](#metadata_fields_items_value)
+    - [12.1.4. Property `Parser process metadata > metadata_fields > metadata_fields items > source`](#metadata_fields_items_source)
+    - [12.1.5. Property `Parser process metadata > metadata_fields > metadata_fields items > timestamp`](#metadata_fields_items_timestamp)
+- [13. Property `Parser process metadata > xml_contains_document_text`](#xml_contains_document_text)
 
 **Title:** Parser process metadata
 
@@ -28,18 +41,21 @@
 
 **Description:** Metadata about a document or its processing which has been generated or collated as a result of the Find Case Law parsing process.
 
-| Property                                             | Pattern | Type             | Deprecated | Definition | Title/Description |
-| ---------------------------------------------------- | ------- | ---------------- | ---------- | ---------- | ----------------- |
-| + [documentType](#documentType )                     | No      | enum (of string) | No         | -          | Type of document  |
-| - [uri](#uri )                                       | No      | string or null   | No         | -          | Document URI      |
-| - [court](#court )                                   | No      | string           | No         | -          | Court             |
-| - [cite](#cite )                                     | No      | string or null   | No         | -          | Citation          |
-| - [date](#date )                                     | No      | Combination      | No         | -          | Date of document  |
-| - [name](#name )                                     | No      | string           | No         | -          | Name of document  |
-| - [attachments](#attachments )                       | No      | Combination      | No         | -          | Attachments       |
-| - [error-messages](#error-messages )                 | No      | array            | No         | -          | Error messages    |
-| - [extensions](#extensions )                         | No      | null or object   | No         | -          | -                 |
-| - [jurisdictionShortNames](#jurisdictionShortNames ) | No      | array            | No         | -          | -                 |
+| Property                                                     | Pattern | Type             | Deprecated | Definition | Title/Description                                                                                                                                                             |
+| ------------------------------------------------------------ | ------- | ---------------- | ---------- | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| + [documentType](#documentType )                             | No      | enum (of string) | No         | -          | Type of document                                                                                                                                                              |
+| - [uri](#uri )                                               | No      | string or null   | No         | -          | Document URI                                                                                                                                                                  |
+| - [court](#court )                                           | No      | string           | No         | -          | Court                                                                                                                                                                         |
+| - [cite](#cite )                                             | No      | string or null   | No         | -          | Citation                                                                                                                                                                      |
+| - [date](#date )                                             | No      | Combination      | No         | -          | Date of document                                                                                                                                                              |
+| - [name](#name )                                             | No      | string           | No         | -          | Name of document                                                                                                                                                              |
+| - [attachments](#attachments )                               | No      | Combination      | No         | -          | Attachments                                                                                                                                                                   |
+| - [error-messages](#error-messages )                         | No      | array            | No         | -          | Error messages                                                                                                                                                                |
+| - [extensions](#extensions )                                 | No      | null or object   | No         | -          | -                                                                                                                                                                             |
+| - [jurisdictionShortNames](#jurisdictionShortNames )         | No      | array            | No         | -          | -                                                                                                                                                                             |
+| - [primary_source](#primary_source )                         | No      | object           | No         | -          | Primary source file                                                                                                                                                           |
+| - [metadata_fields](#metadata_fields )                       | No      | array of object  | No         | -          | Metadata fields                                                                                                                                                               |
+| - [xml_contains_document_text](#xml_contains_document_text ) | No      | boolean          | No         | -          | An indicator of if the XML of the document contains body text which is renderable for human consumption, instead of only being a stub containing metadata for a static asset. |
 
 ## <a name="documentType"></a>1. Property `Parser process metadata > documentType`
 
@@ -246,6 +262,181 @@ Must be one of:
 | **Items unicity**    | False              |
 | **Additional items** | False              |
 | **Tuple validation** | N/A                |
+
+## <a name="primary_source"></a>11. Property `Parser process metadata > primary_source`
+
+**Title:** Primary source file
+
+|                           |                  |
+| ------------------------- | ---------------- |
+| **Type**                  | `object`         |
+| **Required**              | No               |
+| **Additional properties** | Any type allowed |
+
+**Description:** Information about the primary source file which was parsed.
+
+| Property                                | Pattern | Type             | Deprecated | Definition | Title/Description                                  |
+| --------------------------------------- | ------- | ---------------- | ---------- | ---------- | -------------------------------------------------- |
+| + [filename](#primary_source_filename ) | No      | string           | No         | -          | The name of the file which was parsed.             |
+| + [sha256](#primary_source_sha256 )     | No      | string           | No         | -          | The SHA256 hash of the file.                       |
+| + [mimetype](#primary_source_mimetype ) | No      | string           | No         | -          | The MIME type of the file.                         |
+| + [route](#primary_source_route )       | No      | enum (of string) | No         | -          | The route which the file took to reach the parser. |
+
+### <a name="primary_source_filename"></a>11.1. Property `Parser process metadata > primary_source > filename`
+
+|              |          |
+| ------------ | -------- |
+| **Type**     | `string` |
+| **Required** | Yes      |
+
+**Description:** The name of the file which was parsed.
+
+### <a name="primary_source_sha256"></a>11.2. Property `Parser process metadata > primary_source > sha256`
+
+|              |          |
+| ------------ | -------- |
+| **Type**     | `string` |
+| **Required** | Yes      |
+
+**Description:** The SHA256 hash of the file.
+
+| Restrictions                      |                                                                                           |
+| --------------------------------- | ----------------------------------------------------------------------------------------- |
+| **Must match regular expression** | ```^[A-Fa-f0-9]{64}$``` [Test](https://regex101.com/?regex=%5E%5BA-Fa-f0-9%5D%7B64%7D%24) |
+
+### <a name="primary_source_mimetype"></a>11.3. Property `Parser process metadata > primary_source > mimetype`
+
+|              |          |
+| ------------ | -------- |
+| **Type**     | `string` |
+| **Required** | Yes      |
+
+**Description:** The MIME type of the file.
+
+### <a name="primary_source_route"></a>11.4. Property `Parser process metadata > primary_source > route`
+
+|              |                    |
+| ------------ | ------------------ |
+| **Type**     | `enum (of string)` |
+| **Required** | Yes                |
+
+**Description:** The route which the file took to reach the parser.
+
+Must be one of:
+* "TDR"
+* "BULK"
+* "EUI"
+
+## <a name="metadata_fields"></a>12. Property `Parser process metadata > metadata_fields`
+
+**Title:** Metadata fields
+
+|              |                   |
+| ------------ | ----------------- |
+| **Type**     | `array of object` |
+| **Required** | No                |
+
+**Description:** A list of additional metadata fields, either extracted from the document or sourced from a supplementary file.
+
+|                      | Array restrictions |
+| -------------------- | ------------------ |
+| **Min items**        | N/A                |
+| **Max items**        | N/A                |
+| **Items unicity**    | False              |
+| **Additional items** | False              |
+| **Tuple validation** | See below          |
+
+| Each item of this array must be                 | Description |
+| ----------------------------------------------- | ----------- |
+| [metadata_fields items](#metadata_fields_items) | -           |
+
+### <a name="metadata_fields_items"></a>12.1. Parser process metadata > metadata_fields > metadata_fields items
+
+|                           |                  |
+| ------------------------- | ---------------- |
+| **Type**                  | `object`         |
+| **Required**              | No               |
+| **Additional properties** | Any type allowed |
+
+| Property                                         | Pattern | Type             | Deprecated | Definition | Title/Description              |
+| ------------------------------------------------ | ------- | ---------------- | ---------- | ---------- | ------------------------------ |
+| - [id](#metadata_fields_items_id )               | No      | string           | No         | -          | Identifier                     |
+| + [name](#metadata_fields_items_name )           | No      | string           | No         | -          | Metadata name                  |
+| + [value](#metadata_fields_items_value )         | No      | string or object | No         | -          | Metadata value                 |
+| + [source](#metadata_fields_items_source )       | No      | enum (of string) | No         | -          | Metadata source                |
+| + [timestamp](#metadata_fields_items_timestamp ) | No      | string           | No         | -          | Timestamp of metadata creation |
+
+#### <a name="metadata_fields_items_id"></a>12.1.1. Property `Parser process metadata > metadata_fields > metadata_fields items > id`
+
+**Title:** Identifier
+
+|              |          |
+| ------------ | -------- |
+| **Type**     | `string` |
+| **Required** | No       |
+
+#### <a name="metadata_fields_items_name"></a>12.1.2. Property `Parser process metadata > metadata_fields > metadata_fields items > name`
+
+**Title:** Metadata name
+
+|              |          |
+| ------------ | -------- |
+| **Type**     | `string` |
+| **Required** | Yes      |
+
+**Description:** The name of this piece of metadata
+
+| Restrictions                      |                                                                         |
+| --------------------------------- | ----------------------------------------------------------------------- |
+| **Must match regular expression** | ```^[a-z_]+$``` [Test](https://regex101.com/?regex=%5E%5Ba-z_%5D%2B%24) |
+
+#### <a name="metadata_fields_items_value"></a>12.1.3. Property `Parser process metadata > metadata_fields > metadata_fields items > value`
+
+**Title:** Metadata value
+
+|              |                    |
+| ------------ | ------------------ |
+| **Type**     | `string or object` |
+| **Required** | Yes                |
+
+**Description:** A value for this metadata. May be either a plain string, or a JSON object with additional complexity.
+
+#### <a name="metadata_fields_items_source"></a>12.1.4. Property `Parser process metadata > metadata_fields > metadata_fields items > source`
+
+**Title:** Metadata source
+
+|              |                    |
+| ------------ | ------------------ |
+| **Type**     | `enum (of string)` |
+| **Required** | Yes                |
+
+**Description:** The origin of this piece of metadata.
+
+Must be one of:
+* "document"
+* "external"
+* "editor"
+
+#### <a name="metadata_fields_items_timestamp"></a>12.1.5. Property `Parser process metadata > metadata_fields > metadata_fields items > timestamp`
+
+**Title:** Timestamp of metadata creation
+
+|              |            |
+| ------------ | ---------- |
+| **Type**     | `string`   |
+| **Required** | Yes        |
+| **Format**   | `datetime` |
+
+**Description:** The timestamp this piece of metadata was first detected or added.
+
+## <a name="xml_contains_document_text"></a>13. Property `Parser process metadata > xml_contains_document_text`
+
+|              |           |
+| ------------ | --------- |
+| **Type**     | `boolean` |
+| **Required** | No        |
+
+**Description:** An indicator of if the XML of the document contains body text which is renderable for human consumption, instead of only being a stub containing metadata for a static asset.
 
 ----------------------------------------------------------------------------------------------------------------------------
 Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans)

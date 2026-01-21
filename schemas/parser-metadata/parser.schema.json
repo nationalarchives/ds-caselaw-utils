@@ -79,6 +79,76 @@
     },
     "jurisdictionShortNames": {
       "type": "array"
+    },
+    "primary_source": {
+      "title": "Primary source file",
+      "description": "Information about the primary source file which was parsed.",
+      "type": "object",
+      "properties": {
+        "filename": {
+          "name": "Filename",
+          "description": "The name of the file which was parsed.",
+          "type": "string"
+        },
+        "sha256": {
+          "name": "SHA256 hash",
+          "description": "The SHA256 hash of the file.",
+          "type": "string",
+          "pattern": "^[A-Fa-f0-9]{64}$"
+        },
+        "mimetype": {
+          "name": "MIME type",
+          "description": "The MIME type of the file.",
+          "type": "string"
+        },
+        "route": {
+          "name": "Route",
+          "description": "The route which the file took to reach the parser.",
+          "type": "string",
+          "enum": ["TDR", "BULK", "EUI"]
+        }
+      },
+      "required": ["filename", "sha256", "mimetype", "route"]
+    },
+    "metadata_fields": {
+      "title": "Metadata fields",
+      "description": "A list of additional metadata fields, either extracted from the document or sourced from a supplementary file.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": { "title": "Identifier", "description": "", "type": "string" },
+          "name": {
+            "title": "Metadata name",
+            "description": "The name of this piece of metadata",
+            "type": "string",
+            "pattern": "^[a-z_]+$"
+          },
+          "value": {
+            "title": "Metadata value",
+            "description": "A value for this metadata. May be either a plain string, or a JSON object with additional complexity.",
+            "type": ["string", "object"]
+          },
+          "source": {
+            "title": "Metadata source",
+            "description": "The origin of this piece of metadata.",
+            "type": "string",
+            "enum": ["document", "external", "editor"]
+          },
+          "timestamp": {
+            "title": "Timestamp of metadata creation",
+            "description": "The timestamp this piece of metadata was first detected or added.",
+            "type": "string",
+            "format": "datetime"
+          }
+        },
+        "required": ["name", "value", "source", "timestamp"]
+      }
+    },
+    "xml_contains_document_text": {
+      "name": "XML contains document text",
+      "description": "An indicator of if the XML of the document contains body text which is renderable for human consumption, instead of only being a stub containing metadata for a static asset.",
+      "type": "boolean"
     }
   },
   "required": ["documentType"],

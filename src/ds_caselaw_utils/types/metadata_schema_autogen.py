@@ -29,6 +29,30 @@ format: uri
 
 
 
+MetadataSource = Literal['document'] | Literal['external'] | Literal['editor']
+r"""
+Metadata source.
+
+The origin of this piece of metadata.
+"""
+METADATASOURCE_DOCUMENT: Literal['document'] = "document"
+r"""The values for the 'Metadata source' enum"""
+METADATASOURCE_EXTERNAL: Literal['external'] = "external"
+r"""The values for the 'Metadata source' enum"""
+METADATASOURCE_EDITOR: Literal['editor'] = "editor"
+r"""The values for the 'Metadata source' enum"""
+
+
+
+MetadataValue = str | dict[str, Any]
+r"""
+Metadata value.
+
+A value for this metadata. May be either a plain string, or a JSON object with additional complexity.
+"""
+
+
+
 Null: TypeAlias = None
 r""" Null. """
 
@@ -107,7 +131,65 @@ ParserProcessMetadata = TypedDict('ParserProcessMetadata', {
     'extensions': None | dict[str, Any],
     # | WARNING: we get an array without any items
     'jurisdictionShortNames': None,
+    # | Primary source file.
+    # | 
+    # | Information about the primary source file which was parsed.
+    'primary_source': "PrimarySourceFile",
+    # | Metadata fields.
+    # | 
+    # | A list of additional metadata fields, either extracted from the document or sourced from a supplementary file.
+    'metadata_fields': list["_MetadataFieldsItem"],
+    # | An indicator of if the XML of the document contains body text which is renderable for human consumption, instead of only being a stub containing metadata for a static asset.
+    # | 
+    # | name: XML contains document text
+    'xml_contains_document_text': bool,
 }, total=False)
+
+
+class PrimarySourceFile(TypedDict, total=False):
+    r"""
+    Primary source file.
+
+    Information about the primary source file which was parsed.
+    """
+
+    filename: Required[str]
+    r"""
+    The name of the file which was parsed.
+
+    name: Filename
+
+    Required property
+    """
+
+    sha256: Required[str]
+    r"""
+    The SHA256 hash of the file.
+
+    name: SHA256 hash
+    pattern: ^[A-Fa-f0-9]{64}$
+
+    Required property
+    """
+
+    mimetype: Required[str]
+    r"""
+    The MIME type of the file.
+
+    name: MIME type
+
+    Required property
+    """
+
+    route: Required["_PrimarySourceFileRoute"]
+    r"""
+    The route which the file took to reach the parser.
+
+    name: Route
+
+    Required property
+    """
+
 
 
 TypeOfDocument = Literal['decision'] | Literal['judgment'] | Literal['pressSummary']
@@ -127,6 +209,56 @@ class _ArrayOfAttachmentsItem(TypedDict, total=False):
 
     link: Required[str]
     r""" Required property """
+
+
+
+class _MetadataFieldsItem(TypedDict, total=False):
+    id: str
+    r"""
+    Identifier.
+
+
+    """
+
+    name: Required[str]
+    r"""
+    Metadata name.
+
+    The name of this piece of metadata
+
+    pattern: ^[a-z_]+$
+
+    Required property
+    """
+
+    value: Required["MetadataValue"]
+    r"""
+    Metadata value.
+
+    A value for this metadata. May be either a plain string, or a JSON object with additional complexity.
+
+    Required property
+    """
+
+    source: Required["MetadataSource"]
+    r"""
+    Metadata source.
+
+    The origin of this piece of metadata.
+
+    Required property
+    """
+
+    timestamp: Required[str]
+    r"""
+    Timestamp of metadata creation.
+
+    The timestamp this piece of metadata was first detected or added.
+
+    format: datetime
+
+    Required property
+    """
 
 
 
@@ -181,4 +313,19 @@ class _ParsedDocumentMetadataSourceDocument(TypedDict, total=False):
 
     Required property
     """
+
+
+
+_PrimarySourceFileRoute = Literal['TDR'] | Literal['BULK'] | Literal['EUI']
+r"""
+The route which the file took to reach the parser.
+
+name: Route
+"""
+_PRIMARYSOURCEFILEROUTE_TDR: Literal['TDR'] = "TDR"
+r"""The values for the 'The route which the file took to reach the parser' enum"""
+_PRIMARYSOURCEFILEROUTE_BULK: Literal['BULK'] = "BULK"
+r"""The values for the 'The route which the file took to reach the parser' enum"""
+_PRIMARYSOURCEFILEROUTE_EUI: Literal['EUI'] = "EUI"
+r"""The values for the 'The route which the file took to reach the parser' enum"""
 
