@@ -16,6 +16,7 @@
       - [7.2.1.2. Property `Parser process metadata > attachments > oneOf > Array of attachments > item 1 items > link`](#attachments_oneOf_i1_items_link)
 - [8. Property `Parser process metadata > error-messages`](#error-messages)
 - [9. Property `Parser process metadata > extensions`](#extensions)
+- [10. Property `Parser process metadata > jurisdictionShortNames`](#jurisdictionShortNames)
 
 **Title:** Parser process metadata
 
@@ -27,17 +28,18 @@
 
 **Description:** Metadata about a document or its processing which has been generated or collated as a result of the Find Case Law parsing process.
 
-| Property                             | Pattern | Type             | Deprecated | Definition | Title/Description |
-| ------------------------------------ | ------- | ---------------- | ---------- | ---------- | ----------------- |
-| + [documentType](#documentType )     | No      | enum (of string) | No         | -          | Type of document  |
-| - [uri](#uri )                       | No      | string or null   | No         | -          | Document URI      |
-| - [court](#court )                   | No      | string           | No         | -          | Court             |
-| - [cite](#cite )                     | No      | string or null   | No         | -          | Citation          |
-| - [date](#date )                     | No      | Combination      | No         | -          | Date of document  |
-| - [name](#name )                     | No      | string           | No         | -          | Name of document  |
-| - [attachments](#attachments )       | No      | Combination      | No         | -          | Attachments       |
-| - [error-messages](#error-messages ) | No      | array            | No         | -          | Error messages    |
-| - [extensions](#extensions )         | No      | null or object   | No         | -          | -                 |
+| Property                                             | Pattern | Type             | Deprecated | Definition | Title/Description |
+| ---------------------------------------------------- | ------- | ---------------- | ---------- | ---------- | ----------------- |
+| + [documentType](#documentType )                     | No      | enum (of string) | No         | -          | Type of document  |
+| - [uri](#uri )                                       | No      | string or null   | No         | -          | Document URI      |
+| - [court](#court )                                   | No      | string           | No         | -          | Court             |
+| - [cite](#cite )                                     | No      | string or null   | No         | -          | Citation          |
+| - [date](#date )                                     | No      | Combination      | No         | -          | Date of document  |
+| - [name](#name )                                     | No      | string           | No         | -          | Name of document  |
+| - [attachments](#attachments )                       | No      | Combination      | No         | -          | Attachments       |
+| - [error-messages](#error-messages )                 | No      | array            | No         | -          | Error messages    |
+| - [extensions](#extensions )                         | No      | null or object   | No         | -          | -                 |
+| - [jurisdictionShortNames](#jurisdictionShortNames ) | No      | array            | No         | -          | -                 |
 
 ## <a name="documentType"></a>1. Property `Parser process metadata > documentType`
 
@@ -229,6 +231,21 @@ Must be one of:
 | ------------ | ---------------- |
 | **Type**     | `null or object` |
 | **Required** | No               |
+
+## <a name="jurisdictionShortNames"></a>10. Property `Parser process metadata > jurisdictionShortNames`
+
+|              |         |
+| ------------ | ------- |
+| **Type**     | `array` |
+| **Required** | No      |
+
+|                      | Array restrictions |
+| -------------------- | ------------------ |
+| **Min items**        | N/A                |
+| **Max items**        | N/A                |
+| **Items unicity**    | False              |
+| **Additional items** | False              |
+| **Tuple validation** | N/A                |
 
 ----------------------------------------------------------------------------------------------------------------------------
 Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans)

@@ -82,6 +82,8 @@ ParserProcessMetadata = TypedDict('ParserProcessMetadata', {
     # | WARNING: we get an array without any items
     'error-messages': None,
     'extensions': None | dict[str, Any],
+    # | WARNING: we get an array without any items
+    'jurisdictionShortNames': None,
 }, total=False)
 
 

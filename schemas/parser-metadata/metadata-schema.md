@@ -18,6 +18,7 @@
           - [1.1.7.2.1.2. Property `Parsed document metadata > parameters > PARSER > attachments > oneOf > Array of attachments > item 1 items > link`](#parameters_PARSER_attachments_oneOf_i1_items_link)
     - [1.1.8. Property `Parsed document metadata > parameters > PARSER > error-messages`](#parameters_PARSER_error-messages)
     - [1.1.9. Property `Parsed document metadata > parameters > PARSER > extensions`](#parameters_PARSER_extensions)
+    - [1.1.10. Property `Parsed document metadata > parameters > PARSER > jurisdictionShortNames`](#parameters_PARSER_jurisdictionShortNames)
   - [1.2. Property `Parsed document metadata > parameters > INGESTER_OPTIONS`](#parameters_INGESTER_OPTIONS)
     - [1.2.1. Property `Parsed document metadata > parameters > INGESTER_OPTIONS > auto_publish`](#parameters_INGESTER_OPTIONS_auto_publish)
     - [1.2.2. Property `Parsed document metadata > parameters > INGESTER_OPTIONS > source_document`](#parameters_INGESTER_OPTIONS_source_document)
@@ -66,17 +67,18 @@
 
 **Description:** Metadata about a document or its processing which has been generated or collated as a result of the Find Case Law parsing process.
 
-| Property                                               | Pattern | Type             | Deprecated | Definition | Title/Description |
-| ------------------------------------------------------ | ------- | ---------------- | ---------- | ---------- | ----------------- |
-| + [documentType](#parameters_PARSER_documentType )     | No      | enum (of string) | No         | -          | Type of document  |
-| - [uri](#parameters_PARSER_uri )                       | No      | string or null   | No         | -          | Document URI      |
-| - [court](#parameters_PARSER_court )                   | No      | string           | No         | -          | Court             |
-| - [cite](#parameters_PARSER_cite )                     | No      | string or null   | No         | -          | Citation          |
-| - [date](#parameters_PARSER_date )                     | No      | Combination      | No         | -          | Date of document  |
-| - [name](#parameters_PARSER_name )                     | No      | string           | No         | -          | Name of document  |
-| - [attachments](#parameters_PARSER_attachments )       | No      | Combination      | No         | -          | Attachments       |
-| - [error-messages](#parameters_PARSER_error-messages ) | No      | array            | No         | -          | Error messages    |
-| - [extensions](#parameters_PARSER_extensions )         | No      | null or object   | No         | -          | -                 |
+| Property                                                               | Pattern | Type             | Deprecated | Definition | Title/Description |
+| ---------------------------------------------------------------------- | ------- | ---------------- | ---------- | ---------- | ----------------- |
+| + [documentType](#parameters_PARSER_documentType )                     | No      | enum (of string) | No         | -          | Type of document  |
+| - [uri](#parameters_PARSER_uri )                                       | No      | string or null   | No         | -          | Document URI      |
+| - [court](#parameters_PARSER_court )                                   | No      | string           | No         | -          | Court             |
+| - [cite](#parameters_PARSER_cite )                                     | No      | string or null   | No         | -          | Citation          |
+| - [date](#parameters_PARSER_date )                                     | No      | Combination      | No         | -          | Date of document  |
+| - [name](#parameters_PARSER_name )                                     | No      | string           | No         | -          | Name of document  |
+| - [attachments](#parameters_PARSER_attachments )                       | No      | Combination      | No         | -          | Attachments       |
+| - [error-messages](#parameters_PARSER_error-messages )                 | No      | array            | No         | -          | Error messages    |
+| - [extensions](#parameters_PARSER_extensions )                         | No      | null or object   | No         | -          | -                 |
+| - [jurisdictionShortNames](#parameters_PARSER_jurisdictionShortNames ) | No      | array            | No         | -          | -                 |
 
 #### <a name="parameters_PARSER_documentType"></a>1.1.1. Property `Parsed document metadata > parameters > PARSER > documentType`
 
@@ -268,6 +270,21 @@ Must be one of:
 | ------------ | ---------------- |
 | **Type**     | `null or object` |
 | **Required** | No               |
+
+#### <a name="parameters_PARSER_jurisdictionShortNames"></a>1.1.10. Property `Parsed document metadata > parameters > PARSER > jurisdictionShortNames`
+
+|              |         |
+| ------------ | ------- |
+| **Type**     | `array` |
+| **Required** | No      |
+
+|                      | Array restrictions |
+| -------------------- | ------------------ |
+| **Min items**        | N/A                |
+| **Max items**        | N/A                |
+| **Items unicity**    | False              |
+| **Additional items** | False              |
+| **Tuple validation** | N/A                |
 
 ### <a name="parameters_INGESTER_OPTIONS"></a>1.2. Property `Parsed document metadata > parameters > INGESTER_OPTIONS`
 
