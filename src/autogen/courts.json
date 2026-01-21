@@ -680,12 +680,43 @@
       {
         "code": "SIAC",
         "name": "Special Immigration Appeals Commission",
-        "link": "https://webarchive.nationalarchives.gov.uk/ukgwa/https://siac.decisions.tribunals.gov.uk/",
+        "link": "https://www.gov.uk/guidance/appeal-to-the-special-immigration-appeals-commission",
         "selectable": true,
         "listable": true,
         "param": "siac",
-        "start_year": 2003,
-        "identifier_iri": "https://webarchive.nationalarchives.gov.uk/ukgwa/https://siac.decisions.tribunals.gov.uk/"
+        "identifier_iri": "https://www.gov.uk/guidance/appeal-to-the-special-immigration-appeals-commission"
+      }
+    ]
+  },
+  {
+    "name": "proscribed_organisations_appeal_commission",
+    "display_name": null,
+    "is_tribunal": true,
+    "courts": [
+      {
+        "code": "POAC",
+        "name": "Proscribed Organisations Appeal Commission",
+        "link": "https://www.gov.uk/guidance/appeal-to-the-special-immigration-appeals-commission",
+        "selectable": false,
+        "listable": false,
+        "param": "poac",
+        "identifier_iri": "https://www.gov.uk/guidance/appeal-to-the-special-immigration-appeals-commission"
+      }
+    ]
+  },
+  {
+    "name": "pathogens_access_appeal_commission",
+    "display_name": null,
+    "is_tribunal": true,
+    "courts": [
+      {
+        "code": "PAAC",
+        "name": "Pathogens Access Appeal Commission",
+        "link": "https://www.gov.uk/guidance/appeal-to-the-pathogens-access-appeals-commission",
+        "selectable": false,
+        "listable": false,
+        "param": "paac",
+        "identifier_iri": "https://www.gov.uk/guidance/appeal-to-the-pathogens-access-appeals-commission"
       }
     ]
   },
