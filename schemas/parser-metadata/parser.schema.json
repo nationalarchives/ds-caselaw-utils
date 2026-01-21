@@ -79,6 +79,121 @@
     },
     "jurisdictionShortNames": {
       "type": "array"
+    },
+    "primary_source": {
+      "title": "Primary source file",
+      "description": "Information about the primary source file which was parsed. This should usually be describing a document file such as a `.docx` or a `.pdf`, and not a container format such as `.zip`.",
+      "type": "object",
+      "properties": {
+        "filename": {
+          "name": "Filename",
+          "description": "The filename (including extension) of the file which was parsed.",
+          "type": "string",
+          "examples": [
+            "Foo v Bar [2026] UKSC 123.docx",
+            "Judgment v Judgement.pdf"
+          ]
+        },
+        "sha256": {
+          "name": "SHA256 hash",
+          "description": "The SHA256 hash of the file.",
+          "type": "string",
+          "pattern": "^[A-Fa-f0-9]{64}$"
+        },
+        "mimetype": {
+          "name": "MIME type",
+          "description": "The MIME type of the file.",
+          "type": "string",
+          "examples": [
+            "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+            "application/pdf"
+          ]
+        },
+        "route": {
+          "name": "Route",
+          "description": "The route which the file took to reach the parser.",
+          "type": "string",
+          "enum": ["TDR", "BULK", "EUI"]
+        }
+      },
+      "required": ["filename", "sha256", "mimetype", "route"]
+    },
+    "metadata_fields": {
+      "title": "Metadata fields",
+      "description": "A list of additional metadata fields, either extracted from the document or sourced from a supplementary file.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "title": "Identifier",
+            "description": "A UUID for this piece of metadata.\n\nA new UUID should be generated only if the metadata value has changed; if there is an existing piece of metadata with the same source and same value the existing `id` should be used.",
+            "type": "string",
+            "format": "uuid"
+          },
+          "name": {
+            "title": "Metadata name",
+            "description": "The name of this piece of metadata",
+            "type": "string",
+            "pattern": "^[a-z_]+$"
+          },
+          "value": {
+            "title": "Metadata value",
+            "description": "A value for this metadata. May be either a plain string, or a JSON object with additional complexity.",
+            "type": ["string", "object"]
+          },
+          "source": {
+            "title": "Metadata source",
+            "description": "The origin of this piece of metadata.",
+            "type": "string",
+            "enum": ["document", "external", "editor"]
+          },
+          "timestamp": {
+            "title": "Timestamp of metadata creation",
+            "description": "The timestamp this piece of metadata was first detected or added.",
+            "type": "string",
+            "format": "datetime"
+          }
+        },
+        "required": ["name", "value", "source", "timestamp"],
+        "allOf": [
+          {
+            "if": { "properties": { "name": { "const": "title" } } },
+            "then": { "properties": { "value": { "type": "string" } } }
+          },
+          {
+            "if": { "properties": { "name": { "const": "headnote" } } },
+            "then": { "properties": { "value": { "type": "string" } } }
+          },
+          {
+            "if": { "properties": { "name": { "const": "category" } } },
+            "then": {
+              "properties": {
+                "value": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "title": "Category name",
+                      "type": "string"
+                    },
+                    "parent": {
+                      "title": "Category parent",
+                      "description": "If this is a subcategory, the name of the parent category",
+                      "type": ["string", "null"]
+                    }
+                  },
+                  "required": ["name", "parent"]
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "xml_contains_document_text": {
+      "name": "XML contains document text",
+      "description": "An indicator of if the XML of the document contains body text which is renderable for human consumption, instead of only being a stub containing metadata for a static asset.",
+      "type": "boolean"
     }
   },
   "required": ["documentType"],

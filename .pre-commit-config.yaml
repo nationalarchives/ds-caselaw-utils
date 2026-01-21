@@ -61,8 +61,8 @@ repos:
           - "jsonschema-gentypes[validation]"
         args:
           [
-            "--json-schema=schemas/parser-metadata/parser.schema.json",
-            "--python=src/ds_caselaw_utils/types/parser_schema_autogen.py",
+            "--json-schema=schemas/parser-metadata/metadata.schema.json",
+            "--python=src/ds_caselaw_utils/types/metadata_schema_autogen.py",
           ]
         language_version: python3.12
         always_run: true
