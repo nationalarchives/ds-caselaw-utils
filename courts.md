@@ -44,6 +44,7 @@
 | Financial List | EWHC-KBD-Commercial-Financial | – | [2025] EWHC 1881 (Comm) | – | – | ❌ | ❌ |
 | Financial List | EWHC-QBD-Commercial-Financial | – | [2014] EWHC 3156 (Comm) | – | – | ❌ | ❌ |
 | High Court (Chancery Appeals) | EWHC-Chancery-Appeals | – | – | – | – | ❌ | ❌ |
+| High Court | EWHC | – | – | – | – | ❌ | ❌ |
 | Insolvency and Companies List | EWHC-Chancery-InsolvencyAndCompanies | – | – | – | – | ❌ | ❌ |
 | Intellectual Property Enterprise Court | EWHC-Chancery-IPEC | ewhc/ipec | [2014] EWHC 349 (IPEC) | 2013 | – | ✅ | ✅ |
 | Intellectual Property List | EWHC-Chancery-IntellectualProperty | – | – | – | – | ❌ | ❌ |

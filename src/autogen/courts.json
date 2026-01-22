@@ -88,6 +88,15 @@
     "is_tribunal": false,
     "courts": [
       {
+        "code": "EWHC",
+        "name": "High Court",
+        "long_name": "The High Court of Justice",
+        "link": "https://www.judiciary.uk/courts-and-tribunals/high-court/",
+        "selectable": false,
+        "listable": false,
+        "identifier_iri": "https://www.judiciary.uk/courts-and-tribunals/high-court/"
+      },
+      {
         "code": "EWHC-QBD-Admin",
         "grouped_name": "Administrative Court",
         "name": "High Court (Administrative Court)",
