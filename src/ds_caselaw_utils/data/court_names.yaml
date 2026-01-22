@@ -258,7 +258,7 @@
       link: https://www.gov.uk/courts-tribunals/the-intellectual-property-list
       selectable: false
       listable: false
-    - code: EWHC-KBD
+    - code: TNA-EWHC-KBQBD
       grouped_name: King's / Queen's Bench Division
       name: High Court (King's / Queen's Bench Division)
       link: https://www.gov.uk/courts-tribunals/kings-bench-division-of-the-high-court
