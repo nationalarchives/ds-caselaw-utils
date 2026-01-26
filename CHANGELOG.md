@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## Unreleased
+## v4.0.0 (2026-01-26)
 
 ### BREAKING CHANGE
 
