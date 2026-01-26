@@ -44,10 +44,11 @@
 | Financial List | EWHC-KBD-Commercial-Financial | – | [2025] EWHC 1881 (Comm) | – | – | ❌ | ❌ |
 | Financial List | EWHC-QBD-Commercial-Financial | – | [2014] EWHC 3156 (Comm) | – | – | ❌ | ❌ |
 | High Court (Chancery Appeals) | EWHC-Chancery-Appeals | – | – | – | – | ❌ | ❌ |
+| High Court | EWHC | – | – | – | – | ❌ | ❌ |
 | Insolvency and Companies List | EWHC-Chancery-InsolvencyAndCompanies | – | – | – | – | ❌ | ❌ |
 | Intellectual Property Enterprise Court | EWHC-Chancery-IPEC | ewhc/ipec | [2014] EWHC 349 (IPEC) | 2013 | – | ✅ | ✅ |
 | Intellectual Property List | EWHC-Chancery-IntellectualProperty | – | – | – | – | ❌ | ❌ |
-| King's / Queen's Bench Division | EWHC-KBD | ewhc/kb | [2022] EWHC 2387 (KB) | 2003 | – | ❌ | ✅ |
+| King's / Queen's Bench Division | TNA-EWHC-KBQBD | ewhc/kb | [2022] EWHC 2387 (KB) | 2003 | – | ❌ | ✅ |
 | King's Bench Division | EWHC-KBD | ewhc/kb | [2024] EWHC 285 (KB) | 2022 | – | ✅ | ❌ |
 | Mercantile Court | EWHC-Mercantile | ewhc/mercantile | [2014] EWHC 1195 (Mercantile) | 2008 | 2014 | ✅ | ✅ |
 | Patents Court | EWHC-Chancery-Patents | ewhc/pat | [2015] EWHC 3163 (Pat) | 2003 | – | ✅ | ✅ |
