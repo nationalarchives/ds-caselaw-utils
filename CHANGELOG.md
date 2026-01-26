@@ -2,18 +2,34 @@
 
 All notable changes to this project will be documented in this file.
 
-## Unreleased
+## v4.0.0 (2026-01-26)
+
+### BREAKING CHANGE
+
+- JSON schema files are now in the `src/ds_caselaw_utils` folder
+- `parser_schema_autogen.py` is no longer available. Use `ParserProcessMetadata` in `metadata_schema_autogen.py` instead.
 
 ### Feat
 
+- **court_names**: add high court
+- **court_names**: Update court code from EWHC-KBD to TNA-EWHC-KBQBD
+- **parser.schema.json**: add further validation for known metadata types
+- **parser.schema.json**: add new PARSER schema fields for metadata exchange
+- generate Python types for entire metadata.json schema
 - Add PAAC and POAC tribunals
 - Add forgotten SIAC blurbs
+
+### Fix
+
+- schemas are now distributed with the package
+- **parser.schema.json**: add missing jurisdictionShortNames property to PARSER schema
 
 ## v3.0.0 (2026-01-19)
 
 ### BREAKING CHANGE
 
 - The location of the courts.schema.json file has changed, although the contents are identical.
+- The duplicate court code `EWHC-KBD` is now `TNA-EWHC-KBQBD` for the joint KB/QB proxy instance. `EWHC-KBD` now exclusively refers to King's Bench.
 
 ### Feat
 
@@ -26,6 +42,7 @@ All notable changes to this project will be documented in this file.
 - further refinements to parser metadata schemas
 - clarify required/additional properties for parser metadata
 - remove incorrect $id value from courts schema
+- update court names to fix inconsistencies with parser
 
 ## v2.10.0 (2025-12-08)
 
