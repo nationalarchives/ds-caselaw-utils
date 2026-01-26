@@ -1,5 +1,5 @@
-generate-schema-doc --config-file jsfh-conf.yaml schemas/courts/courts.schema.json schemas/courts/courts-schema.md
+generate-schema-doc --config-file jsfh-conf.yaml src/ds_caselaw_utils/schemas/courts/courts.schema.json doc/schemas/courts/courts-schema.md
 
-generate-schema-doc --config-file jsfh-conf.yaml schemas/parser-metadata/metadata.schema.json schemas/parser-metadata/metadata-schema.md
-generate-schema-doc --config-file jsfh-conf.yaml schemas/parser-metadata/parser.schema.json schemas/parser-metadata/parser-schema.md
-generate-schema-doc --config-file jsfh-conf.yaml schemas/parser-metadata/ingester_options.schema.json schemas/parser-metadata/ingester_options-schema.md
+generate-schema-doc --config-file jsfh-conf.yaml src/ds_caselaw_utils/schemas/parser-metadata/metadata.schema.json doc/schemas/parser-metadata/metadata-schema.md
+generate-schema-doc --config-file jsfh-conf.yaml src/ds_caselaw_utils/schemas/parser-metadata/parser.schema.json doc/schemas/parser-metadata/parser-schema.md
+generate-schema-doc --config-file jsfh-conf.yaml src/ds_caselaw_utils/schemas/parser-metadata/ingester_options.schema.json doc/schemas/parser-metadata/ingester_options-schema.md
