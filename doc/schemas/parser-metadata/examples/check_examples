@@ -1,0 +1,1 @@
+check-jsonschema --schemafile "$(dirname "$0")/../../../../src/ds_caselaw_utils/schemas/parser-metadata/metadata.schema.json" "$(dirname "$0")"/*.json

@@ -33,12 +33,16 @@ repos:
     hooks:
       - id: check-jsonschema
         name: Check all JSON Schema files are valid schemas
-        files: schemas/.*\.schema\.json
+        files: src/ds_caselaw_utils/schemas/.*\.schema\.json
         args: ["--check-metaschema"]
       - id: check-jsonschema
         name: Check courts data matches schema
         files: ^src/ds_caselaw_utils/data/court_names.yaml$
-        args: ["--schemafile", "schemas/courts/courts.schema.json"]
+        args:
+          [
+            "--schemafile",
+            "src/ds_caselaw_utils/schemas/courts/courts.schema.json",
+          ]
 
   - repo: https://github.com/camptocamp/jsonschema-gentypes
     rev: 2.13.0
@@ -49,7 +53,7 @@ repos:
           - "jsonschema-gentypes[validation]"
         args:
           [
-            "--json-schema=schemas/courts/courts.schema.json",
+            "--json-schema=src/ds_caselaw_utils/schemas/courts/courts.schema.json",
             "--python=src/ds_caselaw_utils/types/courts_schema_autogen.py",
           ]
         language_version: python3.12
@@ -61,7 +65,7 @@ repos:
           - "jsonschema-gentypes[validation]"
         args:
           [
-            "--json-schema=schemas/parser-metadata/metadata.schema.json",
+            "--json-schema=src/ds_caselaw_utils/schemas/parser-metadata/metadata.schema.json",
             "--python=src/ds_caselaw_utils/types/metadata_schema_autogen.py",
           ]
         language_version: python3.12
