@@ -11,6 +11,7 @@ All notable changes to this project will be documented in this file.
 ### Fix
 
 - **court_names**: Adds a missing slash to `FTT-Claims` web archive link
+- **court_names**: Fixes "immigation" typo
 
 ## v4.0.0 (2026-01-26)
 
