@@ -998,6 +998,7 @@
       {
         "code": "FTT-PC",
         "name": "Land Registration Division (Property Chamber)",
+        "long_name": "First-tier Tribunal (Property Chamber)",
         "param": "ftt/pc",
         "ncn_pattern": "\\[(\\d{4})\\] (UKFTT) (\\d+) \\((PC)\\)",
         "ncn_examples": [
