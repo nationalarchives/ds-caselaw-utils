@@ -116,7 +116,7 @@
         "code": "EWHC-KBD-Admin",
         "grouped_name": "Administrative Court",
         "name": "High Court (Administrative Court)",
-        "long_name": "The Administrative Court (Queen's Bench Division)",
+        "long_name": "The Administrative Court (King's Bench Division)",
         "link": "https://www.gov.uk/courts-tribunals/administrative-court",
         "ncn_pattern": "\\[(\\d{4})\\] (EWHC) (\\d+) \\((Admin)\\)",
         "ncn_examples": [
@@ -164,6 +164,7 @@
         "code": "EWHC-QBD-BusinessAndProperty",
         "grouped_name": "Business and Property Courts",
         "name": "High Court (Business and Property Courts)",
+        "long_name": "The Business and Property Courts (Queen's Bench Division)",
         "link": "https://www.gov.uk/courts-tribunals/the-business-and-property-courts",
         "selectable": false,
         "listable": false,
@@ -173,6 +174,7 @@
         "code": "EWHC-KBD-BusinessAndProperty",
         "grouped_name": "Business and Property Courts",
         "name": "High Courts (Business and Property Courts)",
+        "long_name": "The Business and Property Courts (King's Bench Division)",
         "link": "https://www.gov.uk/courts-tribunals/the-business-and-property-courts",
         "selectable": false,
         "listable": false,
@@ -212,6 +214,7 @@
         "code": "EWHC-Chancery",
         "grouped_name": "Chancery Division",
         "name": "High Court (Chancery Division)",
+        "long_name": "The Chancery Division of the High Court",
         "link": "https://www.gov.uk/courts-tribunals/chancery-division-of-the-high-court",
         "ncn_pattern": "\\[(\\d{4})\\] (EWHC) (\\d+) \\((Ch)\\)",
         "ncn_examples": [
@@ -227,7 +230,7 @@
         "code": "EWHC-QBD-Commercial-Circuit",
         "grouped_name": "Circuit Commercial Court",
         "name": "High Court (Circuit Commercial Court)",
-        "long_name": "The Business and Property Courts (The Financial List) (QBD)",
+        "long_name": "The Business and Property Courts (Circuit Commercial Court)",
         "link": "https://www.gov.uk/courts-tribunals/commercial-circuit-court",
         "ncn_pattern": "\\[(\\d{4})\\] (EWHC) (\\d+) \\((Comm)\\)",
         "ncn_examples": [
@@ -255,7 +258,7 @@
         "code": "EWHC-QBD-Commercial",
         "grouped_name": "Commercial Court",
         "name": "High Court (Commercial Court)",
-        "long_name": "The Business and Property Courts (Circuit Commercial Court)",
+        "long_name": "The Business and Property Courts (Commercial Court)",
         "link": "https://www.gov.uk/courts-tribunals/commercial-court",
         "ncn_pattern": "\\[(\\d{4})\\] (EWHC) (\\d+) \\((Comm)\\)",
         "ncn_examples": [
@@ -271,6 +274,7 @@
         "code": "EWHC-KBD-Commercial",
         "grouped_name": "Commercial Court",
         "name": "High Court (Commercial Court)",
+        "long_name": "The Business and Property Courts (Commercial Court)",
         "link": "https://www.gov.uk/courts-tribunals/commercial-court",
         "ncn_pattern": "\\[(\\d{4})\\] (EWHC) (\\d+) \\((Comm)\\)",
         "ncn_examples": [
@@ -286,6 +290,7 @@
         "code": "EWHC-Family",
         "grouped_name": "Family Division",
         "name": "High Court (Family Division)",
+        "long_name": "The Family Division of the High Court",
         "link": "https://www.gov.uk/courts-tribunals/family-division-of-the-high-court",
         "ncn_pattern": "\\[(\\d{4})\\] (EWHC) (\\d+) \\((Fam)\\)",
         "ncn_examples": [
@@ -301,6 +306,7 @@
         "code": "EWHC-QBD-Commercial-Financial",
         "grouped_name": "Financial List",
         "name": "High Court (Financial List)",
+        "long_name": "The Business and Property Courts (The Financial List) (QBD)",
         "link": "https://www.gov.uk/courts-tribunals/the-financial-list",
         "ncn_pattern": "\\[(\\d{4})\\] (EWHC) (\\d+) \\((Comm)\\)",
         "ncn_examples": [
@@ -328,7 +334,7 @@
         "code": "EWHC-Chancery-Financial",
         "grouped_name": "Financial List",
         "name": "High Court (Financial List)",
-        "long_name": "The Business and Property Courts (Insolvency and Companies List)",
+        "long_name": "The Business and Property Courts (Financial List)",
         "link": "https://www.gov.uk/courts-tribunals/the-financial-list",
         "selectable": false,
         "listable": false,
@@ -392,6 +398,7 @@
         "code": "EWHC-KBD",
         "grouped_name": "King's Bench Division",
         "name": "High Court (King's Bench Division)",
+        "long_name": "The King's Bench Division of the High Court",
         "link": "https://www.gov.uk/courts-tribunals/kings-bench-division-of-the-high-court",
         "ncn_pattern": "\\[(\\d{4})\\] (EWHC) (\\d+) \\((KB)\\)",
         "ncn_examples": [
@@ -439,6 +446,7 @@
         "code": "EWHC-QBD",
         "grouped_name": "Queen's Bench Division",
         "name": "High Court (Queen's Bench Division)",
+        "long_name": "The Queen's Bench Division of the High Court",
         "link": "https://www.gov.uk/courts-tribunals/queens-bench-division-of-the-high-court",
         "ncn_pattern": "\\[(\\d{4})\\] (EWHC) (\\d+) \\((QB)\\)",
         "ncn_examples": [
@@ -455,6 +463,7 @@
         "code": "EWHC-QBD-Planning",
         "grouped_name": "Planning Court",
         "name": "High Court (Planning Court)",
+        "long_name": "The Planning Court (Queen's Bench Division)",
         "link": "https://www.gov.uk/courts-tribunals/planning-court",
         "selectable": false,
         "listable": false,
@@ -464,6 +473,7 @@
         "code": "EWHC-KBD-Planning",
         "grouped_name": "Planning Court",
         "name": "High Court (Planning Court)",
+        "long_name": "The Planning Court (King's Bench Division)",
         "link": "https://www.gov.uk/courts-tribunals/planning-court",
         "selectable": false,
         "listable": false,
@@ -797,7 +807,7 @@
         "listable": false,
         "param": "ukait",
         "name": "Asylum & Immigration Tribunal",
-        "long_name": "United Kingdom Asylum & Immigration Tribunal",
+        "long_name": "United Kingdom Asylum and Immigration Tribunal",
         "link": "https://www.gov.uk/courts-tribunals/upper-tribunal-immigration-and-asylum-chamber",
         "identifier_iri": "http://www.tribunals.gov.uk/ImmigrationAsylum/",
         "ncn_pattern": "\\[(\\d{4})\\] (UKAIT) (\\d+)",
@@ -988,6 +998,7 @@
       {
         "code": "FTT-PC",
         "name": "Land Registration Division (Property Chamber)",
+        "long_name": "First-tier Tribunal (Property Chamber)",
         "param": "ftt/pc",
         "ncn_pattern": "\\[(\\d{4})\\] (UKFTT) (\\d+) \\((PC)\\)",
         "ncn_examples": [
@@ -1055,12 +1066,12 @@
         "name": "Claims Management Services Tribunal",
         "long_name": "Claims Management Services Tribunal",
         "param": "ftt/claims",
-        "link": "https://webarchive.nationalarchives.gov.uk/ukgwa/20200626120017/http:/claimsmanagement.decisions.tribunals.gov.uk/",
+        "link": "https://webarchive.nationalarchives.gov.uk/ukgwa/20200626120017/http://claimsmanagement.decisions.tribunals.gov.uk/",
         "start_year": 2006,
         "end_year": 2010,
         "selectable": true,
         "listable": true,
-        "identifier_iri": "https://webarchive.nationalarchives.gov.uk/ukgwa/20200626120017/http:/claimsmanagement.decisions.tribunals.gov.uk/"
+        "identifier_iri": "https://webarchive.nationalarchives.gov.uk/ukgwa/20200626120017/http://claimsmanagement.decisions.tribunals.gov.uk/"
       },
       {
         "code": "FTT-Transport",
