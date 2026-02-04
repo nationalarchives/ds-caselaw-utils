@@ -1065,12 +1065,12 @@
         "name": "Claims Management Services Tribunal",
         "long_name": "Claims Management Services Tribunal",
         "param": "ftt/claims",
-        "link": "https://webarchive.nationalarchives.gov.uk/ukgwa/20200626120017/http:/claimsmanagement.decisions.tribunals.gov.uk/",
+        "link": "https://webarchive.nationalarchives.gov.uk/ukgwa/20200626120017/http://claimsmanagement.decisions.tribunals.gov.uk/",
         "start_year": 2006,
         "end_year": 2010,
         "selectable": true,
         "listable": true,
-        "identifier_iri": "https://webarchive.nationalarchives.gov.uk/ukgwa/20200626120017/http:/claimsmanagement.decisions.tribunals.gov.uk/"
+        "identifier_iri": "https://webarchive.nationalarchives.gov.uk/ukgwa/20200626120017/http://claimsmanagement.decisions.tribunals.gov.uk/"
       },
       {
         "code": "FTT-Transport",
