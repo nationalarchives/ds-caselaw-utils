@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## Unreleased
+
+### Feat
+
+- **court_names**: Updates the long names of courts to match the parser in advance of the parser relying upon this data
+
+### Fix
+
+- **court_names**: Adds a missing slash to `FTT-Claims` web archive link
+
 ## v4.0.0 (2026-01-26)
 
 ### BREAKING CHANGE
