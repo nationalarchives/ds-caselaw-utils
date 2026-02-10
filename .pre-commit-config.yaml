@@ -49,6 +49,8 @@ repos:
     hooks:
       - id: jsonschema-gentypes
         name: Generate types file for court data
+        language: python
+        language_version: python3.12
         additional_dependencies:
           - "jsonschema-gentypes[validation]"
         args:
@@ -56,11 +58,12 @@ repos:
             "--json-schema=src/ds_caselaw_utils/schemas/courts/courts.schema.json",
             "--python=src/ds_caselaw_utils/types/courts_schema_autogen.py",
           ]
-        language_version: python3.12
         always_run: true
         pass_filenames: false
       - id: jsonschema-gentypes
         name: Generate types file for parser metadata
+        language: python
+        language_version: python3.12
         additional_dependencies:
           - "jsonschema-gentypes[validation]"
         args:
@@ -68,7 +71,6 @@ repos:
             "--json-schema=src/ds_caselaw_utils/schemas/parser-metadata/metadata.schema.json",
             "--python=src/ds_caselaw_utils/types/metadata_schema_autogen.py",
           ]
-        language_version: python3.12
         always_run: true
         pass_filenames: false
 
@@ -97,6 +99,7 @@ repos:
     hooks:
       - id: mypy
         name: mypy-src
+        language: python
         additional_dependencies:
           - types-PyYAML
           - ruamel.yaml
