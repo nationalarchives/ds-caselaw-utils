@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 
+import csv
 import json
 import sys
 from pathlib import Path
@@ -34,7 +35,7 @@ class CourtOutputBuilder:
                     court["identifier_iri"] = court["link"]
 
     def write_markdown(self, destination: str) -> None:
-        print("Building list of courts...")
+        print("Writing courts information to MarkDown…")
 
         with Path(destination).open("w", encoding="utf-8") as f:
             f.write("# Courts in configuration file\n")
@@ -90,12 +91,57 @@ class CourtOutputBuilder:
                     f.write(" |\n")
 
     def write_json(self, destination: str) -> None:
+        print("Writing courts information to JSON…")
 
         with open(destination, "w") as f:
             json.dump(self.court_repository, fp=f, indent=2)
+
+    def write_csv(self, destination: str) -> None:
+        print("Writing courts information to CSV…")
+
+        with open(destination, "w", encoding="utf-8", newline="") as f:
+            writer = csv.writer(f)
+            # Write header
+            writer.writerow(
+                [
+                    "group_name",
+                    "group_display_name",
+                    "is_tribunal",
+                    "court_name",
+                    "court_code",
+                    "grouped_name",
+                    "long_name",
+                    "param",
+                    "ncn_examples",
+                    "start_year",
+                    "end_year",
+                    "link",
+                ]
+            )
+
+            # Write data rows
+            for group in self.court_repository:
+                for court in group["courts"]:
+                    writer.writerow(
+                        [
+                            group["name"],
+                            group.get("display_name", ""),
+                            group.get("is_tribunal", False),
+                            court["name"],
+                            court["code"],
+                            court.get("grouped_name", ""),
+                            court.get("long_name", ""),
+                            court.get("param", ""),
+                            ", ".join(court.get("ncn_examples", [])),
+                            court.get("start_year", ""),
+                            court.get("end_year", ""),
+                            court.get("link", ""),
+                        ]
+                    )
 
 
 if __name__ == "__main__":
     builder = CourtOutputBuilder()
     builder.write_markdown("courts.md")
     builder.write_json("src/autogen/courts.json")
+    builder.write_csv("src/autogen/courts.csv")
