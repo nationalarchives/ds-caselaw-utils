@@ -116,12 +116,26 @@ class CourtOutputBuilder:
                     "start_year",
                     "end_year",
                     "link",
+                    "description",
                 ]
             )
 
             # Write data rows
             for group in self.court_repository:
                 for court in group["courts"]:
+                    # Read description markdown file if it exists
+                    param = court.get("param", "")
+                    description = ""
+                    if param:
+                        markdown_filename = param.replace("/", "_")
+                        description_path = Path(
+                            f"src/ds_caselaw_utils/data/markdown/description/{markdown_filename}.md"
+                        )
+                        if description_path.exists():
+                            description = description_path.read_text(encoding="utf-8").strip()
+                            # Replace line breaks with spaces to keep CSV format clean
+                            description = description.replace("\n", " ").replace("\r", " ")
+
                     writer.writerow(
                         [
                             group["name"],
@@ -136,6 +150,7 @@ class CourtOutputBuilder:
                             court.get("start_year", ""),
                             court.get("end_year", ""),
                             court.get("link", ""),
+                            description,
                         ]
                     )
 
