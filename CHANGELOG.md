@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
+## Unreleased
+
+### Feat
+
+- **build_courts_list**: add output of courts data to CSV
+
+### Refactor
+
+- **build_courts_list**: refactor script for better encapsulation and typing
+
+## v4.1.1 (2026-02-10)
+
 ## v4.1.0 (2026-02-10)
 
 ### Fix
