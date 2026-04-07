@@ -80,7 +80,8 @@ repos:
         name: Generate documentation for JSON Schemas
         entry: bash scripts/build_schema_docs
         language: python
-        additional_dependencies: [json-schema-for-humans]
+        additional_dependencies:
+          - "json-schema-for-humans==1.5.1"
         always_run: true
         pass_filenames: false
 
@@ -90,7 +91,8 @@ repos:
         name: build_courts_list
         entry: scripts/build_courts_list
         language: python
-        additional_dependencies: [pyyaml]
+        additional_dependencies:
+          - "pyyaml==6.0.3"
         always_run: true
         pass_filenames: false
 
@@ -101,9 +103,9 @@ repos:
         name: mypy-src
         language: python
         additional_dependencies:
-          - types-PyYAML
-          - ruamel.yaml
-          - markdown-it-py
+          - "types-PyYAML==6.0.12.20250915"
+          - "ruamel.yaml==0.19.1"
+          - "markdown-it-py==4.0.0"
         args:
           - --strict
         files: ^(src/ds_caselaw_utils|scripts)
