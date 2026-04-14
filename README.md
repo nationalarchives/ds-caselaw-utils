@@ -101,7 +101,9 @@ $ poetry build
 $ python3 -m twine upload --repository testpypi dist/* --verbose
 ```
 
-## Releasing
+## Release process
+
+<!-- last_review: 2026-04-14 -->
 
 When making a new release, update the [changelog](CHANGELOG.md) in the release
 pull request.
