@@ -224,6 +224,36 @@ class _MetadataFieldsItem(TypedDict, total=False):
       - if:
           properties:
             name:
+              const: csv_metadata_file_properties
+        then:
+          properties:
+            value:
+              additionalProperties: false
+              properties:
+                fullLineContents:
+                  additionalProperties:
+                    type: string
+                  description: A representation of the metadata file row for this document,
+                    including all column names and values
+                  title: Metadata file contents
+                  type: object
+                hash:
+                  description: The SHA256 hash of the original source metadata file
+                  pattern: ^[A-Fa-f0-9]{64}$
+                  title: Metadata file hash
+                  type: string
+                name:
+                  description: The name of the original source metadata file
+                  title: Metadata file name
+                  type: string
+              required:
+              - name
+              - hash
+              - fullLineContents
+              type: object
+      - if:
+          properties:
+            name:
               const: title
         then:
           properties:

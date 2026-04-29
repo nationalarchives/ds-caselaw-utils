@@ -158,6 +158,43 @@
         "required": ["name", "value", "source", "timestamp"],
         "allOf": [
           {
+            "if": {
+              "properties": {
+                "name": { "const": "csv_metadata_file_properties" }
+              }
+            },
+            "then": {
+              "properties": {
+                "value": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string",
+                      "title": "Metadata file name",
+                      "description": "The name of the original source metadata file"
+                    },
+                    "hash": {
+                      "type": "string",
+                      "title": "Metadata file hash",
+                      "description": "The SHA256 hash of the original source metadata file",
+                      "pattern": "^[A-Fa-f0-9]{64}$"
+                    },
+                    "fullLineContents": {
+                      "type": "object",
+                      "title": "Metadata file contents",
+                      "description": "A representation of the metadata file row for this document, including all column names and values",
+                      "additionalProperties": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "required": ["name", "hash", "fullLineContents"],
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
+          {
             "if": { "properties": { "name": { "const": "title" } } },
             "then": { "properties": { "value": { "type": "string" } } }
           },
