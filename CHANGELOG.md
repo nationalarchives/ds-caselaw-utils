@@ -7,6 +7,7 @@ All notable changes to this project will be documented in this file.
 ### Feat
 
 - **schema**: add new parserRunId property to parser metadata schema
+- **schemas**: allow lower-case bulk ingest route
 
 ### Fix
 

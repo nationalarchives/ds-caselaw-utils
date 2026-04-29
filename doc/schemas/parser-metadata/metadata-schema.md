@@ -410,6 +410,7 @@ Must be one of:
 * "TDR"
 * "BULK"
 * "EUI"
+* "bulk"
 
 #### <a name="parameters_PARSER_metadata_fields"></a>1.1.13. Property `Parsed document metadata > parameters > PARSER > metadata_fields`
 
