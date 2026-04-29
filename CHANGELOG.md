@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## v4.2.1 (2026-04-29)
+
+### Fix
+
+Ensure that python version isn't too restrictive
+
 ## v4.2.0 (2026-04-22)
 
 ### Feat
