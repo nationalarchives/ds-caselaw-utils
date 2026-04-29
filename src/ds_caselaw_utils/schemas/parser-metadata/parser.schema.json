@@ -113,7 +113,7 @@
           "name": "Route",
           "description": "The route which the file took to reach the parser.",
           "type": "string",
-          "enum": ["TDR", "BULK", "EUI"]
+          "enum": ["TDR", "BULK", "EUI", "bulk"]
         }
       },
       "required": ["filename", "sha256", "mimetype", "route"]

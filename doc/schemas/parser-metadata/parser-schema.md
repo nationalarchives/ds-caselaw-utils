@@ -357,6 +357,7 @@ Must be one of:
 * "TDR"
 * "BULK"
 * "EUI"
+* "bulk"
 
 ## <a name="metadata_fields"></a>12. Property `Parser process metadata > metadata_fields`
 

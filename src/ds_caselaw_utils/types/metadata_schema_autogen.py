@@ -367,7 +367,7 @@ class _ParsedDocumentMetadataSourceDocument(TypedDict, total=False):
 
 
 
-_PrimarySourceFileRoute = Literal['TDR'] | Literal['BULK'] | Literal['EUI']
+_PrimarySourceFileRoute = Literal['TDR'] | Literal['BULK'] | Literal['EUI'] | Literal['bulk']
 r"""
 The route which the file took to reach the parser.
 
@@ -378,5 +378,7 @@ r"""The values for the 'The route which the file took to reach the parser' enum"
 _PRIMARYSOURCEFILEROUTE_BULK: Literal['BULK'] = "BULK"
 r"""The values for the 'The route which the file took to reach the parser' enum"""
 _PRIMARYSOURCEFILEROUTE_EUI: Literal['EUI'] = "EUI"
+r"""The values for the 'The route which the file took to reach the parser' enum"""
+_PRIMARYSOURCEFILEROUTE_BULK0: Literal['bulk'] = "bulk"
 r"""The values for the 'The route which the file took to reach the parser' enum"""
 
