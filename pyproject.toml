@@ -10,7 +10,7 @@ readme = "README.md"
 
 
 [tool.poetry.dependencies]
-python = "3.14.4"
+python = ">=3.12, <4.0"
 "ruamel.yaml" = "0.19.1"
 typing-extensions = "4.15.0"
 markdown-it-py = "4.0.0"

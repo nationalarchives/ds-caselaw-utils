@@ -1,5 +1,11 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["github>nationalarchives/ds-find-caselaw-docs"],
-  "addLabels": ["no-changelog"]
+  "addLabels": ["no-changelog"],
+  "packageRules": [
+    {
+      "matchPackageNames": ["python"],
+      "rangeStrategy": "widen"
+    }
+  ]
 }
