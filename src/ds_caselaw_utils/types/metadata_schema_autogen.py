@@ -90,6 +90,12 @@ class ParsedDocumentMetadata0(TypedDict, total=False):
 # | 
 # | Metadata about a document or its processing which has been generated or collated as a result of the Find Case Law parsing process.
 ParserProcessMetadata = TypedDict('ParserProcessMetadata', {
+    # | Parser run ID.
+    # | 
+    # | A UUID to identify the parser run. This does not need to be unique per document; it should be unique per invocation of the parser.
+    # | 
+    # | format: uuid
+    'parserRunId': str,
     # | Type of document.
     # | 
     # | Required property

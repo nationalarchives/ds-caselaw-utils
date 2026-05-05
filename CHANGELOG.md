@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## Unreleased
+
+### Feat
+
+- **schema**: add new parserRunId property to parser metadata schema
+
 ## v4.2.1 (2026-04-29)
 
 ### Fix
