@@ -1,65 +1,65 @@
-# Parsed document metadata
+# Document processing metadata
 
-- [1. Property `Parsed document metadata > parameters`](#parameters)
-  - [1.1. Property `Parsed document metadata > parameters > PARSER`](#parameters_PARSER)
-    - [1.1.1. Property `Parsed document metadata > parameters > PARSER > parser_run_id`](#parameters_PARSER_parser_run_id)
-    - [1.1.2. Property `Parsed document metadata > parameters > PARSER > documentType`](#parameters_PARSER_documentType)
-    - [1.1.3. Property `Parsed document metadata > parameters > PARSER > uri`](#parameters_PARSER_uri)
-    - [1.1.4. Property `Parsed document metadata > parameters > PARSER > court`](#parameters_PARSER_court)
-    - [1.1.5. Property `Parsed document metadata > parameters > PARSER > cite`](#parameters_PARSER_cite)
-    - [1.1.6. Property `Parsed document metadata > parameters > PARSER > date`](#parameters_PARSER_date)
-      - [1.1.6.1. Property `Parsed document metadata > parameters > PARSER > date > oneOf > Null`](#parameters_PARSER_date_oneOf_i0)
-      - [1.1.6.2. Property `Parsed document metadata > parameters > PARSER > date > oneOf > Date`](#parameters_PARSER_date_oneOf_i1)
-    - [1.1.7. Property `Parsed document metadata > parameters > PARSER > name`](#parameters_PARSER_name)
-    - [1.1.8. Property `Parsed document metadata > parameters > PARSER > attachments`](#parameters_PARSER_attachments)
-      - [1.1.8.1. Property `Parsed document metadata > parameters > PARSER > attachments > oneOf > Null`](#parameters_PARSER_attachments_oneOf_i0)
-      - [1.1.8.2. Property `Parsed document metadata > parameters > PARSER > attachments > oneOf > Array of attachments`](#parameters_PARSER_attachments_oneOf_i1)
-        - [1.1.8.2.1. Parsed document metadata > parameters > PARSER > attachments > oneOf > Array of attachments > item 1 items](#parameters_PARSER_attachments_oneOf_i1_items)
-          - [1.1.8.2.1.1. Property `Parsed document metadata > parameters > PARSER > attachments > oneOf > Array of attachments > item 1 items > name`](#parameters_PARSER_attachments_oneOf_i1_items_name)
-          - [1.1.8.2.1.2. Property `Parsed document metadata > parameters > PARSER > attachments > oneOf > Array of attachments > item 1 items > link`](#parameters_PARSER_attachments_oneOf_i1_items_link)
-    - [1.1.9. Property `Parsed document metadata > parameters > PARSER > error-messages`](#parameters_PARSER_error-messages)
-    - [1.1.10. Property `Parsed document metadata > parameters > PARSER > extensions`](#parameters_PARSER_extensions)
-    - [1.1.11. Property `Parsed document metadata > parameters > PARSER > jurisdictionShortNames`](#parameters_PARSER_jurisdictionShortNames)
-    - [1.1.12. Property `Parsed document metadata > parameters > PARSER > primary_source`](#parameters_PARSER_primary_source)
-      - [1.1.12.1. Property `Parsed document metadata > parameters > PARSER > primary_source > filename`](#parameters_PARSER_primary_source_filename)
-      - [1.1.12.2. Property `Parsed document metadata > parameters > PARSER > primary_source > sha256`](#parameters_PARSER_primary_source_sha256)
-      - [1.1.12.3. Property `Parsed document metadata > parameters > PARSER > primary_source > mimetype`](#parameters_PARSER_primary_source_mimetype)
-      - [1.1.12.4. Property `Parsed document metadata > parameters > PARSER > primary_source > route`](#parameters_PARSER_primary_source_route)
-    - [1.1.13. Property `Parsed document metadata > parameters > PARSER > metadata_fields`](#parameters_PARSER_metadata_fields)
-      - [1.1.13.1. Parsed document metadata > parameters > PARSER > metadata_fields > metadata_fields items](#parameters_PARSER_metadata_fields_items)
-        - [1.1.13.1.1. Property `Parsed document metadata > parameters > PARSER > metadata_fields > metadata_fields items > allOf > item 0`](#parameters_PARSER_metadata_fields_items_allOf_i0)
+- [1. Property `Document processing metadata > parameters`](#parameters)
+  - [1.1. Property `Document processing metadata > parameters > PARSER`](#parameters_PARSER)
+    - [1.1.1. Property `Document processing metadata > parameters > PARSER > parser_run_id`](#parameters_PARSER_parser_run_id)
+    - [1.1.2. Property `Document processing metadata > parameters > PARSER > documentType`](#parameters_PARSER_documentType)
+    - [1.1.3. Property `Document processing metadata > parameters > PARSER > uri`](#parameters_PARSER_uri)
+    - [1.1.4. Property `Document processing metadata > parameters > PARSER > court`](#parameters_PARSER_court)
+    - [1.1.5. Property `Document processing metadata > parameters > PARSER > cite`](#parameters_PARSER_cite)
+    - [1.1.6. Property `Document processing metadata > parameters > PARSER > date`](#parameters_PARSER_date)
+      - [1.1.6.1. Property `Document processing metadata > parameters > PARSER > date > oneOf > Null`](#parameters_PARSER_date_oneOf_i0)
+      - [1.1.6.2. Property `Document processing metadata > parameters > PARSER > date > oneOf > Date`](#parameters_PARSER_date_oneOf_i1)
+    - [1.1.7. Property `Document processing metadata > parameters > PARSER > name`](#parameters_PARSER_name)
+    - [1.1.8. Property `Document processing metadata > parameters > PARSER > attachments`](#parameters_PARSER_attachments)
+      - [1.1.8.1. Property `Document processing metadata > parameters > PARSER > attachments > oneOf > Null`](#parameters_PARSER_attachments_oneOf_i0)
+      - [1.1.8.2. Property `Document processing metadata > parameters > PARSER > attachments > oneOf > Array of attachments`](#parameters_PARSER_attachments_oneOf_i1)
+        - [1.1.8.2.1. Document processing metadata > parameters > PARSER > attachments > oneOf > Array of attachments > item 1 items](#parameters_PARSER_attachments_oneOf_i1_items)
+          - [1.1.8.2.1.1. Property `Document processing metadata > parameters > PARSER > attachments > oneOf > Array of attachments > item 1 items > name`](#parameters_PARSER_attachments_oneOf_i1_items_name)
+          - [1.1.8.2.1.2. Property `Document processing metadata > parameters > PARSER > attachments > oneOf > Array of attachments > item 1 items > link`](#parameters_PARSER_attachments_oneOf_i1_items_link)
+    - [1.1.9. Property `Document processing metadata > parameters > PARSER > error-messages`](#parameters_PARSER_error-messages)
+    - [1.1.10. Property `Document processing metadata > parameters > PARSER > extensions`](#parameters_PARSER_extensions)
+    - [1.1.11. Property `Document processing metadata > parameters > PARSER > jurisdictionShortNames`](#parameters_PARSER_jurisdictionShortNames)
+    - [1.1.12. Property `Document processing metadata > parameters > PARSER > primary_source`](#parameters_PARSER_primary_source)
+      - [1.1.12.1. Property `Document processing metadata > parameters > PARSER > primary_source > filename`](#parameters_PARSER_primary_source_filename)
+      - [1.1.12.2. Property `Document processing metadata > parameters > PARSER > primary_source > sha256`](#parameters_PARSER_primary_source_sha256)
+      - [1.1.12.3. Property `Document processing metadata > parameters > PARSER > primary_source > mimetype`](#parameters_PARSER_primary_source_mimetype)
+      - [1.1.12.4. Property `Document processing metadata > parameters > PARSER > primary_source > route`](#parameters_PARSER_primary_source_route)
+    - [1.1.13. Property `Document processing metadata > parameters > PARSER > metadata_fields`](#parameters_PARSER_metadata_fields)
+      - [1.1.13.1. Document processing metadata > parameters > PARSER > metadata_fields > metadata_fields items](#parameters_PARSER_metadata_fields_items)
+        - [1.1.13.1.1. Property `Document processing metadata > parameters > PARSER > metadata_fields > metadata_fields items > allOf > item 0`](#parameters_PARSER_metadata_fields_items_allOf_i0)
           - [1.1.13.1.1.1. If (name = "csv_metadata_file_properties")](#autogenerated_heading_2)
-            - [1.1.13.1.1.1.1. Property `Parsed document metadata > parameters > PARSER > metadata_fields > metadata_fields items > allOf > item 0 > then > value`](#parameters_PARSER_metadata_fields_items_allOf_i0_then_value)
-              - [1.1.13.1.1.1.1.1. Property `Parsed document metadata > parameters > PARSER > metadata_fields > metadata_fields items > allOf > item 0 > then > value > name`](#parameters_PARSER_metadata_fields_items_allOf_i0_then_value_name)
-              - [1.1.13.1.1.1.1.2. Property `Parsed document metadata > parameters > PARSER > metadata_fields > metadata_fields items > allOf > item 0 > then > value > hash`](#parameters_PARSER_metadata_fields_items_allOf_i0_then_value_hash)
-              - [1.1.13.1.1.1.1.3. Property `Parsed document metadata > parameters > PARSER > metadata_fields > metadata_fields items > allOf > item 0 > then > value > fullLineContents`](#parameters_PARSER_metadata_fields_items_allOf_i0_then_value_fullLineContents)
-                - [1.1.13.1.1.1.1.3.1. Property `Parsed document metadata > parameters > PARSER > metadata_fields > metadata_fields items > allOf > item 0 > then > value > fullLineContents > additionalProperties`](#parameters_PARSER_metadata_fields_items_allOf_i0_then_value_fullLineContents_additionalProperties)
-        - [1.1.13.1.2. Property `Parsed document metadata > parameters > PARSER > metadata_fields > metadata_fields items > allOf > item 1`](#parameters_PARSER_metadata_fields_items_allOf_i1)
+            - [1.1.13.1.1.1.1. Property `Document processing metadata > parameters > PARSER > metadata_fields > metadata_fields items > allOf > item 0 > then > value`](#parameters_PARSER_metadata_fields_items_allOf_i0_then_value)
+              - [1.1.13.1.1.1.1.1. Property `Document processing metadata > parameters > PARSER > metadata_fields > metadata_fields items > allOf > item 0 > then > value > name`](#parameters_PARSER_metadata_fields_items_allOf_i0_then_value_name)
+              - [1.1.13.1.1.1.1.2. Property `Document processing metadata > parameters > PARSER > metadata_fields > metadata_fields items > allOf > item 0 > then > value > hash`](#parameters_PARSER_metadata_fields_items_allOf_i0_then_value_hash)
+              - [1.1.13.1.1.1.1.3. Property `Document processing metadata > parameters > PARSER > metadata_fields > metadata_fields items > allOf > item 0 > then > value > fullLineContents`](#parameters_PARSER_metadata_fields_items_allOf_i0_then_value_fullLineContents)
+                - [1.1.13.1.1.1.1.3.1. Property `Document processing metadata > parameters > PARSER > metadata_fields > metadata_fields items > allOf > item 0 > then > value > fullLineContents > additionalProperties`](#parameters_PARSER_metadata_fields_items_allOf_i0_then_value_fullLineContents_additionalProperties)
+        - [1.1.13.1.2. Property `Document processing metadata > parameters > PARSER > metadata_fields > metadata_fields items > allOf > item 1`](#parameters_PARSER_metadata_fields_items_allOf_i1)
           - [1.1.13.1.2.1. If (name = "title")](#autogenerated_heading_3)
-            - [1.1.13.1.2.1.1. Property `Parsed document metadata > parameters > PARSER > metadata_fields > metadata_fields items > allOf > item 1 > then > value`](#parameters_PARSER_metadata_fields_items_allOf_i1_then_value)
-        - [1.1.13.1.3. Property `Parsed document metadata > parameters > PARSER > metadata_fields > metadata_fields items > allOf > item 2`](#parameters_PARSER_metadata_fields_items_allOf_i2)
+            - [1.1.13.1.2.1.1. Property `Document processing metadata > parameters > PARSER > metadata_fields > metadata_fields items > allOf > item 1 > then > value`](#parameters_PARSER_metadata_fields_items_allOf_i1_then_value)
+        - [1.1.13.1.3. Property `Document processing metadata > parameters > PARSER > metadata_fields > metadata_fields items > allOf > item 2`](#parameters_PARSER_metadata_fields_items_allOf_i2)
           - [1.1.13.1.3.1. If (name = "headnote")](#autogenerated_heading_4)
-            - [1.1.13.1.3.1.1. Property `Parsed document metadata > parameters > PARSER > metadata_fields > metadata_fields items > allOf > item 2 > then > value`](#parameters_PARSER_metadata_fields_items_allOf_i2_then_value)
-        - [1.1.13.1.4. Property `Parsed document metadata > parameters > PARSER > metadata_fields > metadata_fields items > allOf > item 3`](#parameters_PARSER_metadata_fields_items_allOf_i3)
+            - [1.1.13.1.3.1.1. Property `Document processing metadata > parameters > PARSER > metadata_fields > metadata_fields items > allOf > item 2 > then > value`](#parameters_PARSER_metadata_fields_items_allOf_i2_then_value)
+        - [1.1.13.1.4. Property `Document processing metadata > parameters > PARSER > metadata_fields > metadata_fields items > allOf > item 3`](#parameters_PARSER_metadata_fields_items_allOf_i3)
           - [1.1.13.1.4.1. If (name = "category")](#autogenerated_heading_5)
-            - [1.1.13.1.4.1.1. Property `Parsed document metadata > parameters > PARSER > metadata_fields > metadata_fields items > allOf > item 3 > then > value`](#parameters_PARSER_metadata_fields_items_allOf_i3_then_value)
-              - [1.1.13.1.4.1.1.1. Property `Parsed document metadata > parameters > PARSER > metadata_fields > metadata_fields items > allOf > item 3 > then > value > name`](#parameters_PARSER_metadata_fields_items_allOf_i3_then_value_name)
-              - [1.1.13.1.4.1.1.2. Property `Parsed document metadata > parameters > PARSER > metadata_fields > metadata_fields items > allOf > item 3 > then > value > parent`](#parameters_PARSER_metadata_fields_items_allOf_i3_then_value_parent)
-        - [1.1.13.1.5. Property `Parsed document metadata > parameters > PARSER > metadata_fields > metadata_fields items > id`](#parameters_PARSER_metadata_fields_items_id)
-        - [1.1.13.1.6. Property `Parsed document metadata > parameters > PARSER > metadata_fields > metadata_fields items > name`](#parameters_PARSER_metadata_fields_items_name)
-        - [1.1.13.1.7. Property `Parsed document metadata > parameters > PARSER > metadata_fields > metadata_fields items > value`](#parameters_PARSER_metadata_fields_items_value)
-        - [1.1.13.1.8. Property `Parsed document metadata > parameters > PARSER > metadata_fields > metadata_fields items > source`](#parameters_PARSER_metadata_fields_items_source)
-        - [1.1.13.1.9. Property `Parsed document metadata > parameters > PARSER > metadata_fields > metadata_fields items > timestamp`](#parameters_PARSER_metadata_fields_items_timestamp)
-    - [1.1.14. Property `Parsed document metadata > parameters > PARSER > xml_contains_document_text`](#parameters_PARSER_xml_contains_document_text)
-  - [1.2. Property `Parsed document metadata > parameters > INGESTER_OPTIONS`](#parameters_INGESTER_OPTIONS)
-    - [1.2.1. Property `Parsed document metadata > parameters > INGESTER_OPTIONS > auto_publish`](#parameters_INGESTER_OPTIONS_auto_publish)
-    - [1.2.2. Property `Parsed document metadata > parameters > INGESTER_OPTIONS > source_document`](#parameters_INGESTER_OPTIONS_source_document)
-      - [1.2.2.1. Property `Parsed document metadata > parameters > INGESTER_OPTIONS > source_document > format`](#parameters_INGESTER_OPTIONS_source_document_format)
-      - [1.2.2.2. Property `Parsed document metadata > parameters > INGESTER_OPTIONS > source_document > file_hash`](#parameters_INGESTER_OPTIONS_source_document_file_hash)
-  - [1.3. Property `Parsed document metadata > parameters > TDR`](#parameters_TDR)
-  - [1.4. Property `Parsed document metadata > parameters > TRE`](#parameters_TRE)
+            - [1.1.13.1.4.1.1. Property `Document processing metadata > parameters > PARSER > metadata_fields > metadata_fields items > allOf > item 3 > then > value`](#parameters_PARSER_metadata_fields_items_allOf_i3_then_value)
+              - [1.1.13.1.4.1.1.1. Property `Document processing metadata > parameters > PARSER > metadata_fields > metadata_fields items > allOf > item 3 > then > value > name`](#parameters_PARSER_metadata_fields_items_allOf_i3_then_value_name)
+              - [1.1.13.1.4.1.1.2. Property `Document processing metadata > parameters > PARSER > metadata_fields > metadata_fields items > allOf > item 3 > then > value > parent`](#parameters_PARSER_metadata_fields_items_allOf_i3_then_value_parent)
+        - [1.1.13.1.5. Property `Document processing metadata > parameters > PARSER > metadata_fields > metadata_fields items > id`](#parameters_PARSER_metadata_fields_items_id)
+        - [1.1.13.1.6. Property `Document processing metadata > parameters > PARSER > metadata_fields > metadata_fields items > name`](#parameters_PARSER_metadata_fields_items_name)
+        - [1.1.13.1.7. Property `Document processing metadata > parameters > PARSER > metadata_fields > metadata_fields items > value`](#parameters_PARSER_metadata_fields_items_value)
+        - [1.1.13.1.8. Property `Document processing metadata > parameters > PARSER > metadata_fields > metadata_fields items > source`](#parameters_PARSER_metadata_fields_items_source)
+        - [1.1.13.1.9. Property `Document processing metadata > parameters > PARSER > metadata_fields > metadata_fields items > timestamp`](#parameters_PARSER_metadata_fields_items_timestamp)
+    - [1.1.14. Property `Document processing metadata > parameters > PARSER > xml_contains_document_text`](#parameters_PARSER_xml_contains_document_text)
+  - [1.2. Property `Document processing metadata > parameters > INGESTER_OPTIONS`](#parameters_INGESTER_OPTIONS)
+    - [1.2.1. Property `Document processing metadata > parameters > INGESTER_OPTIONS > auto_publish`](#parameters_INGESTER_OPTIONS_auto_publish)
+    - [1.2.2. Property `Document processing metadata > parameters > INGESTER_OPTIONS > source_document`](#parameters_INGESTER_OPTIONS_source_document)
+      - [1.2.2.1. Property `Document processing metadata > parameters > INGESTER_OPTIONS > source_document > format`](#parameters_INGESTER_OPTIONS_source_document_format)
+      - [1.2.2.2. Property `Document processing metadata > parameters > INGESTER_OPTIONS > source_document > file_hash`](#parameters_INGESTER_OPTIONS_source_document_file_hash)
+  - [1.3. Property `Document processing metadata > parameters > TDR`](#parameters_TDR)
+  - [1.4. Property `Document processing metadata > parameters > TRE`](#parameters_TRE)
 
-**Title:** Parsed document metadata
+**Title:** Document processing metadata
 
 |                           |                  |
 | ------------------------- | ---------------- |
@@ -67,11 +67,13 @@
 | **Required**              | No               |
 | **Additional properties** | Any type allowed |
 
+**Description:** Metadata from the entire document processing pipeline, including TDR, TRE, the parser, and any options to pass to the ingester.
+
 | Property                     | Pattern | Type   | Deprecated | Definition | Title/Description |
 | ---------------------------- | ------- | ------ | ---------- | ---------- | ----------------- |
 | + [parameters](#parameters ) | No      | object | No         | -          | -                 |
 
-## <a name="parameters"></a>1. Property `Parsed document metadata > parameters`
+## <a name="parameters"></a>1. Property `Document processing metadata > parameters`
 
 |                           |                  |
 | ------------------------- | ---------------- |
@@ -79,14 +81,14 @@
 | **Required**              | Yes              |
 | **Additional properties** | Any type allowed |
 
-| Property                                            | Pattern | Type   | Deprecated | Definition                       | Title/Description        |
-| --------------------------------------------------- | ------- | ------ | ---------- | -------------------------------- | ------------------------ |
-| + [PARSER](#parameters_PARSER )                     | No      | object | No         | In parser.schema.json#           | Parser process metadata  |
-| - [INGESTER_OPTIONS](#parameters_INGESTER_OPTIONS ) | No      | object | No         | In ingester_options.schema.json# | Parsed document metadata |
-| - [TDR](#parameters_TDR )                           | No      | object | No         | -                                | TDR process metadata     |
-| - [TRE](#parameters_TRE )                           | No      | object | No         | -                                | TRE process metadata     |
+| Property                                            | Pattern | Type   | Deprecated | Definition                       | Title/Description       |
+| --------------------------------------------------- | ------- | ------ | ---------- | -------------------------------- | ----------------------- |
+| + [PARSER](#parameters_PARSER )                     | No      | object | No         | In parser.schema.json#           | Parser process metadata |
+| - [INGESTER_OPTIONS](#parameters_INGESTER_OPTIONS ) | No      | object | No         | In ingester_options.schema.json# | Ingester options        |
+| - [TDR](#parameters_TDR )                           | No      | object | No         | -                                | TDR process metadata    |
+| - [TRE](#parameters_TRE )                           | No      | object | No         | -                                | TRE process metadata    |
 
-### <a name="parameters_PARSER"></a>1.1. Property `Parsed document metadata > parameters > PARSER`
+### <a name="parameters_PARSER"></a>1.1. Property `Document processing metadata > parameters > PARSER`
 
 **Title:** Parser process metadata
 
@@ -116,7 +118,7 @@
 | - [metadata_fields](#parameters_PARSER_metadata_fields )                       | No      | array of object  | No         | -          | Metadata fields                                                                                                                                                               |
 | - [xml_contains_document_text](#parameters_PARSER_xml_contains_document_text ) | No      | boolean          | No         | -          | An indicator of if the XML of the document contains body text which is renderable for human consumption, instead of only being a stub containing metadata for a static asset. |
 
-#### <a name="parameters_PARSER_parser_run_id"></a>1.1.1. Property `Parsed document metadata > parameters > PARSER > parser_run_id`
+#### <a name="parameters_PARSER_parser_run_id"></a>1.1.1. Property `Document processing metadata > parameters > PARSER > parser_run_id`
 
 **Title:** Parser run ID
 
@@ -128,7 +130,7 @@
 
 **Description:** A UUID to identify the parser run. This does not need to be unique per document; it should be unique per invocation of the parser.
 
-#### <a name="parameters_PARSER_documentType"></a>1.1.2. Property `Parsed document metadata > parameters > PARSER > documentType`
+#### <a name="parameters_PARSER_documentType"></a>1.1.2. Property `Document processing metadata > parameters > PARSER > documentType`
 
 **Title:** Type of document
 
@@ -142,7 +144,7 @@ Must be one of:
 * "judgment"
 * "pressSummary"
 
-#### <a name="parameters_PARSER_uri"></a>1.1.3. Property `Parsed document metadata > parameters > PARSER > uri`
+#### <a name="parameters_PARSER_uri"></a>1.1.3. Property `Document processing metadata > parameters > PARSER > uri`
 
 **Title:** Document URI
 
@@ -152,7 +154,7 @@ Must be one of:
 | **Required** | No               |
 | **Format**   | `uri`            |
 
-#### <a name="parameters_PARSER_court"></a>1.1.4. Property `Parsed document metadata > parameters > PARSER > court`
+#### <a name="parameters_PARSER_court"></a>1.1.4. Property `Document processing metadata > parameters > PARSER > court`
 
 **Title:** Court
 
@@ -163,7 +165,7 @@ Must be one of:
 
 **Description:** An FCL court identifier code. Must be one of the values in the [list of courts](https://github.com/nationalarchives/ds-caselaw-utils/blob/main/courts.md).
 
-#### <a name="parameters_PARSER_cite"></a>1.1.5. Property `Parsed document metadata > parameters > PARSER > cite`
+#### <a name="parameters_PARSER_cite"></a>1.1.5. Property `Document processing metadata > parameters > PARSER > cite`
 
 **Title:** Citation
 
@@ -172,7 +174,7 @@ Must be one of:
 | **Type**     | `string or null` |
 | **Required** | No               |
 
-#### <a name="parameters_PARSER_date"></a>1.1.6. Property `Parsed document metadata > parameters > PARSER > date`
+#### <a name="parameters_PARSER_date"></a>1.1.6. Property `Document processing metadata > parameters > PARSER > date`
 
 **Title:** Date of document
 
@@ -189,7 +191,7 @@ Must be one of:
 | [Null](#parameters_PARSER_date_oneOf_i0) |
 | [Date](#parameters_PARSER_date_oneOf_i1) |
 
-##### <a name="parameters_PARSER_date_oneOf_i0"></a>1.1.6.1. Property `Parsed document metadata > parameters > PARSER > date > oneOf > Null`
+##### <a name="parameters_PARSER_date_oneOf_i0"></a>1.1.6.1. Property `Document processing metadata > parameters > PARSER > date > oneOf > Null`
 
 **Title:** Null
 
@@ -198,7 +200,7 @@ Must be one of:
 | **Type**     | `null` |
 | **Required** | No     |
 
-##### <a name="parameters_PARSER_date_oneOf_i1"></a>1.1.6.2. Property `Parsed document metadata > parameters > PARSER > date > oneOf > Date`
+##### <a name="parameters_PARSER_date_oneOf_i1"></a>1.1.6.2. Property `Document processing metadata > parameters > PARSER > date > oneOf > Date`
 
 **Title:** Date
 
@@ -208,7 +210,7 @@ Must be one of:
 | **Required** | No       |
 | **Format**   | `date`   |
 
-#### <a name="parameters_PARSER_name"></a>1.1.7. Property `Parsed document metadata > parameters > PARSER > name`
+#### <a name="parameters_PARSER_name"></a>1.1.7. Property `Document processing metadata > parameters > PARSER > name`
 
 **Title:** Name of document
 
@@ -219,7 +221,7 @@ Must be one of:
 
 **Description:** The title of the document for indexing purposes. May be different from the exact text which appears in the document.
 
-#### <a name="parameters_PARSER_attachments"></a>1.1.8. Property `Parsed document metadata > parameters > PARSER > attachments`
+#### <a name="parameters_PARSER_attachments"></a>1.1.8. Property `Document processing metadata > parameters > PARSER > attachments`
 
 **Title:** Attachments
 
@@ -236,7 +238,7 @@ Must be one of:
 | [Null](#parameters_PARSER_attachments_oneOf_i0)                 |
 | [Array of attachments](#parameters_PARSER_attachments_oneOf_i1) |
 
-##### <a name="parameters_PARSER_attachments_oneOf_i0"></a>1.1.8.1. Property `Parsed document metadata > parameters > PARSER > attachments > oneOf > Null`
+##### <a name="parameters_PARSER_attachments_oneOf_i0"></a>1.1.8.1. Property `Document processing metadata > parameters > PARSER > attachments > oneOf > Null`
 
 **Title:** Null
 
@@ -245,7 +247,7 @@ Must be one of:
 | **Type**     | `null` |
 | **Required** | No     |
 
-##### <a name="parameters_PARSER_attachments_oneOf_i1"></a>1.1.8.2. Property `Parsed document metadata > parameters > PARSER > attachments > oneOf > Array of attachments`
+##### <a name="parameters_PARSER_attachments_oneOf_i1"></a>1.1.8.2. Property `Document processing metadata > parameters > PARSER > attachments > oneOf > Array of attachments`
 
 **Title:** Array of attachments
 
@@ -266,7 +268,7 @@ Must be one of:
 | ------------------------------------------------------------- | ----------- |
 | [item 1 items](#parameters_PARSER_attachments_oneOf_i1_items) | -           |
 
-###### <a name="parameters_PARSER_attachments_oneOf_i1_items"></a>1.1.8.2.1. Parsed document metadata > parameters > PARSER > attachments > oneOf > Array of attachments > item 1 items
+###### <a name="parameters_PARSER_attachments_oneOf_i1_items"></a>1.1.8.2.1. Document processing metadata > parameters > PARSER > attachments > oneOf > Array of attachments > item 1 items
 
 |                           |                  |
 | ------------------------- | ---------------- |
@@ -279,21 +281,21 @@ Must be one of:
 | + [name](#parameters_PARSER_attachments_oneOf_i1_items_name ) | No      | string | No         | -          | -                 |
 | + [link](#parameters_PARSER_attachments_oneOf_i1_items_link ) | No      | string | No         | -          | -                 |
 
-###### <a name="parameters_PARSER_attachments_oneOf_i1_items_name"></a>1.1.8.2.1.1. Property `Parsed document metadata > parameters > PARSER > attachments > oneOf > Array of attachments > item 1 items > name`
+###### <a name="parameters_PARSER_attachments_oneOf_i1_items_name"></a>1.1.8.2.1.1. Property `Document processing metadata > parameters > PARSER > attachments > oneOf > Array of attachments > item 1 items > name`
 
 |              |          |
 | ------------ | -------- |
 | **Type**     | `string` |
 | **Required** | Yes      |
 
-###### <a name="parameters_PARSER_attachments_oneOf_i1_items_link"></a>1.1.8.2.1.2. Property `Parsed document metadata > parameters > PARSER > attachments > oneOf > Array of attachments > item 1 items > link`
+###### <a name="parameters_PARSER_attachments_oneOf_i1_items_link"></a>1.1.8.2.1.2. Property `Document processing metadata > parameters > PARSER > attachments > oneOf > Array of attachments > item 1 items > link`
 
 |              |          |
 | ------------ | -------- |
 | **Type**     | `string` |
 | **Required** | Yes      |
 
-#### <a name="parameters_PARSER_error-messages"></a>1.1.9. Property `Parsed document metadata > parameters > PARSER > error-messages`
+#### <a name="parameters_PARSER_error-messages"></a>1.1.9. Property `Document processing metadata > parameters > PARSER > error-messages`
 
 **Title:** Error messages
 
@@ -312,14 +314,14 @@ Must be one of:
 | **Additional items** | False              |
 | **Tuple validation** | N/A                |
 
-#### <a name="parameters_PARSER_extensions"></a>1.1.10. Property `Parsed document metadata > parameters > PARSER > extensions`
+#### <a name="parameters_PARSER_extensions"></a>1.1.10. Property `Document processing metadata > parameters > PARSER > extensions`
 
 |              |                  |
 | ------------ | ---------------- |
 | **Type**     | `null or object` |
 | **Required** | No               |
 
-#### <a name="parameters_PARSER_jurisdictionShortNames"></a>1.1.11. Property `Parsed document metadata > parameters > PARSER > jurisdictionShortNames`
+#### <a name="parameters_PARSER_jurisdictionShortNames"></a>1.1.11. Property `Document processing metadata > parameters > PARSER > jurisdictionShortNames`
 
 |              |         |
 | ------------ | ------- |
@@ -334,7 +336,7 @@ Must be one of:
 | **Additional items** | False              |
 | **Tuple validation** | N/A                |
 
-#### <a name="parameters_PARSER_primary_source"></a>1.1.12. Property `Parsed document metadata > parameters > PARSER > primary_source`
+#### <a name="parameters_PARSER_primary_source"></a>1.1.12. Property `Document processing metadata > parameters > PARSER > primary_source`
 
 **Title:** Primary source file
 
@@ -353,7 +355,7 @@ Must be one of:
 | + [mimetype](#parameters_PARSER_primary_source_mimetype ) | No      | string           | No         | -          | The MIME type of the file.                                       |
 | + [route](#parameters_PARSER_primary_source_route )       | No      | enum (of string) | No         | -          | The route which the file took to reach the parser.               |
 
-##### <a name="parameters_PARSER_primary_source_filename"></a>1.1.12.1. Property `Parsed document metadata > parameters > PARSER > primary_source > filename`
+##### <a name="parameters_PARSER_primary_source_filename"></a>1.1.12.1. Property `Document processing metadata > parameters > PARSER > primary_source > filename`
 
 |              |          |
 | ------------ | -------- |
@@ -372,7 +374,7 @@ Must be one of:
 "Judgment v Judgement.pdf"
 ```
 
-##### <a name="parameters_PARSER_primary_source_sha256"></a>1.1.12.2. Property `Parsed document metadata > parameters > PARSER > primary_source > sha256`
+##### <a name="parameters_PARSER_primary_source_sha256"></a>1.1.12.2. Property `Document processing metadata > parameters > PARSER > primary_source > sha256`
 
 |              |          |
 | ------------ | -------- |
@@ -385,7 +387,7 @@ Must be one of:
 | --------------------------------- | ----------------------------------------------------------------------------------------- |
 | **Must match regular expression** | ```^[A-Fa-f0-9]{64}$``` [Test](https://regex101.com/?regex=%5E%5BA-Fa-f0-9%5D%7B64%7D%24) |
 
-##### <a name="parameters_PARSER_primary_source_mimetype"></a>1.1.12.3. Property `Parsed document metadata > parameters > PARSER > primary_source > mimetype`
+##### <a name="parameters_PARSER_primary_source_mimetype"></a>1.1.12.3. Property `Document processing metadata > parameters > PARSER > primary_source > mimetype`
 
 |              |          |
 | ------------ | -------- |
@@ -404,7 +406,7 @@ Must be one of:
 "application/pdf"
 ```
 
-##### <a name="parameters_PARSER_primary_source_route"></a>1.1.12.4. Property `Parsed document metadata > parameters > PARSER > primary_source > route`
+##### <a name="parameters_PARSER_primary_source_route"></a>1.1.12.4. Property `Document processing metadata > parameters > PARSER > primary_source > route`
 
 |              |                    |
 | ------------ | ------------------ |
@@ -419,7 +421,7 @@ Must be one of:
 * "EUI"
 * "bulk"
 
-#### <a name="parameters_PARSER_metadata_fields"></a>1.1.13. Property `Parsed document metadata > parameters > PARSER > metadata_fields`
+#### <a name="parameters_PARSER_metadata_fields"></a>1.1.13. Property `Document processing metadata > parameters > PARSER > metadata_fields`
 
 **Title:** Metadata fields
 
@@ -442,7 +444,7 @@ Must be one of:
 | ----------------------------------------------------------------- | ----------- |
 | [metadata_fields items](#parameters_PARSER_metadata_fields_items) | -           |
 
-##### <a name="parameters_PARSER_metadata_fields_items"></a>1.1.13.1. Parsed document metadata > parameters > PARSER > metadata_fields > metadata_fields items
+##### <a name="parameters_PARSER_metadata_fields_items"></a>1.1.13.1. Document processing metadata > parameters > PARSER > metadata_fields > metadata_fields items
 
 |                           |                  |
 | ------------------------- | ---------------- |
@@ -465,7 +467,7 @@ Must be one of:
 | [item 2](#parameters_PARSER_metadata_fields_items_allOf_i2) |
 | [item 3](#parameters_PARSER_metadata_fields_items_allOf_i3) |
 
-###### <a name="parameters_PARSER_metadata_fields_items_allOf_i0"></a>1.1.13.1.1. Property `Parsed document metadata > parameters > PARSER > metadata_fields > metadata_fields items > allOf > item 0`
+###### <a name="parameters_PARSER_metadata_fields_items_allOf_i0"></a>1.1.13.1.1. Property `Document processing metadata > parameters > PARSER > metadata_fields > metadata_fields items > allOf > item 0`
 
 |                           |                  |
 | ------------------------- | ---------------- |
@@ -485,7 +487,7 @@ Must be one of:
 | ------------------------------------------------------------------------ | ------- | ------ | ---------- | ---------- | ----------------- |
 | - [value](#parameters_PARSER_metadata_fields_items_allOf_i0_then_value ) | No      | object | No         | -          | -                 |
 
-###### <a name="parameters_PARSER_metadata_fields_items_allOf_i0_then_value"></a>1.1.13.1.1.1.1. Property `Parsed document metadata > parameters > PARSER > metadata_fields > metadata_fields items > allOf > item 0 > then > value`
+###### <a name="parameters_PARSER_metadata_fields_items_allOf_i0_then_value"></a>1.1.13.1.1.1.1. Property `Document processing metadata > parameters > PARSER > metadata_fields > metadata_fields items > allOf > item 0 > then > value`
 
 |                           |             |
 | ------------------------- | ----------- |
@@ -499,7 +501,7 @@ Must be one of:
 | + [hash](#parameters_PARSER_metadata_fields_items_allOf_i0_then_value_hash )                         | No      | string | No         | -          | Metadata file hash     |
 | + [fullLineContents](#parameters_PARSER_metadata_fields_items_allOf_i0_then_value_fullLineContents ) | No      | object | No         | -          | Metadata file contents |
 
-###### <a name="parameters_PARSER_metadata_fields_items_allOf_i0_then_value_name"></a>1.1.13.1.1.1.1.1. Property `Parsed document metadata > parameters > PARSER > metadata_fields > metadata_fields items > allOf > item 0 > then > value > name`
+###### <a name="parameters_PARSER_metadata_fields_items_allOf_i0_then_value_name"></a>1.1.13.1.1.1.1.1. Property `Document processing metadata > parameters > PARSER > metadata_fields > metadata_fields items > allOf > item 0 > then > value > name`
 
 **Title:** Metadata file name
 
@@ -510,7 +512,7 @@ Must be one of:
 
 **Description:** The name of the original source metadata file
 
-###### <a name="parameters_PARSER_metadata_fields_items_allOf_i0_then_value_hash"></a>1.1.13.1.1.1.1.2. Property `Parsed document metadata > parameters > PARSER > metadata_fields > metadata_fields items > allOf > item 0 > then > value > hash`
+###### <a name="parameters_PARSER_metadata_fields_items_allOf_i0_then_value_hash"></a>1.1.13.1.1.1.1.2. Property `Document processing metadata > parameters > PARSER > metadata_fields > metadata_fields items > allOf > item 0 > then > value > hash`
 
 **Title:** Metadata file hash
 
@@ -525,7 +527,7 @@ Must be one of:
 | --------------------------------- | ----------------------------------------------------------------------------------------- |
 | **Must match regular expression** | ```^[A-Fa-f0-9]{64}$``` [Test](https://regex101.com/?regex=%5E%5BA-Fa-f0-9%5D%7B64%7D%24) |
 
-###### <a name="parameters_PARSER_metadata_fields_items_allOf_i0_then_value_fullLineContents"></a>1.1.13.1.1.1.1.3. Property `Parsed document metadata > parameters > PARSER > metadata_fields > metadata_fields items > allOf > item 0 > then > value > fullLineContents`
+###### <a name="parameters_PARSER_metadata_fields_items_allOf_i0_then_value_fullLineContents"></a>1.1.13.1.1.1.1.3. Property `Document processing metadata > parameters > PARSER > metadata_fields > metadata_fields items > allOf > item 0 > then > value > fullLineContents`
 
 **Title:** Metadata file contents
 
@@ -541,14 +543,14 @@ Must be one of:
 | --------------------------------------------------------------------------------------------------------- | ------- | ------ | ---------- | ---------- | ----------------- |
 | - [](#parameters_PARSER_metadata_fields_items_allOf_i0_then_value_fullLineContents_additionalProperties ) | No      | string | No         | -          | -                 |
 
-###### <a name="parameters_PARSER_metadata_fields_items_allOf_i0_then_value_fullLineContents_additionalProperties"></a>1.1.13.1.1.1.1.3.1. Property `Parsed document metadata > parameters > PARSER > metadata_fields > metadata_fields items > allOf > item 0 > then > value > fullLineContents > additionalProperties`
+###### <a name="parameters_PARSER_metadata_fields_items_allOf_i0_then_value_fullLineContents_additionalProperties"></a>1.1.13.1.1.1.1.3.1. Property `Document processing metadata > parameters > PARSER > metadata_fields > metadata_fields items > allOf > item 0 > then > value > fullLineContents > additionalProperties`
 
 |              |          |
 | ------------ | -------- |
 | **Type**     | `string` |
 | **Required** | No       |
 
-###### <a name="parameters_PARSER_metadata_fields_items_allOf_i1"></a>1.1.13.1.2. Property `Parsed document metadata > parameters > PARSER > metadata_fields > metadata_fields items > allOf > item 1`
+###### <a name="parameters_PARSER_metadata_fields_items_allOf_i1"></a>1.1.13.1.2. Property `Document processing metadata > parameters > PARSER > metadata_fields > metadata_fields items > allOf > item 1`
 
 |                           |                  |
 | ------------------------- | ---------------- |
@@ -568,14 +570,14 @@ Must be one of:
 | ------------------------------------------------------------------------ | ------- | ------ | ---------- | ---------- | ----------------- |
 | - [value](#parameters_PARSER_metadata_fields_items_allOf_i1_then_value ) | No      | string | No         | -          | -                 |
 
-###### <a name="parameters_PARSER_metadata_fields_items_allOf_i1_then_value"></a>1.1.13.1.2.1.1. Property `Parsed document metadata > parameters > PARSER > metadata_fields > metadata_fields items > allOf > item 1 > then > value`
+###### <a name="parameters_PARSER_metadata_fields_items_allOf_i1_then_value"></a>1.1.13.1.2.1.1. Property `Document processing metadata > parameters > PARSER > metadata_fields > metadata_fields items > allOf > item 1 > then > value`
 
 |              |          |
 | ------------ | -------- |
 | **Type**     | `string` |
 | **Required** | No       |
 
-###### <a name="parameters_PARSER_metadata_fields_items_allOf_i2"></a>1.1.13.1.3. Property `Parsed document metadata > parameters > PARSER > metadata_fields > metadata_fields items > allOf > item 2`
+###### <a name="parameters_PARSER_metadata_fields_items_allOf_i2"></a>1.1.13.1.3. Property `Document processing metadata > parameters > PARSER > metadata_fields > metadata_fields items > allOf > item 2`
 
 |                           |                  |
 | ------------------------- | ---------------- |
@@ -595,14 +597,14 @@ Must be one of:
 | ------------------------------------------------------------------------ | ------- | ------ | ---------- | ---------- | ----------------- |
 | - [value](#parameters_PARSER_metadata_fields_items_allOf_i2_then_value ) | No      | string | No         | -          | -                 |
 
-###### <a name="parameters_PARSER_metadata_fields_items_allOf_i2_then_value"></a>1.1.13.1.3.1.1. Property `Parsed document metadata > parameters > PARSER > metadata_fields > metadata_fields items > allOf > item 2 > then > value`
+###### <a name="parameters_PARSER_metadata_fields_items_allOf_i2_then_value"></a>1.1.13.1.3.1.1. Property `Document processing metadata > parameters > PARSER > metadata_fields > metadata_fields items > allOf > item 2 > then > value`
 
 |              |          |
 | ------------ | -------- |
 | **Type**     | `string` |
 | **Required** | No       |
 
-###### <a name="parameters_PARSER_metadata_fields_items_allOf_i3"></a>1.1.13.1.4. Property `Parsed document metadata > parameters > PARSER > metadata_fields > metadata_fields items > allOf > item 3`
+###### <a name="parameters_PARSER_metadata_fields_items_allOf_i3"></a>1.1.13.1.4. Property `Document processing metadata > parameters > PARSER > metadata_fields > metadata_fields items > allOf > item 3`
 
 |                           |                  |
 | ------------------------- | ---------------- |
@@ -622,7 +624,7 @@ Must be one of:
 | ------------------------------------------------------------------------ | ------- | ------ | ---------- | ---------- | ----------------- |
 | - [value](#parameters_PARSER_metadata_fields_items_allOf_i3_then_value ) | No      | object | No         | -          | -                 |
 
-###### <a name="parameters_PARSER_metadata_fields_items_allOf_i3_then_value"></a>1.1.13.1.4.1.1. Property `Parsed document metadata > parameters > PARSER > metadata_fields > metadata_fields items > allOf > item 3 > then > value`
+###### <a name="parameters_PARSER_metadata_fields_items_allOf_i3_then_value"></a>1.1.13.1.4.1.1. Property `Document processing metadata > parameters > PARSER > metadata_fields > metadata_fields items > allOf > item 3 > then > value`
 
 |                           |                  |
 | ------------------------- | ---------------- |
@@ -635,7 +637,7 @@ Must be one of:
 | + [name](#parameters_PARSER_metadata_fields_items_allOf_i3_then_value_name )     | No      | string         | No         | -          | Category name     |
 | + [parent](#parameters_PARSER_metadata_fields_items_allOf_i3_then_value_parent ) | No      | string or null | No         | -          | Category parent   |
 
-###### <a name="parameters_PARSER_metadata_fields_items_allOf_i3_then_value_name"></a>1.1.13.1.4.1.1.1. Property `Parsed document metadata > parameters > PARSER > metadata_fields > metadata_fields items > allOf > item 3 > then > value > name`
+###### <a name="parameters_PARSER_metadata_fields_items_allOf_i3_then_value_name"></a>1.1.13.1.4.1.1.1. Property `Document processing metadata > parameters > PARSER > metadata_fields > metadata_fields items > allOf > item 3 > then > value > name`
 
 **Title:** Category name
 
@@ -644,7 +646,7 @@ Must be one of:
 | **Type**     | `string` |
 | **Required** | Yes      |
 
-###### <a name="parameters_PARSER_metadata_fields_items_allOf_i3_then_value_parent"></a>1.1.13.1.4.1.1.2. Property `Parsed document metadata > parameters > PARSER > metadata_fields > metadata_fields items > allOf > item 3 > then > value > parent`
+###### <a name="parameters_PARSER_metadata_fields_items_allOf_i3_then_value_parent"></a>1.1.13.1.4.1.1.2. Property `Document processing metadata > parameters > PARSER > metadata_fields > metadata_fields items > allOf > item 3 > then > value > parent`
 
 **Title:** Category parent
 
@@ -655,7 +657,7 @@ Must be one of:
 
 **Description:** If this is a subcategory, the name of the parent category
 
-###### <a name="parameters_PARSER_metadata_fields_items_id"></a>1.1.13.1.5. Property `Parsed document metadata > parameters > PARSER > metadata_fields > metadata_fields items > id`
+###### <a name="parameters_PARSER_metadata_fields_items_id"></a>1.1.13.1.5. Property `Document processing metadata > parameters > PARSER > metadata_fields > metadata_fields items > id`
 
 **Title:** Identifier
 
@@ -669,7 +671,7 @@ Must be one of:
 
 A new UUID should be generated only if the metadata value has changed; if there is an existing piece of metadata with the same source and same value the existing `id` should be used.
 
-###### <a name="parameters_PARSER_metadata_fields_items_name"></a>1.1.13.1.6. Property `Parsed document metadata > parameters > PARSER > metadata_fields > metadata_fields items > name`
+###### <a name="parameters_PARSER_metadata_fields_items_name"></a>1.1.13.1.6. Property `Document processing metadata > parameters > PARSER > metadata_fields > metadata_fields items > name`
 
 **Title:** Metadata name
 
@@ -684,7 +686,7 @@ A new UUID should be generated only if the metadata value has changed; if there 
 | --------------------------------- | ----------------------------------------------------------------------- |
 | **Must match regular expression** | ```^[a-z_]+$``` [Test](https://regex101.com/?regex=%5E%5Ba-z_%5D%2B%24) |
 
-###### <a name="parameters_PARSER_metadata_fields_items_value"></a>1.1.13.1.7. Property `Parsed document metadata > parameters > PARSER > metadata_fields > metadata_fields items > value`
+###### <a name="parameters_PARSER_metadata_fields_items_value"></a>1.1.13.1.7. Property `Document processing metadata > parameters > PARSER > metadata_fields > metadata_fields items > value`
 
 **Title:** Metadata value
 
@@ -695,7 +697,7 @@ A new UUID should be generated only if the metadata value has changed; if there 
 
 **Description:** A value for this metadata. May be either a plain string, or a JSON object with additional complexity.
 
-###### <a name="parameters_PARSER_metadata_fields_items_source"></a>1.1.13.1.8. Property `Parsed document metadata > parameters > PARSER > metadata_fields > metadata_fields items > source`
+###### <a name="parameters_PARSER_metadata_fields_items_source"></a>1.1.13.1.8. Property `Document processing metadata > parameters > PARSER > metadata_fields > metadata_fields items > source`
 
 **Title:** Metadata source
 
@@ -711,7 +713,7 @@ Must be one of:
 * "external"
 * "editor"
 
-###### <a name="parameters_PARSER_metadata_fields_items_timestamp"></a>1.1.13.1.9. Property `Parsed document metadata > parameters > PARSER > metadata_fields > metadata_fields items > timestamp`
+###### <a name="parameters_PARSER_metadata_fields_items_timestamp"></a>1.1.13.1.9. Property `Document processing metadata > parameters > PARSER > metadata_fields > metadata_fields items > timestamp`
 
 **Title:** Timestamp of metadata creation
 
@@ -723,7 +725,7 @@ Must be one of:
 
 **Description:** The timestamp this piece of metadata was first detected or added.
 
-#### <a name="parameters_PARSER_xml_contains_document_text"></a>1.1.14. Property `Parsed document metadata > parameters > PARSER > xml_contains_document_text`
+#### <a name="parameters_PARSER_xml_contains_document_text"></a>1.1.14. Property `Document processing metadata > parameters > PARSER > xml_contains_document_text`
 
 |              |           |
 | ------------ | --------- |
@@ -732,9 +734,9 @@ Must be one of:
 
 **Description:** An indicator of if the XML of the document contains body text which is renderable for human consumption, instead of only being a stub containing metadata for a static asset.
 
-### <a name="parameters_INGESTER_OPTIONS"></a>1.2. Property `Parsed document metadata > parameters > INGESTER_OPTIONS`
+### <a name="parameters_INGESTER_OPTIONS"></a>1.2. Property `Document processing metadata > parameters > INGESTER_OPTIONS`
 
-**Title:** Parsed document metadata
+**Title:** Ingester options
 
 |                           |                               |
 | ------------------------- | ----------------------------- |
@@ -748,7 +750,7 @@ Must be one of:
 | - [auto_publish](#parameters_INGESTER_OPTIONS_auto_publish )       | No      | boolean | No         | -          | Auto-publish document                               |
 | - [source_document](#parameters_INGESTER_OPTIONS_source_document ) | No      | object  | No         | -          | Information about the source file which was parsed. |
 
-#### <a name="parameters_INGESTER_OPTIONS_auto_publish"></a>1.2.1. Property `Parsed document metadata > parameters > INGESTER_OPTIONS > auto_publish`
+#### <a name="parameters_INGESTER_OPTIONS_auto_publish"></a>1.2.1. Property `Document processing metadata > parameters > INGESTER_OPTIONS > auto_publish`
 
 **Title:** Auto-publish document
 
@@ -759,7 +761,7 @@ Must be one of:
 
 **Description:** Should the ingester bypass the editorial approval process and automatically publish this document?
 
-#### <a name="parameters_INGESTER_OPTIONS_source_document"></a>1.2.2. Property `Parsed document metadata > parameters > INGESTER_OPTIONS > source_document`
+#### <a name="parameters_INGESTER_OPTIONS_source_document"></a>1.2.2. Property `Document processing metadata > parameters > INGESTER_OPTIONS > source_document`
 
 |                           |                  |
 | ------------------------- | ---------------- |
@@ -771,12 +773,12 @@ Must be one of:
 
 | Property                                                               | Pattern | Type   | Deprecated | Definition | Title/Description |
 | ---------------------------------------------------------------------- | ------- | ------ | ---------- | ---------- | ----------------- |
-| + [format](#parameters_INGESTER_OPTIONS_source_document_format )       | No      | string | No         | -          | Docuent format    |
+| + [format](#parameters_INGESTER_OPTIONS_source_document_format )       | No      | string | No         | -          | Document format   |
 | + [file_hash](#parameters_INGESTER_OPTIONS_source_document_file_hash ) | No      | string | No         | -          | File hash         |
 
-##### <a name="parameters_INGESTER_OPTIONS_source_document_format"></a>1.2.2.1. Property `Parsed document metadata > parameters > INGESTER_OPTIONS > source_document > format`
+##### <a name="parameters_INGESTER_OPTIONS_source_document_format"></a>1.2.2.1. Property `Document processing metadata > parameters > INGESTER_OPTIONS > source_document > format`
 
-**Title:** Docuent format
+**Title:** Document format
 
 |              |          |
 | ------------ | -------- |
@@ -785,7 +787,7 @@ Must be one of:
 
 **Description:** The MIME type of the source file.
 
-##### <a name="parameters_INGESTER_OPTIONS_source_document_file_hash"></a>1.2.2.2. Property `Parsed document metadata > parameters > INGESTER_OPTIONS > source_document > file_hash`
+##### <a name="parameters_INGESTER_OPTIONS_source_document_file_hash"></a>1.2.2.2. Property `Document processing metadata > parameters > INGESTER_OPTIONS > source_document > file_hash`
 
 **Title:** File hash
 
@@ -800,7 +802,7 @@ Must be one of:
 | --------------------------------- | ----------------------------------------------------------------------------------------- |
 | **Must match regular expression** | ```^[A-Fa-f0-9]{64}$``` [Test](https://regex101.com/?regex=%5E%5BA-Fa-f0-9%5D%7B64%7D%24) |
 
-### <a name="parameters_TDR"></a>1.3. Property `Parsed document metadata > parameters > TDR`
+### <a name="parameters_TDR"></a>1.3. Property `Document processing metadata > parameters > TDR`
 
 **Title:** TDR process metadata
 
@@ -812,7 +814,7 @@ Must be one of:
 
 **Description:** Metadata about a document or its processing which has been added as part of the TDR upload process.
 
-### <a name="parameters_TRE"></a>1.4. Property `Parsed document metadata > parameters > TRE`
+### <a name="parameters_TRE"></a>1.4. Property `Document processing metadata > parameters > TRE`
 
 **Title:** TRE process metadata
 

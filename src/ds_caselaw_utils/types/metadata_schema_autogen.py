@@ -20,12 +20,43 @@ format: date
 
 
 
+class DocumentProcessingMetadata(TypedDict, total=False):
+    r"""
+    Document processing metadata.
+
+    Metadata from the entire document processing pipeline, including TDR, TRE, the parser, and any options to pass to the ingester.
+    """
+
+    parameters: Required["_DocumentProcessingMetadataParameters"]
+    r""" Required property """
+
+
+
 DocumentUri = str | None
 r"""
 Document URI.
 
 format: uri
 """
+
+
+
+class IngesterOptions(TypedDict, total=False):
+    r"""
+    Ingester options.
+
+    descriptions: A set of options to be passed to the ingester, giving hints and instructions on processing behaviours.
+    """
+
+    auto_publish: bool
+    r"""
+    Auto-publish document.
+
+    Should the ingester bypass the editorial approval process and automatically publish this document?
+    """
+
+    source_document: "_IngesterOptionsSourceDocument"
+    r""" Information about the source file which was parsed. """
 
 
 
@@ -60,29 +91,6 @@ r""" Null. """
 
 Null0: TypeAlias = None
 r""" Null. """
-
-
-
-class ParsedDocumentMetadata(TypedDict, total=False):
-    r""" Parsed document metadata. """
-
-    auto_publish: bool
-    r"""
-    Auto-publish document.
-
-    Should the ingester bypass the editorial approval process and automatically publish this document?
-    """
-
-    source_document: "_ParsedDocumentMetadataSourceDocument"
-    r""" Information about the source file which was parsed. """
-
-
-
-class ParsedDocumentMetadata0(TypedDict, total=False):
-    r""" Parsed document metadata. """
-
-    parameters: Required["_ParsedDocumentMetadataParameters"]
-    r""" Required property """
 
 
 
@@ -224,6 +232,64 @@ class _ArrayOfAttachmentsItem(TypedDict, total=False):
 
 
 
+class _DocumentProcessingMetadataParameters(TypedDict, total=False):
+    PARSER: Required["ParserProcessMetadata"]
+    r"""
+    Parser process metadata.
+
+    Metadata about a document or its processing which has been generated or collated as a result of the Find Case Law parsing process.
+
+    Required property
+    """
+
+    INGESTER_OPTIONS: "IngesterOptions"
+    r"""
+    Ingester options.
+
+    descriptions: A set of options to be passed to the ingester, giving hints and instructions on processing behaviours.
+    """
+
+    TDR: dict[str, Any]
+    r"""
+    TDR process metadata.
+
+    Metadata about a document or its processing which has been added as part of the TDR upload process.
+    """
+
+    TRE: dict[str, Any]
+    r"""
+    TRE process metadata.
+
+    Metadata about a document or its processing which has been added as part of the TRE workflow.
+    """
+
+
+
+class _IngesterOptionsSourceDocument(TypedDict, total=False):
+    r""" Information about the source file which was parsed. """
+
+    format: Required[str]
+    r"""
+    Document format.
+
+    The MIME type of the source file.
+
+    Required property
+    """
+
+    file_hash: Required[str]
+    r"""
+    File hash.
+
+    The SHA256 hash of the source file.
+
+    pattern: ^[A-Fa-f0-9]{64}$
+
+    Required property
+    """
+
+
+
 class _MetadataFieldsItem(TypedDict, total=False):
     r"""
     allOf:
@@ -343,60 +409,6 @@ class _MetadataFieldsItem(TypedDict, total=False):
     The timestamp this piece of metadata was first detected or added.
 
     format: datetime
-
-    Required property
-    """
-
-
-
-class _ParsedDocumentMetadataParameters(TypedDict, total=False):
-    PARSER: Required["ParserProcessMetadata"]
-    r"""
-    Parser process metadata.
-
-    Metadata about a document or its processing which has been generated or collated as a result of the Find Case Law parsing process.
-
-    Required property
-    """
-
-    INGESTER_OPTIONS: "ParsedDocumentMetadata"
-    r""" Parsed document metadata. """
-
-    TDR: dict[str, Any]
-    r"""
-    TDR process metadata.
-
-    Metadata about a document or its processing which has been added as part of the TDR upload process.
-    """
-
-    TRE: dict[str, Any]
-    r"""
-    TRE process metadata.
-
-    Metadata about a document or its processing which has been added as part of the TRE workflow.
-    """
-
-
-
-class _ParsedDocumentMetadataSourceDocument(TypedDict, total=False):
-    r""" Information about the source file which was parsed. """
-
-    format: Required[str]
-    r"""
-    Docuent format.
-
-    The MIME type of the source file.
-
-    Required property
-    """
-
-    file_hash: Required[str]
-    r"""
-    File hash.
-
-    The SHA256 hash of the source file.
-
-    pattern: ^[A-Fa-f0-9]{64}$
 
     Required property
     """
