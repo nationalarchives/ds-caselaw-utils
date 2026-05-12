@@ -2,13 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
-## Unreleased
+## v4.3.0 (2026-05-12)
 
 ### Feat
 
-- **schema**: add new parserRunId property to parser metadata schema
-- **schemas**: allow lower-case bulk ingest route
 - **schemas**: define format for csv_metadata_file_properties in parser metadata
+- **schemas**: allow lower-case bulk ingest route
+- **schema**: add new parserRunId property to parser metadata schema
 
 ### Fix
 
