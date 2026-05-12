@@ -95,7 +95,7 @@ ParserProcessMetadata = TypedDict('ParserProcessMetadata', {
     # | A UUID to identify the parser run. This does not need to be unique per document; it should be unique per invocation of the parser.
     # | 
     # | format: uuid
-    'parserRunId': str,
+    'parser_run_id': str,
     # | Type of document.
     # | 
     # | Required property
