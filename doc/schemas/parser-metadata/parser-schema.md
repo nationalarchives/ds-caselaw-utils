@@ -1,6 +1,6 @@
 # Parser process metadata
 
-- [1. Property `Parser process metadata > parserRunId`](#parserRunId)
+- [1. Property `Parser process metadata > parser_run_id`](#parser_run_id)
 - [2. Property `Parser process metadata > documentType`](#documentType)
 - [3. Property `Parser process metadata > uri`](#uri)
 - [4. Property `Parser process metadata > court`](#court)
@@ -55,7 +55,7 @@
 
 | Property                                                     | Pattern | Type             | Deprecated | Definition | Title/Description                                                                                                                                                             |
 | ------------------------------------------------------------ | ------- | ---------------- | ---------- | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| - [parserRunId](#parserRunId )                               | No      | string           | No         | -          | Parser run ID                                                                                                                                                                 |
+| - [parser_run_id](#parser_run_id )                           | No      | string           | No         | -          | Parser run ID                                                                                                                                                                 |
 | + [documentType](#documentType )                             | No      | enum (of string) | No         | -          | Type of document                                                                                                                                                              |
 | - [uri](#uri )                                               | No      | string or null   | No         | -          | Document URI                                                                                                                                                                  |
 | - [court](#court )                                           | No      | string           | No         | -          | Court                                                                                                                                                                         |
@@ -70,7 +70,7 @@
 | - [metadata_fields](#metadata_fields )                       | No      | array of object  | No         | -          | Metadata fields                                                                                                                                                               |
 | - [xml_contains_document_text](#xml_contains_document_text ) | No      | boolean          | No         | -          | An indicator of if the XML of the document contains body text which is renderable for human consumption, instead of only being a stub containing metadata for a static asset. |
 
-## <a name="parserRunId"></a>1. Property `Parser process metadata > parserRunId`
+## <a name="parser_run_id"></a>1. Property `Parser process metadata > parser_run_id`
 
 **Title:** Parser run ID
 
