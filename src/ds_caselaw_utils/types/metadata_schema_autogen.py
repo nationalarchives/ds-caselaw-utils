@@ -45,7 +45,7 @@ class IngesterOptions(TypedDict, total=False):
     r"""
     Ingester options.
 
-    descriptions: A set of options to be passed to the ingester, giving hints and instructions on processing behaviours.
+    A set of options to be passed to the ingester, giving hints and instructions on processing behaviours.
     """
 
     auto_publish: bool
@@ -246,7 +246,7 @@ class _DocumentProcessingMetadataParameters(TypedDict, total=False):
     r"""
     Ingester options.
 
-    descriptions: A set of options to be passed to the ingester, giving hints and instructions on processing behaviours.
+    A set of options to be passed to the ingester, giving hints and instructions on processing behaviours.
     """
 
     TDR: dict[str, Any]
