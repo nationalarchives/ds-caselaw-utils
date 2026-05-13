@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file.
 
 ### Fix
 
+- **schemas**: fix a typo in the ingester_options schema
 - **schemas**: retitle metadata objects to prevent classname collisions
 
 ## v4.3.0 (2026-05-12)

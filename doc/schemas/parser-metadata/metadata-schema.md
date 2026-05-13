@@ -745,6 +745,8 @@ Must be one of:
 | **Additional properties** | Any type allowed              |
 | **Defined in**            | ingester_options.schema.json# |
 
+**Description:** A set of options to be passed to the ingester, giving hints and instructions on processing behaviours.
+
 | Property                                                           | Pattern | Type    | Deprecated | Definition | Title/Description                                   |
 | ------------------------------------------------------------------ | ------- | ------- | ---------- | ---------- | --------------------------------------------------- |
 | - [auto_publish](#parameters_INGESTER_OPTIONS_auto_publish )       | No      | boolean | No         | -          | Auto-publish document                               |

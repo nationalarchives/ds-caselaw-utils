@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
   "title": "Ingester options",
-  "descriptions": "A set of options to be passed to the ingester, giving hints and instructions on processing behaviours.",
+  "description": "A set of options to be passed to the ingester, giving hints and instructions on processing behaviours.",
   "properties": {
     "auto_publish": {
       "title": "Auto-publish document",
