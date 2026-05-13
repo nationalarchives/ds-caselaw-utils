@@ -1,11 +1,11 @@
-# Parsed document metadata
+# Ingester options
 
-- [1. Property `Parsed document metadata > auto_publish`](#auto_publish)
-- [2. Property `Parsed document metadata > source_document`](#source_document)
-  - [2.1. Property `Parsed document metadata > source_document > format`](#source_document_format)
-  - [2.2. Property `Parsed document metadata > source_document > file_hash`](#source_document_file_hash)
+- [1. Property `Ingester options > auto_publish`](#auto_publish)
+- [2. Property `Ingester options > source_document`](#source_document)
+  - [2.1. Property `Ingester options > source_document > format`](#source_document_format)
+  - [2.2. Property `Ingester options > source_document > file_hash`](#source_document_file_hash)
 
-**Title:** Parsed document metadata
+**Title:** Ingester options
 
 |                           |                  |
 | ------------------------- | ---------------- |
@@ -18,7 +18,7 @@
 | - [auto_publish](#auto_publish )       | No      | boolean | No         | -          | Auto-publish document                               |
 | - [source_document](#source_document ) | No      | object  | No         | -          | Information about the source file which was parsed. |
 
-## <a name="auto_publish"></a>1. Property `Parsed document metadata > auto_publish`
+## <a name="auto_publish"></a>1. Property `Ingester options > auto_publish`
 
 **Title:** Auto-publish document
 
@@ -29,7 +29,7 @@
 
 **Description:** Should the ingester bypass the editorial approval process and automatically publish this document?
 
-## <a name="source_document"></a>2. Property `Parsed document metadata > source_document`
+## <a name="source_document"></a>2. Property `Ingester options > source_document`
 
 |                           |                  |
 | ------------------------- | ---------------- |
@@ -41,12 +41,12 @@
 
 | Property                                   | Pattern | Type   | Deprecated | Definition | Title/Description |
 | ------------------------------------------ | ------- | ------ | ---------- | ---------- | ----------------- |
-| + [format](#source_document_format )       | No      | string | No         | -          | Docuent format    |
+| + [format](#source_document_format )       | No      | string | No         | -          | Document format   |
 | + [file_hash](#source_document_file_hash ) | No      | string | No         | -          | File hash         |
 
-### <a name="source_document_format"></a>2.1. Property `Parsed document metadata > source_document > format`
+### <a name="source_document_format"></a>2.1. Property `Ingester options > source_document > format`
 
-**Title:** Docuent format
+**Title:** Document format
 
 |              |          |
 | ------------ | -------- |
@@ -55,7 +55,7 @@
 
 **Description:** The MIME type of the source file.
 
-### <a name="source_document_file_hash"></a>2.2. Property `Parsed document metadata > source_document > file_hash`
+### <a name="source_document_file_hash"></a>2.2. Property `Ingester options > source_document > file_hash`
 
 **Title:** File hash
 

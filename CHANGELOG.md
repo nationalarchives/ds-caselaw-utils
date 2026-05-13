@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## Unreleased
+
+### Fix
+
+- **schemas**: retitle metadata objects to prevent classname collisions
+
 ## v4.3.0 (2026-05-12)
 
 ### Feat

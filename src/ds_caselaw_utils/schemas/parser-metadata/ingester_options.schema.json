@@ -1,7 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
-  "title": "Parsed document metadata",
+  "title": "Ingester options",
+  "descriptions": "A set of options to be passed to the ingester, giving hints and instructions on processing behaviours.",
   "properties": {
     "auto_publish": {
       "title": "Auto-publish document",
@@ -13,7 +14,7 @@
       "type": "object",
       "properties": {
         "format": {
-          "title": "Docuent format",
+          "title": "Document format",
           "description": "The MIME type of the source file.",
           "type": "string"
         },
