@@ -28,6 +28,7 @@
 | ------------ | --------- |
 | **Type**     | `boolean` |
 | **Required** | No        |
+| **Default**  | `false`   |
 
 **Description:** Should the ingester bypass the editorial approval process and automatically publish this document?
 
