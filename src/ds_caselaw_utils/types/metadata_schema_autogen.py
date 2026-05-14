@@ -62,6 +62,15 @@ class IngesterOptions(TypedDict, total=False):
     default: False
     """
 
+    error_on_existing_document: bool
+    r"""
+    Raise error on existing document.
+
+    Should the ingester raise an exception when it finds an existing document, instead of appending a new version?
+
+    default: False
+    """
+
     source_document: "_IngesterOptionsSourceDocument"
     r""" Information about the source file which was parsed. """
 
@@ -216,6 +225,11 @@ class PrimarySourceFile(TypedDict, total=False):
 
     Required property
     """
+
+
+
+RAISE_ERROR_ON_EXISTING_DOCUMENT_DEFAULT = False
+r""" Default value of the field path 'Ingester options error_on_existing_document' """
 
 
 

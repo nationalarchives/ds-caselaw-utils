@@ -10,6 +10,12 @@
       "type": "boolean",
       "default": false
     },
+    "error_on_existing_document": {
+      "title": "Raise error on existing document",
+      "description": "Should the ingester raise an exception when it finds an existing document, instead of appending a new version?",
+      "type": "boolean",
+      "default": false
+    },
     "source_document": {
       "description": "Information about the source file which was parsed.",
       "type": "object",
