@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## Unreleased
+
+### Feat
+
+- **schemas**: add new INGESTER.error_on_existing_document option
+
 ## v4.3.1 (2026-05-13)
 
 ### Fix

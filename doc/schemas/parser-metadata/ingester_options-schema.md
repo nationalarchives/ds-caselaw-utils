@@ -1,9 +1,10 @@
 # Ingester options
 
 - [1. Property `Ingester options > auto_publish`](#auto_publish)
-- [2. Property `Ingester options > source_document`](#source_document)
-  - [2.1. Property `Ingester options > source_document > format`](#source_document_format)
-  - [2.2. Property `Ingester options > source_document > file_hash`](#source_document_file_hash)
+- [2. Property `Ingester options > error_on_existing_document`](#error_on_existing_document)
+- [3. Property `Ingester options > source_document`](#source_document)
+  - [3.1. Property `Ingester options > source_document > format`](#source_document_format)
+  - [3.2. Property `Ingester options > source_document > file_hash`](#source_document_file_hash)
 
 **Title:** Ingester options
 
@@ -15,10 +16,11 @@
 
 **Description:** A set of options to be passed to the ingester, giving hints and instructions on processing behaviours.
 
-| Property                               | Pattern | Type    | Deprecated | Definition | Title/Description                                   |
-| -------------------------------------- | ------- | ------- | ---------- | ---------- | --------------------------------------------------- |
-| - [auto_publish](#auto_publish )       | No      | boolean | No         | -          | Auto-publish document                               |
-| - [source_document](#source_document ) | No      | object  | No         | -          | Information about the source file which was parsed. |
+| Property                                                     | Pattern | Type    | Deprecated | Definition | Title/Description                                   |
+| ------------------------------------------------------------ | ------- | ------- | ---------- | ---------- | --------------------------------------------------- |
+| - [auto_publish](#auto_publish )                             | No      | boolean | No         | -          | Auto-publish document                               |
+| - [error_on_existing_document](#error_on_existing_document ) | No      | boolean | No         | -          | Raise error on existing document                    |
+| - [source_document](#source_document )                       | No      | object  | No         | -          | Information about the source file which was parsed. |
 
 ## <a name="auto_publish"></a>1. Property `Ingester options > auto_publish`
 
@@ -28,10 +30,23 @@
 | ------------ | --------- |
 | **Type**     | `boolean` |
 | **Required** | No        |
+| **Default**  | `false`   |
 
 **Description:** Should the ingester bypass the editorial approval process and automatically publish this document?
 
-## <a name="source_document"></a>2. Property `Ingester options > source_document`
+## <a name="error_on_existing_document"></a>2. Property `Ingester options > error_on_existing_document`
+
+**Title:** Raise error on existing document
+
+|              |           |
+| ------------ | --------- |
+| **Type**     | `boolean` |
+| **Required** | No        |
+| **Default**  | `false`   |
+
+**Description:** Should the ingester raise an exception when it finds an existing document, instead of appending a new version?
+
+## <a name="source_document"></a>3. Property `Ingester options > source_document`
 
 |                           |                  |
 | ------------------------- | ---------------- |
@@ -46,7 +61,7 @@
 | + [format](#source_document_format )       | No      | string | No         | -          | Document format   |
 | + [file_hash](#source_document_file_hash ) | No      | string | No         | -          | File hash         |
 
-### <a name="source_document_format"></a>2.1. Property `Ingester options > source_document > format`
+### <a name="source_document_format"></a>3.1. Property `Ingester options > source_document > format`
 
 **Title:** Document format
 
@@ -57,7 +72,7 @@
 
 **Description:** The MIME type of the source file.
 
-### <a name="source_document_file_hash"></a>2.2. Property `Ingester options > source_document > file_hash`
+### <a name="source_document_file_hash"></a>3.2. Property `Ingester options > source_document > file_hash`
 
 **Title:** File hash
 

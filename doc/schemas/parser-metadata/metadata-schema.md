@@ -53,9 +53,10 @@
     - [1.1.14. Property `Document processing metadata > parameters > PARSER > xml_contains_document_text`](#parameters_PARSER_xml_contains_document_text)
   - [1.2. Property `Document processing metadata > parameters > INGESTER_OPTIONS`](#parameters_INGESTER_OPTIONS)
     - [1.2.1. Property `Document processing metadata > parameters > INGESTER_OPTIONS > auto_publish`](#parameters_INGESTER_OPTIONS_auto_publish)
-    - [1.2.2. Property `Document processing metadata > parameters > INGESTER_OPTIONS > source_document`](#parameters_INGESTER_OPTIONS_source_document)
-      - [1.2.2.1. Property `Document processing metadata > parameters > INGESTER_OPTIONS > source_document > format`](#parameters_INGESTER_OPTIONS_source_document_format)
-      - [1.2.2.2. Property `Document processing metadata > parameters > INGESTER_OPTIONS > source_document > file_hash`](#parameters_INGESTER_OPTIONS_source_document_file_hash)
+    - [1.2.2. Property `Document processing metadata > parameters > INGESTER_OPTIONS > error_on_existing_document`](#parameters_INGESTER_OPTIONS_error_on_existing_document)
+    - [1.2.3. Property `Document processing metadata > parameters > INGESTER_OPTIONS > source_document`](#parameters_INGESTER_OPTIONS_source_document)
+      - [1.2.3.1. Property `Document processing metadata > parameters > INGESTER_OPTIONS > source_document > format`](#parameters_INGESTER_OPTIONS_source_document_format)
+      - [1.2.3.2. Property `Document processing metadata > parameters > INGESTER_OPTIONS > source_document > file_hash`](#parameters_INGESTER_OPTIONS_source_document_file_hash)
   - [1.3. Property `Document processing metadata > parameters > TDR`](#parameters_TDR)
   - [1.4. Property `Document processing metadata > parameters > TRE`](#parameters_TRE)
 
@@ -747,10 +748,11 @@ Must be one of:
 
 **Description:** A set of options to be passed to the ingester, giving hints and instructions on processing behaviours.
 
-| Property                                                           | Pattern | Type    | Deprecated | Definition | Title/Description                                   |
-| ------------------------------------------------------------------ | ------- | ------- | ---------- | ---------- | --------------------------------------------------- |
-| - [auto_publish](#parameters_INGESTER_OPTIONS_auto_publish )       | No      | boolean | No         | -          | Auto-publish document                               |
-| - [source_document](#parameters_INGESTER_OPTIONS_source_document ) | No      | object  | No         | -          | Information about the source file which was parsed. |
+| Property                                                                                 | Pattern | Type    | Deprecated | Definition | Title/Description                                   |
+| ---------------------------------------------------------------------------------------- | ------- | ------- | ---------- | ---------- | --------------------------------------------------- |
+| - [auto_publish](#parameters_INGESTER_OPTIONS_auto_publish )                             | No      | boolean | No         | -          | Auto-publish document                               |
+| - [error_on_existing_document](#parameters_INGESTER_OPTIONS_error_on_existing_document ) | No      | boolean | No         | -          | Raise error on existing document                    |
+| - [source_document](#parameters_INGESTER_OPTIONS_source_document )                       | No      | object  | No         | -          | Information about the source file which was parsed. |
 
 #### <a name="parameters_INGESTER_OPTIONS_auto_publish"></a>1.2.1. Property `Document processing metadata > parameters > INGESTER_OPTIONS > auto_publish`
 
@@ -760,10 +762,23 @@ Must be one of:
 | ------------ | --------- |
 | **Type**     | `boolean` |
 | **Required** | No        |
+| **Default**  | `false`   |
 
 **Description:** Should the ingester bypass the editorial approval process and automatically publish this document?
 
-#### <a name="parameters_INGESTER_OPTIONS_source_document"></a>1.2.2. Property `Document processing metadata > parameters > INGESTER_OPTIONS > source_document`
+#### <a name="parameters_INGESTER_OPTIONS_error_on_existing_document"></a>1.2.2. Property `Document processing metadata > parameters > INGESTER_OPTIONS > error_on_existing_document`
+
+**Title:** Raise error on existing document
+
+|              |           |
+| ------------ | --------- |
+| **Type**     | `boolean` |
+| **Required** | No        |
+| **Default**  | `false`   |
+
+**Description:** Should the ingester raise an exception when it finds an existing document, instead of appending a new version?
+
+#### <a name="parameters_INGESTER_OPTIONS_source_document"></a>1.2.3. Property `Document processing metadata > parameters > INGESTER_OPTIONS > source_document`
 
 |                           |                  |
 | ------------------------- | ---------------- |
@@ -778,7 +793,7 @@ Must be one of:
 | + [format](#parameters_INGESTER_OPTIONS_source_document_format )       | No      | string | No         | -          | Document format   |
 | + [file_hash](#parameters_INGESTER_OPTIONS_source_document_file_hash ) | No      | string | No         | -          | File hash         |
 
-##### <a name="parameters_INGESTER_OPTIONS_source_document_format"></a>1.2.2.1. Property `Document processing metadata > parameters > INGESTER_OPTIONS > source_document > format`
+##### <a name="parameters_INGESTER_OPTIONS_source_document_format"></a>1.2.3.1. Property `Document processing metadata > parameters > INGESTER_OPTIONS > source_document > format`
 
 **Title:** Document format
 
@@ -789,7 +804,7 @@ Must be one of:
 
 **Description:** The MIME type of the source file.
 
-##### <a name="parameters_INGESTER_OPTIONS_source_document_file_hash"></a>1.2.2.2. Property `Document processing metadata > parameters > INGESTER_OPTIONS > source_document > file_hash`
+##### <a name="parameters_INGESTER_OPTIONS_source_document_file_hash"></a>1.2.3.2. Property `Document processing metadata > parameters > INGESTER_OPTIONS > source_document > file_hash`
 
 **Title:** File hash
 

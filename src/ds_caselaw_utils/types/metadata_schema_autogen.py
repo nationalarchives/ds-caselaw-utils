@@ -1,6 +1,11 @@
 from typing import Any, Literal, Required, TypeAlias, TypedDict, Union
 
 
+AUTO_PUBLISH_DOCUMENT_DEFAULT = False
+r""" Default value of the field path 'Ingester options auto_publish' """
+
+
+
 ArrayOfAttachments = list["_ArrayOfAttachmentsItem"]
 r""" Array of attachments. """
 
@@ -53,6 +58,17 @@ class IngesterOptions(TypedDict, total=False):
     Auto-publish document.
 
     Should the ingester bypass the editorial approval process and automatically publish this document?
+
+    default: False
+    """
+
+    error_on_existing_document: bool
+    r"""
+    Raise error on existing document.
+
+    Should the ingester raise an exception when it finds an existing document, instead of appending a new version?
+
+    default: False
     """
 
     source_document: "_IngesterOptionsSourceDocument"
@@ -209,6 +225,11 @@ class PrimarySourceFile(TypedDict, total=False):
 
     Required property
     """
+
+
+
+RAISE_ERROR_ON_EXISTING_DOCUMENT_DEFAULT = False
+r""" Default value of the field path 'Ingester options error_on_existing_document' """
 
 
 
