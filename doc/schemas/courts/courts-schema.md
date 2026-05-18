@@ -65,12 +65,12 @@
 | **Required**              | No          |
 | **Additional properties** | Not allowed |
 
-| Property                               | Pattern | Type            | Deprecated | Definition | Title/Description |
-| -------------------------------------- | ------- | --------------- | ---------- | ---------- | ----------------- |
-| + [name](#items_name )                 | No      | string          | No         | -          | -                 |
-| + [display_name](#items_display_name ) | No      | string or null  | No         | -          | -                 |
-| + [is_tribunal](#items_is_tribunal )   | No      | boolean         | No         | -          | -                 |
-| + [courts](#items_courts )             | No      | array of object | No         | -          | -                 |
+| Property                               | Pattern | Type           | Deprecated | Definition | Title/Description |
+| -------------------------------------- | ------- | -------------- | ---------- | ---------- | ----------------- |
+| + [name](#items_name )                 | No      | string         | No         | -          | -                 |
+| + [display_name](#items_display_name ) | No      | string or null | No         | -          | -                 |
+| + [is_tribunal](#items_is_tribunal )   | No      | boolean        | No         | -          | -                 |
+| + [courts](#items_courts )             | No      | array          | No         | -          | -                 |
 
 ### <a name="items_name"></a>1.1. Property `Raw Court Repository > Raw Court Group > name`
 
@@ -95,10 +95,10 @@
 
 ### <a name="items_courts"></a>1.4. Property `Raw Court Repository > Raw Court Group > courts`
 
-|              |                   |
-| ------------ | ----------------- |
-| **Type**     | `array of object` |
-| **Required** | Yes               |
+|              |         |
+| ------------ | ------- |
+| **Type**     | `array` |
+| **Required** | Yes     |
 
 |                      | Array restrictions |
 | -------------------- | ------------------ |
@@ -116,11 +116,12 @@
 
 **Title:** Raw Court
 
-|                           |             |
-| ------------------------- | ----------- |
-| **Type**                  | `combining` |
-| **Required**              | No          |
-| **Additional properties** | Not allowed |
+|                           |                    |
+| ------------------------- | ------------------ |
+| **Type**                  | `combining`        |
+| **Required**              | No                 |
+| **Additional properties** | Not allowed        |
+| **Defined in**            | court.schema.json# |
 
 | Property                                                | Pattern | Type            | Deprecated | Definition | Title/Description                                                                 |
 | ------------------------------------------------------- | ------- | --------------- | ---------- | ---------- | --------------------------------------------------------------------------------- |
