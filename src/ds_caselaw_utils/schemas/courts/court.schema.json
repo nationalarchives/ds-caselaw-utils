@@ -1,13 +1,19 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$defs": {
+    "CourtCode": {
+      "title": "Court Code",
+      "type": "string",
+      "pattern": "^[A-Za-z]{2,}(-[A-Za-z0-9]+)*$"
+    }
+  },
   "type": "object",
   "title": "Raw Court",
   "properties": {
     "code": {
       "title": "Court Code",
       "description": "A unique code (within Find Case Law) to identify this court entity. Courts which exist only as internal proxy entities should be prefixed with `TNA`.",
-      "type": "string",
-      "pattern": "^[A-Za-z]{2,}(-[A-Za-z0-9]+)*$"
+      "$ref": "./court.schema.json#/$defs/CourtCode"
     },
     "name": {
       "title": "Name",
@@ -100,6 +106,26 @@
         },
         "required": ["prefix", "name", "code"],
         "additionalProperties": false
+      }
+    },
+    "relationships": {
+      "title": "Relationships",
+      "description": "Other courts which this court relates to.",
+      "type": "array",
+      "items": {
+        "title": "Court relationship",
+        "description": "An object describing the relationship between two courts.",
+        "type": "object",
+        "properties": {
+          "court_code": {
+            "$ref": "./court.schema.json#/$defs/CourtCode"
+          },
+          "relationship_type": {
+            "type": "string",
+            "enum": ["hears_appeals_from", "hears_similar_cases_to"]
+          }
+        },
+        "required": ["court_code"]
       }
     }
   },

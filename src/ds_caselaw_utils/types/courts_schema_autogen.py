@@ -1,4 +1,32 @@
-from typing import Required, TypedDict
+from typing import Literal, Required, TypedDict
+
+
+CourtCode = str
+r"""
+Court Code.
+
+pattern: ^[A-Za-z]{2,}(-[A-Za-z0-9]+)*$
+"""
+
+
+
+class CourtRelationship(TypedDict, total=False):
+    r"""
+    Court relationship.
+
+    An object describing the relationship between two courts.
+    """
+
+    court_code: Required["CourtCode"]
+    r"""
+    Court Code.
+
+    pattern: ^[A-Za-z]{2,}(-[A-Za-z0-9]+)*$
+
+    Required property
+    """
+
+    relationship_type: "_CourtRelationshipRelationshipType"
 
 
 NeutralCitationNumber = str
@@ -40,11 +68,9 @@ class RawCourt(TypedDict, total=False):
           - param
     """
 
-    code: Required[str]
+    code: Required["CourtCode"]
     r"""
     Court Code.
-
-    A unique code (within Find Case Law) to identify this court entity. Courts which exist only as internal proxy entities should be prefixed with `TNA`.
 
     pattern: ^[A-Za-z]{2,}(-[A-Za-z0-9]+)*$
 
@@ -143,6 +169,13 @@ class RawCourt(TypedDict, total=False):
     """
 
     jurisdictions: list["RawJurisdiction"]
+    relationships: list["CourtRelationship"]
+    r"""
+    Relationships.
+
+    Other courts which this court relates to.
+    """
+
 
 
 class RawCourtGroup(TypedDict, total=False):
@@ -182,6 +215,14 @@ class RawJurisdiction(TypedDict, total=False):
 
     code: Required[str]
     r""" Required property """
+
+
+
+_CourtRelationshipRelationshipType = Literal['hears_appeals_from'] | Literal['hears_similar_cases_to']
+_COURTRELATIONSHIPRELATIONSHIPTYPE_HEARS_APPEALS_FROM: Literal['hears_appeals_from'] = "hears_appeals_from"
+r"""The values for the '_CourtRelationshipRelationshipType' enum"""
+_COURTRELATIONSHIPRELATIONSHIPTYPE_HEARS_SIMILAR_CASES_TO: Literal['hears_similar_cases_to'] = "hears_similar_cases_to"
+r"""The values for the '_CourtRelationshipRelationshipType' enum"""
 
 
 

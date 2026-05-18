@@ -33,6 +33,10 @@
           - [1.4.1.17.1.1. Property `Raw Court Repository > Raw Court Group > courts > Raw Court > jurisdictions > Raw Jurisdiction > prefix`](#items_courts_items_jurisdictions_items_prefix)
           - [1.4.1.17.1.2. Property `Raw Court Repository > Raw Court Group > courts > Raw Court > jurisdictions > Raw Jurisdiction > name`](#items_courts_items_jurisdictions_items_name)
           - [1.4.1.17.1.3. Property `Raw Court Repository > Raw Court Group > courts > Raw Court > jurisdictions > Raw Jurisdiction > code`](#items_courts_items_jurisdictions_items_code)
+      - [1.4.1.18. Property `Raw Court Repository > Raw Court Group > courts > Raw Court > relationships`](#items_courts_items_relationships)
+        - [1.4.1.18.1. Raw Court Repository > Raw Court Group > courts > Raw Court > relationships > Court relationship](#items_courts_items_relationships_items)
+          - [1.4.1.18.1.1. Property `Raw Court Repository > Raw Court Group > courts > Raw Court > relationships > Court relationship > court_code`](#items_courts_items_relationships_items_court_code)
+          - [1.4.1.18.1.2. Property `Raw Court Repository > Raw Court Group > courts > Raw Court > relationships > Court relationship > relationship_type`](#items_courts_items_relationships_items_relationship_type)
 
 **Title:** Raw Court Repository
 
@@ -123,23 +127,24 @@
 | **Additional properties** | Not allowed        |
 | **Defined in**            | court.schema.json# |
 
-| Property                                                | Pattern | Type            | Deprecated | Definition | Title/Description         |
-| ------------------------------------------------------- | ------- | --------------- | ---------- | ---------- | ------------------------- |
-| + [code](#items_courts_items_code )                     | No      | string          | No         | -          | Court Code                |
-| + [name](#items_courts_items_name )                     | No      | string          | No         | -          | Name                      |
-| - [long_name](#items_courts_items_long_name )           | No      | string          | No         | -          | Long Name                 |
-| - [grouped_name](#items_courts_items_grouped_name )     | No      | string          | No         | -          | -                         |
-| - [param](#items_courts_items_param )                   | No      | string          | No         | -          | Search parameter          |
-| - [extra_params](#items_courts_items_extra_params )     | No      | array of string | No         | -          | Extra parameters          |
-| - [ncn_pattern](#items_courts_items_ncn_pattern )       | No      | string          | No         | -          | Neutral Citation Pattern  |
-| - [ncn_examples](#items_courts_items_ncn_examples )     | No      | array of string | No         | -          | Neutral Citation examples |
-| + [link](#items_courts_items_link )                     | No      | string          | No         | -          | -                         |
-| - [identifier_iri](#items_courts_items_identifier_iri ) | No      | string          | No         | -          | -                         |
-| - [start_year](#items_courts_items_start_year )         | No      | integer         | No         | -          | Start year                |
-| - [end_year](#items_courts_items_end_year )             | No      | integer         | No         | -          | End year                  |
-| + [listable](#items_courts_items_listable )             | No      | boolean         | No         | -          | Listable                  |
-| + [selectable](#items_courts_items_selectable )         | No      | boolean         | No         | -          | Selectable                |
-| - [jurisdictions](#items_courts_items_jurisdictions )   | No      | array of object | No         | -          | -                         |
+| Property                                                | Pattern | Type            | Deprecated | Definition                              | Title/Description         |
+| ------------------------------------------------------- | ------- | --------------- | ---------- | --------------------------------------- | ------------------------- |
+| + [code](#items_courts_items_code )                     | No      | string          | No         | In ./court.schema.json#/$defs/CourtCode | Court Code                |
+| + [name](#items_courts_items_name )                     | No      | string          | No         | -                                       | Name                      |
+| - [long_name](#items_courts_items_long_name )           | No      | string          | No         | -                                       | Long Name                 |
+| - [grouped_name](#items_courts_items_grouped_name )     | No      | string          | No         | -                                       | -                         |
+| - [param](#items_courts_items_param )                   | No      | string          | No         | -                                       | Search parameter          |
+| - [extra_params](#items_courts_items_extra_params )     | No      | array of string | No         | -                                       | Extra parameters          |
+| - [ncn_pattern](#items_courts_items_ncn_pattern )       | No      | string          | No         | -                                       | Neutral Citation Pattern  |
+| - [ncn_examples](#items_courts_items_ncn_examples )     | No      | array of string | No         | -                                       | Neutral Citation examples |
+| + [link](#items_courts_items_link )                     | No      | string          | No         | -                                       | -                         |
+| - [identifier_iri](#items_courts_items_identifier_iri ) | No      | string          | No         | -                                       | -                         |
+| - [start_year](#items_courts_items_start_year )         | No      | integer         | No         | -                                       | Start year                |
+| - [end_year](#items_courts_items_end_year )             | No      | integer         | No         | -                                       | End year                  |
+| + [listable](#items_courts_items_listable )             | No      | boolean         | No         | -                                       | Listable                  |
+| + [selectable](#items_courts_items_selectable )         | No      | boolean         | No         | -                                       | Selectable                |
+| - [jurisdictions](#items_courts_items_jurisdictions )   | No      | array of object | No         | -                                       | -                         |
+| - [relationships](#items_courts_items_relationships )   | No      | array of object | No         | -                                       | Relationships             |
 
 | All of(Requirement)                    |
 | -------------------------------------- |
@@ -188,10 +193,11 @@
 
 **Title:** Court Code
 
-|              |          |
-| ------------ | -------- |
-| **Type**     | `string` |
-| **Required** | Yes      |
+|                |                                      |
+| -------------- | ------------------------------------ |
+| **Type**       | `string`                             |
+| **Required**   | Yes                                  |
+| **Defined in** | ./court.schema.json#/$defs/CourtCode |
 
 **Description:** A unique code (within Find Case Law) to identify this court entity. Courts which exist only as internal proxy entities should be prefixed with `TNA`.
 
@@ -445,6 +451,67 @@
 | ------------ | -------- |
 | **Type**     | `string` |
 | **Required** | Yes      |
+
+##### <a name="items_courts_items_relationships"></a>1.4.1.18. Property `Raw Court Repository > Raw Court Group > courts > Raw Court > relationships`
+
+**Title:** Relationships
+
+|              |                   |
+| ------------ | ----------------- |
+| **Type**     | `array of object` |
+| **Required** | No                |
+
+**Description:** Other courts which this court relates to.
+
+|                      | Array restrictions |
+| -------------------- | ------------------ |
+| **Min items**        | N/A                |
+| **Max items**        | N/A                |
+| **Items unicity**    | False              |
+| **Additional items** | False              |
+| **Tuple validation** | See below          |
+
+| Each item of this array must be                               | Description                                               |
+| ------------------------------------------------------------- | --------------------------------------------------------- |
+| [Court relationship](#items_courts_items_relationships_items) | An object describing the relationship between two courts. |
+
+###### <a name="items_courts_items_relationships_items"></a>1.4.1.18.1. Raw Court Repository > Raw Court Group > courts > Raw Court > relationships > Court relationship
+
+**Title:** Court relationship
+
+|                           |                  |
+| ------------------------- | ---------------- |
+| **Type**                  | `object`         |
+| **Required**              | No               |
+| **Additional properties** | Any type allowed |
+
+**Description:** An object describing the relationship between two courts.
+
+| Property                                                                          | Pattern | Type             | Deprecated | Definition                                | Title/Description |
+| --------------------------------------------------------------------------------- | ------- | ---------------- | ---------- | ----------------------------------------- | ----------------- |
+| + [court_code](#items_courts_items_relationships_items_court_code )               | No      | string           | No         | Same as [code](#items_courts_items_code ) | Court Code        |
+| - [relationship_type](#items_courts_items_relationships_items_relationship_type ) | No      | enum (of string) | No         | -                                         | -                 |
+
+###### <a name="items_courts_items_relationships_items_court_code"></a>1.4.1.18.1.1. Property `Raw Court Repository > Raw Court Group > courts > Raw Court > relationships > Court relationship > court_code`
+
+**Title:** Court Code
+
+|                        |                                  |
+| ---------------------- | -------------------------------- |
+| **Type**               | `string`                         |
+| **Required**           | Yes                              |
+| **Same definition as** | [code](#items_courts_items_code) |
+
+###### <a name="items_courts_items_relationships_items_relationship_type"></a>1.4.1.18.1.2. Property `Raw Court Repository > Raw Court Group > courts > Raw Court > relationships > Court relationship > relationship_type`
+
+|              |                    |
+| ------------ | ------------------ |
+| **Type**     | `enum (of string)` |
+| **Required** | No                 |
+
+Must be one of:
+* "hears_appeals_from"
+* "hears_similar_cases_to"
 
 ----------------------------------------------------------------------------------------------------------------------------
 Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans)
