@@ -2,13 +2,12 @@ import unittest
 from datetime import date
 from unittest.mock import MagicMock, PropertyMock, mock_open, patch
 
-from ds_caselaw_utils.factory import CourtFactory
-
-from .courts import (
+from ds_caselaw_utils.courts import (
     Court,
     CourtWithJurisdiction,
     InstitutionType,
 )
+from ds_caselaw_utils.tests.factory import CourtFactory
 
 
 def mock_with_properties(properties={}):

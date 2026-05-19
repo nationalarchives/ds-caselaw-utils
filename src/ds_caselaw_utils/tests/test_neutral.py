@@ -1,7 +1,7 @@
 import pytest
 
-from .neutral import neutral_url
-from .types import NeutralCitationString
+from ds_caselaw_utils.neutral import neutral_url
+from ds_caselaw_utils.types import NeutralCitationString
 
 
 class TestNeutralURL:

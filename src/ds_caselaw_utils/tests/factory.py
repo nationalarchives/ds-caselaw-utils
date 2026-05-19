@@ -1,7 +1,7 @@
 import typing
 
-from .courts import Court, InstitutionType
-from .types.courts_schema_autogen import RawCourt, RawCourtRepository
+from ds_caselaw_utils.courts import Court, InstitutionType
+from ds_caselaw_utils.types.courts_schema_autogen import RawCourt, RawCourtRepository
 
 
 class CourtFactory(Court):
