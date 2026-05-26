@@ -1,0 +1,123 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "title": "Raw Court",
+  "properties": {
+    "code": {
+      "title": "Court Code",
+      "description": "A unique code (within Find Case Law) to identify this court entity. Courts which exist only as internal proxy entities should be prefixed with `TNA`.",
+      "type": "string",
+      "pattern": "^[A-Za-z]{2,}(-[A-Za-z0-9]+)*$"
+    },
+    "name": {
+      "title": "Name",
+      "description": "The name of this court as it will commonly appear on Find Case Law.",
+      "type": "string"
+    },
+    "long_name": {
+      "title": "Long Name",
+      "description": "Optionally, the formal name of this court where it differs from the `name`.",
+      "type": "string"
+    },
+    "grouped_name": {
+      "type": "string"
+    },
+    "param": {
+      "title": "Search parameter",
+      "description": "The primary value for the `court` parameter to use when searching for this court.",
+      "type": "string",
+      "pattern": "^[a-z]{2,}(?:/[a-z0-9]+)?$"
+    },
+    "extra_params": {
+      "title": "Extra parameters",
+      "description": "A list of additional parameters which, if they appear as a `court` parameter in search, will be mapped to this court.",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z]{2,}(/[a-z]+)?$"
+      }
+    },
+    "ncn_pattern": {
+      "title": "Neutral Citation Pattern",
+      "description": "A regular expression pattern which matches valid NCNs from this court.",
+      "type": "string"
+    },
+    "ncn_examples": {
+      "title": "Neutral Citation examples",
+      "description": "An array of example NCNs for this court.",
+      "type": "array",
+      "items": {
+        "title": "Neutral Citation Number",
+        "description": "An example Neutral Citation Number, matching our expected generic NCN pattern.",
+        "type": "string",
+        "pattern": "^\\[([0-9]{4})\\] ([a-zA-Z]+)(?: ([a-zA-Z]+))? ([0-9]+)(?: \\(([a-zA-Z0-9]+)\\))?$"
+      }
+    },
+    "link": {
+      "type": "string",
+      "format": "uri"
+    },
+    "identifier_iri": {
+      "type": "string",
+      "format": "uri"
+    },
+    "start_year": {
+      "title": "Start year",
+      "description": "The default start year of the document holding range for this court in Find Case Law.",
+      "type": "integer",
+      "minimum": 1066
+    },
+    "end_year": {
+      "title": "End year",
+      "description": "If this court no longer publishes documents, the default end year of the document holding range for this court in Find Case Law.",
+      "type": "integer"
+    },
+    "listable": {
+      "title": "Listable",
+      "description": "Should this court appear in public lists of courts supported by Find Case Law?",
+      "type": "boolean"
+    },
+    "selectable": {
+      "title": "Selectable",
+      "description": "Should this court appear as a selectable option in the list of searchable courts?",
+      "type": "boolean"
+    },
+    "jurisdictions": {
+      "type": "array",
+      "items": {
+        "title": "Raw Jurisdiction",
+        "type": "object",
+        "properties": {
+          "prefix": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "code": {
+            "type": "string"
+          }
+        },
+        "required": ["prefix", "name", "code"],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": ["code", "name", "link", "listable", "selectable"],
+  "dependentRequired": {
+    "end_year": ["start_year"],
+    "ncn_pattern": ["ncn_examples"],
+    "ncn_examples": ["ncn_pattern"]
+  },
+  "additionalProperties": false,
+  "allOf": [
+    {
+      "if": { "properties": { "selectable": { "const": true } } },
+      "then": { "required": ["param"] }
+    },
+    {
+      "if": { "properties": { "listable": { "const": true } } },
+      "then": { "required": ["param"] }
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-from .factory import make_court_repo_valid
+from ds_caselaw_utils.tests.factory import make_court_repo_valid
 
 
 def test_factory():

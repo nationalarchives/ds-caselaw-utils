@@ -1,8 +1,8 @@
 from re import compile
 
-from .courts import courts
-from .neutral import neutral_url
-from .types import NeutralCitationString
+from ds_caselaw_utils.courts import courts
+from ds_caselaw_utils.neutral import neutral_url
+from ds_caselaw_utils.types import NeutralCitationString
 
 
 def test_court_ncn_example_integrity():

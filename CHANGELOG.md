@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## Unreleased
+
+### Fix
+
+- **schemas**: correctly title listable and selectable properties in court schema
+
 ## v4.4.0 (2026-05-14)
 
 ### Feat
