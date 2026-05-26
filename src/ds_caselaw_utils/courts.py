@@ -5,6 +5,7 @@ Get metadata for the courts covered by the service
 """
 
 import pathlib
+from dataclasses import dataclass
 from datetime import date
 from enum import Enum
 from functools import cached_property
@@ -16,6 +17,7 @@ from mdit_py_plugins.attrs import attrs_plugin
 from ruamel.yaml import YAML
 
 from ds_caselaw_utils.types.courts_schema_autogen import (
+    CourtRelationship,
     RawCourt,
     RawCourtRepository,
     RawJurisdiction,
@@ -31,9 +33,22 @@ class FormatMapDict(dict[str, Any]):
         return "{" + key + "}"
 
 
+@dataclass
+class CourtRelationshipObject:
+    court: "Court"
+    relationship_type: "RelationshipType"
+
+
 class InstitutionType(Enum):
     COURT = "court"
     TRIBUNAL = "tribunal"
+
+
+class RelationshipType(Enum):
+    """This maintains the mapping between types of relationship in the Court class and the enumerated types in the schema."""
+
+    HEARS_APPEALS_FROM = "hears_appeals_from"
+    SIMILAR_CASES_TO = "hears_similar_cases_to"
 
 
 class Jurisdiction:
@@ -73,6 +88,7 @@ class Court:
         self.jurisdictions: list[Jurisdiction] = [
             Jurisdiction(jurisdiction_data) for jurisdiction_data in data.get("jurisdictions", [])
         ]
+        self.relationships: list[CourtRelationship] = data.get("relationships") or []
 
     def get_jurisdiction(self, code: str) -> Optional[Jurisdiction]:
         return next((j for j in self.jurisdictions if j.code == code), None)
@@ -106,6 +122,29 @@ class Court:
     def historic_documents_support_text_as_html(self) -> Optional[str]:
         """Get support information (where present) on accessing historic court documents not held in FCL."""
         return self.render_markdown_text("historic_docs")
+
+    def relationships_of_type(self, relationship_type: RelationshipType) -> list[CourtRelationshipObject]:
+        relationships: list[CourtRelationshipObject] = [
+            CourtRelationshipObject(
+                court=courts.get_by_code(CourtCode(relationship["court_code"])),
+                relationship_type=RelationshipType(relationship["relationship_type"]),
+            )
+            for relationship in self.relationships
+            if relationship["relationship_type"] == relationship_type.value
+        ]
+
+        return relationships
+
+    def _relationships_to_courts(self, relationships: list[CourtRelationshipObject]) -> list["Court"]:
+        return [relationship.court for relationship in relationships]
+
+    @cached_property
+    def hears_appeals_from(self) -> list["Court"]:
+        return self._relationships_to_courts(self.relationships_of_type(RelationshipType.HEARS_APPEALS_FROM))
+
+    @cached_property
+    def hears_similar_cases_to(self) -> list["Court"]:
+        return self._relationships_to_courts(self.relationships_of_type(RelationshipType.SIMILAR_CASES_TO))
 
     def __repr__(self) -> str:
         return self.name

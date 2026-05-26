@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 
 ## Unreleased
 
+### Feat
+
+- support relationships between courts
+
 ### Fix
 
 - **schemas**: correctly title listable and selectable properties in court schema

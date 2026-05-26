@@ -6,6 +6,7 @@ from ds_caselaw_utils.courts import (
     Court,
     CourtWithJurisdiction,
     InstitutionType,
+    RelationshipType,
 )
 from ds_caselaw_utils.tests.factory import CourtFactory
 
@@ -126,6 +127,55 @@ class TestCourt(unittest.TestCase):
 
         assert court.historic_documents_support_text_as_html == "<p>Support text.</p>"
         mock_render.assert_called_once_with("historic_docs")
+
+    def test_relationships_default_to_empty(self):
+        court = CourtFactory({})
+        self.assertEqual([], court.relationships)
+        self.assertEqual([], court.hears_appeals_from)
+        self.assertEqual([], court.hears_similar_cases_to)
+
+    @patch("ds_caselaw_utils.courts.courts.get_by_code")
+    def test_relationships_of_type_filters_by_relationship_type(self, mock_get_by_code):
+        related_court = CourtFactory({"code": "EWHC", "name": "High Court"})
+        mock_get_by_code.return_value = related_court
+
+        court = CourtFactory(
+            {
+                "relationships": [
+                    {"court_code": "EWHC", "relationship_type": "hears_appeals_from"},
+                    {"court_code": "EWCA", "relationship_type": "hears_similar_cases_to"},
+                ]
+            }
+        )
+
+        relationships = court.relationships_of_type(RelationshipType.HEARS_APPEALS_FROM)
+
+        self.assertEqual(1, len(relationships))
+        self.assertEqual("EWHC", relationships[0].court.code)
+        self.assertEqual(RelationshipType.HEARS_APPEALS_FROM, relationships[0].relationship_type)
+        mock_get_by_code.assert_called_once_with("EWHC")
+
+    @patch("ds_caselaw_utils.courts.Court.relationships_of_type")
+    def test_hears_appeals_from_returns_related_courts(self, mock_relationships_of_type):
+        related_court = CourtFactory({"code": "EWHC", "name": "High Court"})
+        mock_relationship = MagicMock(court=related_court)
+        mock_relationships_of_type.return_value = [mock_relationship]
+
+        court = CourtFactory({})
+
+        assert court.hears_appeals_from == [related_court]
+        mock_relationships_of_type.assert_called_once_with(RelationshipType.HEARS_APPEALS_FROM)
+
+    @patch("ds_caselaw_utils.courts.Court.relationships_of_type")
+    def test_hears_similar_cases_to_returns_related_courts(self, mock_relationships_of_type):
+        related_court = CourtFactory({"code": "EWCA", "name": "Court of Appeal"})
+        mock_relationship = MagicMock(court=related_court)
+        mock_relationships_of_type.return_value = [mock_relationship]
+
+        court = CourtFactory({})
+
+        assert court.hears_similar_cases_to == [related_court]
+        mock_relationships_of_type.assert_called_once_with(RelationshipType.SIMILAR_CASES_TO)
 
 
 class TestCourtWithJurisdiction(unittest.TestCase):
