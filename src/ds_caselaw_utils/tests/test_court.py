@@ -10,12 +10,18 @@ from ds_caselaw_utils.courts import (
 from ds_caselaw_utils.tests.factory import CourtFactory
 
 
-def mock_with_properties(properties={}):
-    mock = MagicMock(spec=dict)
-    for property, value in properties.items():
+def mock_with_properties(properties=None):
+    if properties is None:
+        properties = {}
+
+    # Use a per-call subclass so class-level PropertyMock assignments do not leak across other MagicMock instances.
+    mock_cls = type("MockWithProperties", (MagicMock,), {})
+    mock = mock_cls(spec=dict)
+
+    for property_name, value in properties.items():
         property_mock = PropertyMock(return_value=value)
-        setattr(type(mock), property, property_mock)
-        setattr(mock, "mock_%s" % property, property_mock)
+        setattr(mock_cls, property_name, property_mock)
+        setattr(mock, "mock_%s" % property_name, property_mock)
     return mock
 
 
