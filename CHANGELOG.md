@@ -2,11 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
-## Unreleased
+## v4.5.0 (2026-05-26)
 
 ### Feat
 
-- support relationships between courts
+- **schemas**: add court relationships to schema
 
 ### Fix
 
