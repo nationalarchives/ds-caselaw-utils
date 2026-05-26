@@ -78,7 +78,7 @@ class TestCourt(unittest.TestCase):
             assert issubclass(type(c), Court)
 
     def test_render_markdown_text_if_no_canonical_param(self):
-        court = CourtFactory({"param": "test"})
+        court = CourtFactory({})
         assert court.description_text_as_html is None
 
     def test_render_markdown_text_if_no_file(self):
