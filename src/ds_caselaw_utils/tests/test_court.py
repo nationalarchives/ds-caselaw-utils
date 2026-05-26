@@ -192,7 +192,7 @@ class TestCourtWithJurisdiction(unittest.TestCase):
         self.assertEqual(cwj.canonical_param, "court_canonical_param")
         court.mock_canonical_param.assert_called()
 
-    def param_aliases(self):
+    def test_param_aliases(self):
         # It returns the court param_aliases
         court = mock_with_properties({"param_aliases": "court_param_aliases"})
         jurisdiction = mock_with_properties()
@@ -200,7 +200,7 @@ class TestCourtWithJurisdiction(unittest.TestCase):
         self.assertEqual(cwj.param_aliases, "court_param_aliases")
         court.mock_param_aliases.assert_called()
 
-    def start_year(self):
+    def test_start_year(self):
         # It returns the court start_year
         court = mock_with_properties({"start_year": "court_start_year"})
         jurisdiction = mock_with_properties()
@@ -208,7 +208,7 @@ class TestCourtWithJurisdiction(unittest.TestCase):
         self.assertEqual(cwj.start_year, "court_start_year")
         court.mock_start_year.assert_called()
 
-    def end_year(self):
+    def test_end_year(self):
         # It returns the court end_year
         court = mock_with_properties({"end_year": "court_end_year"})
         jurisdiction = mock_with_properties()
