@@ -93,13 +93,12 @@ class TestCourt(unittest.TestCase):
 
     def test_render_markdown_text_if_file(self):
         court = CourtFactory({"param": "test"})
-        with patch("pathlib.Path.is_file", True), patch("builtins.open", mock_open(read_data="**Test** description.")):
+        with patch("builtins.open", mock_open(read_data="**Test** description.")):
             assert court.render_markdown_text("test") == "<p><strong>Test</strong> description.</p>\n"
 
     def test_render_markdown_text_with_context(self):
         court = CourtFactory({"param": "test", "name": "test name", "start_year": 2000, "end_year": 2025})
         with (
-            patch("pathlib.Path.is_file", True),
             patch(
                 "builtins.open",
                 mock_open(
