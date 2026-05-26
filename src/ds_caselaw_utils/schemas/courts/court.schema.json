@@ -73,12 +73,12 @@
       "type": "integer"
     },
     "listable": {
-      "name": "Listable",
+      "title": "Listable",
       "description": "Should this court appear in public lists of courts supported by Find Case Law?",
       "type": "boolean"
     },
     "selectable": {
-      "name": "Selectable",
+      "title": "Selectable",
       "description": "Should this court appear as a selectable option in the list of searchable courts?",
       "type": "boolean"
     },

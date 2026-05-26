@@ -126,18 +126,18 @@ class RawCourt(TypedDict, total=False):
 
     listable: Required[bool]
     r"""
-    Should this court appear in public lists of courts supported by Find Case Law?
+    Listable.
 
-    name: Listable
+    Should this court appear in public lists of courts supported by Find Case Law?
 
     Required property
     """
 
     selectable: Required[bool]
     r"""
-    Should this court appear as a selectable option in the list of searchable courts?
+    Selectable.
 
-    name: Selectable
+    Should this court appear as a selectable option in the list of searchable courts?
 
     Required property
     """
