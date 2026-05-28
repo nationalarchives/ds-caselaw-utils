@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## v4.5.1 (2026-05-28)
+
+### Refactor
+
+- Remove court/tribunal descriptions/historic documents content as this has been relocated to the only place it is used
+
 ## v4.5.0 (2026-05-26)
 
 ### Feat
