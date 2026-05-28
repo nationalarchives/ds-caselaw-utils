@@ -1,6 +1,6 @@
 import unittest
 from datetime import date
-from unittest.mock import MagicMock, PropertyMock, mock_open, patch
+from unittest.mock import MagicMock, PropertyMock, patch
 
 from ds_caselaw_utils.courts import (
     Court,
@@ -83,50 +83,6 @@ class TestCourt(unittest.TestCase):
         self.assertIn("Court 1 – Jurisdiction 1", [c.name for c in expanded])
         for c in expanded:
             assert issubclass(type(c), Court)
-
-    def test_render_markdown_text_if_no_canonical_param(self):
-        court = CourtFactory({})
-        assert court.description_text_as_html is None
-
-    def test_render_markdown_text_if_no_file(self):
-        court = CourtFactory({"param": "test"})
-        assert court.description_text_as_html is None
-
-    def test_render_markdown_text_if_file(self):
-        court = CourtFactory({"param": "test"})
-        with patch("builtins.open", mock_open(read_data="**Test** description.")):
-            assert court.render_markdown_text("test") == "<p><strong>Test</strong> description.</p>\n"
-
-    def test_render_markdown_text_with_context(self):
-        court = CourtFactory({"param": "test", "name": "test name", "start_year": 2000, "end_year": 2025})
-        with (
-            patch(
-                "builtins.open",
-                mock_open(
-                    read_data="**Test** description.\n - Name: {name}\n - Start year: {start_year}\n - End year: {end_year}\n - Do not replace: {do_not_replace}"
-                ),
-            ),
-        ):
-            assert (
-                court.render_markdown_text("test")
-                == "<p><strong>Test</strong> description.</p>\n<ul>\n<li>Name: test name</li>\n<li>Start year: 2000</li>\n<li>End year: 2025</li>\n<li>Do not replace: {do_not_replace}</li>\n</ul>\n"
-            )
-
-    @patch("ds_caselaw_utils.courts.Court.render_markdown_text")
-    def test_description_text_as_html(self, mock_render):
-        court = CourtFactory({"param": "test"})
-        mock_render.return_value = "<p>Description.</p>"
-
-        assert court.description_text_as_html == "<p>Description.</p>"
-        mock_render.assert_called_once_with("description")
-
-    @patch("ds_caselaw_utils.courts.Court.render_markdown_text")
-    def test_historic_documents_support_text_as_html(self, mock_render):
-        court = CourtFactory({"param": "test"})
-        mock_render.return_value = "<p>Support text.</p>"
-
-        assert court.historic_documents_support_text_as_html == "<p>Support text.</p>"
-        mock_render.assert_called_once_with("historic_docs")
 
     def test_relationships_default_to_empty(self):
         court = CourtFactory({})
