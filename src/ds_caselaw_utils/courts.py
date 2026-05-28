@@ -49,6 +49,7 @@ class RelationshipType(Enum):
 
     HEARS_APPEALS_FROM = "hears_appeals_from"
     SIMILAR_CASES_TO = "hears_similar_cases_to"
+    LOOKING_FOR = "might_be_looking_for"
 
 
 class Jurisdiction:
@@ -145,6 +146,10 @@ class Court:
     @cached_property
     def hears_similar_cases_to(self) -> list["Court"]:
         return self._relationships_to_courts(self.relationships_of_type(RelationshipType.SIMILAR_CASES_TO))
+
+    @cached_property
+    def might_be_looking_for(self) -> list["Court"]:
+        return self._relationships_to_courts(self.relationships_of_type(RelationshipType.LOOKING_FOR))
 
     def __repr__(self) -> str:
         return self.name

@@ -218,10 +218,12 @@ class RawJurisdiction(TypedDict, total=False):
 
 
 
-_CourtRelationshipRelationshipType = Literal['hears_appeals_from'] | Literal['hears_similar_cases_to']
+_CourtRelationshipRelationshipType = Literal['hears_appeals_from'] | Literal['hears_similar_cases_to'] | Literal['might_be_looking_for']
 _COURTRELATIONSHIPRELATIONSHIPTYPE_HEARS_APPEALS_FROM: Literal['hears_appeals_from'] = "hears_appeals_from"
 r"""The values for the '_CourtRelationshipRelationshipType' enum"""
 _COURTRELATIONSHIPRELATIONSHIPTYPE_HEARS_SIMILAR_CASES_TO: Literal['hears_similar_cases_to'] = "hears_similar_cases_to"
+r"""The values for the '_CourtRelationshipRelationshipType' enum"""
+_COURTRELATIONSHIPRELATIONSHIPTYPE_MIGHT_BE_LOOKING_FOR: Literal['might_be_looking_for'] = "might_be_looking_for"
 r"""The values for the '_CourtRelationshipRelationshipType' enum"""
 
 

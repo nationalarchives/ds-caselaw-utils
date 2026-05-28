@@ -177,6 +177,17 @@ class TestCourt(unittest.TestCase):
         assert court.hears_similar_cases_to == [related_court]
         mock_relationships_of_type.assert_called_once_with(RelationshipType.SIMILAR_CASES_TO)
 
+    @patch("ds_caselaw_utils.courts.Court.relationships_of_type")
+    def test_might_be_looking_for_returns_related_courts(self, mock_relationships_of_type):
+        related_court = CourtFactory({"code": "EWCA", "name": "Court of Appeal"})
+        mock_relationship = MagicMock(court=related_court)
+        mock_relationships_of_type.return_value = [mock_relationship]
+
+        court = CourtFactory({})
+
+        assert court.might_be_looking_for == [related_court]
+        mock_relationships_of_type.assert_called_once_with(RelationshipType.LOOKING_FOR)
+
 
 class TestCourtWithJurisdiction(unittest.TestCase):
     def test_code(self):
