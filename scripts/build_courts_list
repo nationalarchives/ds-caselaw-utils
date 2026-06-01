@@ -15,6 +15,14 @@ if TYPE_CHECKING:
 COURTS_REPOSITORY_FILE = "src/ds_caselaw_utils/data/court_names.yaml"
 
 
+def _to_mermaid_id(value: str) -> str:
+    return value.replace(" ", "_").replace("/", "_")
+
+
+def _format_relationship_type(relationship_type: str) -> str:
+    return relationship_type.replace("_", " ")
+
+
 class CourtDataLoader:
     @classmethod
     def load_courts(cls, filename: str) -> "RawCourtRepository":
@@ -172,16 +180,34 @@ class CourtOutputBuilder:
             f.write("    classDef tribunalGroup fill:#fffbf0,stroke:#e65100,stroke-width:2px,color:#000\n")
             f.write("\n")
 
+            all_court_ids = {
+                _to_mermaid_id(court["code"]) for group in self.court_repository for court in group["courts"]
+            }
+            relationship_edges: set[tuple[str, str, str]] = set()
+
             # Add court nodes with groupings via subgraphs
             for group in self.court_repository:
-                group_id = group["name"].replace(" ", "_").replace("/", "_")
+                group_id = _to_mermaid_id(group["name"])
                 is_tribunal = group.get("is_tribunal", False)
 
                 f.write(f'    subgraph {group_id}["{group["name"]}"]\n')
 
                 for court in group["courts"]:
-                    court_id = court["code"].replace(" ", "_").replace("/", "_")
+                    court_id = _to_mermaid_id(court["code"])
                     f.write(f'        {court_id}["{court["name"]}"]\n')
+
+                    for relationship in court.get("relationships", []):
+                        related_court_id = _to_mermaid_id(relationship["court_code"])
+                        if related_court_id not in all_court_ids:
+                            continue
+
+                        relationship_edges.add(
+                            (
+                                court_id,
+                                related_court_id,
+                                _format_relationship_type(relationship["relationship_type"]),
+                            )
+                        )
 
                 f.write("    end\n")
 
@@ -195,10 +221,14 @@ class CourtOutputBuilder:
                 class_name = "tribunal" if is_tribunal else "court"
 
                 for court in group["courts"]:
-                    court_id = court["code"].replace(" ", "_").replace("/", "_")
+                    court_id = _to_mermaid_id(court["code"])
                     f.write(f"    class {court_id} {class_name}\n")
 
-            # TODO: Add directional relationships between courts (eg appeals)
+            if relationship_edges:
+                f.write("\n")
+
+                for source_court_id, target_court_id, relationship_label in sorted(relationship_edges):
+                    f.write(f'    {source_court_id} -->|"{relationship_label}"| {target_court_id}\n')
 
             f.write("```\n")
 
