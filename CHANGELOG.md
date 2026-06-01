@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## Unreleased
+
+### Feat
+
+- **courts**: add limited court relationship data
+- **schemas**: add new "might be looking for" relationship type
+
 ## v4.5.2 (2026-06-01)
 
 ### Feat
