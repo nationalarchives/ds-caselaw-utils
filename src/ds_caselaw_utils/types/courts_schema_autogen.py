@@ -168,6 +168,13 @@ class RawCourt(TypedDict, total=False):
     Required property
     """
 
+    ended: bool
+    r"""
+    Ended.
+
+    Has the court ended?
+    """
+
     jurisdictions: list["RawJurisdiction"]
     relationships: list["CourtRelationship"]
     r"""

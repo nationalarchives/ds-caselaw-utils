@@ -13,6 +13,7 @@
       start_year: 2009
       selectable: true
       listable: true
+      ended: false
 - name: privy_council
   display_name: ~
   is_tribunal: false
@@ -28,6 +29,7 @@
       start_year: 2009
       selectable: true
       listable: true
+      ended: false
 - name: court_of_appeal
   display_name: "Court of Appeal"
   is_tribunal: false
@@ -44,6 +46,7 @@
       start_year: 2001
       selectable: true
       listable: true
+      ended: false
     - code: EWCA-Criminal
       grouped_name: "Criminal Division"
       name: Court of Appeal (Criminal Division)
@@ -56,6 +59,7 @@
       start_year: 2003
       selectable: true
       listable: true
+      ended: false
 - name: high_court
   display_name: "High Court (England and Wales)"
   is_tribunal: false
@@ -66,6 +70,7 @@
       link: https://www.judiciary.uk/courts-and-tribunals/high-court/
       selectable: false
       listable: false
+      ended: false
     - code: EWHC-QBD-Admin
       grouped_name: "Administrative Court"
       name: High Court (Administrative Court)
@@ -78,6 +83,7 @@
       start_year: 2003
       selectable: true
       listable: true
+      ended: false
     - code: EWHC-KBD-Admin
       grouped_name: "Administrative Court"
       name: High Court (Administrative Court)
@@ -90,6 +96,7 @@
       start_year: 2022
       selectable: false
       listable: false
+      ended: false
     - code: EWHC-QBD-Admiralty
       grouped_name: "Admiralty Court"
       name: High Court (Admiralty Division)
@@ -102,6 +109,7 @@
       start_year: 2003
       selectable: true
       listable: true
+      ended: false
     - code: EWHC-KBD-Admiralty
       grouped_name: "Admiralty Court"
       name: High Court (Admiralty Division)
@@ -114,6 +122,7 @@
       start_year: 2022
       selectable: false
       listable: false
+      ended: false
     - code: EWHC-QBD-BusinessAndProperty
       grouped_name: Business and Property Courts
       name: High Court (Business and Property Courts)
@@ -121,6 +130,7 @@
       link: https://www.gov.uk/courts-tribunals/the-business-and-property-courts
       selectable: false
       listable: false
+      ended: false
     - code: EWHC-KBD-BusinessAndProperty
       grouped_name: Business and Property Courts
       name: High Courts (Business and Property Courts)
@@ -128,6 +138,7 @@
       link: https://www.gov.uk/courts-tribunals/the-business-and-property-courts
       selectable: false
       listable: false
+      ended: false
     - code: EWHC-Chancery-BusinessAndProperty
       grouped_name: Business and Property Courts
       name: High Court (Business and Property Courts)
@@ -135,6 +146,7 @@
       link: https://www.gov.uk/courts-tribunals/the-business-and-property-courts
       selectable: false
       listable: false
+      ended: false
     - code: EWHC-Chancery-Business
       grouped_name: Business List
       name: High Court (Business List)
@@ -142,6 +154,7 @@
       link: https://www.gov.uk/courts-tribunals/the-business-list
       selectable: false
       listable: false
+      ended: false
     - code: EWHC-Chancery-Appeals
       name: Chancery Appeals
       grouped_name: High Court (Chancery Appeals)
@@ -149,6 +162,7 @@
       link: https://www.gov.uk/courts-tribunals/chancery-division-of-the-high-court
       selectable: false
       listable: false
+      ended: false
     - code: EWHC-Chancery
       grouped_name: Chancery Division
       name: High Court (Chancery Division)
@@ -161,6 +175,7 @@
       start_year: 2003
       selectable: true
       listable: true
+      ended: false
     - code: EWHC-QBD-Commercial-Circuit
       grouped_name: Circuit Commercial Court
       name: High Court (Circuit Commercial Court)
@@ -171,6 +186,7 @@
         - "[2021] EWHC 286 (Comm)"
       selectable: false
       listable: false
+      ended: false
     - code: EWHC-KBD-Commercial-Circuit
       grouped_name: Circuit Commercial Court
       name: High Court (Circuit Commercial Court)
@@ -181,6 +197,7 @@
         - "[2023] EWHC 2168 (Comm)"
       selectable: false
       listable: false
+      ended: false
     - code: EWHC-QBD-Commercial
       grouped_name: Commercial Court
       name: High Court (Commercial Court)
@@ -193,6 +210,7 @@
       start_year: 2003
       selectable: true
       listable: true
+      ended: false
     - code: EWHC-KBD-Commercial
       grouped_name: Commercial Court
       name: High Court (Commercial Court)
@@ -205,6 +223,7 @@
       start_year: 2022
       selectable: false
       listable: false
+      ended: false
     - code: EWHC-Family
       grouped_name: Family Division
       name: High Court (Family Division)
@@ -217,6 +236,7 @@
       start_year: 2003
       selectable: true
       listable: true
+      ended: false
     - code: EWHC-QBD-Commercial-Financial
       grouped_name: Financial List
       name: High Court (Financial List)
@@ -227,6 +247,7 @@
         - "[2014] EWHC 3156 (Comm)"
       selectable: false
       listable: false
+      ended: false
     - code: EWHC-KBD-Commercial-Financial
       grouped_name: Financial List
       name: High Court (Financial List)
@@ -237,6 +258,7 @@
         - "[2025] EWHC 1881 (Comm)"
       selectable: false
       listable: false
+      ended: false
     - code: EWHC-Chancery-Financial
       grouped_name: Financial List
       name: High Court (Financial List)
@@ -244,6 +266,7 @@
       link: https://www.gov.uk/courts-tribunals/the-financial-list
       selectable: false
       listable: false
+      ended: false
     - code: EWHC-Chancery-InsolvencyAndCompanies
       grouped_name: Insolvency and Companies List
       name: High Court (Insolvency and Companies List)
@@ -251,6 +274,7 @@
       link: https://www.gov.uk/courts-tribunals/insolvency-list
       selectable: false
       listable: false
+      ended: false
     - code: EWHC-Chancery-IPEC
       grouped_name: Intellectual Property Enterprise Court
       name: High Court (Intellectual Property Enterprise Court)
@@ -263,6 +287,7 @@
       start_year: 2013
       selectable: true
       listable: true
+      ended: false
     - code: EWHC-Chancery-IntellectualProperty
       grouped_name: Intellectual Property List
       name: High Court (Intellectual Property List)
@@ -270,6 +295,7 @@
       link: https://www.gov.uk/courts-tribunals/the-intellectual-property-list
       selectable: false
       listable: false
+      ended: false
     - code: TNA-EWHC-KBQBD
       grouped_name: King's / Queen's Bench Division
       name: High Court (King's / Queen's Bench Division)
@@ -282,6 +308,7 @@
       start_year: 2003
       selectable: true
       listable: false
+      ended: false
     - code: EWHC-KBD
       grouped_name: King's Bench Division
       name: High Court (King's Bench Division)
@@ -294,6 +321,7 @@
       start_year: 2022
       selectable: false
       listable: true
+      ended: false
     - code: EWHC-Mercantile
       grouped_name: Mercantile Court
       name: High Court (Mercantile Court)
@@ -306,6 +334,7 @@
       end_year: 2014
       selectable: true
       listable: true
+      ended: true
     - code: EWHC-Chancery-Patents
       grouped_name: Patents Court
       name: High Court (Patents Court)
@@ -318,6 +347,7 @@
       start_year: 2003
       selectable: true
       listable: true
+      ended: false
     - code: EWHC-QBD
       grouped_name: Queen's Bench Division
       name: High Court (Queen's Bench Division)
@@ -331,6 +361,7 @@
       end_year: 2022
       selectable: false
       listable: true
+      ended: true
     - code: EWHC-QBD-Planning
       grouped_name: Planning Court
       name: High Court (Planning Court)
@@ -338,6 +369,7 @@
       link: https://www.gov.uk/courts-tribunals/planning-court
       selectable: false
       listable: false
+      ended: false
     - code: EWHC-KBD-Planning
       grouped_name: Planning Court
       name: High Court (Planning Court)
@@ -345,6 +377,7 @@
       link: https://www.gov.uk/courts-tribunals/planning-court
       selectable: false
       listable: false
+      ended: false
     - code: EWHC-Chancery-PropertyTrustsProbate
       grouped_name: Property, Trusts and Probate List
       name: High Court (Property, Trusts and Probate List)
@@ -352,6 +385,7 @@
       link: https://www.gov.uk/courts-tribunals/the-property-trusts-and-probate-list
       selectable: false
       listable: false
+      ended: false
     - code: EWHC-SeniorCourtsCosts
       grouped_name: Senior Courts Costs Office
       name: High Court (Senior Court Costs Office)
@@ -365,6 +399,7 @@
       start_year: 2003
       selectable: true
       listable: true
+      ended: false
     - code: EWHC-QBD-TCC
       grouped_name: Technology and Construction Court
       name: High Court (Technology and Construction Court)
@@ -377,6 +412,7 @@
       start_year: 2003
       selectable: true
       listable: true
+      ended: false
     - code: EWHC-KBD-TCC
       grouped_name: Technology and Construction Court
       name: High Court (Technology and Construction Court)
@@ -389,6 +425,7 @@
       start_year: 2003
       selectable: false
       listable: false
+      ended: false
 - name: lower_courts
   display_name: "Other Courts"
   is_tribunal: false
@@ -404,6 +441,7 @@
       start_year: 2020
       selectable: true
       listable: true
+      ended: false
     - code: "EWCC"
       name: "County Court"
       long_name: The County Court
@@ -415,6 +453,7 @@
       start_year: 2019
       selectable: true
       listable: true
+      ended: false
     - code: EWFC
       name: Family Court
       long_name: The Family Court
@@ -426,6 +465,7 @@
       start_year: 2014
       selectable: true
       listable: true
+      ended: false
     - code: "EWFC-B"
       name: Family Court (B - district and circuit judges)
       long_name: The Family Court (B cases)
@@ -438,6 +478,7 @@
       start_year: 2009
       selectable: false
       listable: false
+      ended: false
     - code: EWCOP
       name: Court of Protection
       long_name: The Court of Protection
@@ -449,6 +490,7 @@
       start_year: 2009
       selectable: true
       listable: true
+      ended: false
     - code: EWCOP-T1
       name: Court of Protection (Tier 1 - district judges)
       long_name: The Court of Protection (Tier 1 cases)
@@ -460,6 +502,7 @@
       start_year: 2009
       selectable: false
       listable: false
+      ended: false
     - code: EWCOP-T2
       name: Court of Protection (Tier 2 - circuit judges)
       long_name: The Court of Protection (Tier 2 cases)
@@ -471,6 +514,7 @@
       start_year: 2009
       selectable: false
       listable: false
+      ended: false
     - code: EWCOP-T3
       name: Court of Protection (Tier 3 - high court judges)
       long_name: The Court of Protection (Tier 3 cases)
@@ -482,6 +526,7 @@
       start_year: 2009
       selectable: false
       listable: false
+      ended: false
 
 - name: investigatory_powers_tribunal
   display_name: ~
@@ -496,6 +541,7 @@
         - "[2023] UKIPTrib 11"
       selectable: true
       listable: true
+      ended: false
       param: "ukiptrib"
       start_year: 2023
 - name: special_immigration_appeals_commission
@@ -507,6 +553,7 @@
       link: https://www.gov.uk/guidance/appeal-to-the-special-immigration-appeals-commission
       selectable: true
       listable: true
+      ended: false
       param: "siac"
 - name: proscribed_organisations_appeal_commission
   display_name: ~
@@ -518,6 +565,7 @@
       link: https://www.gov.uk/guidance/appeal-to-the-special-immigration-appeals-commission
       selectable: false
       listable: false
+      ended: false
       param: "poac"
 - name: pathogens_access_appeal_commission
   display_name: ~
@@ -529,6 +577,7 @@
       link: https://www.gov.uk/guidance/appeal-to-the-pathogens-access-appeals-commission
       selectable: false
       listable: false
+      ended: false
       param: "paac"
 - name: employment_appeal_tribunal
   display_name: ~
@@ -543,6 +592,7 @@
         - "[2024] EAT 100"
       selectable: true
       listable: true
+      ended: false
       param: "eat"
       start_year: 2021
 - name: upper_tribunals
@@ -559,6 +609,7 @@
         - "[2024] UKUT 326 (AAC)"
       selectable: true
       listable: true
+      ended: false
       param: "ukut/aac"
       start_year: 2011
     - code: UKUT-IAC
@@ -571,12 +622,14 @@
         - "[2016] UKUT 562 (IAC)"
       selectable: true
       listable: true
+      ended: false
       param: "ukut/iac"
       extra_params: ["ukait"]
       start_year: 2007
     - code: UKAIT
       selectable: false
       listable: false
+      ended: true
       param: "ukait"
       name: Asylum & Immigration Tribunal
       long_name: United Kingdom Asylum and Immigration Tribunal
@@ -597,6 +650,7 @@
         - "[2017] UKUT 135 (LC)"
       selectable: true
       listable: true
+      ended: false
       param: "ukut/lc"
       start_year: 2014
     - code: UKUT-TCC
@@ -609,6 +663,7 @@
         - "[2017] UKUT 504 (TCC)"
       selectable: true
       listable: true
+      ended: false
       param: "ukut/tcc"
       start_year: 2016
 - name: first_tier_tribunals
@@ -625,6 +680,7 @@
       start_year: 1985
       selectable: true
       listable: true
+      ended: false
     - code: ET
       grouped_name: Employment Tribunal
       name: First-tier Tribunal (Employment Tribunal)
@@ -633,6 +689,7 @@
       start_year: 2022
       selectable: false
       listable: false
+      ended: false
     - code: UKFTT-GRC
       grouped_name: General Regulatory Chamber
       name: First-tier Tribunal (General Regulatory Chamber)
@@ -645,6 +702,7 @@
       start_year: 2019
       selectable: true
       listable: true
+      ended: false
       jurisdictions:
         - code: Charity
           prefix: CA
@@ -706,6 +764,7 @@
       start_year: 2019
       selectable: true
       listable: true
+      ended: false
     - code: FTT-PC
       name: Land Registration Division (Property Chamber)
       long_name: First-tier Tribunal (Property Chamber)
@@ -716,12 +775,14 @@
       link: https://www.judiciary.uk/courts-and-tribunals/tribunals/first-tier-tribunal/property-chamber/land-registration-division/
       selectable: true
       listable: false
+      ended: false
     - code: FTT-PHL
       name: Primary Health Lists
       param: ftt/phl
       link: https://www.judiciary.uk/courts-and-tribunals/tribunals/first-tier-tribunal/health-education-and-social-care-chamber/special-educational-needs-and-disability-care-standards-and-primary-health-lists-send/primary-health-lists/
       selectable: true
       listable: false
+      ended: false
 - name: historic_tribunals
   display_name: Historic Tribunals
   is_tribunal: true
@@ -735,6 +796,7 @@
       end_year: 2010
       selectable: true
       listable: true
+      ended: true
     - code: UKFTT-Credit
       name: Consumer Credit Appeals Tribunal
       long_name: Consumer Credit Appeals Tribunal
@@ -744,6 +806,7 @@
       end_year: 2013
       selectable: true
       listable: true
+      ended: true
     - code: UKFTT-Estate
       name: Estate Agents Tribunal
       long_name: Estate Agents Tribunal
@@ -753,6 +816,7 @@
       end_year: 2010
       selectable: true
       listable: true
+      ended: true
     - code: FTT-Claims
       name: Claims Management Services Tribunal
       long_name: Claims Management Services Tribunal
@@ -762,6 +826,7 @@
       end_year: 2010
       selectable: true
       listable: true
+      ended: true
     - code: FTT-Transport
       name: Transport Tribunal
       param: ftt/transport
@@ -770,3 +835,4 @@
       end_year: 2010
       selectable: true
       listable: true
+      ended: true

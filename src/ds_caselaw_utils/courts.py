@@ -64,6 +64,7 @@ class Court:
         self.param_aliases: list[CourtParam]
         self.code: CourtCode = CourtCode(data["code"])
         self.name: str = data["name"]
+        self.is_ended: bool = data["ended"]
         self.long_name: str = data.get("long_name") or data["name"]
         self.grouped_name: str = data.get("grouped_name") or data["name"]
         self.link: str = data["link"]
