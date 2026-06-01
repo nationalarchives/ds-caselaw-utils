@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## v4.5.2 (2026-06-01)
+
+### Feat
+
+- **schemas**: add is_ended to schema
+
 ## v4.5.1 (2026-05-28)
 
 ### Refactor
