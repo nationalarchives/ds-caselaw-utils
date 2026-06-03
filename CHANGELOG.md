@@ -6,7 +6,7 @@ All notable changes to this project will be documented in this file.
 
 ### Feat
 
-- **schemas**: add is_ended to schema
+- **schemas**: add is_ended to schema for tribunals that have ended
 
 ## v4.5.1 (2026-05-28)
 
