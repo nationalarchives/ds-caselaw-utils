@@ -52,6 +52,14 @@ class TestCourt(unittest.TestCase):
         court = CourtFactory({})
         self.assertEqual(date.today().year, court.end_year)
 
+    def test_is_ended_default(self):
+        court = CourtFactory({})
+        assert not court.is_ended
+
+    def test_is_ended_explicit(self):
+        court = CourtFactory({"ended": True})
+        assert court.is_ended
+
     def test_type_when_court(self):
         court = CourtFactory({})
         assert court.type is InstitutionType.COURT

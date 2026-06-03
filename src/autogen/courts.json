@@ -17,6 +17,7 @@
         "start_year": 2009,
         "selectable": true,
         "listable": true,
+        "ended": false,
         "identifier_iri": "https://www.supremecourt.uk/"
       }
     ]
@@ -39,6 +40,7 @@
         "start_year": 2009,
         "selectable": true,
         "listable": true,
+        "ended": false,
         "identifier_iri": "https://www.jcpc.uk/"
       }
     ]
@@ -62,6 +64,7 @@
         "start_year": 2001,
         "selectable": true,
         "listable": true,
+        "ended": false,
         "identifier_iri": "https://www.gov.uk/courts-tribunals/court-of-appeal-civil-division"
       },
       {
@@ -78,6 +81,7 @@
         "start_year": 2003,
         "selectable": true,
         "listable": true,
+        "ended": false,
         "identifier_iri": "https://www.gov.uk/courts-tribunals/court-of-appeal-criminal-division"
       }
     ]
@@ -94,6 +98,7 @@
         "link": "https://www.judiciary.uk/courts-and-tribunals/high-court/",
         "selectable": false,
         "listable": false,
+        "ended": false,
         "identifier_iri": "https://www.judiciary.uk/courts-and-tribunals/high-court/"
       },
       {
@@ -110,6 +115,7 @@
         "start_year": 2003,
         "selectable": true,
         "listable": true,
+        "ended": false,
         "identifier_iri": "https://www.gov.uk/courts-tribunals/administrative-court"
       },
       {
@@ -126,6 +132,7 @@
         "start_year": 2022,
         "selectable": false,
         "listable": false,
+        "ended": false,
         "identifier_iri": "https://www.gov.uk/courts-tribunals/administrative-court"
       },
       {
@@ -142,6 +149,7 @@
         "start_year": 2003,
         "selectable": true,
         "listable": true,
+        "ended": false,
         "identifier_iri": "https://www.gov.uk/courts-tribunals/admiralty-court"
       },
       {
@@ -158,6 +166,7 @@
         "start_year": 2022,
         "selectable": false,
         "listable": false,
+        "ended": false,
         "identifier_iri": "https://www.gov.uk/courts-tribunals/admiralty-court"
       },
       {
@@ -168,6 +177,7 @@
         "link": "https://www.gov.uk/courts-tribunals/the-business-and-property-courts",
         "selectable": false,
         "listable": false,
+        "ended": false,
         "identifier_iri": "https://www.gov.uk/courts-tribunals/the-business-and-property-courts"
       },
       {
@@ -178,6 +188,7 @@
         "link": "https://www.gov.uk/courts-tribunals/the-business-and-property-courts",
         "selectable": false,
         "listable": false,
+        "ended": false,
         "identifier_iri": "https://www.gov.uk/courts-tribunals/the-business-and-property-courts"
       },
       {
@@ -188,6 +199,7 @@
         "link": "https://www.gov.uk/courts-tribunals/the-business-and-property-courts",
         "selectable": false,
         "listable": false,
+        "ended": false,
         "identifier_iri": "https://www.gov.uk/courts-tribunals/the-business-and-property-courts"
       },
       {
@@ -198,6 +210,7 @@
         "link": "https://www.gov.uk/courts-tribunals/the-business-list",
         "selectable": false,
         "listable": false,
+        "ended": false,
         "identifier_iri": "https://www.gov.uk/courts-tribunals/the-business-list"
       },
       {
@@ -208,6 +221,7 @@
         "link": "https://www.gov.uk/courts-tribunals/chancery-division-of-the-high-court",
         "selectable": false,
         "listable": false,
+        "ended": false,
         "identifier_iri": "https://www.gov.uk/courts-tribunals/chancery-division-of-the-high-court"
       },
       {
@@ -224,6 +238,7 @@
         "start_year": 2003,
         "selectable": true,
         "listable": true,
+        "ended": false,
         "identifier_iri": "https://www.gov.uk/courts-tribunals/chancery-division-of-the-high-court"
       },
       {
@@ -238,6 +253,7 @@
         ],
         "selectable": false,
         "listable": false,
+        "ended": false,
         "identifier_iri": "https://www.gov.uk/courts-tribunals/commercial-circuit-court"
       },
       {
@@ -252,6 +268,7 @@
         ],
         "selectable": false,
         "listable": false,
+        "ended": false,
         "identifier_iri": "https://www.gov.uk/courts-tribunals/commercial-circuit-court"
       },
       {
@@ -268,6 +285,7 @@
         "start_year": 2003,
         "selectable": true,
         "listable": true,
+        "ended": false,
         "identifier_iri": "https://www.gov.uk/courts-tribunals/commercial-court"
       },
       {
@@ -284,6 +302,7 @@
         "start_year": 2022,
         "selectable": false,
         "listable": false,
+        "ended": false,
         "identifier_iri": "https://www.gov.uk/courts-tribunals/commercial-court"
       },
       {
@@ -300,6 +319,7 @@
         "start_year": 2003,
         "selectable": true,
         "listable": true,
+        "ended": false,
         "identifier_iri": "https://www.gov.uk/courts-tribunals/family-division-of-the-high-court"
       },
       {
@@ -314,6 +334,7 @@
         ],
         "selectable": false,
         "listable": false,
+        "ended": false,
         "identifier_iri": "https://www.gov.uk/courts-tribunals/the-financial-list"
       },
       {
@@ -328,6 +349,7 @@
         ],
         "selectable": false,
         "listable": false,
+        "ended": false,
         "identifier_iri": "https://www.gov.uk/courts-tribunals/the-financial-list"
       },
       {
@@ -338,6 +360,7 @@
         "link": "https://www.gov.uk/courts-tribunals/the-financial-list",
         "selectable": false,
         "listable": false,
+        "ended": false,
         "identifier_iri": "https://www.gov.uk/courts-tribunals/the-financial-list"
       },
       {
@@ -348,6 +371,7 @@
         "link": "https://www.gov.uk/courts-tribunals/insolvency-list",
         "selectable": false,
         "listable": false,
+        "ended": false,
         "identifier_iri": "https://www.gov.uk/courts-tribunals/insolvency-list"
       },
       {
@@ -364,6 +388,7 @@
         "start_year": 2013,
         "selectable": true,
         "listable": true,
+        "ended": false,
         "identifier_iri": "https://www.gov.uk/courts-tribunals/intellectual-property-enterprise-court"
       },
       {
@@ -374,6 +399,7 @@
         "link": "https://www.gov.uk/courts-tribunals/the-intellectual-property-list",
         "selectable": false,
         "listable": false,
+        "ended": false,
         "identifier_iri": "https://www.gov.uk/courts-tribunals/the-intellectual-property-list"
       },
       {
@@ -392,6 +418,7 @@
         "start_year": 2003,
         "selectable": true,
         "listable": false,
+        "ended": false,
         "identifier_iri": "https://www.gov.uk/courts-tribunals/kings-bench-division-of-the-high-court"
       },
       {
@@ -408,6 +435,7 @@
         "start_year": 2022,
         "selectable": false,
         "listable": true,
+        "ended": false,
         "identifier_iri": "https://www.gov.uk/courts-tribunals/kings-bench-division-of-the-high-court"
       },
       {
@@ -424,6 +452,7 @@
         "end_year": 2014,
         "selectable": true,
         "listable": true,
+        "ended": true,
         "identifier_iri": "https://www.gov.uk/courts-tribunals/intellectual-property-enterprise-court"
       },
       {
@@ -440,6 +469,7 @@
         "start_year": 2003,
         "selectable": true,
         "listable": true,
+        "ended": false,
         "identifier_iri": "https://www.gov.uk/courts-tribunals/patents-court"
       },
       {
@@ -457,6 +487,7 @@
         "end_year": 2022,
         "selectable": false,
         "listable": true,
+        "ended": true,
         "identifier_iri": "https://www.gov.uk/courts-tribunals/queens-bench-division-of-the-high-court"
       },
       {
@@ -467,6 +498,7 @@
         "link": "https://www.gov.uk/courts-tribunals/planning-court",
         "selectable": false,
         "listable": false,
+        "ended": false,
         "identifier_iri": "https://www.gov.uk/courts-tribunals/planning-court"
       },
       {
@@ -477,6 +509,7 @@
         "link": "https://www.gov.uk/courts-tribunals/planning-court",
         "selectable": false,
         "listable": false,
+        "ended": false,
         "identifier_iri": "https://www.gov.uk/courts-tribunals/planning-court"
       },
       {
@@ -487,6 +520,7 @@
         "link": "https://www.gov.uk/courts-tribunals/the-property-trusts-and-probate-list",
         "selectable": false,
         "listable": false,
+        "ended": false,
         "identifier_iri": "https://www.gov.uk/courts-tribunals/the-property-trusts-and-probate-list"
       },
       {
@@ -506,6 +540,7 @@
         "start_year": 2003,
         "selectable": true,
         "listable": true,
+        "ended": false,
         "identifier_iri": "https://www.gov.uk/courts-tribunals/senior-courts-costs-office"
       },
       {
@@ -522,6 +557,7 @@
         "start_year": 2003,
         "selectable": true,
         "listable": true,
+        "ended": false,
         "identifier_iri": "https://www.gov.uk/courts-tribunals/technology-and-construction-court"
       },
       {
@@ -538,6 +574,7 @@
         "start_year": 2003,
         "selectable": false,
         "listable": false,
+        "ended": false,
         "identifier_iri": "https://www.gov.uk/courts-tribunals/technology-and-construction-court"
       }
     ]
@@ -560,6 +597,7 @@
         "start_year": 2020,
         "selectable": true,
         "listable": true,
+        "ended": false,
         "identifier_iri": "https://www.judiciary.uk/courts-and-tribunals/crown-court/"
       },
       {
@@ -575,6 +613,7 @@
         "start_year": 2019,
         "selectable": true,
         "listable": true,
+        "ended": false,
         "identifier_iri": "https://www.judiciary.uk/courts-and-tribunals/county-court/"
       },
       {
@@ -590,6 +629,7 @@
         "start_year": 2014,
         "selectable": true,
         "listable": true,
+        "ended": false,
         "identifier_iri": "https://www.judiciary.uk/you-and-the-judiciary/going-to-court/family-law-courts/"
       },
       {
@@ -605,6 +645,7 @@
         "start_year": 2009,
         "selectable": false,
         "listable": false,
+        "ended": false,
         "identifier_iri": "https://www.judiciary.uk/you-and-the-judiciary/going-to-court/family-law-courts/"
       },
       {
@@ -620,6 +661,7 @@
         "start_year": 2009,
         "selectable": true,
         "listable": true,
+        "ended": false,
         "identifier_iri": "https://www.gov.uk/courts-tribunals/court-of-protection"
       },
       {
@@ -635,6 +677,7 @@
         "start_year": 2009,
         "selectable": false,
         "listable": false,
+        "ended": false,
         "identifier_iri": "https://www.gov.uk/courts-tribunals/court-of-protection"
       },
       {
@@ -650,6 +693,7 @@
         "start_year": 2009,
         "selectable": false,
         "listable": false,
+        "ended": false,
         "identifier_iri": "https://www.gov.uk/courts-tribunals/court-of-protection"
       },
       {
@@ -665,6 +709,7 @@
         "start_year": 2009,
         "selectable": false,
         "listable": false,
+        "ended": false,
         "identifier_iri": "https://www.gov.uk/courts-tribunals/court-of-protection"
       }
     ]
@@ -685,6 +730,7 @@
         ],
         "selectable": true,
         "listable": true,
+        "ended": false,
         "param": "ukiptrib",
         "start_year": 2023,
         "identifier_iri": "https://investigatorypowerstribunal.org.uk/about-the-tribunal/"
@@ -702,6 +748,7 @@
         "link": "https://www.gov.uk/guidance/appeal-to-the-special-immigration-appeals-commission",
         "selectable": true,
         "listable": true,
+        "ended": false,
         "param": "siac",
         "identifier_iri": "https://www.gov.uk/guidance/appeal-to-the-special-immigration-appeals-commission"
       }
@@ -718,6 +765,7 @@
         "link": "https://www.gov.uk/guidance/appeal-to-the-special-immigration-appeals-commission",
         "selectable": false,
         "listable": false,
+        "ended": false,
         "param": "poac",
         "identifier_iri": "https://www.gov.uk/guidance/appeal-to-the-special-immigration-appeals-commission"
       }
@@ -734,6 +782,7 @@
         "link": "https://www.gov.uk/guidance/appeal-to-the-pathogens-access-appeals-commission",
         "selectable": false,
         "listable": false,
+        "ended": false,
         "param": "paac",
         "identifier_iri": "https://www.gov.uk/guidance/appeal-to-the-pathogens-access-appeals-commission"
       }
@@ -755,6 +804,7 @@
         ],
         "selectable": true,
         "listable": true,
+        "ended": false,
         "param": "eat",
         "start_year": 2021,
         "identifier_iri": "https://www.gov.uk/courts-tribunals/employment-appeal-tribunal"
@@ -778,6 +828,7 @@
         ],
         "selectable": true,
         "listable": true,
+        "ended": false,
         "param": "ukut/aac",
         "start_year": 2011,
         "identifier_iri": "https://www.gov.uk/courts-tribunals/upper-tribunal-administrative-appeals-chamber"
@@ -794,6 +845,7 @@
         ],
         "selectable": true,
         "listable": true,
+        "ended": false,
         "param": "ukut/iac",
         "extra_params": [
           "ukait"
@@ -805,6 +857,7 @@
         "code": "UKAIT",
         "selectable": false,
         "listable": false,
+        "ended": true,
         "param": "ukait",
         "name": "Asylum & Immigration Tribunal",
         "long_name": "United Kingdom Asylum and Immigration Tribunal",
@@ -829,6 +882,7 @@
         ],
         "selectable": true,
         "listable": true,
+        "ended": false,
         "param": "ukut/lc",
         "start_year": 2014,
         "identifier_iri": "https://www.gov.uk/courts-tribunals/upper-tribunal-lands-chamber"
@@ -845,6 +899,7 @@
         ],
         "selectable": true,
         "listable": true,
+        "ended": false,
         "param": "ukut/tcc",
         "start_year": 2016,
         "identifier_iri": "https://www.gov.uk/courts-tribunals/upper-tribunal-tax-and-chancery-chamber"
@@ -868,6 +923,7 @@
         "start_year": 1985,
         "selectable": true,
         "listable": true,
+        "ended": false,
         "identifier_iri": "https://www.gov.uk/courts-tribunals/first-tier-tribunal-care-standards"
       },
       {
@@ -879,6 +935,7 @@
         "start_year": 2022,
         "selectable": false,
         "listable": false,
+        "ended": false,
         "identifier_iri": "https://www.gov.uk/courts-tribunals/employment-tribunal"
       },
       {
@@ -895,6 +952,7 @@
         "start_year": 2019,
         "selectable": true,
         "listable": true,
+        "ended": false,
         "jurisdictions": [
           {
             "code": "Charity",
@@ -993,6 +1051,7 @@
         "start_year": 2019,
         "selectable": true,
         "listable": true,
+        "ended": false,
         "identifier_iri": "https://www.gov.uk/courts-tribunals/first-tier-tribunal-tax"
       },
       {
@@ -1007,6 +1066,7 @@
         "link": "https://www.judiciary.uk/courts-and-tribunals/tribunals/first-tier-tribunal/property-chamber/land-registration-division/",
         "selectable": true,
         "listable": false,
+        "ended": false,
         "identifier_iri": "https://www.judiciary.uk/courts-and-tribunals/tribunals/first-tier-tribunal/property-chamber/land-registration-division/"
       },
       {
@@ -1016,6 +1076,7 @@
         "link": "https://www.judiciary.uk/courts-and-tribunals/tribunals/first-tier-tribunal/health-education-and-social-care-chamber/special-educational-needs-and-disability-care-standards-and-primary-health-lists-send/primary-health-lists/",
         "selectable": true,
         "listable": false,
+        "ended": false,
         "identifier_iri": "https://www.judiciary.uk/courts-and-tribunals/tribunals/first-tier-tribunal/health-education-and-social-care-chamber/special-educational-needs-and-disability-care-standards-and-primary-health-lists-send/primary-health-lists/"
       }
     ]
@@ -1035,6 +1096,7 @@
         "end_year": 2010,
         "selectable": true,
         "listable": true,
+        "ended": true,
         "identifier_iri": "https://webarchive.nationalarchives.gov.uk/ukgwa/https://immigrationservices.decisions.tribunals.gov.uk/Aspx/default.aspx"
       },
       {
@@ -1047,6 +1109,7 @@
         "end_year": 2013,
         "selectable": true,
         "listable": true,
+        "ended": true,
         "identifier_iri": "https://webarchive.nationalarchives.gov.uk/ukgwa/https://consumercreditappeals.decisions.tribunals.gov.uk/"
       },
       {
@@ -1059,6 +1122,7 @@
         "end_year": 2010,
         "selectable": true,
         "listable": true,
+        "ended": true,
         "identifier_iri": "https://webarchive.nationalarchives.gov.uk/ukgwa/20130206050212/https://www.justice.gov.uk/tribunals/estate-agents"
       },
       {
@@ -1071,6 +1135,7 @@
         "end_year": 2010,
         "selectable": true,
         "listable": true,
+        "ended": true,
         "identifier_iri": "https://webarchive.nationalarchives.gov.uk/ukgwa/20200626120017/http://claimsmanagement.decisions.tribunals.gov.uk/"
       },
       {
@@ -1082,6 +1147,7 @@
         "end_year": 2010,
         "selectable": true,
         "listable": true,
+        "ended": true,
         "identifier_iri": "https://webarchive.nationalarchives.gov.uk/ukgwa/20160811143636/http://www.transporttribunal.gov.uk/Aspx/Default.aspx"
       }
     ]

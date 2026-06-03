@@ -88,6 +88,11 @@
       "description": "Should this court appear as a selectable option in the list of searchable courts?",
       "type": "boolean"
     },
+    "ended": {
+      "title": "Ended",
+      "description": "Has the court ended?",
+      "type": "boolean"
+    },
     "jurisdictions": {
       "type": "array",
       "items": {

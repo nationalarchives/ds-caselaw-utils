@@ -66,6 +66,8 @@ The list of courts is defined in `src/ds_caselaw_utils/data/court_names.yml`. Th
       selectable: true
       # Whether to expose this court publicly in listings:
       listable: true
+      # Whether this court has ended yet
+      ended: false
 ```
 
 ## Requirements
