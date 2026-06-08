@@ -14,6 +14,11 @@
       selectable: true
       listable: true
       ended: false
+      relationships:
+        - court_code: EWCA-Civil
+          relationship_type: hears_appeals_from
+        - court_code: EWCA-Criminal
+          relationship_type: hears_appeals_from
 - name: privy_council
   display_name: ~
   is_tribunal: false
@@ -47,6 +52,11 @@
       selectable: true
       listable: true
       ended: false
+      relationships:
+        - court_code: EWHC
+          relationship_type: hears_appeals_from
+        - court_code: EWHC-Family
+          relationship_type: hears_appeals_from
     - code: EWCA-Criminal
       grouped_name: "Criminal Division"
       name: Court of Appeal (Criminal Division)
@@ -60,6 +70,9 @@
       selectable: true
       listable: true
       ended: false
+      relationships:
+        - court_code: EWCR
+          relationship_type: hears_appeals_from
 - name: high_court
   display_name: "High Court (England and Wales)"
   is_tribunal: false

@@ -525,6 +525,7 @@
 Must be one of:
 * "hears_appeals_from"
 * "hears_similar_cases_to"
+* "might_be_looking_for"
 
 ----------------------------------------------------------------------------------------------------------------------------
 Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans)

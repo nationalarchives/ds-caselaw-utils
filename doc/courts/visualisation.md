@@ -180,4 +180,10 @@ graph TD
     class UKFTT-Estate tribunal
     class FTT-Claims tribunal
     class FTT-Transport tribunal
+
+    EWCA-Civil -->|"hears appeals from"| EWHC
+    EWCA-Civil -->|"hears appeals from"| EWHC-Family
+    EWCA-Criminal -->|"hears appeals from"| EWCR
+    UKSC -->|"hears appeals from"| EWCA-Civil
+    UKSC -->|"hears appeals from"| EWCA-Criminal
 ```
