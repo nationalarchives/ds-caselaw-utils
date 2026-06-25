@@ -800,12 +800,12 @@
   display_name: Historic Tribunals
   is_tribunal: true
   courts:
-    - code: UKIST
-      name: Immigration Services Tribunal
-      long_name: The Immigration Services Tribunal
-      param: ukist
-      link: https://webarchive.nationalarchives.gov.uk/ukgwa/https://immigrationservices.decisions.tribunals.gov.uk/Aspx/default.aspx
-      start_year: 2001
+    - code: FTT-Claims
+      name: Claims Management Services Tribunal
+      long_name: Claims Management Services Tribunal
+      param: ftt/claims
+      link: https://webarchive.nationalarchives.gov.uk/ukgwa/20200626120017/http://claimsmanagement.decisions.tribunals.gov.uk/
+      start_year: 2006
       end_year: 2010
       selectable: true
       listable: true
@@ -830,12 +830,22 @@
       selectable: true
       listable: true
       ended: true
-    - code: FTT-Claims
-      name: Claims Management Services Tribunal
-      long_name: Claims Management Services Tribunal
-      param: ftt/claims
-      link: https://webarchive.nationalarchives.gov.uk/ukgwa/20200626120017/http://claimsmanagement.decisions.tribunals.gov.uk/
-      start_year: 2006
+    - code: UKIT
+      name: Information Tribunal
+      link: https://webarchive.nationalarchives.gov.uk/ukgwa/20120405092513/http://www.justice.gov.uk/tribunals/information-rights
+      # previously known as the Data Protection Tribunal; became the Information Rights Tribunal and then First Tier Tribunal (Information Rights)
+      param: ukit
+      start_year: 1990
+      end_year: 2010
+      selectable: true
+      listable: true
+      ended: true
+    - code: UKIST
+      name: Immigration Services Tribunal
+      long_name: The Immigration Services Tribunal
+      param: ukist
+      link: https://webarchive.nationalarchives.gov.uk/ukgwa/https://immigrationservices.decisions.tribunals.gov.uk/Aspx/default.aspx
+      start_year: 2001
       end_year: 2010
       selectable: true
       listable: true

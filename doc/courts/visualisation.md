@@ -107,10 +107,11 @@ graph TD
     end
     class first_tier_tribunals tribunalGroup
     subgraph historic_tribunals["historic_tribunals"]
-        UKIST["Immigration Services Tribunal"]
+        FTT-Claims["Claims Management Services Tribunal"]
         UKFTT-Credit["Consumer Credit Appeals Tribunal"]
         UKFTT-Estate["Estate Agents Tribunal"]
-        FTT-Claims["Claims Management Services Tribunal"]
+        UKIT["Information Tribunal"]
+        UKIST["Immigration Services Tribunal"]
         FTT-Transport["Transport Tribunal"]
     end
     class historic_tribunals tribunalGroup
@@ -175,10 +176,11 @@ graph TD
     class UKFTT-TC tribunal
     class FTT-PC tribunal
     class FTT-PHL tribunal
-    class UKIST tribunal
+    class FTT-Claims tribunal
     class UKFTT-Credit tribunal
     class UKFTT-Estate tribunal
-    class FTT-Claims tribunal
+    class UKIT tribunal
+    class UKIST tribunal
     class FTT-Transport tribunal
 
     EWCA-Civil -->|"hears appeals from"| EWHC

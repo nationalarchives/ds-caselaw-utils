@@ -1113,17 +1113,17 @@
     "is_tribunal": true,
     "courts": [
       {
-        "code": "UKIST",
-        "name": "Immigration Services Tribunal",
-        "long_name": "The Immigration Services Tribunal",
-        "param": "ukist",
-        "link": "https://webarchive.nationalarchives.gov.uk/ukgwa/https://immigrationservices.decisions.tribunals.gov.uk/Aspx/default.aspx",
-        "start_year": 2001,
+        "code": "FTT-Claims",
+        "name": "Claims Management Services Tribunal",
+        "long_name": "Claims Management Services Tribunal",
+        "param": "ftt/claims",
+        "link": "https://webarchive.nationalarchives.gov.uk/ukgwa/20200626120017/http://claimsmanagement.decisions.tribunals.gov.uk/",
+        "start_year": 2006,
         "end_year": 2010,
         "selectable": true,
         "listable": true,
         "ended": true,
-        "identifier_iri": "https://webarchive.nationalarchives.gov.uk/ukgwa/https://immigrationservices.decisions.tribunals.gov.uk/Aspx/default.aspx"
+        "identifier_iri": "https://webarchive.nationalarchives.gov.uk/ukgwa/20200626120017/http://claimsmanagement.decisions.tribunals.gov.uk/"
       },
       {
         "code": "UKFTT-Credit",
@@ -1152,17 +1152,29 @@
         "identifier_iri": "https://webarchive.nationalarchives.gov.uk/ukgwa/20130206050212/https://www.justice.gov.uk/tribunals/estate-agents"
       },
       {
-        "code": "FTT-Claims",
-        "name": "Claims Management Services Tribunal",
-        "long_name": "Claims Management Services Tribunal",
-        "param": "ftt/claims",
-        "link": "https://webarchive.nationalarchives.gov.uk/ukgwa/20200626120017/http://claimsmanagement.decisions.tribunals.gov.uk/",
-        "start_year": 2006,
+        "code": "UKIT",
+        "name": "Information Tribunal",
+        "link": "https://webarchive.nationalarchives.gov.uk/ukgwa/20120405092513/http://www.justice.gov.uk/tribunals/information-rights",
+        "param": "ukit",
+        "start_year": 1990,
         "end_year": 2010,
         "selectable": true,
         "listable": true,
         "ended": true,
-        "identifier_iri": "https://webarchive.nationalarchives.gov.uk/ukgwa/20200626120017/http://claimsmanagement.decisions.tribunals.gov.uk/"
+        "identifier_iri": "https://webarchive.nationalarchives.gov.uk/ukgwa/20120405092513/http://www.justice.gov.uk/tribunals/information-rights"
+      },
+      {
+        "code": "UKIST",
+        "name": "Immigration Services Tribunal",
+        "long_name": "The Immigration Services Tribunal",
+        "param": "ukist",
+        "link": "https://webarchive.nationalarchives.gov.uk/ukgwa/https://immigrationservices.decisions.tribunals.gov.uk/Aspx/default.aspx",
+        "start_year": 2001,
+        "end_year": 2010,
+        "selectable": true,
+        "listable": true,
+        "ended": true,
+        "identifier_iri": "https://webarchive.nationalarchives.gov.uk/ukgwa/https://immigrationservices.decisions.tribunals.gov.uk/Aspx/default.aspx"
       },
       {
         "code": "FTT-Transport",
