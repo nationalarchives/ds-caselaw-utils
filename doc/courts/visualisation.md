@@ -110,6 +110,7 @@ graph TD
         FTT-Claims["Claims Management Services Tribunal"]
         UKFTT-Credit["Consumer Credit Appeals Tribunal"]
         UKFTT-Estate["Estate Agents Tribunal"]
+        UKIT["Information Tribunal"]
         UKIST["Immigration Services Tribunal"]
         FTT-Transport["Transport Tribunal"]
     end
@@ -178,6 +179,7 @@ graph TD
     class FTT-Claims tribunal
     class UKFTT-Credit tribunal
     class UKFTT-Estate tribunal
+    class UKIT tribunal
     class UKIST tribunal
     class FTT-Transport tribunal
 

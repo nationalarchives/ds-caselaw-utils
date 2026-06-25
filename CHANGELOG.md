@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## Unreleased
+
+### Feat
+
+-- **courts**: Add UKIT (Information Tribunal)
+-- **courts**: Alphabetise historic tribunals
+
 ## v4.6.0 (2026-06-08)
 
 ### Feat

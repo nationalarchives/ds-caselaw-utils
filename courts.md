@@ -132,4 +132,5 @@
 | Consumer Credit Appeals Tribunal | UKFTT-Credit | ukftt/credit | – | 2008 | 2013 | ✅ | ✅ |
 | Estate Agents Tribunal | UKFTT-Estate | ukftt/estate | – | 2009 | 2010 | ✅ | ✅ |
 | Immigration Services Tribunal | UKIST | ukist | – | 2001 | 2010 | ✅ | ✅ |
+| Information Tribunal | UKIT | ukit | – | 1990 | 2010 | ✅ | ✅ |
 | Transport Tribunal | FTT-Transport | ftt/transport | – | 2000 | 2010 | ✅ | ✅ |
