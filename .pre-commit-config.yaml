@@ -29,7 +29,7 @@ repos:
         exclude: types/.*autogen\.py
 
   - repo: https://github.com/python-jsonschema/check-jsonschema
-    rev: 0.37.3
+    rev: 0.37.4
     hooks:
       - id: check-jsonschema
         name: Check all JSON Schema files are valid schemas
