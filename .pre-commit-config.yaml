@@ -97,7 +97,7 @@ repos:
         pass_filenames: false
 
   - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v2.1.0
+    rev: v2.2.0
     hooks:
       - id: mypy
         name: mypy-src
@@ -112,7 +112,7 @@ repos:
         exclude: (?:test_|factory.py)
 
   - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v2.1.0
+    rev: v2.2.0
     hooks:
       - id: mypy
         name: mypy-tests
