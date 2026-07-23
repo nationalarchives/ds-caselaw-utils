@@ -1152,6 +1152,19 @@
         "identifier_iri": "https://webarchive.nationalarchives.gov.uk/ukgwa/20130206050212/https://www.justice.gov.uk/tribunals/estate-agents"
       },
       {
+        "code": "UKFSMT",
+        "name": "Financial Services Tribunal",
+        "long_name": "Financial Services and Markets Tribunal",
+        "param": "ukfsmt",
+        "link": "https://webarchive.nationalarchives.gov.uk/ukgwa/20220415114127/http://taxandchancery_ut.decisions.tribunals.gov.uk/Decisions/Financial.html",
+        "start_year": 2002,
+        "end_year": 2010,
+        "selectable": true,
+        "listable": true,
+        "ended": true,
+        "identifier_iri": "https://webarchive.nationalarchives.gov.uk/ukgwa/20220415114127/http://taxandchancery_ut.decisions.tribunals.gov.uk/Decisions/Financial.html"
+      },
+      {
         "code": "UKIT",
         "name": "Information Tribunal",
         "link": "https://webarchive.nationalarchives.gov.uk/ukgwa/20120405092513/http://www.justice.gov.uk/tribunals/information-rights",
@@ -1177,6 +1190,32 @@
         "identifier_iri": "https://webarchive.nationalarchives.gov.uk/ukgwa/https://immigrationservices.decisions.tribunals.gov.uk/Aspx/default.aspx"
       },
       {
+        "code": "UKPRT",
+        "name": "Pensions Regulator Tribunal",
+        "long_name": "The Pensions Regulator Tribunal",
+        "param": "ukprt",
+        "link": "https://webarchive.nationalarchives.gov.uk/ukgwa/20220415070804/http://taxandchancery_ut.decisions.tribunals.gov.uk/Decisions/Pensions.html",
+        "start_year": 2006,
+        "end_year": 2010,
+        "selectable": true,
+        "listable": true,
+        "ended": true,
+        "identifier_iri": "https://webarchive.nationalarchives.gov.uk/ukgwa/20220415070804/http://taxandchancery_ut.decisions.tribunals.gov.uk/Decisions/Pensions.html"
+      },
+      {
+        "code": "UKSPC",
+        "name": "Special Commissioners of Income Tax",
+        "long_name": "Special Commissioners of Income Tax",
+        "param": "ukspc",
+        "link": "https://webarchive.nationalarchives.gov.uk/ukgwa/20250603040749/https://financeandtax.decisions.tribunals.gov.uk/Aspx/default.aspx",
+        "start_year": 1999,
+        "end_year": 2009,
+        "selectable": true,
+        "listable": true,
+        "ended": true,
+        "identifier_iri": "https://webarchive.nationalarchives.gov.uk/ukgwa/20250603040749/https://financeandtax.decisions.tribunals.gov.uk/Aspx/default.aspx"
+      },
+      {
         "code": "FTT-Transport",
         "name": "Transport Tribunal",
         "param": "ftt/transport",
@@ -1187,6 +1226,19 @@
         "listable": true,
         "ended": true,
         "identifier_iri": "https://webarchive.nationalarchives.gov.uk/ukgwa/20160811143636/http://www.transporttribunal.gov.uk/Aspx/Default.aspx"
+      },
+      {
+        "code": "UKVAT",
+        "name": "VAT and Duties Tribunal",
+        "long_name": "VAT and Duties Tribunal",
+        "param": "ukvat",
+        "link": "https://webarchive.nationalarchives.gov.uk/ukgwa/20250603040749/https://financeandtax.decisions.tribunals.gov.uk/Aspx/default.aspx",
+        "start_year": 1989,
+        "end_year": 2009,
+        "selectable": true,
+        "listable": true,
+        "ended": true,
+        "identifier_iri": "https://webarchive.nationalarchives.gov.uk/ukgwa/20250603040749/https://financeandtax.decisions.tribunals.gov.uk/Aspx/default.aspx"
       }
     ]
   }
