@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## Unreleased
+
+### Feat
+
+-- **courts**: Add UKFSMT (Financial Services Tribunal), UKPRT (Pensions Regulator Tribunal), UKSPC (Special Commissioners of Income Tax), and UKVAT (VAT and Duties Tribunal) historic tribunals
+
 ## v4.7.0 (2026-07-25)
 
 ### Feat

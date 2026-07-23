@@ -110,9 +110,13 @@ graph TD
         FTT-Claims["Claims Management Services Tribunal"]
         UKFTT-Credit["Consumer Credit Appeals Tribunal"]
         UKFTT-Estate["Estate Agents Tribunal"]
+        UKFSMT["Financial Services Tribunal"]
         UKIT["Information Tribunal"]
         UKIST["Immigration Services Tribunal"]
+        UKPRT["Pensions Regulator Tribunal"]
+        UKSPC["Special Commissioners of Income Tax"]
         FTT-Transport["Transport Tribunal"]
+        UKVAT["VAT and Duties Tribunal"]
     end
     class historic_tribunals tribunalGroup
     class UKSC court
@@ -179,9 +183,13 @@ graph TD
     class FTT-Claims tribunal
     class UKFTT-Credit tribunal
     class UKFTT-Estate tribunal
+    class UKFSMT tribunal
     class UKIT tribunal
     class UKIST tribunal
+    class UKPRT tribunal
+    class UKSPC tribunal
     class FTT-Transport tribunal
+    class UKVAT tribunal
 
     EWCA-Civil -->|"hears appeals from"| EWHC
     EWCA-Civil -->|"hears appeals from"| EWHC-Family

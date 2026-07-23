@@ -830,6 +830,17 @@
       selectable: true
       listable: true
       ended: true
+    - code: UKFSMT
+      name: Financial Services Tribunal
+      long_name: Financial Services and Markets Tribunal
+      # Heard appeals against FSA regulatory decisions under FSMA 2000; merged into UKUT-TCC in 2010.
+      param: ukfsmt
+      link: https://webarchive.nationalarchives.gov.uk/ukgwa/20220415114127/http://taxandchancery_ut.decisions.tribunals.gov.uk/Decisions/Financial.html
+      start_year: 2002
+      end_year: 2010
+      selectable: true
+      listable: true
+      ended: true
     - code: UKIT
       name: Information Tribunal
       link: https://webarchive.nationalarchives.gov.uk/ukgwa/20120405092513/http://www.justice.gov.uk/tribunals/information-rights
@@ -850,12 +861,46 @@
       selectable: true
       listable: true
       ended: true
+    - code: UKPRT
+      name: Pensions Regulator Tribunal
+      long_name: The Pensions Regulator Tribunal
+      # Heard appeals against Pensions Regulator determinations under the Pensions Act 2004; merged into UKUT-TCC in 2010.
+      param: ukprt
+      link: https://webarchive.nationalarchives.gov.uk/ukgwa/20220415070804/http://taxandchancery_ut.decisions.tribunals.gov.uk/Decisions/Pensions.html
+      start_year: 2006
+      end_year: 2010
+      selectable: true
+      listable: true
+      ended: true
+    - code: UKSPC
+      name: Special Commissioners of Income Tax
+      long_name: Special Commissioners of Income Tax
+      # Heard direct tax appeals (income tax, corporation tax, capital gains tax); merged into UKFTT-TC in 2009.
+      param: ukspc
+      link: https://webarchive.nationalarchives.gov.uk/ukgwa/20250603040749/https://financeandtax.decisions.tribunals.gov.uk/Aspx/default.aspx
+      start_year: 1999
+      end_year: 2009
+      selectable: true
+      listable: true
+      ended: true
     - code: FTT-Transport
       name: Transport Tribunal
       param: ftt/transport
       link: https://webarchive.nationalarchives.gov.uk/ukgwa/20160811143636/http://www.transporttribunal.gov.uk/Aspx/Default.aspx
       start_year: 2000
       end_year: 2010
+      selectable: true
+      listable: true
+      ended: true
+    - code: UKVAT
+      name: VAT and Duties Tribunal
+      long_name: VAT and Duties Tribunal
+      # Heard indirect tax appeals (VAT, Customs Duties, Excise Duties, Insurance Premium Tax,
+      # Landfill Tax); merged into UKFTT-TC in 2009.
+      param: ukvat
+      link: https://webarchive.nationalarchives.gov.uk/ukgwa/20250603040749/https://financeandtax.decisions.tribunals.gov.uk/Aspx/default.aspx
+      start_year: 1989
+      end_year: 2009
       selectable: true
       listable: true
       ended: true
