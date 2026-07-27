@@ -131,6 +131,10 @@
 | Claims Management Services Tribunal | FTT-Claims | ftt/claims | – | 2006 | 2010 | ✅ | ✅ |
 | Consumer Credit Appeals Tribunal | UKFTT-Credit | ukftt/credit | – | 2008 | 2013 | ✅ | ✅ |
 | Estate Agents Tribunal | UKFTT-Estate | ukftt/estate | – | 2009 | 2010 | ✅ | ✅ |
+| Financial Services Tribunal | UKFSMT | ukfsmt | – | 2002 | 2010 | ✅ | ✅ |
 | Immigration Services Tribunal | UKIST | ukist | – | 2001 | 2010 | ✅ | ✅ |
 | Information Tribunal | UKIT | ukit | – | 1990 | 2010 | ✅ | ✅ |
+| Pensions Regulator Tribunal | UKPRT | ukprt | – | 2006 | 2010 | ✅ | ✅ |
+| Special Commissioners of Income Tax | UKSPC | ukspc | – | 1999 | 2009 | ✅ | ✅ |
 | Transport Tribunal | FTT-Transport | ftt/transport | – | 2000 | 2010 | ✅ | ✅ |
+| VAT and Duties Tribunal | UKVAT | ukvat | – | 1989 | 2009 | ✅ | ✅ |
