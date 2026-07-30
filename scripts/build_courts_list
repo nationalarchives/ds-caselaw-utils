@@ -29,14 +29,14 @@ class CourtDataLoader:
         print("Loading courts...")
 
         with open(filename, "r") as stream:
-            court_repository: "RawCourtRepository" = yaml.safe_load(stream)
+            court_repository: RawCourtRepository = yaml.safe_load(stream)
 
         return court_repository
 
 
 class CourtOutputBuilder:
     def __init__(self) -> None:
-        self.court_repository: "RawCourtRepository" = CourtDataLoader.load_courts(COURTS_REPOSITORY_FILE)
+        self.court_repository: RawCourtRepository = CourtDataLoader.load_courts(COURTS_REPOSITORY_FILE)
         for group in self.court_repository:
             for court in group["courts"]:
                 if "identifier_iri" not in court:
@@ -74,7 +74,7 @@ class CourtOutputBuilder:
                     f.write(court["code"])
 
                     f.write(" | ")
-                    f.write(court["param"] if "param" in court else "–")
+                    f.write(court.get("param", "–"))
 
                     f.write(" | ")
                     f.write(
@@ -227,8 +227,10 @@ class CourtOutputBuilder:
             if relationship_edges:
                 f.write("\n")
 
-                for source_court_id, target_court_id, relationship_label in sorted(relationship_edges):
-                    f.write(f'    {source_court_id} -->|"{relationship_label}"| {target_court_id}\n')
+                f.writelines(
+                    f'    {source_court_id} -->|"{relationship_label}"| {target_court_id}\n'
+                    for source_court_id, target_court_id, relationship_label in sorted(relationship_edges)
+                )
 
             f.write("```\n")
 
