@@ -6,11 +6,11 @@ Get metadata for the courts covered by the service
 
 import pathlib
 from dataclasses import dataclass
-from datetime import date
+from datetime import datetime, timezone
 from enum import Enum
 from functools import cached_property
 from re import compile
-from typing import Any, Optional
+from typing import Any
 
 from markdown_it import MarkdownIt
 from mdit_py_plugins.attrs import attrs_plugin
@@ -56,12 +56,12 @@ class Jurisdiction:
     def __init__(self, data: RawJurisdiction):
         self.code: JurisdictionCode = JurisdictionCode(data["code"])
         self.name: str = data["name"]
-        self.prefix: Optional[str] = data.get("prefix")
+        self.prefix: str | None = data.get("prefix")
 
 
 class Court:
     def __init__(self, data: RawCourt, type: InstitutionType) -> None:
-        self.canonical_param: Optional[CourtParam]
+        self.canonical_param: CourtParam | None
         self.param_aliases: list[CourtParam]
         self.code: CourtCode = CourtCode(data["code"])
         self.name: str = data["name"]
@@ -70,10 +70,10 @@ class Court:
         self.grouped_name: str = data.get("grouped_name") or data["name"]
         self.link: str = data["link"]
         self.identifier_iri: str = data.get("identifier_iri") or data["link"]
-        self.ncn_pattern: Optional[NeutralCitationPattern] = (
+        self.ncn_pattern: NeutralCitationPattern | None = (
             NeutralCitationPattern(compile(data["ncn_pattern"])) if "ncn_pattern" in data else None
         )
-        self.ncn_examples: Optional[list[str]] = data["ncn_examples"] if "ncn_examples" in data else None
+        self.ncn_examples: list[str] | None = data.get("ncn_examples", None)
         if "param" in data:
             self.canonical_param = CourtParam(data["param"])
             self.param_aliases = [CourtParam(data["param"])] + [
@@ -85,14 +85,14 @@ class Court:
 
         self.type = type
 
-        self.start_year: Optional[int] = data.get("start_year")
-        self.end_year: int = data.get("end_year") or date.today().year
+        self.start_year: int | None = data.get("start_year")
+        self.end_year: int = data.get("end_year") or datetime.now(tz=timezone.utc).date().year
         self.jurisdictions: list[Jurisdiction] = [
             Jurisdiction(jurisdiction_data) for jurisdiction_data in data.get("jurisdictions", [])
         ]
         self.relationships: list[CourtRelationship] = data.get("relationships") or []
 
-    def get_jurisdiction(self, code: str) -> Optional[Jurisdiction]:
+    def get_jurisdiction(self, code: str) -> Jurisdiction | None:
         return next((j for j in self.jurisdictions if j.code == code), None)
 
     def expand_jurisdictions(self) -> list["Court"]:
@@ -137,11 +137,11 @@ class CourtWithJurisdiction(Court):
 
     @property
     def code(self) -> CourtCode:
-        return CourtCode("/".join((self.court.code, self.jurisdiction.code)))
+        return CourtCode(f"{self.court.code}/{self.jurisdiction.code}")
 
     @property
     def name(self) -> str:
-        return "%s – %s" % (self.court.name, self.jurisdiction.name)
+        return f"{self.court.name} – {self.jurisdiction.name}"
 
     @property
     def grouped_name(self) -> str:
@@ -156,15 +156,15 @@ class CourtWithJurisdiction(Court):
         return self.court.identifier_iri
 
     @property
-    def ncn_pattern(self) -> Optional[NeutralCitationPattern]:
+    def ncn_pattern(self) -> NeutralCitationPattern | None:
         return self.court.ncn_pattern
 
     @property
-    def ncn_examples(self) -> Optional[list[str]]:
+    def ncn_examples(self) -> list[str] | None:
         return self.court.ncn_examples
 
     @property
-    def canonical_param(self) -> Optional[CourtParam]:
+    def canonical_param(self) -> CourtParam | None:
         return self.court.canonical_param
 
     @property
@@ -172,7 +172,7 @@ class CourtWithJurisdiction(Court):
         return self.court.param_aliases
 
     @property
-    def start_year(self) -> Optional[int]:
+    def start_year(self) -> int | None:
         return self.court.start_year
 
     @property
@@ -180,13 +180,13 @@ class CourtWithJurisdiction(Court):
         return self.court.end_year
 
     @property
-    def jurisdiction_prefix(self) -> Optional[str]:
+    def jurisdiction_prefix(self) -> str | None:
         return self.jurisdiction.prefix
 
 
 class CourtGroup:
-    def __init__(self, name: Optional[str], courts: list[Court]) -> None:
-        self.name: Optional[str] = name
+    def __init__(self, name: str | None, courts: list[Court]) -> None:
+        self.name: str | None = name
         self.courts: list[Court] = courts
 
     @property

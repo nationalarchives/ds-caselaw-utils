@@ -4,7 +4,6 @@ Convert neutral Citations to URL
 
 import pathlib
 import re
-from typing import Optional
 
 from ruamel.yaml import YAML
 
@@ -16,7 +15,7 @@ with open(datafile) as f:
     citation_data = yaml.load(f)
 
 
-def neutral_url(citation: NeutralCitationString) -> Optional[NCNBasedUriString]:
+def neutral_url(citation: NeutralCitationString) -> NCNBasedUriString | None:
     """Given a neutral citation such as `[2020] EAT 17`,
     return a public-API URL like `eat/2020/17`, or None
     if no match is found.
