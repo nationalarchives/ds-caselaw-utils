@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## Unreleased
+
+### Feat
+
+-- **courts**: Add UKFTT-IAC (First-tier Tribunal (Immigration and Asylum Chamber))
+
 ## v4.8.0 (2026-07-28)
 
 ### Feat

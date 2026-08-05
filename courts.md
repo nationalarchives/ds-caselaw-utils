@@ -120,6 +120,7 @@
 | Care Standards | UKFTT-HESC | ukftt/hesc | [2025] UKFTT 1104 (HESC) | 1985 | – | ✅ | ✅ |
 | Employment Tribunal | ET | – | – | 2022 | – | ❌ | ❌ |
 | General Regulatory Chamber | UKFTT-GRC | ukftt/grc | [2024] UKFTT 1069 (GRC) | 2019 | – | ✅ | ✅ |
+| Immigration and Asylum Chamber | UKFTT-IAC | ukftt/iac | – | 2010 | – | ✅ | ✅ |
 | Land Registration Division (Property Chamber) | FTT-PC | ftt/pc | [2025] UKFTT 1077 (PC) | – | – | ❌ | ✅ |
 | Primary Health Lists | FTT-PHL | ftt/phl | – | – | – | ❌ | ✅ |
 | Tax Chamber | UKFTT-TC | ukftt/tc | [2022] UKFTT 159 (TC) | 2019 | – | ✅ | ✅ |

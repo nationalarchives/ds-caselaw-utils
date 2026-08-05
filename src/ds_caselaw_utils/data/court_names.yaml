@@ -765,6 +765,16 @@
         - code: WelfareOfAnimals
           prefix: WA
           name: Welfare of Animals
+    - code: UKFTT-IAC
+      grouped_name: Immigration and Asylum Chamber
+      name: First-tier Tribunal (Immigration and Asylum Chamber)
+      long_name: United Kingdom First-tier Tribunal (Immigration and Asylum Chamber)
+      param: ukftt/iac
+      start_year: 2010
+      link: https://www.judiciary.uk/courts-and-tribunals/tribunals/first-tier-tribunal/first-tier-tribunal-immigration-and-asylum-chamber/
+      selectable: true
+      listable: true
+      ended: false
     - code: UKFTT-TC
       grouped_name: Tax Chamber
       name: First-tier Tribunal (Tax Chamber)
