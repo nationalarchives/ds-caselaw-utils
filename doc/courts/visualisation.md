@@ -101,6 +101,7 @@ graph TD
         UKFTT-HESC["Care Standards"]
         ET["First-tier Tribunal (Employment Tribunal)"]
         UKFTT-GRC["First-tier Tribunal (General Regulatory Chamber)"]
+        UKFTT-IAC["First-tier Tribunal (Immigration and Asylum Chamber)"]
         UKFTT-TC["First-tier Tribunal (Tax Chamber)"]
         FTT-PC["Land Registration Division (Property Chamber)"]
         FTT-PHL["Primary Health Lists"]
@@ -177,6 +178,7 @@ graph TD
     class UKFTT-HESC tribunal
     class ET tribunal
     class UKFTT-GRC tribunal
+    class UKFTT-IAC tribunal
     class UKFTT-TC tribunal
     class FTT-PC tribunal
     class FTT-PHL tribunal
