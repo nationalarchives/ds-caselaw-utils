@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## Unreleased
+
+### Feat
+
+- **courts**: flag courts of record
+- **courts**: courts can now be flagged as being a court of record
+
 ## v4.9.0 (2026-08-06)
 
 ### Feat
