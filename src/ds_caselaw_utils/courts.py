@@ -66,6 +66,7 @@ class Court:
         self.code: CourtCode = CourtCode(data["code"])
         self.name: str = data["name"]
         self.is_ended: bool = data.get("ended") or False
+        self.is_court_of_record: bool = data.get("court_of_record") or False
         self.long_name: str = data.get("long_name") or data["name"]
         self.grouped_name: str = data.get("grouped_name") or data["name"]
         self.link: str = data["link"]

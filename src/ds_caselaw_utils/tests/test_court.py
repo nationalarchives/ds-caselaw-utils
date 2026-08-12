@@ -60,6 +60,14 @@ class TestCourt(unittest.TestCase):
         court = CourtFactory({"ended": True})
         assert court.is_ended
 
+    def test_is_court_of_record_default(self):
+        court = CourtFactory({})
+        assert not court.is_court_of_record
+
+    def test_is_court_of_record_explicit(self):
+        court = CourtFactory({"court_of_record": True})
+        assert court.is_court_of_record
+
     def test_type_when_court(self):
         court = CourtFactory({})
         assert court.type is InstitutionType.COURT

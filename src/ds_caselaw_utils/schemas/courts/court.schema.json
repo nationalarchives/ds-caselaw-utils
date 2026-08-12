@@ -93,6 +93,11 @@
       "description": "Has the court ended?",
       "type": "boolean"
     },
+    "court_of_record": {
+      "title": "Court of record",
+      "description": "Is this court a court of record?",
+      "type": "boolean"
+    },
     "jurisdictions": {
       "type": "array",
       "items": {

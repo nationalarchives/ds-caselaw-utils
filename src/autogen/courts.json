@@ -28,7 +28,8 @@
             "relationship_type": "hears_appeals_from"
           }
         ],
-        "identifier_iri": "https://www.supremecourt.uk/"
+        "identifier_iri": "https://www.supremecourt.uk/",
+        "court_of_record": false
       }
     ]
   },
@@ -51,7 +52,8 @@
         "selectable": true,
         "listable": true,
         "ended": false,
-        "identifier_iri": "https://www.jcpc.uk/"
+        "identifier_iri": "https://www.jcpc.uk/",
+        "court_of_record": false
       }
     ]
   },
@@ -85,7 +87,8 @@
             "relationship_type": "hears_appeals_from"
           }
         ],
-        "identifier_iri": "https://www.gov.uk/courts-tribunals/court-of-appeal-civil-division"
+        "identifier_iri": "https://www.gov.uk/courts-tribunals/court-of-appeal-civil-division",
+        "court_of_record": false
       },
       {
         "code": "EWCA-Criminal",
@@ -108,7 +111,8 @@
             "relationship_type": "hears_appeals_from"
           }
         ],
-        "identifier_iri": "https://www.gov.uk/courts-tribunals/court-of-appeal-criminal-division"
+        "identifier_iri": "https://www.gov.uk/courts-tribunals/court-of-appeal-criminal-division",
+        "court_of_record": false
       }
     ]
   },
@@ -125,7 +129,8 @@
         "selectable": false,
         "listable": false,
         "ended": false,
-        "identifier_iri": "https://www.judiciary.uk/courts-and-tribunals/high-court/"
+        "identifier_iri": "https://www.judiciary.uk/courts-and-tribunals/high-court/",
+        "court_of_record": false
       },
       {
         "code": "EWHC-QBD-Admin",
@@ -142,7 +147,8 @@
         "selectable": true,
         "listable": true,
         "ended": false,
-        "identifier_iri": "https://www.gov.uk/courts-tribunals/administrative-court"
+        "identifier_iri": "https://www.gov.uk/courts-tribunals/administrative-court",
+        "court_of_record": false
       },
       {
         "code": "EWHC-KBD-Admin",
@@ -159,7 +165,8 @@
         "selectable": false,
         "listable": false,
         "ended": false,
-        "identifier_iri": "https://www.gov.uk/courts-tribunals/administrative-court"
+        "identifier_iri": "https://www.gov.uk/courts-tribunals/administrative-court",
+        "court_of_record": false
       },
       {
         "code": "EWHC-QBD-Admiralty",
@@ -176,7 +183,8 @@
         "selectable": true,
         "listable": true,
         "ended": false,
-        "identifier_iri": "https://www.gov.uk/courts-tribunals/admiralty-court"
+        "identifier_iri": "https://www.gov.uk/courts-tribunals/admiralty-court",
+        "court_of_record": false
       },
       {
         "code": "EWHC-KBD-Admiralty",
@@ -193,7 +201,8 @@
         "selectable": false,
         "listable": false,
         "ended": false,
-        "identifier_iri": "https://www.gov.uk/courts-tribunals/admiralty-court"
+        "identifier_iri": "https://www.gov.uk/courts-tribunals/admiralty-court",
+        "court_of_record": false
       },
       {
         "code": "EWHC-QBD-BusinessAndProperty",
@@ -204,7 +213,8 @@
         "selectable": false,
         "listable": false,
         "ended": false,
-        "identifier_iri": "https://www.gov.uk/courts-tribunals/the-business-and-property-courts"
+        "identifier_iri": "https://www.gov.uk/courts-tribunals/the-business-and-property-courts",
+        "court_of_record": false
       },
       {
         "code": "EWHC-KBD-BusinessAndProperty",
@@ -215,7 +225,8 @@
         "selectable": false,
         "listable": false,
         "ended": false,
-        "identifier_iri": "https://www.gov.uk/courts-tribunals/the-business-and-property-courts"
+        "identifier_iri": "https://www.gov.uk/courts-tribunals/the-business-and-property-courts",
+        "court_of_record": false
       },
       {
         "code": "EWHC-Chancery-BusinessAndProperty",
@@ -226,7 +237,8 @@
         "selectable": false,
         "listable": false,
         "ended": false,
-        "identifier_iri": "https://www.gov.uk/courts-tribunals/the-business-and-property-courts"
+        "identifier_iri": "https://www.gov.uk/courts-tribunals/the-business-and-property-courts",
+        "court_of_record": false
       },
       {
         "code": "EWHC-Chancery-Business",
@@ -237,7 +249,8 @@
         "selectable": false,
         "listable": false,
         "ended": false,
-        "identifier_iri": "https://www.gov.uk/courts-tribunals/the-business-list"
+        "identifier_iri": "https://www.gov.uk/courts-tribunals/the-business-list",
+        "court_of_record": false
       },
       {
         "code": "EWHC-Chancery-Appeals",
@@ -248,7 +261,8 @@
         "selectable": false,
         "listable": false,
         "ended": false,
-        "identifier_iri": "https://www.gov.uk/courts-tribunals/chancery-division-of-the-high-court"
+        "identifier_iri": "https://www.gov.uk/courts-tribunals/chancery-division-of-the-high-court",
+        "court_of_record": false
       },
       {
         "code": "EWHC-Chancery",
@@ -265,7 +279,8 @@
         "selectable": true,
         "listable": true,
         "ended": false,
-        "identifier_iri": "https://www.gov.uk/courts-tribunals/chancery-division-of-the-high-court"
+        "identifier_iri": "https://www.gov.uk/courts-tribunals/chancery-division-of-the-high-court",
+        "court_of_record": false
       },
       {
         "code": "EWHC-QBD-Commercial-Circuit",
@@ -280,7 +295,8 @@
         "selectable": false,
         "listable": false,
         "ended": false,
-        "identifier_iri": "https://www.gov.uk/courts-tribunals/commercial-circuit-court"
+        "identifier_iri": "https://www.gov.uk/courts-tribunals/commercial-circuit-court",
+        "court_of_record": false
       },
       {
         "code": "EWHC-KBD-Commercial-Circuit",
@@ -295,7 +311,8 @@
         "selectable": false,
         "listable": false,
         "ended": false,
-        "identifier_iri": "https://www.gov.uk/courts-tribunals/commercial-circuit-court"
+        "identifier_iri": "https://www.gov.uk/courts-tribunals/commercial-circuit-court",
+        "court_of_record": false
       },
       {
         "code": "EWHC-QBD-Commercial",
@@ -312,7 +329,8 @@
         "selectable": true,
         "listable": true,
         "ended": false,
-        "identifier_iri": "https://www.gov.uk/courts-tribunals/commercial-court"
+        "identifier_iri": "https://www.gov.uk/courts-tribunals/commercial-court",
+        "court_of_record": false
       },
       {
         "code": "EWHC-KBD-Commercial",
@@ -329,7 +347,8 @@
         "selectable": false,
         "listable": false,
         "ended": false,
-        "identifier_iri": "https://www.gov.uk/courts-tribunals/commercial-court"
+        "identifier_iri": "https://www.gov.uk/courts-tribunals/commercial-court",
+        "court_of_record": false
       },
       {
         "code": "EWHC-Family",
@@ -346,7 +365,8 @@
         "selectable": true,
         "listable": true,
         "ended": false,
-        "identifier_iri": "https://www.gov.uk/courts-tribunals/family-division-of-the-high-court"
+        "identifier_iri": "https://www.gov.uk/courts-tribunals/family-division-of-the-high-court",
+        "court_of_record": false
       },
       {
         "code": "EWHC-QBD-Commercial-Financial",
@@ -361,7 +381,8 @@
         "selectable": false,
         "listable": false,
         "ended": false,
-        "identifier_iri": "https://www.gov.uk/courts-tribunals/the-financial-list"
+        "identifier_iri": "https://www.gov.uk/courts-tribunals/the-financial-list",
+        "court_of_record": false
       },
       {
         "code": "EWHC-KBD-Commercial-Financial",
@@ -376,7 +397,8 @@
         "selectable": false,
         "listable": false,
         "ended": false,
-        "identifier_iri": "https://www.gov.uk/courts-tribunals/the-financial-list"
+        "identifier_iri": "https://www.gov.uk/courts-tribunals/the-financial-list",
+        "court_of_record": false
       },
       {
         "code": "EWHC-Chancery-Financial",
@@ -387,7 +409,8 @@
         "selectable": false,
         "listable": false,
         "ended": false,
-        "identifier_iri": "https://www.gov.uk/courts-tribunals/the-financial-list"
+        "identifier_iri": "https://www.gov.uk/courts-tribunals/the-financial-list",
+        "court_of_record": false
       },
       {
         "code": "EWHC-Chancery-InsolvencyAndCompanies",
@@ -398,7 +421,8 @@
         "selectable": false,
         "listable": false,
         "ended": false,
-        "identifier_iri": "https://www.gov.uk/courts-tribunals/insolvency-list"
+        "identifier_iri": "https://www.gov.uk/courts-tribunals/insolvency-list",
+        "court_of_record": false
       },
       {
         "code": "EWHC-Chancery-IPEC",
@@ -415,7 +439,8 @@
         "selectable": true,
         "listable": true,
         "ended": false,
-        "identifier_iri": "https://www.gov.uk/courts-tribunals/intellectual-property-enterprise-court"
+        "identifier_iri": "https://www.gov.uk/courts-tribunals/intellectual-property-enterprise-court",
+        "court_of_record": false
       },
       {
         "code": "EWHC-Chancery-IntellectualProperty",
@@ -426,7 +451,8 @@
         "selectable": false,
         "listable": false,
         "ended": false,
-        "identifier_iri": "https://www.gov.uk/courts-tribunals/the-intellectual-property-list"
+        "identifier_iri": "https://www.gov.uk/courts-tribunals/the-intellectual-property-list",
+        "court_of_record": false
       },
       {
         "code": "TNA-EWHC-KBQBD",
@@ -445,7 +471,8 @@
         "selectable": true,
         "listable": false,
         "ended": false,
-        "identifier_iri": "https://www.gov.uk/courts-tribunals/kings-bench-division-of-the-high-court"
+        "identifier_iri": "https://www.gov.uk/courts-tribunals/kings-bench-division-of-the-high-court",
+        "court_of_record": false
       },
       {
         "code": "EWHC-KBD",
@@ -462,7 +489,8 @@
         "selectable": false,
         "listable": true,
         "ended": false,
-        "identifier_iri": "https://www.gov.uk/courts-tribunals/kings-bench-division-of-the-high-court"
+        "identifier_iri": "https://www.gov.uk/courts-tribunals/kings-bench-division-of-the-high-court",
+        "court_of_record": false
       },
       {
         "code": "EWHC-Mercantile",
@@ -479,7 +507,8 @@
         "selectable": true,
         "listable": true,
         "ended": true,
-        "identifier_iri": "https://www.gov.uk/courts-tribunals/intellectual-property-enterprise-court"
+        "identifier_iri": "https://www.gov.uk/courts-tribunals/intellectual-property-enterprise-court",
+        "court_of_record": false
       },
       {
         "code": "EWHC-Chancery-Patents",
@@ -496,7 +525,8 @@
         "selectable": true,
         "listable": true,
         "ended": false,
-        "identifier_iri": "https://www.gov.uk/courts-tribunals/patents-court"
+        "identifier_iri": "https://www.gov.uk/courts-tribunals/patents-court",
+        "court_of_record": false
       },
       {
         "code": "EWHC-QBD",
@@ -514,7 +544,8 @@
         "selectable": false,
         "listable": true,
         "ended": true,
-        "identifier_iri": "https://www.gov.uk/courts-tribunals/queens-bench-division-of-the-high-court"
+        "identifier_iri": "https://www.gov.uk/courts-tribunals/queens-bench-division-of-the-high-court",
+        "court_of_record": false
       },
       {
         "code": "EWHC-QBD-Planning",
@@ -525,7 +556,8 @@
         "selectable": false,
         "listable": false,
         "ended": false,
-        "identifier_iri": "https://www.gov.uk/courts-tribunals/planning-court"
+        "identifier_iri": "https://www.gov.uk/courts-tribunals/planning-court",
+        "court_of_record": false
       },
       {
         "code": "EWHC-KBD-Planning",
@@ -536,7 +568,8 @@
         "selectable": false,
         "listable": false,
         "ended": false,
-        "identifier_iri": "https://www.gov.uk/courts-tribunals/planning-court"
+        "identifier_iri": "https://www.gov.uk/courts-tribunals/planning-court",
+        "court_of_record": false
       },
       {
         "code": "EWHC-Chancery-PropertyTrustsProbate",
@@ -547,7 +580,8 @@
         "selectable": false,
         "listable": false,
         "ended": false,
-        "identifier_iri": "https://www.gov.uk/courts-tribunals/the-property-trusts-and-probate-list"
+        "identifier_iri": "https://www.gov.uk/courts-tribunals/the-property-trusts-and-probate-list",
+        "court_of_record": false
       },
       {
         "code": "EWHC-SeniorCourtsCosts",
@@ -567,7 +601,8 @@
         "selectable": true,
         "listable": true,
         "ended": false,
-        "identifier_iri": "https://www.gov.uk/courts-tribunals/senior-courts-costs-office"
+        "identifier_iri": "https://www.gov.uk/courts-tribunals/senior-courts-costs-office",
+        "court_of_record": false
       },
       {
         "code": "EWHC-QBD-TCC",
@@ -584,7 +619,8 @@
         "selectable": true,
         "listable": true,
         "ended": false,
-        "identifier_iri": "https://www.gov.uk/courts-tribunals/technology-and-construction-court"
+        "identifier_iri": "https://www.gov.uk/courts-tribunals/technology-and-construction-court",
+        "court_of_record": false
       },
       {
         "code": "EWHC-KBD-TCC",
@@ -601,7 +637,8 @@
         "selectable": false,
         "listable": false,
         "ended": false,
-        "identifier_iri": "https://www.gov.uk/courts-tribunals/technology-and-construction-court"
+        "identifier_iri": "https://www.gov.uk/courts-tribunals/technology-and-construction-court",
+        "court_of_record": false
       }
     ]
   },
@@ -624,7 +661,8 @@
         "selectable": true,
         "listable": true,
         "ended": false,
-        "identifier_iri": "https://www.judiciary.uk/courts-and-tribunals/crown-court/"
+        "identifier_iri": "https://www.judiciary.uk/courts-and-tribunals/crown-court/",
+        "court_of_record": false
       },
       {
         "code": "EWCC",
@@ -640,7 +678,8 @@
         "selectable": true,
         "listable": true,
         "ended": false,
-        "identifier_iri": "https://www.judiciary.uk/courts-and-tribunals/county-court/"
+        "identifier_iri": "https://www.judiciary.uk/courts-and-tribunals/county-court/",
+        "court_of_record": false
       },
       {
         "code": "EWFC",
@@ -656,7 +695,8 @@
         "selectable": true,
         "listable": true,
         "ended": false,
-        "identifier_iri": "https://www.judiciary.uk/you-and-the-judiciary/going-to-court/family-law-courts/"
+        "identifier_iri": "https://www.judiciary.uk/you-and-the-judiciary/going-to-court/family-law-courts/",
+        "court_of_record": false
       },
       {
         "code": "EWFC-B",
@@ -672,7 +712,8 @@
         "selectable": false,
         "listable": false,
         "ended": false,
-        "identifier_iri": "https://www.judiciary.uk/you-and-the-judiciary/going-to-court/family-law-courts/"
+        "identifier_iri": "https://www.judiciary.uk/you-and-the-judiciary/going-to-court/family-law-courts/",
+        "court_of_record": false
       },
       {
         "code": "EWCOP",
@@ -688,7 +729,8 @@
         "selectable": true,
         "listable": true,
         "ended": false,
-        "identifier_iri": "https://www.gov.uk/courts-tribunals/court-of-protection"
+        "identifier_iri": "https://www.gov.uk/courts-tribunals/court-of-protection",
+        "court_of_record": false
       },
       {
         "code": "EWCOP-T1",
@@ -704,7 +746,8 @@
         "selectable": false,
         "listable": false,
         "ended": false,
-        "identifier_iri": "https://www.gov.uk/courts-tribunals/court-of-protection"
+        "identifier_iri": "https://www.gov.uk/courts-tribunals/court-of-protection",
+        "court_of_record": false
       },
       {
         "code": "EWCOP-T2",
@@ -720,7 +763,8 @@
         "selectable": false,
         "listable": false,
         "ended": false,
-        "identifier_iri": "https://www.gov.uk/courts-tribunals/court-of-protection"
+        "identifier_iri": "https://www.gov.uk/courts-tribunals/court-of-protection",
+        "court_of_record": false
       },
       {
         "code": "EWCOP-T3",
@@ -736,7 +780,8 @@
         "selectable": false,
         "listable": false,
         "ended": false,
-        "identifier_iri": "https://www.gov.uk/courts-tribunals/court-of-protection"
+        "identifier_iri": "https://www.gov.uk/courts-tribunals/court-of-protection",
+        "court_of_record": false
       }
     ]
   },
@@ -759,7 +804,8 @@
         "ended": false,
         "param": "ukiptrib",
         "start_year": 2023,
-        "identifier_iri": "https://investigatorypowerstribunal.org.uk/about-the-tribunal/"
+        "identifier_iri": "https://investigatorypowerstribunal.org.uk/about-the-tribunal/",
+        "court_of_record": false
       }
     ]
   },
@@ -776,7 +822,8 @@
         "listable": true,
         "ended": false,
         "param": "siac",
-        "identifier_iri": "https://www.gov.uk/guidance/appeal-to-the-special-immigration-appeals-commission"
+        "identifier_iri": "https://www.gov.uk/guidance/appeal-to-the-special-immigration-appeals-commission",
+        "court_of_record": false
       }
     ]
   },
@@ -793,7 +840,8 @@
         "listable": false,
         "ended": false,
         "param": "poac",
-        "identifier_iri": "https://www.gov.uk/guidance/appeal-to-the-special-immigration-appeals-commission"
+        "identifier_iri": "https://www.gov.uk/guidance/appeal-to-the-special-immigration-appeals-commission",
+        "court_of_record": false
       }
     ]
   },
@@ -810,7 +858,8 @@
         "listable": false,
         "ended": false,
         "param": "paac",
-        "identifier_iri": "https://www.gov.uk/guidance/appeal-to-the-pathogens-access-appeals-commission"
+        "identifier_iri": "https://www.gov.uk/guidance/appeal-to-the-pathogens-access-appeals-commission",
+        "court_of_record": false
       }
     ]
   },
@@ -833,7 +882,8 @@
         "ended": false,
         "param": "eat",
         "start_year": 2021,
-        "identifier_iri": "https://www.gov.uk/courts-tribunals/employment-appeal-tribunal"
+        "identifier_iri": "https://www.gov.uk/courts-tribunals/employment-appeal-tribunal",
+        "court_of_record": false
       }
     ]
   },
@@ -857,7 +907,8 @@
         "ended": false,
         "param": "ukut/aac",
         "start_year": 2011,
-        "identifier_iri": "https://www.gov.uk/courts-tribunals/upper-tribunal-administrative-appeals-chamber"
+        "identifier_iri": "https://www.gov.uk/courts-tribunals/upper-tribunal-administrative-appeals-chamber",
+        "court_of_record": false
       },
       {
         "code": "UKUT-IAC",
@@ -877,7 +928,8 @@
           "ukait"
         ],
         "start_year": 2007,
-        "identifier_iri": "https://www.gov.uk/courts-tribunals/upper-tribunal-immigration-and-asylum-chamber"
+        "identifier_iri": "https://www.gov.uk/courts-tribunals/upper-tribunal-immigration-and-asylum-chamber",
+        "court_of_record": false
       },
       {
         "code": "UKAIT",
@@ -894,7 +946,8 @@
           "[2009] UKAIT 10"
         ],
         "start_year": 2003,
-        "end_year": 2010
+        "end_year": 2010,
+        "court_of_record": false
       },
       {
         "code": "UKUT-LC",
@@ -911,7 +964,8 @@
         "ended": false,
         "param": "ukut/lc",
         "start_year": 2014,
-        "identifier_iri": "https://www.gov.uk/courts-tribunals/upper-tribunal-lands-chamber"
+        "identifier_iri": "https://www.gov.uk/courts-tribunals/upper-tribunal-lands-chamber",
+        "court_of_record": false
       },
       {
         "code": "UKUT-TCC",
@@ -928,7 +982,8 @@
         "ended": false,
         "param": "ukut/tcc",
         "start_year": 2016,
-        "identifier_iri": "https://www.gov.uk/courts-tribunals/upper-tribunal-tax-and-chancery-chamber"
+        "identifier_iri": "https://www.gov.uk/courts-tribunals/upper-tribunal-tax-and-chancery-chamber",
+        "court_of_record": false
       }
     ]
   },
@@ -950,7 +1005,8 @@
         "selectable": true,
         "listable": true,
         "ended": false,
-        "identifier_iri": "https://www.gov.uk/courts-tribunals/first-tier-tribunal-care-standards"
+        "identifier_iri": "https://www.gov.uk/courts-tribunals/first-tier-tribunal-care-standards",
+        "court_of_record": false
       },
       {
         "code": "ET",
@@ -962,7 +1018,8 @@
         "selectable": false,
         "listable": false,
         "ended": false,
-        "identifier_iri": "https://www.gov.uk/courts-tribunals/employment-tribunal"
+        "identifier_iri": "https://www.gov.uk/courts-tribunals/employment-tribunal",
+        "court_of_record": false
       },
       {
         "code": "UKFTT-GRC",
@@ -1061,7 +1118,8 @@
             "name": "Welfare of Animals"
           }
         ],
-        "identifier_iri": "https://www.gov.uk/courts-tribunals/first-tier-tribunal-general-regulatory-chamber"
+        "identifier_iri": "https://www.gov.uk/courts-tribunals/first-tier-tribunal-general-regulatory-chamber",
+        "court_of_record": false
       },
       {
         "code": "UKFTT-IAC",
@@ -1074,7 +1132,8 @@
         "selectable": true,
         "listable": true,
         "ended": false,
-        "identifier_iri": "https://www.judiciary.uk/courts-and-tribunals/tribunals/first-tier-tribunal/first-tier-tribunal-immigration-and-asylum-chamber/"
+        "identifier_iri": "https://www.judiciary.uk/courts-and-tribunals/tribunals/first-tier-tribunal/first-tier-tribunal-immigration-and-asylum-chamber/",
+        "court_of_record": false
       },
       {
         "code": "UKFTT-TC",
@@ -1091,7 +1150,8 @@
         "selectable": true,
         "listable": true,
         "ended": false,
-        "identifier_iri": "https://www.gov.uk/courts-tribunals/first-tier-tribunal-tax"
+        "identifier_iri": "https://www.gov.uk/courts-tribunals/first-tier-tribunal-tax",
+        "court_of_record": false
       },
       {
         "code": "FTT-PC",
@@ -1106,7 +1166,8 @@
         "selectable": true,
         "listable": false,
         "ended": false,
-        "identifier_iri": "https://www.judiciary.uk/courts-and-tribunals/tribunals/first-tier-tribunal/property-chamber/land-registration-division/"
+        "identifier_iri": "https://www.judiciary.uk/courts-and-tribunals/tribunals/first-tier-tribunal/property-chamber/land-registration-division/",
+        "court_of_record": false
       },
       {
         "code": "FTT-PHL",
@@ -1116,7 +1177,8 @@
         "selectable": true,
         "listable": false,
         "ended": false,
-        "identifier_iri": "https://www.judiciary.uk/courts-and-tribunals/tribunals/first-tier-tribunal/health-education-and-social-care-chamber/special-educational-needs-and-disability-care-standards-and-primary-health-lists-send/primary-health-lists/"
+        "identifier_iri": "https://www.judiciary.uk/courts-and-tribunals/tribunals/first-tier-tribunal/health-education-and-social-care-chamber/special-educational-needs-and-disability-care-standards-and-primary-health-lists-send/primary-health-lists/",
+        "court_of_record": false
       }
     ]
   },
@@ -1136,7 +1198,8 @@
         "selectable": true,
         "listable": true,
         "ended": true,
-        "identifier_iri": "https://webarchive.nationalarchives.gov.uk/ukgwa/20200626120017/http://claimsmanagement.decisions.tribunals.gov.uk/"
+        "identifier_iri": "https://webarchive.nationalarchives.gov.uk/ukgwa/20200626120017/http://claimsmanagement.decisions.tribunals.gov.uk/",
+        "court_of_record": false
       },
       {
         "code": "UKFTT-Credit",
@@ -1149,7 +1212,8 @@
         "selectable": true,
         "listable": true,
         "ended": true,
-        "identifier_iri": "https://webarchive.nationalarchives.gov.uk/ukgwa/https://consumercreditappeals.decisions.tribunals.gov.uk/"
+        "identifier_iri": "https://webarchive.nationalarchives.gov.uk/ukgwa/https://consumercreditappeals.decisions.tribunals.gov.uk/",
+        "court_of_record": false
       },
       {
         "code": "UKFTT-Estate",
@@ -1162,7 +1226,8 @@
         "selectable": true,
         "listable": true,
         "ended": true,
-        "identifier_iri": "https://webarchive.nationalarchives.gov.uk/ukgwa/20130206050212/https://www.justice.gov.uk/tribunals/estate-agents"
+        "identifier_iri": "https://webarchive.nationalarchives.gov.uk/ukgwa/20130206050212/https://www.justice.gov.uk/tribunals/estate-agents",
+        "court_of_record": false
       },
       {
         "code": "UKFSMT",
@@ -1175,7 +1240,8 @@
         "selectable": true,
         "listable": true,
         "ended": true,
-        "identifier_iri": "https://webarchive.nationalarchives.gov.uk/ukgwa/20220415114127/http://taxandchancery_ut.decisions.tribunals.gov.uk/Decisions/Financial.html"
+        "identifier_iri": "https://webarchive.nationalarchives.gov.uk/ukgwa/20220415114127/http://taxandchancery_ut.decisions.tribunals.gov.uk/Decisions/Financial.html",
+        "court_of_record": false
       },
       {
         "code": "UKIT",
@@ -1187,7 +1253,8 @@
         "selectable": true,
         "listable": true,
         "ended": true,
-        "identifier_iri": "https://webarchive.nationalarchives.gov.uk/ukgwa/20120405092513/http://www.justice.gov.uk/tribunals/information-rights"
+        "identifier_iri": "https://webarchive.nationalarchives.gov.uk/ukgwa/20120405092513/http://www.justice.gov.uk/tribunals/information-rights",
+        "court_of_record": false
       },
       {
         "code": "UKIST",
@@ -1200,7 +1267,8 @@
         "selectable": true,
         "listable": true,
         "ended": true,
-        "identifier_iri": "https://webarchive.nationalarchives.gov.uk/ukgwa/https://immigrationservices.decisions.tribunals.gov.uk/Aspx/default.aspx"
+        "identifier_iri": "https://webarchive.nationalarchives.gov.uk/ukgwa/https://immigrationservices.decisions.tribunals.gov.uk/Aspx/default.aspx",
+        "court_of_record": false
       },
       {
         "code": "UKPRT",
@@ -1213,7 +1281,8 @@
         "selectable": true,
         "listable": true,
         "ended": true,
-        "identifier_iri": "https://webarchive.nationalarchives.gov.uk/ukgwa/20220415070804/http://taxandchancery_ut.decisions.tribunals.gov.uk/Decisions/Pensions.html"
+        "identifier_iri": "https://webarchive.nationalarchives.gov.uk/ukgwa/20220415070804/http://taxandchancery_ut.decisions.tribunals.gov.uk/Decisions/Pensions.html",
+        "court_of_record": false
       },
       {
         "code": "UKSPC",
@@ -1226,7 +1295,8 @@
         "selectable": true,
         "listable": true,
         "ended": true,
-        "identifier_iri": "https://webarchive.nationalarchives.gov.uk/ukgwa/20250603040749/https://financeandtax.decisions.tribunals.gov.uk/Aspx/default.aspx"
+        "identifier_iri": "https://webarchive.nationalarchives.gov.uk/ukgwa/20250603040749/https://financeandtax.decisions.tribunals.gov.uk/Aspx/default.aspx",
+        "court_of_record": false
       },
       {
         "code": "FTT-Transport",
@@ -1238,7 +1308,8 @@
         "selectable": true,
         "listable": true,
         "ended": true,
-        "identifier_iri": "https://webarchive.nationalarchives.gov.uk/ukgwa/20160811143636/http://www.transporttribunal.gov.uk/Aspx/Default.aspx"
+        "identifier_iri": "https://webarchive.nationalarchives.gov.uk/ukgwa/20160811143636/http://www.transporttribunal.gov.uk/Aspx/Default.aspx",
+        "court_of_record": false
       },
       {
         "code": "UKVAT",
@@ -1251,7 +1322,8 @@
         "selectable": true,
         "listable": true,
         "ended": true,
-        "identifier_iri": "https://webarchive.nationalarchives.gov.uk/ukgwa/20250603040749/https://financeandtax.decisions.tribunals.gov.uk/Aspx/default.aspx"
+        "identifier_iri": "https://webarchive.nationalarchives.gov.uk/ukgwa/20250603040749/https://financeandtax.decisions.tribunals.gov.uk/Aspx/default.aspx",
+        "court_of_record": false
       }
     ]
   }

@@ -68,6 +68,8 @@ The list of courts is defined in `src/ds_caselaw_utils/data/court_names.yml`. Th
       listable: true
       # Whether this court has ended yet
       ended: false
+      # Whether this court is a court of record (optional):
+      court_of_record: true
 ```
 
 ## Requirements

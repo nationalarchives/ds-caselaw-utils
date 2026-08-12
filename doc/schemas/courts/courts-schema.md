@@ -29,15 +29,16 @@
       - [1.4.1.15. Property `Raw Court Repository > Raw Court Group > courts > Raw Court > listable`](#items_courts_items_listable)
       - [1.4.1.16. Property `Raw Court Repository > Raw Court Group > courts > Raw Court > selectable`](#items_courts_items_selectable)
       - [1.4.1.17. Property `Raw Court Repository > Raw Court Group > courts > Raw Court > ended`](#items_courts_items_ended)
-      - [1.4.1.18. Property `Raw Court Repository > Raw Court Group > courts > Raw Court > jurisdictions`](#items_courts_items_jurisdictions)
-        - [1.4.1.18.1. Raw Court Repository > Raw Court Group > courts > Raw Court > jurisdictions > Raw Jurisdiction](#items_courts_items_jurisdictions_items)
-          - [1.4.1.18.1.1. Property `Raw Court Repository > Raw Court Group > courts > Raw Court > jurisdictions > Raw Jurisdiction > prefix`](#items_courts_items_jurisdictions_items_prefix)
-          - [1.4.1.18.1.2. Property `Raw Court Repository > Raw Court Group > courts > Raw Court > jurisdictions > Raw Jurisdiction > name`](#items_courts_items_jurisdictions_items_name)
-          - [1.4.1.18.1.3. Property `Raw Court Repository > Raw Court Group > courts > Raw Court > jurisdictions > Raw Jurisdiction > code`](#items_courts_items_jurisdictions_items_code)
-      - [1.4.1.19. Property `Raw Court Repository > Raw Court Group > courts > Raw Court > relationships`](#items_courts_items_relationships)
-        - [1.4.1.19.1. Raw Court Repository > Raw Court Group > courts > Raw Court > relationships > Court relationship](#items_courts_items_relationships_items)
-          - [1.4.1.19.1.1. Property `Raw Court Repository > Raw Court Group > courts > Raw Court > relationships > Court relationship > court_code`](#items_courts_items_relationships_items_court_code)
-          - [1.4.1.19.1.2. Property `Raw Court Repository > Raw Court Group > courts > Raw Court > relationships > Court relationship > relationship_type`](#items_courts_items_relationships_items_relationship_type)
+      - [1.4.1.18. Property `Raw Court Repository > Raw Court Group > courts > Raw Court > court_of_record`](#items_courts_items_court_of_record)
+      - [1.4.1.19. Property `Raw Court Repository > Raw Court Group > courts > Raw Court > jurisdictions`](#items_courts_items_jurisdictions)
+        - [1.4.1.19.1. Raw Court Repository > Raw Court Group > courts > Raw Court > jurisdictions > Raw Jurisdiction](#items_courts_items_jurisdictions_items)
+          - [1.4.1.19.1.1. Property `Raw Court Repository > Raw Court Group > courts > Raw Court > jurisdictions > Raw Jurisdiction > prefix`](#items_courts_items_jurisdictions_items_prefix)
+          - [1.4.1.19.1.2. Property `Raw Court Repository > Raw Court Group > courts > Raw Court > jurisdictions > Raw Jurisdiction > name`](#items_courts_items_jurisdictions_items_name)
+          - [1.4.1.19.1.3. Property `Raw Court Repository > Raw Court Group > courts > Raw Court > jurisdictions > Raw Jurisdiction > code`](#items_courts_items_jurisdictions_items_code)
+      - [1.4.1.20. Property `Raw Court Repository > Raw Court Group > courts > Raw Court > relationships`](#items_courts_items_relationships)
+        - [1.4.1.20.1. Raw Court Repository > Raw Court Group > courts > Raw Court > relationships > Court relationship](#items_courts_items_relationships_items)
+          - [1.4.1.20.1.1. Property `Raw Court Repository > Raw Court Group > courts > Raw Court > relationships > Court relationship > court_code`](#items_courts_items_relationships_items_court_code)
+          - [1.4.1.20.1.2. Property `Raw Court Repository > Raw Court Group > courts > Raw Court > relationships > Court relationship > relationship_type`](#items_courts_items_relationships_items_relationship_type)
 
 **Title:** Raw Court Repository
 
@@ -128,25 +129,26 @@
 | **Additional properties** | Not allowed        |
 | **Defined in**            | court.schema.json# |
 
-| Property                                                | Pattern | Type            | Deprecated | Definition                              | Title/Description         |
-| ------------------------------------------------------- | ------- | --------------- | ---------- | --------------------------------------- | ------------------------- |
-| + [code](#items_courts_items_code )                     | No      | string          | No         | In ./court.schema.json#/$defs/CourtCode | Court Code                |
-| + [name](#items_courts_items_name )                     | No      | string          | No         | -                                       | Name                      |
-| - [long_name](#items_courts_items_long_name )           | No      | string          | No         | -                                       | Long Name                 |
-| - [grouped_name](#items_courts_items_grouped_name )     | No      | string          | No         | -                                       | -                         |
-| - [param](#items_courts_items_param )                   | No      | string          | No         | -                                       | Search parameter          |
-| - [extra_params](#items_courts_items_extra_params )     | No      | array of string | No         | -                                       | Extra parameters          |
-| - [ncn_pattern](#items_courts_items_ncn_pattern )       | No      | string          | No         | -                                       | Neutral Citation Pattern  |
-| - [ncn_examples](#items_courts_items_ncn_examples )     | No      | array of string | No         | -                                       | Neutral Citation examples |
-| + [link](#items_courts_items_link )                     | No      | string          | No         | -                                       | -                         |
-| - [identifier_iri](#items_courts_items_identifier_iri ) | No      | string          | No         | -                                       | -                         |
-| - [start_year](#items_courts_items_start_year )         | No      | integer         | No         | -                                       | Start year                |
-| - [end_year](#items_courts_items_end_year )             | No      | integer         | No         | -                                       | End year                  |
-| + [listable](#items_courts_items_listable )             | No      | boolean         | No         | -                                       | Listable                  |
-| + [selectable](#items_courts_items_selectable )         | No      | boolean         | No         | -                                       | Selectable                |
-| - [ended](#items_courts_items_ended )                   | No      | boolean         | No         | -                                       | Ended                     |
-| - [jurisdictions](#items_courts_items_jurisdictions )   | No      | array of object | No         | -                                       | -                         |
-| - [relationships](#items_courts_items_relationships )   | No      | array of object | No         | -                                       | Relationships             |
+| Property                                                  | Pattern | Type            | Deprecated | Definition                              | Title/Description         |
+| --------------------------------------------------------- | ------- | --------------- | ---------- | --------------------------------------- | ------------------------- |
+| + [code](#items_courts_items_code )                       | No      | string          | No         | In ./court.schema.json#/$defs/CourtCode | Court Code                |
+| + [name](#items_courts_items_name )                       | No      | string          | No         | -                                       | Name                      |
+| - [long_name](#items_courts_items_long_name )             | No      | string          | No         | -                                       | Long Name                 |
+| - [grouped_name](#items_courts_items_grouped_name )       | No      | string          | No         | -                                       | -                         |
+| - [param](#items_courts_items_param )                     | No      | string          | No         | -                                       | Search parameter          |
+| - [extra_params](#items_courts_items_extra_params )       | No      | array of string | No         | -                                       | Extra parameters          |
+| - [ncn_pattern](#items_courts_items_ncn_pattern )         | No      | string          | No         | -                                       | Neutral Citation Pattern  |
+| - [ncn_examples](#items_courts_items_ncn_examples )       | No      | array of string | No         | -                                       | Neutral Citation examples |
+| + [link](#items_courts_items_link )                       | No      | string          | No         | -                                       | -                         |
+| - [identifier_iri](#items_courts_items_identifier_iri )   | No      | string          | No         | -                                       | -                         |
+| - [start_year](#items_courts_items_start_year )           | No      | integer         | No         | -                                       | Start year                |
+| - [end_year](#items_courts_items_end_year )               | No      | integer         | No         | -                                       | End year                  |
+| + [listable](#items_courts_items_listable )               | No      | boolean         | No         | -                                       | Listable                  |
+| + [selectable](#items_courts_items_selectable )           | No      | boolean         | No         | -                                       | Selectable                |
+| - [ended](#items_courts_items_ended )                     | No      | boolean         | No         | -                                       | Ended                     |
+| - [court_of_record](#items_courts_items_court_of_record ) | No      | boolean         | No         | -                                       | Court of record           |
+| - [jurisdictions](#items_courts_items_jurisdictions )     | No      | array of object | No         | -                                       | -                         |
+| - [relationships](#items_courts_items_relationships )     | No      | array of object | No         | -                                       | Relationships             |
 
 | All of(Requirement)                    |
 | -------------------------------------- |
@@ -409,7 +411,18 @@
 
 **Description:** Has the court ended?
 
-##### <a name="items_courts_items_jurisdictions"></a>1.4.1.18. Property `Raw Court Repository > Raw Court Group > courts > Raw Court > jurisdictions`
+##### <a name="items_courts_items_court_of_record"></a>1.4.1.18. Property `Raw Court Repository > Raw Court Group > courts > Raw Court > court_of_record`
+
+**Title:** Court of record
+
+|              |           |
+| ------------ | --------- |
+| **Type**     | `boolean` |
+| **Required** | No        |
+
+**Description:** Is this court a court of record?
+
+##### <a name="items_courts_items_jurisdictions"></a>1.4.1.19. Property `Raw Court Repository > Raw Court Group > courts > Raw Court > jurisdictions`
 
 |              |                   |
 | ------------ | ----------------- |
@@ -428,7 +441,7 @@
 | ----------------------------------------------------------- | ----------- |
 | [Raw Jurisdiction](#items_courts_items_jurisdictions_items) | -           |
 
-###### <a name="items_courts_items_jurisdictions_items"></a>1.4.1.18.1. Raw Court Repository > Raw Court Group > courts > Raw Court > jurisdictions > Raw Jurisdiction
+###### <a name="items_courts_items_jurisdictions_items"></a>1.4.1.19.1. Raw Court Repository > Raw Court Group > courts > Raw Court > jurisdictions > Raw Jurisdiction
 
 **Title:** Raw Jurisdiction
 
@@ -444,28 +457,28 @@
 | + [name](#items_courts_items_jurisdictions_items_name )     | No      | string | No         | -          | -                 |
 | + [code](#items_courts_items_jurisdictions_items_code )     | No      | string | No         | -          | -                 |
 
-###### <a name="items_courts_items_jurisdictions_items_prefix"></a>1.4.1.18.1.1. Property `Raw Court Repository > Raw Court Group > courts > Raw Court > jurisdictions > Raw Jurisdiction > prefix`
+###### <a name="items_courts_items_jurisdictions_items_prefix"></a>1.4.1.19.1.1. Property `Raw Court Repository > Raw Court Group > courts > Raw Court > jurisdictions > Raw Jurisdiction > prefix`
 
 |              |          |
 | ------------ | -------- |
 | **Type**     | `string` |
 | **Required** | Yes      |
 
-###### <a name="items_courts_items_jurisdictions_items_name"></a>1.4.1.18.1.2. Property `Raw Court Repository > Raw Court Group > courts > Raw Court > jurisdictions > Raw Jurisdiction > name`
+###### <a name="items_courts_items_jurisdictions_items_name"></a>1.4.1.19.1.2. Property `Raw Court Repository > Raw Court Group > courts > Raw Court > jurisdictions > Raw Jurisdiction > name`
 
 |              |          |
 | ------------ | -------- |
 | **Type**     | `string` |
 | **Required** | Yes      |
 
-###### <a name="items_courts_items_jurisdictions_items_code"></a>1.4.1.18.1.3. Property `Raw Court Repository > Raw Court Group > courts > Raw Court > jurisdictions > Raw Jurisdiction > code`
+###### <a name="items_courts_items_jurisdictions_items_code"></a>1.4.1.19.1.3. Property `Raw Court Repository > Raw Court Group > courts > Raw Court > jurisdictions > Raw Jurisdiction > code`
 
 |              |          |
 | ------------ | -------- |
 | **Type**     | `string` |
 | **Required** | Yes      |
 
-##### <a name="items_courts_items_relationships"></a>1.4.1.19. Property `Raw Court Repository > Raw Court Group > courts > Raw Court > relationships`
+##### <a name="items_courts_items_relationships"></a>1.4.1.20. Property `Raw Court Repository > Raw Court Group > courts > Raw Court > relationships`
 
 **Title:** Relationships
 
@@ -488,7 +501,7 @@
 | ------------------------------------------------------------- | --------------------------------------------------------- |
 | [Court relationship](#items_courts_items_relationships_items) | An object describing the relationship between two courts. |
 
-###### <a name="items_courts_items_relationships_items"></a>1.4.1.19.1. Raw Court Repository > Raw Court Group > courts > Raw Court > relationships > Court relationship
+###### <a name="items_courts_items_relationships_items"></a>1.4.1.20.1. Raw Court Repository > Raw Court Group > courts > Raw Court > relationships > Court relationship
 
 **Title:** Court relationship
 
@@ -505,7 +518,7 @@
 | + [court_code](#items_courts_items_relationships_items_court_code )               | No      | string           | No         | Same as [code](#items_courts_items_code ) | Court Code        |
 | - [relationship_type](#items_courts_items_relationships_items_relationship_type ) | No      | enum (of string) | No         | -                                         | -                 |
 
-###### <a name="items_courts_items_relationships_items_court_code"></a>1.4.1.19.1.1. Property `Raw Court Repository > Raw Court Group > courts > Raw Court > relationships > Court relationship > court_code`
+###### <a name="items_courts_items_relationships_items_court_code"></a>1.4.1.20.1.1. Property `Raw Court Repository > Raw Court Group > courts > Raw Court > relationships > Court relationship > court_code`
 
 **Title:** Court Code
 
@@ -515,7 +528,7 @@
 | **Required**           | Yes                              |
 | **Same definition as** | [code](#items_courts_items_code) |
 
-###### <a name="items_courts_items_relationships_items_relationship_type"></a>1.4.1.19.1.2. Property `Raw Court Repository > Raw Court Group > courts > Raw Court > relationships > Court relationship > relationship_type`
+###### <a name="items_courts_items_relationships_items_relationship_type"></a>1.4.1.20.1.2. Property `Raw Court Repository > Raw Court Group > courts > Raw Court > relationships > Court relationship > relationship_type`
 
 |              |                    |
 | ------------ | ------------------ |

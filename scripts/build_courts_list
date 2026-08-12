@@ -41,6 +41,8 @@ class CourtOutputBuilder:
             for court in group["courts"]:
                 if "identifier_iri" not in court:
                     court["identifier_iri"] = court["link"]
+                if "court_of_record" not in court:
+                    court["court_of_record"] = False
 
     def write_markdown(self, destination: str) -> None:
         print("Writing courts information to MarkDown…")
@@ -60,9 +62,9 @@ class CourtOutputBuilder:
                     f.write(f"\n## {group['name']}\n")
 
                 f.write(
-                    "\n| Name | Code | Param | Example NCNs | Start | End | List? | Searchable? |\n",
+                    "\n| Name | Code | Param | Example NCNs | Start | End | List? | Searchable? | Of record? |\n",
                 )
-                f.write("| ---- | ---- | ----- | ------------ | ----- | --- | ----- | ----------- |\n")
+                f.write("| ---- | ---- | ----- | ------------ | ----- | --- | ----- | ----------- | ---------- |\n")
 
                 for court in sorted(
                     group["courts"], key=lambda x: (x["grouped_name"] if "grouped_name" in x else x["name"]) + x["code"]
@@ -96,6 +98,9 @@ class CourtOutputBuilder:
                     f.write(" | ")
                     f.write("✅" if court["selectable"] else "❌")
 
+                    f.write(" | ")
+                    f.write("✅" if court.get("court_of_record") else "❌")
+
                     f.write(" |\n")
 
     def write_json(self, destination: str) -> None:
@@ -125,6 +130,7 @@ class CourtOutputBuilder:
                     "end_year",
                     "link",
                     "description",
+                    "court_of_record",
                 ]
             )
 
@@ -159,6 +165,7 @@ class CourtOutputBuilder:
                             court.get("end_year", ""),
                             court.get("link", ""),
                             description,
+                            court.get("court_of_record", False),
                         ]
                     )
 
