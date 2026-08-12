@@ -175,6 +175,13 @@ class RawCourt(TypedDict, total=False):
     Has the court ended?
     """
 
+    court_of_record: bool
+    r"""
+    Court of record.
+
+    Is this court a court of record?
+    """
+
     jurisdictions: list["RawJurisdiction"]
     relationships: list["CourtRelationship"]
     r"""
