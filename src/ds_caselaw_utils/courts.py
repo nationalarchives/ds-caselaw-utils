@@ -311,6 +311,30 @@ class CourtsRepository:
                     groups.append(CourtGroup(category.get("display_name"), courts))
         return groups
 
+    def get_grouped_listable_courts(self) -> list[CourtGroup]:
+        groups = []
+        for category in self._data:
+            if not category.get("is_tribunal"):
+                courts = [
+                    Court(court, type=InstitutionType.COURT)
+                    for court in category.get("courts", [])
+                    if court["listable"]
+                ]
+                if len(courts) > 0:
+                    groups.append(CourtGroup(category.get("display_name"), courts))
+        return groups
+
+    def get_grouped_listable_tribunals(self) -> list[CourtGroup]:
+        groups = []
+        for category in self._data:
+            if category.get("is_tribunal"):
+                courts = [
+                    Court(court, InstitutionType.TRIBUNAL) for court in category.get("courts", []) if court["listable"]
+                ]
+                if len(courts) > 0:
+                    groups.append(CourtGroup(category.get("display_name"), courts))
+        return groups
+
     def get_listable_groups(self) -> list[CourtGroup]:
         groups = []
         for category in self._data:
