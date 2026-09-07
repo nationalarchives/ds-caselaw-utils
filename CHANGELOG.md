@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## Unreleased
+
+### Feat
+
+- **courts**: make PAAC listable
+- **courts**: make POAC listable and selectable
+
 ## v4.10.0 (2026-08-14)
 
 ### Feat

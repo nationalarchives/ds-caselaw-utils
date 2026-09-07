@@ -89,13 +89,13 @@
 
 | Name | Code | Param | Example NCNs | Start | End | List? | Searchable? | Of record? |
 | ---- | ---- | ----- | ------------ | ----- | --- | ----- | ----------- | ---------- |
-| Proscribed Organisations Appeal Commission | POAC | poac | – | – | – | ❌ | ❌ | ❌ |
+| Proscribed Organisations Appeal Commission | POAC | poac | – | – | – | ✅ | ✅ | ❌ |
 
 ## pathogens_access_appeal_commission
 
 | Name | Code | Param | Example NCNs | Start | End | List? | Searchable? | Of record? |
 | ---- | ---- | ----- | ------------ | ----- | --- | ----- | ----------- | ---------- |
-| Pathogens Access Appeal Commission | PAAC | paac | – | – | – | ❌ | ❌ | ❌ |
+| Pathogens Access Appeal Commission | PAAC | paac | – | – | – | ✅ | ❌ | ❌ |
 
 ## employment_appeal_tribunal
 

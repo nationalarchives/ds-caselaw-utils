@@ -615,8 +615,8 @@
       name: Proscribed Organisations Appeal Commission
 
       link: https://www.gov.uk/guidance/appeal-to-the-special-immigration-appeals-commission
-      selectable: false
-      listable: false
+      selectable: true
+      listable: true
       ended: false
       param: "poac"
 - name: pathogens_access_appeal_commission
@@ -628,7 +628,7 @@
 
       link: https://www.gov.uk/guidance/appeal-to-the-pathogens-access-appeals-commission
       selectable: false
-      listable: false
+      listable: true
       ended: false
       param: "paac"
 - name: employment_appeal_tribunal
