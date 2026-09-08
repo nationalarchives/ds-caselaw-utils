@@ -8,6 +8,9 @@ All notable changes to this project will be documented in this file.
 
 - **courts**: make PAAC listable
 - **courts**: make POAC listable and selectable
+- Add `get_grouped_listable_courts()`
+- Add `get_grouped_listable_tribunals()`
+- Document the selectable and listable accessors in the README
 
 ## v4.10.0 (2026-08-14)
 

@@ -26,8 +26,19 @@ courts.get_by_param("ewhc/ch") # get a court by its parameter value
 courts.get_selectable() # returns a list of all courts that are whitelisted to
                         # appear as searchable options
 
+courts.get_selectable_groups() # returns a grouped list of all courts and tribunals
+                               # that are whitelisted as searchable options
+
+courts.get_grouped_selectable_courts() # returns selectable courts grouped for display
+
+courts.get_grouped_selectable_tribunals() # returns selectable tribunals grouped for display
+
 courts.get_listable_groups() # returns a grouped list of courts that are whitelisted to
                              # be listed publicly
+
+courts.get_grouped_listable_courts() # returns listable courts grouped for display
+
+courts.get_grouped_listable_tribunals() # returns listable tribunals grouped for display
 
 courts.get_listable_courts() # returns a list of all *courts* (ie not tribunals)
                              # which are whitelisted to be listed publicly
