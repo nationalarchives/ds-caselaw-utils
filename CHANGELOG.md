@@ -2,22 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
-## Unreleased
-
-### Feat
-
-- **courts**: make PAAC listable
-- **courts**: make POAC listable and selectable
-- Add `get_grouped_listable_courts()`
-- Add `get_grouped_listable_tribunals()`
-- Document the selectable and listable accessors in the README
-
-## v4.10.0 (2026-08-14)
+## v4.10.0 (2026-09-08)
 
 ### Feat
 
 - **courts**: flag courts of record
 - **courts**: courts can now be flagged as being a court of record
+- **courts**: make PAAC listable
+- **courts**: make POAC listable and selectable
+- Add `get_grouped_listable_courts()`
+- Add `get_grouped_listable_tribunals()`
+- Document the selectable and listable accessors in the README
 
 ## v4.9.0 (2026-08-06)
 
