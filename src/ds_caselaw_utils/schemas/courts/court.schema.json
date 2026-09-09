@@ -78,14 +78,14 @@
       "description": "If this court no longer publishes documents, the default end year of the document holding range for this court in Find Case Law.",
       "type": "integer"
     },
-    "listable": {
-      "title": "Listable",
+    "show_to_editors": {
+      "title": "Show to editors",
       "description": "Should this court appear in public lists of courts supported by Find Case Law?",
       "type": "boolean"
     },
-    "selectable": {
-      "title": "Selectable",
-      "description": "Should this court appear as a selectable option in the list of searchable courts?",
+    "show_in_search_filters": {
+      "title": "Show in search filters",
+      "description": "Should this court appear as a show_in_search_filters option in the list of searchable courts?",
       "type": "boolean"
     },
     "ended": {
@@ -143,7 +143,7 @@
       }
     }
   },
-  "required": ["code", "name", "link", "listable", "selectable"],
+  "required": ["code", "name", "link", "show_to_editors", "show_in_search_filters"],
   "dependentRequired": {
     "end_year": ["start_year"],
     "ncn_pattern": ["ncn_examples"],
@@ -152,11 +152,11 @@
   "additionalProperties": false,
   "allOf": [
     {
-      "if": { "properties": { "selectable": { "const": true } } },
+      "if": { "properties": { "show_in_search_filters": { "const": true } } },
       "then": { "required": ["param"] }
     },
     {
-      "if": { "properties": { "listable": { "const": true } } },
+      "if": { "properties": { "show_to_editors": { "const": true } } },
       "then": { "required": ["param"] }
     }
   ]

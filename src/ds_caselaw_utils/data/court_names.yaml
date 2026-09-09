@@ -11,8 +11,8 @@
         - "[2013] UKSC 42"
       param: "uksc"
       start_year: 2009
-      selectable: true
-      listable: true
+      show_in_search_filters: true
+      show_to_editors: true
       ended: false
       court_of_record: true
       relationships:
@@ -33,8 +33,8 @@
         - "[2011] UKPC 25"
       param: "ukpc"
       start_year: 2009
-      selectable: true
-      listable: true
+      show_in_search_filters: true
+      show_to_editors: true
       ended: false
       court_of_record: true
 - name: court_of_appeal
@@ -51,8 +51,8 @@
         - "[2008] EWCA Civ 649"
       param: "ewca/civ"
       start_year: 2001
-      selectable: true
-      listable: true
+      show_in_search_filters: true
+      show_to_editors: true
       ended: false
       court_of_record: true
       relationships:
@@ -70,8 +70,8 @@
         - "[2014] EWCA Crim 420"
       param: "ewca/crim"
       start_year: 2003
-      selectable: true
-      listable: true
+      show_in_search_filters: true
+      show_to_editors: true
       ended: false
       court_of_record: true
       relationships:
@@ -85,8 +85,8 @@
       name: High Court
       long_name: The High Court of Justice
       link: https://www.judiciary.uk/courts-and-tribunals/high-court/
-      selectable: false
-      listable: false
+      show_in_search_filters: false
+      show_to_editors: false
       ended: false
       court_of_record: true
     - code: EWHC-QBD-Admin
@@ -99,8 +99,8 @@
         - "[2009] EWHC 995 (Admin)"
       param: "ewhc/admin"
       start_year: 2003
-      selectable: true
-      listable: true
+      show_in_search_filters: true
+      show_to_editors: true
       ended: false
       court_of_record: true
     - code: EWHC-KBD-Admin
@@ -113,8 +113,8 @@
         - "[2025] EWHC 2152 (Admin)"
       param: "ewhc/admin"
       start_year: 2022
-      selectable: false
-      listable: false
+      show_in_search_filters: false
+      show_to_editors: false
       ended: false
       court_of_record: true
     - code: EWHC-QBD-Admiralty
@@ -127,8 +127,8 @@
         - "[2018] EWHC 82 (Admlty)"
       param: "ewhc/admlty"
       start_year: 2003
-      selectable: true
-      listable: true
+      show_in_search_filters: true
+      show_to_editors: true
       ended: false
       court_of_record: true
     - code: EWHC-KBD-Admiralty
@@ -141,8 +141,8 @@
         - "[2024] EWHC 16 (Admlty)"
       param: "ewhc/admlty"
       start_year: 2022
-      selectable: false
-      listable: false
+      show_in_search_filters: false
+      show_to_editors: false
       ended: false
       court_of_record: true
     - code: EWHC-QBD-BusinessAndProperty
@@ -150,8 +150,8 @@
       name: High Court (Business and Property Courts)
       long_name: The Business and Property Courts (Queen's Bench Division)
       link: https://www.gov.uk/courts-tribunals/the-business-and-property-courts
-      selectable: false
-      listable: false
+      show_in_search_filters: false
+      show_to_editors: false
       ended: false
       court_of_record: true
     - code: EWHC-KBD-BusinessAndProperty
@@ -159,8 +159,8 @@
       name: High Courts (Business and Property Courts)
       long_name: The Business and Property Courts (King's Bench Division)
       link: https://www.gov.uk/courts-tribunals/the-business-and-property-courts
-      selectable: false
-      listable: false
+      show_in_search_filters: false
+      show_to_editors: false
       ended: false
       court_of_record: true
     - code: EWHC-Chancery-BusinessAndProperty
@@ -168,8 +168,8 @@
       name: High Court (Business and Property Courts)
       long_name: The Business and Property Courts (Chancery Division)
       link: https://www.gov.uk/courts-tribunals/the-business-and-property-courts
-      selectable: false
-      listable: false
+      show_in_search_filters: false
+      show_to_editors: false
       ended: false
       court_of_record: true
     - code: EWHC-Chancery-Business
@@ -177,8 +177,8 @@
       name: High Court (Business List)
       long_name: The Business and Property Courts (Business List)
       link: https://www.gov.uk/courts-tribunals/the-business-list
-      selectable: false
-      listable: false
+      show_in_search_filters: false
+      show_to_editors: false
       ended: false
       court_of_record: true
     - code: EWHC-Chancery-Appeals
@@ -186,8 +186,8 @@
       grouped_name: High Court (Chancery Appeals)
       long_name: The Business and Property Courts (Chancery Appeals)
       link: https://www.gov.uk/courts-tribunals/chancery-division-of-the-high-court
-      selectable: false
-      listable: false
+      show_in_search_filters: false
+      show_to_editors: false
       ended: false
       court_of_record: true
     - code: EWHC-Chancery
@@ -200,8 +200,8 @@
         - "[2016] EWHC 2142 (Ch)"
       param: "ewhc/ch"
       start_year: 2003
-      selectable: true
-      listable: true
+      show_in_search_filters: true
+      show_to_editors: true
       ended: false
       court_of_record: true
     - code: EWHC-QBD-Commercial-Circuit
@@ -212,8 +212,8 @@
       ncn_pattern: \[(\d{4})\] (EWHC) (\d+) \((Comm)\)
       ncn_examples:
         - "[2021] EWHC 286 (Comm)"
-      selectable: false
-      listable: false
+      show_in_search_filters: false
+      show_to_editors: false
       ended: false
       court_of_record: true
     - code: EWHC-KBD-Commercial-Circuit
@@ -224,8 +224,8 @@
       ncn_pattern: \[(\d{4})\] (EWHC) (\d+) \((Comm)\)
       ncn_examples:
         - "[2023] EWHC 2168 (Comm)"
-      selectable: false
-      listable: false
+      show_in_search_filters: false
+      show_to_editors: false
       ended: false
       court_of_record: true
     - code: EWHC-QBD-Commercial
@@ -238,8 +238,8 @@
         - "[2011] EWHC 68 (Comm)"
       param: "ewhc/comm"
       start_year: 2003
-      selectable: true
-      listable: true
+      show_in_search_filters: true
+      show_to_editors: true
       ended: false
       court_of_record: true
     - code: EWHC-KBD-Commercial
@@ -252,8 +252,8 @@
         - "[2024] EWHC 789 (Comm)"
       param: "ewhc/comm"
       start_year: 2022
-      selectable: false
-      listable: false
+      show_in_search_filters: false
+      show_to_editors: false
       ended: false
       court_of_record: true
     - code: EWHC-Family
@@ -266,8 +266,8 @@
         - "[2013] EWHC 3158 (Fam)"
       param: "ewhc/fam"
       start_year: 2003
-      selectable: true
-      listable: true
+      show_in_search_filters: true
+      show_to_editors: true
       ended: false
       court_of_record: true
     - code: EWHC-QBD-Commercial-Financial
@@ -278,8 +278,8 @@
       ncn_pattern: \[(\d{4})\] (EWHC) (\d+) \((Comm)\)
       ncn_examples:
         - "[2014] EWHC 3156 (Comm)"
-      selectable: false
-      listable: false
+      show_in_search_filters: false
+      show_to_editors: false
       ended: false
       court_of_record: true
     - code: EWHC-KBD-Commercial-Financial
@@ -290,8 +290,8 @@
       ncn_pattern: \[(\d{4})\] (EWHC) (\d+) \((Comm)\)
       ncn_examples:
         - "[2025] EWHC 1881 (Comm)"
-      selectable: false
-      listable: false
+      show_in_search_filters: false
+      show_to_editors: false
       ended: false
       court_of_record: true
     - code: EWHC-Chancery-Financial
@@ -299,8 +299,8 @@
       name: High Court (Financial List)
       long_name: The Business and Property Courts (Financial List)
       link: https://www.gov.uk/courts-tribunals/the-financial-list
-      selectable: false
-      listable: false
+      show_in_search_filters: false
+      show_to_editors: false
       ended: false
       court_of_record: true
     - code: EWHC-Chancery-InsolvencyAndCompanies
@@ -308,8 +308,8 @@
       name: High Court (Insolvency and Companies List)
       long_name: The Business and Property Courts (Insolvency and Companies List)
       link: https://www.gov.uk/courts-tribunals/insolvency-list
-      selectable: false
-      listable: false
+      show_in_search_filters: false
+      show_to_editors: false
       ended: false
       court_of_record: true
     - code: EWHC-Chancery-IPEC
@@ -322,8 +322,8 @@
         - "[2014] EWHC 349 (IPEC)"
       param: "ewhc/ipec"
       start_year: 2013
-      selectable: true
-      listable: true
+      show_in_search_filters: true
+      show_to_editors: true
       ended: false
       court_of_record: true
     - code: EWHC-Chancery-IntellectualProperty
@@ -331,8 +331,8 @@
       name: High Court (Intellectual Property List)
       long_name: The Business and Property Courts (Intellectual Property List)
       link: https://www.gov.uk/courts-tribunals/the-intellectual-property-list
-      selectable: false
-      listable: false
+      show_in_search_filters: false
+      show_to_editors: false
       ended: false
       court_of_record: true
     - code: TNA-EWHC-KBQBD
@@ -345,8 +345,8 @@
       param: "ewhc/kb"
       extra_params: ["ewhc/qb"]
       start_year: 2003
-      selectable: true
-      listable: false
+      show_in_search_filters: true
+      show_to_editors: false
       ended: false
       court_of_record: true
     - code: EWHC-KBD
@@ -359,8 +359,8 @@
         - "[2024] EWHC 285 (KB)"
       param: "ewhc/kb"
       start_year: 2022
-      selectable: false
-      listable: true
+      show_in_search_filters: false
+      show_to_editors: true
       ended: false
       court_of_record: true
     - code: EWHC-Mercantile
@@ -373,8 +373,8 @@
       param: "ewhc/mercantile"
       start_year: 2008
       end_year: 2014
-      selectable: true
-      listable: true
+      show_in_search_filters: true
+      show_to_editors: true
       ended: true
       court_of_record: true
     - code: EWHC-Chancery-Patents
@@ -387,8 +387,8 @@
         - "[2015] EWHC 3163 (Pat)"
       param: "ewhc/pat"
       start_year: 2003
-      selectable: true
-      listable: true
+      show_in_search_filters: true
+      show_to_editors: true
       ended: false
       court_of_record: true
     - code: EWHC-QBD
@@ -402,8 +402,8 @@
       param: "ewhc/qb"
       start_year: 2003
       end_year: 2022
-      selectable: false
-      listable: true
+      show_in_search_filters: false
+      show_to_editors: true
       ended: true
       court_of_record: true
     - code: EWHC-QBD-Planning
@@ -411,8 +411,8 @@
       name: High Court (Planning Court)
       long_name: The Planning Court (Queen's Bench Division)
       link: https://www.gov.uk/courts-tribunals/planning-court
-      selectable: false
-      listable: false
+      show_in_search_filters: false
+      show_to_editors: false
       ended: false
       court_of_record: true
     - code: EWHC-KBD-Planning
@@ -420,8 +420,8 @@
       name: High Court (Planning Court)
       long_name: The Planning Court (King's Bench Division)
       link: https://www.gov.uk/courts-tribunals/planning-court
-      selectable: false
-      listable: false
+      show_in_search_filters: false
+      show_to_editors: false
       ended: false
       court_of_record: true
     - code: EWHC-Chancery-PropertyTrustsProbate
@@ -429,8 +429,8 @@
       name: High Court (Property, Trusts and Probate List)
       long_name: The Business and Property Courts (Property, Trusts and Probate List)
       link: https://www.gov.uk/courts-tribunals/the-property-trusts-and-probate-list
-      selectable: false
-      listable: false
+      show_in_search_filters: false
+      show_to_editors: false
       ended: false
       court_of_record: true
     - code: EWHC-SeniorCourtsCosts
@@ -444,8 +444,8 @@
       param: "ewhc/scco"
       extra_params: ["ewhc/costs"]
       start_year: 2003
-      selectable: true
-      listable: true
+      show_in_search_filters: true
+      show_to_editors: true
       ended: false
       court_of_record: true
     - code: EWHC-QBD-TCC
@@ -458,8 +458,8 @@
         - "[2014] EWHC 1800 (TCC)"
       param: "ewhc/tcc"
       start_year: 2003
-      selectable: true
-      listable: true
+      show_in_search_filters: true
+      show_to_editors: true
       ended: false
       court_of_record: true
     - code: EWHC-KBD-TCC
@@ -472,8 +472,8 @@
         - "[2024] EWHC 802 (TCC)"
       param: "ewhc/tcc"
       start_year: 2003
-      selectable: false
-      listable: false
+      show_in_search_filters: false
+      show_to_editors: false
       ended: false
       court_of_record: true
 - name: lower_courts
@@ -489,8 +489,8 @@
         - "[2025] EWCR 3"
       param: "ewcr"
       start_year: 2020
-      selectable: true
-      listable: true
+      show_in_search_filters: true
+      show_to_editors: true
       ended: false
     - code: "EWCC"
       name: "County Court"
@@ -501,8 +501,8 @@
         - "[2025] EWCC 26"
       param: "ewcc"
       start_year: 2019
-      selectable: true
-      listable: true
+      show_in_search_filters: true
+      show_to_editors: true
       ended: false
     - code: EWFC
       name: Family Court
@@ -513,8 +513,8 @@
         - "[2024] EWFC 141"
       param: "ewfc"
       start_year: 2014
-      selectable: true
-      listable: true
+      show_in_search_filters: true
+      show_to_editors: true
       ended: false
     - code: "EWFC-B"
       name: Family Court (B - district and circuit judges)
@@ -526,8 +526,8 @@
         - "[2025] EWFC 79 (B)"
       param: "ewfc/b"
       start_year: 2009
-      selectable: false
-      listable: false
+      show_in_search_filters: false
+      show_to_editors: false
       ended: false
     - code: EWCOP
       name: Court of Protection
@@ -538,8 +538,8 @@
         - "[2016] EWCOP 11"
       param: "ewcop"
       start_year: 2009
-      selectable: true
-      listable: true
+      show_in_search_filters: true
+      show_to_editors: true
       ended: false
     - code: EWCOP-T1
       name: Court of Protection (Tier 1 - district judges)
@@ -550,8 +550,8 @@
         - "[2024] EWCOP 51 (T1)"
       param: "ewcop/t1"
       start_year: 2009
-      selectable: false
-      listable: false
+      show_in_search_filters: false
+      show_to_editors: false
       ended: false
     - code: EWCOP-T2
       name: Court of Protection (Tier 2 - circuit judges)
@@ -562,8 +562,8 @@
         - "[2023] EWCOP 75 (T2)"
       param: "ewcop/t2"
       start_year: 2009
-      selectable: false
-      listable: false
+      show_in_search_filters: false
+      show_to_editors: false
       ended: false
     - code: EWCOP-T3
       name: Court of Protection (Tier 3 - high court judges)
@@ -574,8 +574,8 @@
         - "[2024] EWCOP 44 (T3)"
       param: "ewcop/t3"
       start_year: 2009
-      selectable: false
-      listable: false
+      show_in_search_filters: false
+      show_to_editors: false
       ended: false
 
 - name: investigatory_powers_tribunal
@@ -589,8 +589,8 @@
       ncn_pattern: \[(\d{4})\] (UKIPTrib) (\d+)
       ncn_examples:
         - "[2023] UKIPTrib 11"
-      selectable: true
-      listable: true
+      show_in_search_filters: true
+      show_to_editors: true
       ended: false
       court_of_record: true
       param: "ukiptrib"
@@ -602,8 +602,8 @@
     - code: SIAC
       name: Special Immigration Appeals Commission
       link: https://www.gov.uk/guidance/appeal-to-the-special-immigration-appeals-commission
-      selectable: true
-      listable: true
+      show_in_search_filters: true
+      show_to_editors: true
       ended: false
       court_of_record: true
       param: "siac"
@@ -615,8 +615,8 @@
       name: Proscribed Organisations Appeal Commission
 
       link: https://www.gov.uk/guidance/appeal-to-the-special-immigration-appeals-commission
-      selectable: true
-      listable: true
+      show_in_search_filters: true
+      show_to_editors: true
       ended: false
       param: "poac"
 - name: pathogens_access_appeal_commission
@@ -627,8 +627,8 @@
       name: Pathogens Access Appeal Commission
 
       link: https://www.gov.uk/guidance/appeal-to-the-pathogens-access-appeals-commission
-      selectable: false
-      listable: true
+      show_in_search_filters: false
+      show_to_editors: true
       ended: false
       param: "paac"
 - name: employment_appeal_tribunal
@@ -642,8 +642,8 @@
       ncn_pattern: \[(\d{4})\] (EAT) (\d+)
       ncn_examples:
         - "[2024] EAT 100"
-      selectable: true
-      listable: true
+      show_in_search_filters: true
+      show_to_editors: true
       ended: false
       court_of_record: true
       param: "eat"
@@ -660,8 +660,8 @@
       ncn_pattern: \[(\d{4})\] (UKUT) (\d+) \((AAC)\)
       ncn_examples:
         - "[2024] UKUT 326 (AAC)"
-      selectable: true
-      listable: true
+      show_in_search_filters: true
+      show_to_editors: true
       ended: false
       court_of_record: true
       param: "ukut/aac"
@@ -674,16 +674,16 @@
       ncn_pattern: \[(\d{4})\] (UKUT) (\d+) \((IAC)\)
       ncn_examples:
         - "[2016] UKUT 562 (IAC)"
-      selectable: true
-      listable: true
+      show_in_search_filters: true
+      show_to_editors: true
       ended: false
       court_of_record: true
       param: "ukut/iac"
       extra_params: ["ukait"]
       start_year: 2007
     - code: UKAIT
-      selectable: false
-      listable: false
+      show_in_search_filters: false
+      show_to_editors: false
       ended: true
       param: "ukait"
       name: Asylum & Immigration Tribunal
@@ -703,8 +703,8 @@
       ncn_pattern: \[(\d{4})\] (UKUT) (\d+) \((LC)\)
       ncn_examples:
         - "[2017] UKUT 135 (LC)"
-      selectable: true
-      listable: true
+      show_in_search_filters: true
+      show_to_editors: true
       ended: false
       court_of_record: true
       param: "ukut/lc"
@@ -717,8 +717,8 @@
       ncn_pattern: \[(\d{4})\] (UKUT) (\d+) \((TCC)\)
       ncn_examples:
         - "[2017] UKUT 504 (TCC)"
-      selectable: true
-      listable: true
+      show_in_search_filters: true
+      show_to_editors: true
       ended: false
       court_of_record: true
       param: "ukut/tcc"
@@ -735,8 +735,8 @@
         - "[2025] UKFTT 1104 (HESC)"
       param: "ukftt/hesc"
       start_year: 1985
-      selectable: true
-      listable: true
+      show_in_search_filters: true
+      show_to_editors: true
       ended: false
     - code: ET
       grouped_name: Employment Tribunal
@@ -744,8 +744,8 @@
       long_name: The Employment Tribunal
       link: https://www.gov.uk/courts-tribunals/employment-tribunal
       start_year: 2022
-      selectable: false
-      listable: false
+      show_in_search_filters: false
+      show_to_editors: false
       ended: false
     - code: UKFTT-GRC
       grouped_name: General Regulatory Chamber
@@ -757,8 +757,8 @@
       ncn_examples:
         - "[2024] UKFTT 1069 (GRC)"
       start_year: 2019
-      selectable: true
-      listable: true
+      show_in_search_filters: true
+      show_to_editors: true
       ended: false
       jurisdictions:
         - code: Charity
@@ -816,8 +816,8 @@
       param: ukftt/iac
       start_year: 2010
       link: https://www.judiciary.uk/courts-and-tribunals/tribunals/first-tier-tribunal/first-tier-tribunal-immigration-and-asylum-chamber/
-      selectable: true
-      listable: true
+      show_in_search_filters: true
+      show_to_editors: true
       ended: false
     - code: UKFTT-TC
       grouped_name: Tax Chamber
@@ -829,8 +829,8 @@
         - "[2022] UKFTT 159 (TC)"
       param: "ukftt/tc"
       start_year: 2019
-      selectable: true
-      listable: true
+      show_in_search_filters: true
+      show_to_editors: true
       ended: false
     - code: FTT-PC
       name: Land Registration Division (Property Chamber)
@@ -840,15 +840,15 @@
       ncn_examples:
         - "[2025] UKFTT 1077 (PC)"
       link: https://www.judiciary.uk/courts-and-tribunals/tribunals/first-tier-tribunal/property-chamber/land-registration-division/
-      selectable: true
-      listable: false
+      show_in_search_filters: true
+      show_to_editors: false
       ended: false
     - code: FTT-PHL
       name: Primary Health Lists
       param: ftt/phl
       link: https://www.judiciary.uk/courts-and-tribunals/tribunals/first-tier-tribunal/health-education-and-social-care-chamber/special-educational-needs-and-disability-care-standards-and-primary-health-lists-send/primary-health-lists/
-      selectable: true
-      listable: false
+      show_in_search_filters: true
+      show_to_editors: false
       ended: false
 - name: historic_tribunals
   display_name: Historic Tribunals
@@ -861,8 +861,8 @@
       link: https://webarchive.nationalarchives.gov.uk/ukgwa/20200626120017/http://claimsmanagement.decisions.tribunals.gov.uk/
       start_year: 2006
       end_year: 2010
-      selectable: true
-      listable: true
+      show_in_search_filters: true
+      show_to_editors: true
       ended: true
     - code: UKFTT-Credit
       name: Consumer Credit Appeals Tribunal
@@ -871,8 +871,8 @@
       link: https://webarchive.nationalarchives.gov.uk/ukgwa/https://consumercreditappeals.decisions.tribunals.gov.uk/
       start_year: 2008
       end_year: 2013
-      selectable: true
-      listable: true
+      show_in_search_filters: true
+      show_to_editors: true
       ended: true
     - code: UKFTT-Estate
       name: Estate Agents Tribunal
@@ -881,8 +881,8 @@
       link: https://webarchive.nationalarchives.gov.uk/ukgwa/20130206050212/https://www.justice.gov.uk/tribunals/estate-agents
       start_year: 2009
       end_year: 2010
-      selectable: true
-      listable: true
+      show_in_search_filters: true
+      show_to_editors: true
       ended: true
     - code: UKFSMT
       name: Financial Services Tribunal
@@ -892,8 +892,8 @@
       link: https://webarchive.nationalarchives.gov.uk/ukgwa/20220415114127/http://taxandchancery_ut.decisions.tribunals.gov.uk/Decisions/Financial.html
       start_year: 2002
       end_year: 2010
-      selectable: true
-      listable: true
+      show_in_search_filters: true
+      show_to_editors: true
       ended: true
     - code: UKIT
       name: Information Tribunal
@@ -902,8 +902,8 @@
       param: ukit
       start_year: 1990
       end_year: 2010
-      selectable: true
-      listable: true
+      show_in_search_filters: true
+      show_to_editors: true
       ended: true
     - code: UKIST
       name: Immigration Services Tribunal
@@ -912,8 +912,8 @@
       link: https://webarchive.nationalarchives.gov.uk/ukgwa/https://immigrationservices.decisions.tribunals.gov.uk/Aspx/default.aspx
       start_year: 2001
       end_year: 2010
-      selectable: true
-      listable: true
+      show_in_search_filters: true
+      show_to_editors: true
       ended: true
     - code: UKPRT
       name: Pensions Regulator Tribunal
@@ -923,8 +923,8 @@
       link: https://webarchive.nationalarchives.gov.uk/ukgwa/20220415070804/http://taxandchancery_ut.decisions.tribunals.gov.uk/Decisions/Pensions.html
       start_year: 2006
       end_year: 2010
-      selectable: true
-      listable: true
+      show_in_search_filters: true
+      show_to_editors: true
       ended: true
     - code: UKSPC
       name: Special Commissioners of Income Tax
@@ -934,8 +934,8 @@
       link: https://webarchive.nationalarchives.gov.uk/ukgwa/20250603040749/https://financeandtax.decisions.tribunals.gov.uk/Aspx/default.aspx
       start_year: 1999
       end_year: 2009
-      selectable: true
-      listable: true
+      show_in_search_filters: true
+      show_to_editors: true
       ended: true
     - code: FTT-Transport
       name: Transport Tribunal
@@ -943,8 +943,8 @@
       link: https://webarchive.nationalarchives.gov.uk/ukgwa/20160811143636/http://www.transporttribunal.gov.uk/Aspx/Default.aspx
       start_year: 2000
       end_year: 2010
-      selectable: true
-      listable: true
+      show_in_search_filters: true
+      show_to_editors: true
       ended: true
     - code: UKVAT
       name: VAT and Duties Tribunal
@@ -955,6 +955,6 @@
       link: https://webarchive.nationalarchives.gov.uk/ukgwa/20250603040749/https://financeandtax.decisions.tribunals.gov.uk/Aspx/default.aspx
       start_year: 1989
       end_year: 2009
-      selectable: true
-      listable: true
+      show_in_search_filters: true
+      show_to_editors: true
       ended: true

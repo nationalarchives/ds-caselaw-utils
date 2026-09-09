@@ -14,7 +14,7 @@ def make_court_valid(data) -> RawCourt:
     for keyword in ["code", "name", "link"]:
         if keyword not in data:
             data[keyword] = f"placeholder {keyword}"
-    for keyword in ["selectable", "listable"]:
+    for keyword in ["show_in_search_filters", "show_to_editors"]:
         if keyword not in data:
             data[keyword] = True
 

@@ -93,10 +93,10 @@ class CourtOutputBuilder:
                     f.write(str(court["end_year"]) if "end_year" in court else "–")
 
                     f.write(" | ")
-                    f.write("✅" if court["listable"] else "❌")
+                    f.write("✅" if court["show_to_editors"] else "❌")
 
                     f.write(" | ")
-                    f.write("✅" if court["selectable"] else "❌")
+                    f.write("✅" if court["show_in_search_filters"] else "❌")
 
                     f.write(" | ")
                     f.write("✅" if court.get("court_of_record") else "❌")
