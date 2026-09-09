@@ -80,12 +80,17 @@
     },
     "show_to_editors": {
       "title": "Show to editors",
-      "description": "Should this court appear in public lists of courts supported by Find Case Law?",
+      "description": "Should this court be visible to editors?",
       "type": "boolean"
     },
     "show_in_search_filters": {
       "title": "Show in search filters",
-      "description": "Should this court appear as a show_in_search_filters option in the list of searchable courts?",
+      "description": "Should this court appear as an advanced search filter option?",
+      "type": "boolean"
+    },
+    "show_in_public_directory": {
+      "title": "Show in courts and tribunals directory",
+      "description": "Should this court appear in the public directory of courts and tribunals?",
       "type": "boolean"
     },
     "ended": {
@@ -143,7 +148,14 @@
       }
     }
   },
-  "required": ["code", "name", "link", "show_to_editors", "show_in_search_filters"],
+  "required": [
+    "code",
+    "name",
+    "link",
+    "show_to_editors",
+    "show_in_search_filters",
+    "show_in_public_directory"
+  ],
   "dependentRequired": {
     "end_year": ["start_year"],
     "ncn_pattern": ["ncn_examples"],
@@ -153,6 +165,10 @@
   "allOf": [
     {
       "if": { "properties": { "show_in_search_filters": { "const": true } } },
+      "then": { "required": ["param"] }
+    },
+    {
+      "if": { "properties": { "show_in_public_directory": { "const": true } } },
       "then": { "required": ["param"] }
     },
     {

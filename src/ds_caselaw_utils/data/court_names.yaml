@@ -12,6 +12,7 @@
       param: "uksc"
       start_year: 2009
       show_in_search_filters: true
+      show_in_public_directory: true
       show_to_editors: true
       ended: false
       court_of_record: true
@@ -34,6 +35,7 @@
       param: "ukpc"
       start_year: 2009
       show_in_search_filters: true
+      show_in_public_directory: true
       show_to_editors: true
       ended: false
       court_of_record: true
@@ -52,6 +54,7 @@
       param: "ewca/civ"
       start_year: 2001
       show_in_search_filters: true
+      show_in_public_directory: true
       show_to_editors: true
       ended: false
       court_of_record: true
@@ -71,6 +74,7 @@
       param: "ewca/crim"
       start_year: 2003
       show_in_search_filters: true
+      show_in_public_directory: true
       show_to_editors: true
       ended: false
       court_of_record: true
@@ -86,6 +90,7 @@
       long_name: The High Court of Justice
       link: https://www.judiciary.uk/courts-and-tribunals/high-court/
       show_in_search_filters: false
+      show_in_public_directory: false
       show_to_editors: false
       ended: false
       court_of_record: true
@@ -100,6 +105,7 @@
       param: "ewhc/admin"
       start_year: 2003
       show_in_search_filters: true
+      show_in_public_directory: true
       show_to_editors: true
       ended: false
       court_of_record: true
@@ -114,6 +120,7 @@
       param: "ewhc/admin"
       start_year: 2022
       show_in_search_filters: false
+      show_in_public_directory: false
       show_to_editors: false
       ended: false
       court_of_record: true
@@ -128,6 +135,7 @@
       param: "ewhc/admlty"
       start_year: 2003
       show_in_search_filters: true
+      show_in_public_directory: true
       show_to_editors: true
       ended: false
       court_of_record: true
@@ -142,6 +150,7 @@
       param: "ewhc/admlty"
       start_year: 2022
       show_in_search_filters: false
+      show_in_public_directory: false
       show_to_editors: false
       ended: false
       court_of_record: true
@@ -151,6 +160,7 @@
       long_name: The Business and Property Courts (Queen's Bench Division)
       link: https://www.gov.uk/courts-tribunals/the-business-and-property-courts
       show_in_search_filters: false
+      show_in_public_directory: false
       show_to_editors: false
       ended: false
       court_of_record: true
@@ -160,6 +170,7 @@
       long_name: The Business and Property Courts (King's Bench Division)
       link: https://www.gov.uk/courts-tribunals/the-business-and-property-courts
       show_in_search_filters: false
+      show_in_public_directory: false
       show_to_editors: false
       ended: false
       court_of_record: true
@@ -169,6 +180,7 @@
       long_name: The Business and Property Courts (Chancery Division)
       link: https://www.gov.uk/courts-tribunals/the-business-and-property-courts
       show_in_search_filters: false
+      show_in_public_directory: false
       show_to_editors: false
       ended: false
       court_of_record: true
@@ -178,6 +190,7 @@
       long_name: The Business and Property Courts (Business List)
       link: https://www.gov.uk/courts-tribunals/the-business-list
       show_in_search_filters: false
+      show_in_public_directory: false
       show_to_editors: false
       ended: false
       court_of_record: true
@@ -187,6 +200,7 @@
       long_name: The Business and Property Courts (Chancery Appeals)
       link: https://www.gov.uk/courts-tribunals/chancery-division-of-the-high-court
       show_in_search_filters: false
+      show_in_public_directory: false
       show_to_editors: false
       ended: false
       court_of_record: true
@@ -201,6 +215,7 @@
       param: "ewhc/ch"
       start_year: 2003
       show_in_search_filters: true
+      show_in_public_directory: true
       show_to_editors: true
       ended: false
       court_of_record: true
@@ -213,6 +228,7 @@
       ncn_examples:
         - "[2021] EWHC 286 (Comm)"
       show_in_search_filters: false
+      show_in_public_directory: false
       show_to_editors: false
       ended: false
       court_of_record: true
@@ -225,6 +241,7 @@
       ncn_examples:
         - "[2023] EWHC 2168 (Comm)"
       show_in_search_filters: false
+      show_in_public_directory: false
       show_to_editors: false
       ended: false
       court_of_record: true
@@ -239,6 +256,7 @@
       param: "ewhc/comm"
       start_year: 2003
       show_in_search_filters: true
+      show_in_public_directory: true
       show_to_editors: true
       ended: false
       court_of_record: true
@@ -253,6 +271,7 @@
       param: "ewhc/comm"
       start_year: 2022
       show_in_search_filters: false
+      show_in_public_directory: false
       show_to_editors: false
       ended: false
       court_of_record: true
@@ -267,6 +286,7 @@
       param: "ewhc/fam"
       start_year: 2003
       show_in_search_filters: true
+      show_in_public_directory: true
       show_to_editors: true
       ended: false
       court_of_record: true
@@ -279,6 +299,7 @@
       ncn_examples:
         - "[2014] EWHC 3156 (Comm)"
       show_in_search_filters: false
+      show_in_public_directory: false
       show_to_editors: false
       ended: false
       court_of_record: true
@@ -291,6 +312,7 @@
       ncn_examples:
         - "[2025] EWHC 1881 (Comm)"
       show_in_search_filters: false
+      show_in_public_directory: false
       show_to_editors: false
       ended: false
       court_of_record: true
@@ -300,6 +322,7 @@
       long_name: The Business and Property Courts (Financial List)
       link: https://www.gov.uk/courts-tribunals/the-financial-list
       show_in_search_filters: false
+      show_in_public_directory: false
       show_to_editors: false
       ended: false
       court_of_record: true
@@ -309,6 +332,7 @@
       long_name: The Business and Property Courts (Insolvency and Companies List)
       link: https://www.gov.uk/courts-tribunals/insolvency-list
       show_in_search_filters: false
+      show_in_public_directory: false
       show_to_editors: false
       ended: false
       court_of_record: true
@@ -323,6 +347,7 @@
       param: "ewhc/ipec"
       start_year: 2013
       show_in_search_filters: true
+      show_in_public_directory: true
       show_to_editors: true
       ended: false
       court_of_record: true
@@ -332,6 +357,7 @@
       long_name: The Business and Property Courts (Intellectual Property List)
       link: https://www.gov.uk/courts-tribunals/the-intellectual-property-list
       show_in_search_filters: false
+      show_in_public_directory: false
       show_to_editors: false
       ended: false
       court_of_record: true
@@ -346,6 +372,7 @@
       extra_params: ["ewhc/qb"]
       start_year: 2003
       show_in_search_filters: true
+      show_in_public_directory: true
       show_to_editors: false
       ended: false
       court_of_record: true
@@ -360,6 +387,7 @@
       param: "ewhc/kb"
       start_year: 2022
       show_in_search_filters: false
+      show_in_public_directory: false
       show_to_editors: true
       ended: false
       court_of_record: true
@@ -374,6 +402,7 @@
       start_year: 2008
       end_year: 2014
       show_in_search_filters: true
+      show_in_public_directory: true
       show_to_editors: true
       ended: true
       court_of_record: true
@@ -388,6 +417,7 @@
       param: "ewhc/pat"
       start_year: 2003
       show_in_search_filters: true
+      show_in_public_directory: true
       show_to_editors: true
       ended: false
       court_of_record: true
@@ -403,6 +433,7 @@
       start_year: 2003
       end_year: 2022
       show_in_search_filters: false
+      show_in_public_directory: false
       show_to_editors: true
       ended: true
       court_of_record: true
@@ -412,6 +443,7 @@
       long_name: The Planning Court (Queen's Bench Division)
       link: https://www.gov.uk/courts-tribunals/planning-court
       show_in_search_filters: false
+      show_in_public_directory: false
       show_to_editors: false
       ended: false
       court_of_record: true
@@ -421,6 +453,7 @@
       long_name: The Planning Court (King's Bench Division)
       link: https://www.gov.uk/courts-tribunals/planning-court
       show_in_search_filters: false
+      show_in_public_directory: false
       show_to_editors: false
       ended: false
       court_of_record: true
@@ -430,6 +463,7 @@
       long_name: The Business and Property Courts (Property, Trusts and Probate List)
       link: https://www.gov.uk/courts-tribunals/the-property-trusts-and-probate-list
       show_in_search_filters: false
+      show_in_public_directory: false
       show_to_editors: false
       ended: false
       court_of_record: true
@@ -445,6 +479,7 @@
       extra_params: ["ewhc/costs"]
       start_year: 2003
       show_in_search_filters: true
+      show_in_public_directory: true
       show_to_editors: true
       ended: false
       court_of_record: true
@@ -459,6 +494,7 @@
       param: "ewhc/tcc"
       start_year: 2003
       show_in_search_filters: true
+      show_in_public_directory: true
       show_to_editors: true
       ended: false
       court_of_record: true
@@ -473,6 +509,7 @@
       param: "ewhc/tcc"
       start_year: 2003
       show_in_search_filters: false
+      show_in_public_directory: false
       show_to_editors: false
       ended: false
       court_of_record: true
@@ -490,6 +527,7 @@
       param: "ewcr"
       start_year: 2020
       show_in_search_filters: true
+      show_in_public_directory: true
       show_to_editors: true
       ended: false
     - code: "EWCC"
@@ -502,6 +540,7 @@
       param: "ewcc"
       start_year: 2019
       show_in_search_filters: true
+      show_in_public_directory: true
       show_to_editors: true
       ended: false
     - code: EWFC
@@ -514,6 +553,7 @@
       param: "ewfc"
       start_year: 2014
       show_in_search_filters: true
+      show_in_public_directory: true
       show_to_editors: true
       ended: false
     - code: "EWFC-B"
@@ -527,6 +567,7 @@
       param: "ewfc/b"
       start_year: 2009
       show_in_search_filters: false
+      show_in_public_directory: false
       show_to_editors: false
       ended: false
     - code: EWCOP
@@ -539,6 +580,7 @@
       param: "ewcop"
       start_year: 2009
       show_in_search_filters: true
+      show_in_public_directory: true
       show_to_editors: true
       ended: false
     - code: EWCOP-T1
@@ -551,6 +593,7 @@
       param: "ewcop/t1"
       start_year: 2009
       show_in_search_filters: false
+      show_in_public_directory: false
       show_to_editors: false
       ended: false
     - code: EWCOP-T2
@@ -563,6 +606,7 @@
       param: "ewcop/t2"
       start_year: 2009
       show_in_search_filters: false
+      show_in_public_directory: false
       show_to_editors: false
       ended: false
     - code: EWCOP-T3
@@ -575,6 +619,7 @@
       param: "ewcop/t3"
       start_year: 2009
       show_in_search_filters: false
+      show_in_public_directory: false
       show_to_editors: false
       ended: false
 
@@ -590,6 +635,7 @@
       ncn_examples:
         - "[2023] UKIPTrib 11"
       show_in_search_filters: true
+      show_in_public_directory: true
       show_to_editors: true
       ended: false
       court_of_record: true
@@ -603,6 +649,7 @@
       name: Special Immigration Appeals Commission
       link: https://www.gov.uk/guidance/appeal-to-the-special-immigration-appeals-commission
       show_in_search_filters: true
+      show_in_public_directory: true
       show_to_editors: true
       ended: false
       court_of_record: true
@@ -616,6 +663,7 @@
 
       link: https://www.gov.uk/guidance/appeal-to-the-special-immigration-appeals-commission
       show_in_search_filters: true
+      show_in_public_directory: true
       show_to_editors: true
       ended: false
       param: "poac"
@@ -628,6 +676,7 @@
 
       link: https://www.gov.uk/guidance/appeal-to-the-pathogens-access-appeals-commission
       show_in_search_filters: false
+      show_in_public_directory: true
       show_to_editors: true
       ended: false
       param: "paac"
@@ -643,6 +692,7 @@
       ncn_examples:
         - "[2024] EAT 100"
       show_in_search_filters: true
+      show_in_public_directory: true
       show_to_editors: true
       ended: false
       court_of_record: true
@@ -661,6 +711,7 @@
       ncn_examples:
         - "[2024] UKUT 326 (AAC)"
       show_in_search_filters: true
+      show_in_public_directory: true
       show_to_editors: true
       ended: false
       court_of_record: true
@@ -675,6 +726,7 @@
       ncn_examples:
         - "[2016] UKUT 562 (IAC)"
       show_in_search_filters: true
+      show_in_public_directory: true
       show_to_editors: true
       ended: false
       court_of_record: true
@@ -683,6 +735,7 @@
       start_year: 2007
     - code: UKAIT
       show_in_search_filters: false
+      show_in_public_directory: false
       show_to_editors: false
       ended: true
       param: "ukait"
@@ -704,6 +757,7 @@
       ncn_examples:
         - "[2017] UKUT 135 (LC)"
       show_in_search_filters: true
+      show_in_public_directory: true
       show_to_editors: true
       ended: false
       court_of_record: true
@@ -718,6 +772,7 @@
       ncn_examples:
         - "[2017] UKUT 504 (TCC)"
       show_in_search_filters: true
+      show_in_public_directory: true
       show_to_editors: true
       ended: false
       court_of_record: true
@@ -736,6 +791,7 @@
       param: "ukftt/hesc"
       start_year: 1985
       show_in_search_filters: true
+      show_in_public_directory: true
       show_to_editors: true
       ended: false
     - code: ET
@@ -745,6 +801,7 @@
       link: https://www.gov.uk/courts-tribunals/employment-tribunal
       start_year: 2022
       show_in_search_filters: false
+      show_in_public_directory: false
       show_to_editors: false
       ended: false
     - code: UKFTT-GRC
@@ -758,6 +815,7 @@
         - "[2024] UKFTT 1069 (GRC)"
       start_year: 2019
       show_in_search_filters: true
+      show_in_public_directory: true
       show_to_editors: true
       ended: false
       jurisdictions:
@@ -817,6 +875,7 @@
       start_year: 2010
       link: https://www.judiciary.uk/courts-and-tribunals/tribunals/first-tier-tribunal/first-tier-tribunal-immigration-and-asylum-chamber/
       show_in_search_filters: true
+      show_in_public_directory: true
       show_to_editors: true
       ended: false
     - code: UKFTT-TC
@@ -830,6 +889,7 @@
       param: "ukftt/tc"
       start_year: 2019
       show_in_search_filters: true
+      show_in_public_directory: true
       show_to_editors: true
       ended: false
     - code: FTT-PC
@@ -841,6 +901,7 @@
         - "[2025] UKFTT 1077 (PC)"
       link: https://www.judiciary.uk/courts-and-tribunals/tribunals/first-tier-tribunal/property-chamber/land-registration-division/
       show_in_search_filters: true
+      show_in_public_directory: true
       show_to_editors: false
       ended: false
     - code: FTT-PHL
@@ -848,6 +909,7 @@
       param: ftt/phl
       link: https://www.judiciary.uk/courts-and-tribunals/tribunals/first-tier-tribunal/health-education-and-social-care-chamber/special-educational-needs-and-disability-care-standards-and-primary-health-lists-send/primary-health-lists/
       show_in_search_filters: true
+      show_in_public_directory: true
       show_to_editors: false
       ended: false
 - name: historic_tribunals
@@ -862,6 +924,7 @@
       start_year: 2006
       end_year: 2010
       show_in_search_filters: true
+      show_in_public_directory: true
       show_to_editors: true
       ended: true
     - code: UKFTT-Credit
@@ -872,6 +935,7 @@
       start_year: 2008
       end_year: 2013
       show_in_search_filters: true
+      show_in_public_directory: true
       show_to_editors: true
       ended: true
     - code: UKFTT-Estate
@@ -882,6 +946,7 @@
       start_year: 2009
       end_year: 2010
       show_in_search_filters: true
+      show_in_public_directory: true
       show_to_editors: true
       ended: true
     - code: UKFSMT
@@ -893,6 +958,7 @@
       start_year: 2002
       end_year: 2010
       show_in_search_filters: true
+      show_in_public_directory: true
       show_to_editors: true
       ended: true
     - code: UKIT
@@ -903,6 +969,7 @@
       start_year: 1990
       end_year: 2010
       show_in_search_filters: true
+      show_in_public_directory: true
       show_to_editors: true
       ended: true
     - code: UKIST
@@ -913,6 +980,7 @@
       start_year: 2001
       end_year: 2010
       show_in_search_filters: true
+      show_in_public_directory: true
       show_to_editors: true
       ended: true
     - code: UKPRT
@@ -924,6 +992,7 @@
       start_year: 2006
       end_year: 2010
       show_in_search_filters: true
+      show_in_public_directory: true
       show_to_editors: true
       ended: true
     - code: UKSPC
@@ -935,6 +1004,7 @@
       start_year: 1999
       end_year: 2009
       show_in_search_filters: true
+      show_in_public_directory: true
       show_to_editors: true
       ended: true
     - code: FTT-Transport
@@ -944,6 +1014,7 @@
       start_year: 2000
       end_year: 2010
       show_in_search_filters: true
+      show_in_public_directory: true
       show_to_editors: true
       ended: true
     - code: UKVAT
@@ -956,5 +1027,6 @@
       start_year: 1989
       end_year: 2009
       show_in_search_filters: true
+      show_in_public_directory: true
       show_to_editors: true
       ended: true

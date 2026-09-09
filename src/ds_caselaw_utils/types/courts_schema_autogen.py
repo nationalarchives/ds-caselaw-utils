@@ -61,6 +61,13 @@ class RawCourt(TypedDict, total=False):
           - param
       - if:
           properties:
+            show_in_public_directory:
+              const: true
+        then:
+          required:
+          - param
+      - if:
+          properties:
             show_to_editors:
               const: true
         then:
@@ -154,7 +161,7 @@ class RawCourt(TypedDict, total=False):
     r"""
     Show to editors.
 
-    Should this court appear in public lists of courts supported by Find Case Law?
+    Should this court be visible to editors?
 
     Required property
     """
@@ -163,7 +170,16 @@ class RawCourt(TypedDict, total=False):
     r"""
     Show in search filters.
 
-    Should this court appear as a show_in_search_filters option in the list of searchable courts?
+    Should this court appear as an advanced search filter option?
+
+    Required property
+    """
+
+    show_in_public_directory: Required[bool]
+    r"""
+    Show in courts and tribunals directory.
+
+    Should this court appear in the public directory of courts and tribunals?
 
     Required property
     """
