@@ -5,26 +5,26 @@
 
 ## supreme_court
 
-| Name | Code | Param | Example NCNs | Start | End | Show to editors? | Advanced search filter? | Show in directory? | Of record? |
+| Name | Code | Param | Example NCNs | Start | End | Show to editors? | Advanced search filter? | Show in public directory? | Of record? |
 | ---- | ---- | ----- | ------------ | ----- | --- | ----- | ----------- | ----------- | ---------- |
 | United Kingdom Supreme Court | UKSC | uksc | [2013] UKSC 42 | 2009 | – | ✅ | ✅ | ✅ | ✅ |
 
 ## privy_council
 
-| Name | Code | Param | Example NCNs | Start | End | Show to editors? | Advanced search filter? | Show in directory? | Of record? |
+| Name | Code | Param | Example NCNs | Start | End | Show to editors? | Advanced search filter? | Show in public directory? | Of record? |
 | ---- | ---- | ----- | ------------ | ----- | --- | ----- | ----------- | ----------- | ---------- |
 | Privy Council | UKPC | ukpc | [2011] UKPC 25 | 2009 | – | ✅ | ✅ | ✅ | ✅ |
 
 ## Court of Appeal (court_of_appeal)
 
-| Name | Code | Param | Example NCNs | Start | End | Show to editors? | Advanced search filter? | Show in directory? | Of record? |
+| Name | Code | Param | Example NCNs | Start | End | Show to editors? | Advanced search filter? | Show in public directory? | Of record? |
 | ---- | ---- | ----- | ------------ | ----- | --- | ----- | ----------- | ----------- | ---------- |
 | Civil Division | EWCA-Civil | ewca/civ | [2008] EWCA Civ 649 | 2001 | – | ✅ | ✅ | ✅ | ✅ |
 | Criminal Division | EWCA-Criminal | ewca/crim | [2014] EWCA Crim 420 | 2003 | – | ✅ | ✅ | ✅ | ✅ |
 
 ## High Court (England and Wales) (high_court)
 
-| Name | Code | Param | Example NCNs | Start | End | Show to editors? | Advanced search filter? | Show in directory? | Of record? |
+| Name | Code | Param | Example NCNs | Start | End | Show to editors? | Advanced search filter? | Show in public directory? | Of record? |
 | ---- | ---- | ----- | ------------ | ----- | --- | ----- | ----------- | ----------- | ---------- |
 | Administrative Court | EWHC-KBD-Admin | ewhc/admin | [2025] EWHC 2152 (Admin) | 2022 | – | ❌ | ❌ | ❌ | ✅ |
 | Administrative Court | EWHC-QBD-Admin | ewhc/admin | [2009] EWHC 995 (Admin) | 2003 | – | ✅ | ✅ | ✅ | ✅ |
@@ -62,7 +62,7 @@
 
 ## Other Courts (lower_courts)
 
-| Name | Code | Param | Example NCNs | Start | End | Show to editors? | Advanced search filter? | Show in directory? | Of record? |
+| Name | Code | Param | Example NCNs | Start | End | Show to editors? | Advanced search filter? | Show in public directory? | Of record? |
 | ---- | ---- | ----- | ------------ | ----- | --- | ----- | ----------- | ----------- | ---------- |
 | County Court | EWCC | ewcc | [2025] EWCC 26 | 2019 | – | ✅ | ✅ | ✅ | ❌ |
 | Court of Protection (Tier 1 - district judges) | EWCOP-T1 | ewcop/t1 | [2024] EWCOP 51 (T1) | 2009 | – | ❌ | ❌ | ❌ | ❌ |
@@ -75,37 +75,37 @@
 
 ## investigatory_powers_tribunal
 
-| Name | Code | Param | Example NCNs | Start | End | Show to editors? | Advanced search filter? | Show in directory? | Of record? |
+| Name | Code | Param | Example NCNs | Start | End | Show to editors? | Advanced search filter? | Show in public directory? | Of record? |
 | ---- | ---- | ----- | ------------ | ----- | --- | ----- | ----------- | ----------- | ---------- |
 | Investigatory Powers Tribunal | UKIPT | ukiptrib | [2023] UKIPTrib 11 | 2023 | – | ✅ | ✅ | ✅ | ✅ |
 
 ## special_immigration_appeals_commission
 
-| Name | Code | Param | Example NCNs | Start | End | Show to editors? | Advanced search filter? | Show in directory? | Of record? |
+| Name | Code | Param | Example NCNs | Start | End | Show to editors? | Advanced search filter? | Show in public directory? | Of record? |
 | ---- | ---- | ----- | ------------ | ----- | --- | ----- | ----------- | ----------- | ---------- |
 | Special Immigration Appeals Commission | SIAC | siac | – | – | – | ✅ | ✅ | ✅ | ✅ |
 
 ## proscribed_organisations_appeal_commission
 
-| Name | Code | Param | Example NCNs | Start | End | Show to editors? | Advanced search filter? | Show in directory? | Of record? |
+| Name | Code | Param | Example NCNs | Start | End | Show to editors? | Advanced search filter? | Show in public directory? | Of record? |
 | ---- | ---- | ----- | ------------ | ----- | --- | ----- | ----------- | ----------- | ---------- |
 | Proscribed Organisations Appeal Commission | POAC | poac | – | – | – | ✅ | ✅ | ✅ | ❌ |
 
 ## pathogens_access_appeal_commission
 
-| Name | Code | Param | Example NCNs | Start | End | Show to editors? | Advanced search filter? | Show in directory? | Of record? |
+| Name | Code | Param | Example NCNs | Start | End | Show to editors? | Advanced search filter? | Show in public directory? | Of record? |
 | ---- | ---- | ----- | ------------ | ----- | --- | ----- | ----------- | ----------- | ---------- |
 | Pathogens Access Appeal Commission | PAAC | paac | – | – | – | ✅ | ❌ | ✅ | ❌ |
 
 ## employment_appeal_tribunal
 
-| Name | Code | Param | Example NCNs | Start | End | Show to editors? | Advanced search filter? | Show in directory? | Of record? |
+| Name | Code | Param | Example NCNs | Start | End | Show to editors? | Advanced search filter? | Show in public directory? | Of record? |
 | ---- | ---- | ----- | ------------ | ----- | --- | ----- | ----------- | ----------- | ---------- |
 | Employment Appeal Tribunal | EAT | eat | [2024] EAT 100 | 2021 | – | ✅ | ✅ | ✅ | ✅ |
 
 ## Upper Tribunals (upper_tribunals)
 
-| Name | Code | Param | Example NCNs | Start | End | Show to editors? | Advanced search filter? | Show in directory? | Of record? |
+| Name | Code | Param | Example NCNs | Start | End | Show to editors? | Advanced search filter? | Show in public directory? | Of record? |
 | ---- | ---- | ----- | ------------ | ----- | --- | ----- | ----------- | ----------- | ---------- |
 | Administrative Appeals Chamber | UKUT-AAC | ukut/aac | [2024] UKUT 326 (AAC) | 2011 | – | ✅ | ✅ | ✅ | ✅ |
 | Asylum & Immigration Tribunal | UKAIT | ukait | [2009] UKAIT 10 | 2003 | 2010 | ❌ | ❌ | ❌ | ❌ |
@@ -115,7 +115,7 @@
 
 ## First-tier Tribunals (first_tier_tribunals)
 
-| Name | Code | Param | Example NCNs | Start | End | Show to editors? | Advanced search filter? | Show in directory? | Of record? |
+| Name | Code | Param | Example NCNs | Start | End | Show to editors? | Advanced search filter? | Show in public directory? | Of record? |
 | ---- | ---- | ----- | ------------ | ----- | --- | ----- | ----------- | ----------- | ---------- |
 | Care Standards | UKFTT-HESC | ukftt/hesc | [2025] UKFTT 1104 (HESC) | 1985 | – | ✅ | ✅ | ✅ | ❌ |
 | Employment Tribunal | ET | – | – | 2022 | – | ❌ | ❌ | ❌ | ❌ |
@@ -127,7 +127,7 @@
 
 ## Historic Tribunals (historic_tribunals)
 
-| Name | Code | Param | Example NCNs | Start | End | Show to editors? | Advanced search filter? | Show in directory? | Of record? |
+| Name | Code | Param | Example NCNs | Start | End | Show to editors? | Advanced search filter? | Show in public directory? | Of record? |
 | ---- | ---- | ----- | ------------ | ----- | --- | ----- | ----------- | ----------- | ---------- |
 | Claims Management Services Tribunal | FTT-Claims | ftt/claims | – | 2006 | 2010 | ✅ | ✅ | ✅ | ❌ |
 | Consumer Credit Appeals Tribunal | UKFTT-Credit | ukftt/credit | – | 2008 | 2013 | ✅ | ✅ | ✅ | ❌ |

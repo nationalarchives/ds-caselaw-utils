@@ -62,7 +62,7 @@ class CourtOutputBuilder:
                     f.write(f"\n## {group['name']}\n")
 
                 f.write(
-                    "\n| Name | Code | Param | Example NCNs | Start | End | Show to editors? | Advanced search filter? | Show in directory? | Of record? |\n",
+                    "\n| Name | Code | Param | Example NCNs | Start | End | Show to editors? | Advanced search filter? | Show in public directory? | Of record? |\n",
                 )
                 f.write(
                     "| ---- | ---- | ----- | ------------ | ----- | --- | ----- | ----------- | ----------- | ---------- |\n"
