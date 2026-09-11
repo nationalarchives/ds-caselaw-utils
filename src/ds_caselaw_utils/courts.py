@@ -261,55 +261,46 @@ class CourtsRepository:
         else:
             return courts
 
-    def get_show_in_search_filters(self) -> list[Court]:
+    def _get_with_property(self, court_property: str) -> list[Court]:
         courts = []
         for category in self._data:
             for court in category.get("courts", []):
-                if court["show_in_search_filters"]:
+                if court.get(court_property):
                     courts.append(
                         Court(
                             court, type=InstitutionType.TRIBUNAL if category["is_tribunal"] else InstitutionType.COURT
                         )
                     )
         return courts
+
+    def get_show_in_search_filters(self) -> list[Court]:
+        return self._get_with_property("show_in_search_filters")
 
     def get_show_in_public_directory(self) -> list[Court]:
-        courts = []
+        return self._get_with_property("show_in_public_directory")
+
+    def _get_groups_with_property(self, court_property: str) -> list[CourtGroup]:
+        groups = []
         for category in self._data:
-            for court in category.get("courts", []):
-                if court["show_in_public_directory"]:
-                    courts.append(
-                        Court(
-                            court, type=InstitutionType.TRIBUNAL if category["is_tribunal"] else InstitutionType.COURT
-                        )
-                    )
-        return courts
+            courts = [
+                Court(court, type=InstitutionType.TRIBUNAL if category["is_tribunal"] else InstitutionType.COURT)
+                for court in category.get("courts", [])
+                if court.get(court_property)
+            ]
+            if len(courts) > 0:
+                groups.append(CourtGroup(category.get("display_name"), courts))
+        return groups
 
     def get_show_in_search_filters_groups(self) -> list[CourtGroup]:
-        groups = []
-        for category in self._data:
-            courts = [
-                Court(court, type=InstitutionType.TRIBUNAL if category["is_tribunal"] else InstitutionType.COURT)
-                for court in category.get("courts", [])
-                if court["show_in_search_filters"]
-            ]
-            if len(courts) > 0:
-                groups.append(CourtGroup(category.get("display_name"), courts))
-        return groups
+        return self._get_groups_with_property("show_in_search_filters")
 
     def get_show_in_public_directory_groups(self) -> list[CourtGroup]:
-        groups = []
-        for category in self._data:
-            courts = [
-                Court(court, type=InstitutionType.TRIBUNAL if category["is_tribunal"] else InstitutionType.COURT)
-                for court in category.get("courts", [])
-                if court["show_in_public_directory"]
-            ]
-            if len(courts) > 0:
-                groups.append(CourtGroup(category.get("display_name"), courts))
-        return groups
+        return self._get_groups_with_property("show_in_public_directory")
 
-    def get_grouped_institutions_with_property(
+    def get_show_to_editors_groups(self) -> list[CourtGroup]:
+        return self._get_groups_with_property("show_to_editors")
+
+    def _get_grouped_institutions_with_property(
         self, institution_type: InstitutionType, court_property: str
     ) -> list[CourtGroup]:
         groups = []
@@ -323,52 +314,28 @@ class CourtsRepository:
         return groups
 
     def get_grouped_show_in_search_filters_courts(self) -> list[CourtGroup]:
-        return self.get_grouped_institutions_with_property(InstitutionType.COURT, "show_in_search_filters")
+        return self._get_grouped_institutions_with_property(InstitutionType.COURT, "show_in_search_filters")
 
     def get_grouped_show_in_search_filters_tribunals(self) -> list[CourtGroup]:
-        return self.get_grouped_institutions_with_property(InstitutionType.TRIBUNAL, "show_in_search_filters")
+        return self._get_grouped_institutions_with_property(InstitutionType.TRIBUNAL, "show_in_search_filters")
 
     def get_grouped_show_in_public_directory_courts(self) -> list[CourtGroup]:
-        return self.get_grouped_institutions_with_property(InstitutionType.COURT, "show_in_public_directory")
+        return self._get_grouped_institutions_with_property(InstitutionType.COURT, "show_in_public_directory")
 
     def get_grouped_show_in_public_directory_tribunals(self) -> list[CourtGroup]:
-        return self.get_grouped_institutions_with_property(InstitutionType.TRIBUNAL, "show_in_public_directory")
+        return self._get_grouped_institutions_with_property(InstitutionType.TRIBUNAL, "show_in_public_directory")
 
     def get_grouped_show_to_editors_courts(self) -> list[CourtGroup]:
-        return self.get_grouped_institutions_with_property(InstitutionType.COURT, "show_to_editors")
+        return self._get_grouped_institutions_with_property(InstitutionType.COURT, "show_to_editors")
 
     def get_grouped_show_to_editors_tribunals(self) -> list[CourtGroup]:
-        return self.get_grouped_institutions_with_property(InstitutionType.TRIBUNAL, "show_to_editors")
-
-    def get_show_to_editors_groups(self) -> list[CourtGroup]:
-        groups = []
-        for category in self._data:
-            courts = [
-                Court(court, type=InstitutionType.TRIBUNAL if category["is_tribunal"] else InstitutionType.COURT)
-                for court in category.get("courts", [])
-                if court["show_to_editors"]
-            ]
-            if len(courts) > 0:
-                groups.append(CourtGroup(category.get("display_name"), courts))
-        return groups
+        return self._get_grouped_institutions_with_property(InstitutionType.TRIBUNAL, "show_to_editors")
 
     def get_show_to_editors_courts(self) -> list[Court]:
-        courts = []
-        for group in self._data:
-            if not group.get("is_tribunal"):
-                for court in group.get("courts", []):
-                    if court["show_to_editors"]:
-                        courts.append(Court(court, InstitutionType.COURT))
-        return courts
+        return [court for court in self._get_with_property("show_to_editors") if court.type is InstitutionType.COURT]
 
     def get_show_to_editors_tribunals(self) -> list[Court]:
-        courts = []
-        for group in self._data:
-            if group.get("is_tribunal"):
-                for court in group.get("courts", []):
-                    if court["show_to_editors"]:
-                        courts.append(Court(court, InstitutionType.TRIBUNAL))
-        return courts
+        return [court for court in self._get_with_property("show_to_editors") if court.type is InstitutionType.TRIBUNAL]
 
 
 yaml = YAML()
