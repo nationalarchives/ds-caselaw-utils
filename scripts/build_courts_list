@@ -62,9 +62,11 @@ class CourtOutputBuilder:
                     f.write(f"\n## {group['name']}\n")
 
                 f.write(
-                    "\n| Name | Code | Param | Example NCNs | Start | End | List? | Searchable? | Of record? |\n",
+                    "\n| Name | Code | Param | Example NCNs | Start | End | Show to editors? | Advanced search filter? | Show in public directory? | Of record? |\n",
                 )
-                f.write("| ---- | ---- | ----- | ------------ | ----- | --- | ----- | ----------- | ---------- |\n")
+                f.write(
+                    "| ---- | ---- | ----- | ------------ | ----- | --- | ----- | ----------- | ----------- | ---------- |\n"
+                )
 
                 for court in sorted(
                     group["courts"], key=lambda x: (x["grouped_name"] if "grouped_name" in x else x["name"]) + x["code"]
@@ -93,10 +95,13 @@ class CourtOutputBuilder:
                     f.write(str(court["end_year"]) if "end_year" in court else "–")
 
                     f.write(" | ")
-                    f.write("✅" if court["listable"] else "❌")
+                    f.write("✅" if court["show_to_editors"] else "❌")
 
                     f.write(" | ")
-                    f.write("✅" if court["selectable"] else "❌")
+                    f.write("✅" if court["show_in_search_filters"] else "❌")
+
+                    f.write(" | ")
+                    f.write("✅" if court["show_in_public_directory"] else "❌")
 
                     f.write(" | ")
                     f.write("✅" if court.get("court_of_record") else "❌")
