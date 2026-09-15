@@ -46,7 +46,7 @@ class TestCourtsRepository(unittest.TestCase):
         self.assertIn("court1", [c.name for c in courts])
         self.assertIn("court1 – jurisdiction1", [c.name for c in courts])
 
-    def test_loads_selectable_courts(self):
+    def test_loads_show_in_search_filters_courts(self):
         data = [
             {
                 "name": "court_group",
@@ -55,31 +55,64 @@ class TestCourtsRepository(unittest.TestCase):
                 "courts": [
                     {
                         "name": "court1",
-                        "selectable": True,
+                        "show_in_search_filters": True,
                     },
-                    {"name": "court2", "selectable": False},
+                    {"name": "court2", "show_in_search_filters": False},
                 ],
             },
             {
                 "name": "court_group2",
                 "display_name": "court group 2",
                 "is_tribunal": False,
-                "courts": [{"name": "court3", "selectable": False}],
+                "courts": [{"name": "court3", "show_in_search_filters": False}],
             },
         ]
         valid_data = make_court_repo_valid(data)
         repo = CourtsRepository(valid_data)
-        selectable = repo.get_selectable()
-        self.assertIn("court1", [c.name for c in selectable])
-        self.assertNotIn("court2", [c.name for c in selectable])
-        groups = repo.get_selectable_groups()
+        show_in_search_filters = repo.get_show_in_search_filters()
+        self.assertIn("court1", [c.name for c in show_in_search_filters])
+        self.assertNotIn("court2", [c.name for c in show_in_search_filters])
+        groups = repo.get_show_in_search_filters_groups()
         self.assertIn("court group 1", [g.name for g in groups])
         self.assertNotIn("court group 2", [g.name for g in groups])
         self.assertIn("court1", [c.name for g in groups for c in g.courts])
         self.assertNotIn("court2", [c.name for g in groups for c in g.courts])
         self.assertNotIn("court3", [c.name for g in groups for c in g.courts])
 
-    def test_loads_listable_courts(self):
+    def test_loads_show_in_public_directory_courts(self):
+        data = [
+            {
+                "name": "court_group",
+                "display_name": "court group 1",
+                "is_tribunal": False,
+                "courts": [
+                    {
+                        "name": "court1",
+                        "show_in_public_directory": True,
+                    },
+                    {"name": "court2", "show_in_public_directory": False},
+                ],
+            },
+            {
+                "name": "court_group2",
+                "display_name": "court group 2",
+                "is_tribunal": False,
+                "courts": [{"name": "court3", "show_in_public_directory": False}],
+            },
+        ]
+        valid_data = make_court_repo_valid(data)
+        repo = CourtsRepository(valid_data)
+        show_in_public_directory = repo.get_show_in_public_directory()
+        self.assertIn("court1", [c.name for c in show_in_public_directory])
+        self.assertNotIn("court2", [c.name for c in show_in_public_directory])
+        groups = repo.get_show_in_public_directory_groups()
+        self.assertIn("court group 1", [g.name for g in groups])
+        self.assertNotIn("court group 2", [g.name for g in groups])
+        self.assertIn("court1", [c.name for g in groups for c in g.courts])
+        self.assertNotIn("court2", [c.name for g in groups for c in g.courts])
+        self.assertNotIn("court3", [c.name for g in groups for c in g.courts])
+
+    def test_loads_show_to_editors_courts(self):
         data = [
             {
                 "name": "court_group1",
@@ -88,21 +121,21 @@ class TestCourtsRepository(unittest.TestCase):
                 "courts": [
                     {
                         "name": "court1",
-                        "listable": True,
+                        "show_to_editors": True,
                     },
-                    {"name": "court2", "listable": False},
+                    {"name": "court2", "show_to_editors": False},
                 ],
             },
             {
                 "name": "court_group2",
                 "display_name": "court group 2",
                 "is_tribunal": False,
-                "courts": [{"name": "court3", "listable": False}],
+                "courts": [{"name": "court3", "show_to_editors": False}],
             },
         ]
         valid_data = make_court_repo_valid(data)
         repo = CourtsRepository(valid_data)
-        groups = repo.get_listable_groups()
+        groups = repo.get_show_to_editors_groups()
         self.assertIn("court group 1", [g.name for g in groups])
         self.assertNotIn("court group 2", [g.name for g in groups])
         self.assertIn("court1", [c.name for g in groups for c in g.courts])
@@ -214,64 +247,64 @@ class TestCourtsRepository(unittest.TestCase):
         repo = CourtsRepository(valid_data)
         self.assertRaises(CourtNotFoundException, repo.get_by_code, "court3")
 
-    def test_returns_listable_courts(self):
+    def test_returns_show_to_editors_courts(self):
         data = [
             {
                 "name": "court_group1",
                 "is_tribunal": False,
                 "courts": [
-                    {"param": "court1", "listable": True, "name": "Court 1"},
-                    {"param": "court2", "listable": False, "name": "Court 2"},
+                    {"param": "court1", "show_to_editors": True, "name": "Court 1"},
+                    {"param": "court2", "show_to_editors": False, "name": "Court 2"},
                 ],
             },
             {
                 "name": "court_group2",
                 "is_tribunal": True,
-                "courts": [{"param": "court3", "listable": True, "name": "Court 3"}],
+                "courts": [{"param": "court3", "show_to_editors": True, "name": "Court 3"}],
             },
         ]
         valid_data = make_court_repo_valid(data)
         repo = CourtsRepository(valid_data)
-        self.assertIn("court1", [c.canonical_param for c in repo.get_listable_courts()])
-        self.assertNotIn("court2", [c.canonical_param for c in repo.get_listable_courts()])
-        self.assertNotIn("court3", [c.canonical_param for c in repo.get_listable_courts()])
+        self.assertIn("court1", [c.canonical_param for c in repo.get_show_to_editors_courts()])
+        self.assertNotIn("court2", [c.canonical_param for c in repo.get_show_to_editors_courts()])
+        self.assertNotIn("court3", [c.canonical_param for c in repo.get_show_to_editors_courts()])
 
-    def test_returns_listable_tribunals(self):
+    def test_returns_show_to_editors_tribunals(self):
         data = [
             {
                 "name": "court_group1",
                 "is_tribunal": False,
                 "courts": [
-                    {"param": "court1", "listable": True, "name": "Court 1"},
+                    {"param": "court1", "show_to_editors": True, "name": "Court 1"},
                 ],
             },
             {
                 "name": "court_group2",
                 "is_tribunal": True,
                 "courts": [
-                    {"param": "court2", "listable": False, "name": "Court 2"},
-                    {"param": "court3", "listable": True, "name": "Court 3"},
+                    {"param": "court2", "show_to_editors": False, "name": "Court 2"},
+                    {"param": "court3", "show_to_editors": True, "name": "Court 3"},
                 ],
             },
         ]
         valid_data = make_court_repo_valid(data)
         repo = CourtsRepository(valid_data)
-        self.assertNotIn("court1", [c.canonical_param for c in repo.get_listable_tribunals()])
-        self.assertNotIn("court2", [c.canonical_param for c in repo.get_listable_tribunals()])
-        self.assertIn("court3", [c.canonical_param for c in repo.get_listable_tribunals()])
+        self.assertNotIn("court1", [c.canonical_param for c in repo.get_show_to_editors_tribunals()])
+        self.assertNotIn("court2", [c.canonical_param for c in repo.get_show_to_editors_tribunals()])
+        self.assertIn("court3", [c.canonical_param for c in repo.get_show_to_editors_tribunals()])
 
-    def test_returns_grouped_selectable_courts(self):
+    def test_returns_grouped_show_in_search_filters_courts(self):
         data = [
             {
                 "name": "group2",
                 "display_name": "Court group",
                 "is_tribunal": False,
                 "courts": [
-                    {"param": "court1", "selectable": True, "name": "Selectable court"},
+                    {"param": "court1", "show_in_search_filters": True, "name": "Show in search filters court"},
                     {
                         "param": "court2",
-                        "selectable": False,
-                        "name": "Unselectable court",
+                        "show_in_search_filters": False,
+                        "name": "Hidden in search filters court",
                     },
                 ],
             },
@@ -282,29 +315,29 @@ class TestCourtsRepository(unittest.TestCase):
                 "courts": [
                     {
                         "param": "court3",
-                        "selectable": True,
-                        "name": "Selectable tribunal",
+                        "show_in_search_filters": True,
+                        "name": "Show in search filters tribunal",
                     }
                 ],
             },
         ]
         valid_data = make_court_repo_valid(data)
         repo = CourtsRepository(valid_data)
-        groups = repo.get_grouped_selectable_courts()
+        groups = repo.get_grouped_show_in_search_filters_courts()
         self.assertIn("Court group", [g.name for g in groups])
         self.assertNotIn("Tribunal group", [g.name for g in groups])
-        self.assertIn("Selectable court", [c.name for g in groups for c in g.courts])
-        self.assertNotIn("Unselectable court", [c.name for g in groups for c in g.courts])
-        self.assertNotIn("Selectable tribunal", [c.name for g in groups for c in g.courts])
+        self.assertIn("Show in search filters court", [c.name for g in groups for c in g.courts])
+        self.assertNotIn("Hidden in search filters court", [c.name for g in groups for c in g.courts])
+        self.assertNotIn("Show in search filters tribunal", [c.name for g in groups for c in g.courts])
 
-    def test_returns_grouped_selectable_tribunals(self):
+    def test_returns_grouped_show_in_search_filters_tribunals(self):
         data = [
             {
                 "name": "group1",
                 "display_name": "Court group",
                 "is_tribunal": False,
                 "courts": [
-                    {"param": "court1", "selectable": True, "name": "Selectable court"},
+                    {"param": "court1", "show_in_search_filters": True, "name": "Show in search filters court"},
                 ],
             },
             {
@@ -314,77 +347,151 @@ class TestCourtsRepository(unittest.TestCase):
                 "courts": [
                     {
                         "param": "court2",
-                        "selectable": True,
-                        "name": "Selectable tribunal",
+                        "show_in_search_filters": True,
+                        "name": "Show in search filters tribunal",
                     },
                     {
                         "param": "court3",
-                        "selectable": False,
-                        "name": "Unselectable tribunal",
+                        "show_in_search_filters": False,
+                        "name": "Hidden in search filters tribunal",
                     },
                 ],
             },
         ]
         valid_data = make_court_repo_valid(data)
         repo = CourtsRepository(valid_data)
-        groups = repo.get_grouped_selectable_tribunals()
+        groups = repo.get_grouped_show_in_search_filters_tribunals()
         self.assertIn("Tribunal group", [g.name for g in groups])
         self.assertNotIn("Court group", [g.name for g in groups])
-        self.assertIn("Selectable tribunal", [c.name for g in groups for c in g.courts])
-        self.assertNotIn("Unselectable tribunal", [c.name for g in groups for c in g.courts])
-        self.assertNotIn("Selectable court", [c.name for g in groups for c in g.courts])
+        self.assertIn("Show in search filters tribunal", [c.name for g in groups for c in g.courts])
+        self.assertNotIn("Hidden in search filters tribunal", [c.name for g in groups for c in g.courts])
+        self.assertNotIn("Show in search filters court", [c.name for g in groups for c in g.courts])
 
-    def test_returns_grouped_listable_courts(self):
+    def test_returns_grouped_show_in_public_directory_courts(self):
         data = [
             {
-                "name": "group1",
+                "name": "group2",
                 "display_name": "Court group",
                 "is_tribunal": False,
                 "courts": [
-                    {"param": "court1", "listable": True, "name": "Listable court"},
-                    {"param": "court2", "listable": False, "name": "Unlistable court"},
+                    {"param": "court1", "show_in_public_directory": True, "name": "Show in public directory court"},
+                    {
+                        "param": "court2",
+                        "show_in_public_directory": False,
+                        "name": "Hidden from public directory court",
+                    },
                 ],
             },
             {
                 "name": "group2",
                 "display_name": "Tribunal group",
                 "is_tribunal": True,
-                "courts": [{"param": "court3", "listable": True, "name": "Listable tribunal"}],
+                "courts": [
+                    {
+                        "param": "court3",
+                        "show_in_public_directory": True,
+                        "name": "Show in public directory tribunal",
+                    }
+                ],
             },
         ]
-        repo = CourtsRepository(make_court_repo_valid(data))
-        groups = repo.get_grouped_listable_courts()
+        valid_data = make_court_repo_valid(data)
+        repo = CourtsRepository(valid_data)
+        groups = repo.get_grouped_show_in_public_directory_courts()
         self.assertIn("Court group", [g.name for g in groups])
         self.assertNotIn("Tribunal group", [g.name for g in groups])
-        self.assertIn("Listable court", [c.name for g in groups for c in g.courts])
-        self.assertNotIn("Unlistable court", [c.name for g in groups for c in g.courts])
-        self.assertNotIn("Listable tribunal", [c.name for g in groups for c in g.courts])
+        self.assertIn("Show in public directory court", [c.name for g in groups for c in g.courts])
+        self.assertNotIn("Hidden from public directory court", [c.name for g in groups for c in g.courts])
+        self.assertNotIn("Show in public directory tribunal", [c.name for g in groups for c in g.courts])
 
-    def test_returns_grouped_listable_tribunals(self):
+    def test_returns_grouped_show_in_public_directory_tribunals(self):
         data = [
             {
                 "name": "group1",
                 "display_name": "Court group",
                 "is_tribunal": False,
-                "courts": [{"param": "court1", "listable": True, "name": "Listable court"}],
+                "courts": [
+                    {"param": "court1", "show_in_public_directory": True, "name": "Show in public directory court"},
+                ],
             },
             {
                 "name": "group2",
                 "display_name": "Tribunal group",
                 "is_tribunal": True,
                 "courts": [
-                    {"param": "court2", "listable": True, "name": "Listable tribunal"},
-                    {"param": "court3", "listable": False, "name": "Unlistable tribunal"},
+                    {
+                        "param": "court2",
+                        "show_in_public_directory": True,
+                        "name": "Show in public directory tribunal",
+                    },
+                    {
+                        "param": "court3",
+                        "show_in_public_directory": False,
+                        "name": "Hidden from public directory tribunal",
+                    },
+                ],
+            },
+        ]
+        valid_data = make_court_repo_valid(data)
+        repo = CourtsRepository(valid_data)
+        groups = repo.get_grouped_show_in_public_directory_tribunals()
+        self.assertIn("Tribunal group", [g.name for g in groups])
+        self.assertNotIn("Court group", [g.name for g in groups])
+        self.assertIn("Show in public directory tribunal", [c.name for g in groups for c in g.courts])
+        self.assertNotIn("Hidden from public directory tribunal", [c.name for g in groups for c in g.courts])
+        self.assertNotIn("Show in public directory court", [c.name for g in groups for c in g.courts])
+
+    def test_returns_grouped_show_to_editors_courts(self):
+        data = [
+            {
+                "name": "group1",
+                "display_name": "Court group",
+                "is_tribunal": False,
+                "courts": [
+                    {"param": "court1", "show_to_editors": True, "name": "Show to editors court"},
+                    {"param": "court2", "show_to_editors": False, "name": "Hidden from editors court"},
+                ],
+            },
+            {
+                "name": "group2",
+                "display_name": "Tribunal group",
+                "is_tribunal": True,
+                "courts": [{"param": "court3", "show_to_editors": True, "name": "Show to editors tribunal"}],
+            },
+        ]
+        repo = CourtsRepository(make_court_repo_valid(data))
+        groups = repo.get_grouped_show_to_editors_courts()
+        self.assertIn("Court group", [g.name for g in groups])
+        self.assertNotIn("Tribunal group", [g.name for g in groups])
+        self.assertIn("Show to editors court", [c.name for g in groups for c in g.courts])
+        self.assertNotIn("Hidden from editors court", [c.name for g in groups for c in g.courts])
+        self.assertNotIn("Show to editors tribunal", [c.name for g in groups for c in g.courts])
+
+    def test_returns_grouped_show_to_editors_tribunals(self):
+        data = [
+            {
+                "name": "group1",
+                "display_name": "Court group",
+                "is_tribunal": False,
+                "courts": [{"param": "court1", "show_to_editors": True, "name": "Show to editors court"}],
+            },
+            {
+                "name": "group2",
+                "display_name": "Tribunal group",
+                "is_tribunal": True,
+                "courts": [
+                    {"param": "court2", "show_to_editors": True, "name": "Show to editors tribunal"},
+                    {"param": "court3", "show_to_editors": False, "name": "Hidden from editors tribunal"},
                 ],
             },
         ]
         repo = CourtsRepository(make_court_repo_valid(data))
-        groups = repo.get_grouped_listable_tribunals()
+        groups = repo.get_grouped_show_to_editors_tribunals()
         self.assertIn("Tribunal group", [g.name for g in groups])
         self.assertNotIn("Court group", [g.name for g in groups])
-        self.assertIn("Listable tribunal", [c.name for g in groups for c in g.courts])
-        self.assertNotIn("Unlistable tribunal", [c.name for g in groups for c in g.courts])
-        self.assertNotIn("Listable court", [c.name for g in groups for c in g.courts])
+        self.assertIn("Show to editors tribunal", [c.name for g in groups for c in g.courts])
+        self.assertNotIn("Hidden from editors tribunal", [c.name for g in groups for c in g.courts])
+        self.assertNotIn("Show to editors court", [c.name for g in groups for c in g.courts])
 
     def test_repr(self):
         data = [
@@ -393,7 +500,7 @@ class TestCourtsRepository(unittest.TestCase):
                 "display_name": "Court group",
                 "is_tribunal": False,
                 "courts": [
-                    {"param": "court1", "selectable": True, "name": "Selectable court"},
+                    {"param": "court1", "show_in_search_filters": True, "name": "Show in search filters court"},
                 ],
             }
         ]
@@ -407,14 +514,14 @@ class TestCourtsRepository(unittest.TestCase):
                 "name": "courts",
                 "is_tribunal": False,
                 "courts": [
-                    {"param": "court", "listable": True, "name": "Court"},
+                    {"param": "court", "show_to_editors": True, "name": "Court"},
                 ],
             },
             {
                 "name": "tribunals",
                 "is_tribunal": True,
                 "courts": [
-                    {"param": "tribunal", "listable": True, "name": "Tribunal"},
+                    {"param": "tribunal", "show_to_editors": True, "name": "Tribunal"},
                 ],
             },
         ]

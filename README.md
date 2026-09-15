@@ -23,28 +23,34 @@ courts.get_all() # return a list of all courts
 
 courts.get_by_param("ewhc/ch") # get a court by its parameter value
 
-courts.get_selectable() # returns a list of all courts that are whitelisted to
-                        # appear as searchable options
+courts.get_show_in_search_filters() # returns a list of all courts that appear as
+                        # searchable options
 
-courts.get_selectable_groups() # returns a grouped list of all courts and tribunals
-                               # that are whitelisted as searchable options
+courts.get_show_in_search_filters_groups() # returns a grouped list of all courts and tribunals
+                               # that appear as search-filter options
 
-courts.get_grouped_selectable_courts() # returns selectable courts grouped for display
+courts.get_grouped_show_in_search_filters_courts() # returns show_in_search_filters courts grouped for display
 
-courts.get_grouped_selectable_tribunals() # returns selectable tribunals grouped for display
+courts.get_grouped_show_in_search_filters_tribunals() # returns show_in_search_filters tribunals grouped for display
 
-courts.get_listable_groups() # returns a grouped list of courts that are whitelisted to
-                             # be listed publicly
+courts.get_show_in_public_directory() # returns a list of courts included in the public directory
 
-courts.get_grouped_listable_courts() # returns listable courts grouped for display
+courts.get_show_in_public_directory_groups() # returns public-directory courts grouped by category
 
-courts.get_grouped_listable_tribunals() # returns listable tribunals grouped for display
+courts.get_grouped_show_in_public_directory_courts() # returns public-directory courts grouped for display
 
-courts.get_listable_courts() # returns a list of all *courts* (ie not tribunals)
-                             # which are whitelisted to be listed publicly
+courts.get_grouped_show_in_public_directory_tribunals() # returns public-directory tribunals grouped for display
 
-courts.get_listable_tribunals() # return a list of all *tribunals*  which are
-                                # whitelisted to be listed publicly
+courts.get_show_to_editors_groups() # returns a grouped list of courts visible to editors
+
+courts.get_grouped_show_to_editors_courts() # returns courts visible to editors grouped for display
+
+courts.get_grouped_show_to_editors_tribunals() # returns tribunals visible to editors grouped for display
+
+courts.get_show_to_editors_courts() # returns a list of all *courts* (ie not tribunals)
+                             # visible to editors
+
+courts.get_show_to_editors_tribunals() # returns a list of all *tribunals* visible to editors
 ```
 
 The list of courts is defined in `src/ds_caselaw_utils/data/court_names.yml`. The format is as follows:
@@ -73,10 +79,12 @@ The list of courts is defined in `src/ds_caselaw_utils/data/court_names.yml`. Th
       # The year of the last judgment we have on file for this court
       # (optional, defaults to current year):
       end_year: ~
-      # Whether to expose this court publicly as selectable in search filters:
-      selectable: true
-      # Whether to expose this court publicly in listings:
-      listable: true
+      # Whether this court appears as an option in search filters:
+      show_in_search_filters: true
+      # Whether to include this court in the public directory:
+      show_in_public_directory: true
+      # Whether this court is visible to editors:
+      show_to_editors: true
       # Whether this court has ended yet
       ended: false
       # Whether this court is a court of record (optional):

@@ -9,15 +9,16 @@ def test_factory():
             "courts": [
                 {
                     "name": "court1",
-                    "selectable": True,
+                    "show_in_search_filters": True,
+                    "show_in_public_directory": True,
                 },
-                {"name": "court2", "selectable": False},
+                {"name": "court2", "show_in_search_filters": False, "show_in_public_directory": True},
             ],
         },
         {
             "name": "court_group2",
             "display_name": "court group 2",
-            "courts": [{"name": "court3", "selectable": False}],
+            "courts": [{"name": "court3", "show_in_search_filters": False, "show_in_public_directory": True}],
         },
     ]
 
@@ -28,33 +29,37 @@ def test_factory():
             "courts": [
                 {
                     "name": "court1",
-                    "selectable": True,
+                    "show_in_search_filters": True,
+                    "show_in_public_directory": True,
                     "code": "placeholder code",
                     "link": "placeholder link",
-                    "listable": True,
+                    "show_to_editors": True,
                 },
                 {
                     "name": "court2",
-                    "selectable": False,
+                    "show_in_search_filters": False,
+                    "show_in_public_directory": True,
                     "code": "placeholder code",
                     "link": "placeholder link",
-                    "listable": True,
+                    "show_to_editors": True,
                 },
             ],
             "court": [
                 {
                     "name": "court1",
-                    "selectable": True,
+                    "show_in_search_filters": True,
+                    "show_in_public_directory": True,
                     "code": "placeholder code",
                     "link": "placeholder link",
-                    "listable": True,
+                    "show_to_editors": True,
                 },
                 {
                     "name": "court2",
-                    "selectable": False,
+                    "show_in_search_filters": False,
+                    "show_in_public_directory": True,
                     "code": "placeholder code",
                     "link": "placeholder link",
-                    "listable": True,
+                    "show_to_editors": True,
                 },
             ],
         },
@@ -64,19 +69,21 @@ def test_factory():
             "courts": [
                 {
                     "name": "court3",
-                    "selectable": False,
+                    "show_in_search_filters": False,
+                    "show_in_public_directory": True,
                     "code": "placeholder code",
                     "link": "placeholder link",
-                    "listable": True,
+                    "show_to_editors": True,
                 }
             ],
             "court": [
                 {
                     "name": "court3",
-                    "selectable": False,
+                    "show_in_search_filters": False,
+                    "show_in_public_directory": True,
                     "code": "placeholder code",
                     "link": "placeholder link",
-                    "listable": True,
+                    "show_to_editors": True,
                 }
             ],
         },

@@ -54,14 +54,21 @@ class RawCourt(TypedDict, total=False):
     allOf:
       - if:
           properties:
-            selectable:
+            show_in_search_filters:
               const: true
         then:
           required:
           - param
       - if:
           properties:
-            listable:
+            show_in_public_directory:
+              const: true
+        then:
+          required:
+          - param
+      - if:
+          properties:
+            show_to_editors:
               const: true
         then:
           required:
@@ -150,20 +157,29 @@ class RawCourt(TypedDict, total=False):
     If this court no longer publishes documents, the default end year of the document holding range for this court in Find Case Law.
     """
 
-    listable: Required[bool]
+    show_to_editors: Required[bool]
     r"""
-    Listable.
+    Show to editors.
 
-    Should this court appear in public lists of courts supported by Find Case Law?
+    Should this court be visible to editors?
 
     Required property
     """
 
-    selectable: Required[bool]
+    show_in_search_filters: Required[bool]
     r"""
-    Selectable.
+    Show in search filters.
 
-    Should this court appear as a selectable option in the list of searchable courts?
+    Should this court appear as an advanced search filter option?
+
+    Required property
+    """
+
+    show_in_public_directory: Required[bool]
+    r"""
+    Show in courts and tribunals directory.
+
+    Should this court appear in the public directory of courts and tribunals?
 
     Required property
     """
