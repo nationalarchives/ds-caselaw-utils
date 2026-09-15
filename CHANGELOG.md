@@ -2,33 +2,23 @@
 
 All notable changes to this project will be documented in this file.
 
-## Unreleased
+## v5.0.0 (2026-09-15)
 
-### BREAKING CHANGE
+### Feat
 
-- Rename the `selectable` court property to `show_in_search_filters`
-- Rename the `listable` court property to `show_to_editors`
-- Rename the corresponding public accessors to use the new property names
-- Add the `show_in_public_directory` court property and public accessors
+- add show_in_public_directory param
+- rename listable and selectable params for clarity
+- add grouped listable court accessors
+- make PAAC listable and POAC listable and selectable
 
-Renamed methods:
+### Fix
 
-- `get_selectable()` -> `get_show_in_search_filters()`
-- `get_selectable_groups()` -> `get_show_in_search_filters_groups()`
-- `get_grouped_selectable_courts()` -> `get_grouped_show_in_search_filters_courts()`
-- `get_grouped_selectable_tribunals()` -> `get_grouped_show_in_search_filters_tribunals()`
-- `get_listable_groups()` -> `get_show_to_editors_groups()`
-- `get_grouped_listable_courts()` -> `get_grouped_show_to_editors_courts()`
-- `get_grouped_listable_tribunals()` -> `get_grouped_show_to_editors_tribunals()`
-- `get_listable_courts()` -> `get_show_to_editors_courts()`
-- `get_listable_tribunals()` -> `get_show_to_editors_tribunals()`
+- clarify court header wording
 
-New public-directory accessors:
+### Refactor
 
-- `get_show_in_public_directory()`
-- `get_show_in_public_directory_groups()`
-- `get_grouped_show_in_public_directory_courts()`
-- `get_grouped_show_in_public_directory_tribunals()`
+- add private helpers for court property access
+- add get_grouped_institutions_with_property method to reduce duplication across grouped get methods
 
 ## v4.10.0 (2026-09-08)
 
