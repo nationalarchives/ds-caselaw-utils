@@ -34,6 +34,7 @@ graph TD
         EWHC-Chancery-Business["High Court (Business List)"]
         EWHC-Chancery-Appeals["Chancery Appeals"]
         EWHC-Chancery["High Court (Chancery Division)"]
+        EWHC-BPD["High Court (Business and Property Division)"]
         EWHC-QBD-Commercial-Circuit["High Court (Circuit Commercial Court)"]
         EWHC-KBD-Commercial-Circuit["High Court (Circuit Commercial Court)"]
         EWHC-QBD-Commercial["High Court (Commercial Court)"]
@@ -135,6 +136,7 @@ graph TD
     class EWHC-Chancery-Business court
     class EWHC-Chancery-Appeals court
     class EWHC-Chancery court
+    class EWHC-BPD court
     class EWHC-QBD-Commercial-Circuit court
     class EWHC-KBD-Commercial-Circuit court
     class EWHC-QBD-Commercial court

@@ -34,6 +34,7 @@
 | Business and Property Courts | EWHC-Chancery-BusinessAndProperty | – | – | – | – | ❌ | ❌ | ❌ | ✅ |
 | Business and Property Courts | EWHC-KBD-BusinessAndProperty | – | – | – | – | ❌ | ❌ | ❌ | ✅ |
 | Business and Property Courts | EWHC-QBD-BusinessAndProperty | – | – | – | – | ❌ | ❌ | ❌ | ✅ |
+| Business and Property Division | EWHC-BPD | ewhc/bp | [2026] EWHC 2142 (BP) | 2026 | – | ✅ | ✅ | ✅ | ✅ |
 | Chancery Division | EWHC-Chancery | ewhc/ch | [2016] EWHC 2142 (Ch) | 2003 | – | ✅ | ✅ | ✅ | ✅ |
 | Circuit Commercial Court | EWHC-KBD-Commercial-Circuit | – | [2023] EWHC 2168 (Comm) | – | – | ❌ | ❌ | ❌ | ✅ |
 | Circuit Commercial Court | EWHC-QBD-Commercial-Circuit | – | [2021] EWHC 286 (Comm) | – | – | ❌ | ❌ | ❌ | ✅ |

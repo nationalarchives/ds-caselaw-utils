@@ -293,9 +293,28 @@
         "show_in_search_filters": true,
         "show_in_public_directory": true,
         "show_to_editors": true,
-        "ended": false,
+        "ended": true,
         "court_of_record": true,
         "identifier_iri": "https://www.gov.uk/courts-tribunals/chancery-division-of-the-high-court"
+      },
+      {
+        "code": "EWHC-BPD",
+        "grouped_name": "Business and Property Division",
+        "name": "High Court (Business and Property Division)",
+        "long_name": "The Business and Property Division of the High Court",
+        "link": "https://www.gov.uk/courts-tribunals/the-business-and-property-courts",
+        "ncn_pattern": "\\[(\\d{4})\\] (EWHC) (\\d+) \\((BP)\\)",
+        "ncn_examples": [
+          "[2026] EWHC 2142 (BP)"
+        ],
+        "param": "ewhc/bp",
+        "start_year": 2026,
+        "show_in_search_filters": true,
+        "show_in_public_directory": true,
+        "show_to_editors": true,
+        "ended": false,
+        "court_of_record": true,
+        "identifier_iri": "https://www.gov.uk/courts-tribunals/the-business-and-property-courts"
       },
       {
         "code": "EWHC-QBD-Commercial-Circuit",

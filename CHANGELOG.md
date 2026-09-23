@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## Unreleased
+
+### Feat
+
+- add Business and Property Division
+- mark Chancery Division as ended
+
 ## v5.0.0 (2026-09-15)
 
 ### Feat
