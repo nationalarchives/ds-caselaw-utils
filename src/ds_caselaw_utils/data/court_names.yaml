@@ -214,6 +214,7 @@
         - "[2016] EWHC 2142 (Ch)"
       param: "ewhc/ch"
       start_year: 2003
+      end_year: 2026
       show_in_search_filters: true
       show_in_public_directory: true
       show_to_editors: true
@@ -223,7 +224,7 @@
       grouped_name: Business and Property Division
       name: High Court (Business and Property Division)
       long_name: The Business and Property Division of the High Court
-      link: https://www.gov.uk/courts-tribunals/the-business-and-property-courts
+      link: https://www.gov.uk/courts-tribunals/business-and-property-division-of-the-high-court
       ncn_pattern: \[(\d{4})\] (EWHC) (\d+) \((BP)\)
       ncn_examples:
         - "[2026] EWHC 2142 (BP)"
@@ -526,6 +527,185 @@
       show_in_search_filters: false
       show_in_public_directory: false
       show_to_editors: false
+      ended: false
+      court_of_record: true
+    - code: EWHC-BPD-Admiralty
+      grouped_name: "Admiralty Court"
+      name: High Court (Admiralty Court)
+      long_name: The Business and Property Division (Admiralty Court)
+      link: https://www.gov.uk/courts-tribunals/admiralty-court
+      ncn_pattern: \[(\d{4})\] (EWHC) (\d+) \((Admlty)\)
+      ncn_examples:
+        - "[2024] EWHC 16 (Admlty)"
+      param: "ewhc/admlty"
+      start_year: 2026
+      show_in_search_filters: false
+      show_in_public_directory: false
+      show_to_editors: false
+      ended: false
+      court_of_record: true
+    - code: EWHC-BPD-Commercial
+      grouped_name: Commercial Court
+      name: High Court (Commercial Court)
+      long_name: The Business and Property Division (Commercial Court)
+      link: https://www.gov.uk/courts-tribunals/commercial-court
+      ncn_pattern: \[(\d{4})\] (EWHC) (\d+) \((Comm)\)
+      ncn_examples:
+        - "[2024] EWHC 789 (Comm)"
+      param: "ewhc/comm"
+      start_year: 2026
+      show_in_search_filters: false
+      show_in_public_directory: false
+      show_to_editors: false
+      ended: false
+      court_of_record: true
+    - code: EWHC-BPD-Commercial-Circuit
+      grouped_name: Circuit Commercial Court
+      name: High Court (Circuit Commercial Court)
+      long_name: The Business and Property Division (Circuit Commercial Court)
+      link: https://www.gov.uk/courts-tribunals/commercial-circuit-court
+      ncn_pattern: \[(\d{4})\] (EWHC) (\d+) \((Comm)\)
+      ncn_examples:
+        - "[2023] EWHC 2168 (Comm)"
+      show_in_search_filters: false
+      show_in_public_directory: false
+      show_to_editors: false
+      start_year: 2026
+      ended: false
+      court_of_record: true
+    - code: EWHC-BPD-IntellectualProperty
+      grouped_name: Intellectual Property List
+      name: High Court (Intellectual Property List)
+      long_name: The Business and Property Division (Intellectual Property List)
+      link: https://www.gov.uk/courts-tribunals/the-intellectual-property-list
+      show_in_search_filters: false
+      show_in_public_directory: false
+      show_to_editors: false
+      start_year: 2026
+      ended: false
+      court_of_record: true
+    - code: EWHC-BPD-IPEC
+      grouped_name: Intellectual Property Enterprise Court
+      name: High Court (Intellectual Property Enterprise Court)
+      long_name: The Business and Property Division (Intellectual Property Enterprise Court)
+      link: https://www.gov.uk/courts-tribunals/intellectual-property-enterprise-court
+      ncn_pattern: \[(\d{4})\] (EWHC) (\d+) \((IPEC)\)
+      ncn_examples:
+        - "[2014] EWHC 349 (IPEC)"
+      param: "ewhc/ipec"
+      start_year: 2026
+      show_in_search_filters: false
+      show_in_public_directory: false
+      show_to_editors: false
+      ended: false
+      court_of_record: true
+    - code: EWHC-BPD-Patents
+      grouped_name: Patents Court
+      name: High Court (Patents Court)
+      long_name: The Business and Property Division (Patents Court)
+      link: https://www.gov.uk/courts-tribunals/patents-court
+      ncn_pattern: \[(\d{4})\] (EWHC) (\d+) \((Pat)\)
+      ncn_examples:
+        - "[2015] EWHC 3163 (Pat)"
+      param: "ewhc/pat"
+      start_year: 2026
+      show_in_search_filters: false
+      show_in_public_directory: false
+      show_to_editors: false
+      ended: false
+      court_of_record: true
+    - code: EWHC-BPD-TCC
+      grouped_name: Technology and Construction Court
+      name: High Court (Technology and Construction Court)
+      long_name: The Business and Property Division (Technology and Construction Court)
+      link: https://www.gov.uk/courts-tribunals/technology-and-construction-court
+      ncn_pattern: \[(\d{4})\] (EWHC) (\d+) \((TCC)\)
+      ncn_examples:
+        - "[2024] EWHC 802 (TCC)"
+      param: "ewhc/tcc"
+      start_year: 2026
+      show_in_search_filters: false
+      show_in_public_directory: false
+      show_to_editors: false
+      ended: false
+      court_of_record: true
+    - code: EWHC-BPD-Business
+      grouped_name: Business List
+      name: High Court (Business List)
+      long_name: The Business and Property Division (Business List)
+      link: https://www.gov.uk/courts-tribunals/the-business-list
+      show_in_search_filters: false
+      show_in_public_directory: false
+      show_to_editors: false
+      start_year: 2026
+      ended: false
+      court_of_record: true
+    - code: EWHC-BPD-InsolvencyAndCompanies
+      grouped_name: Insolvency and Companies List
+      name: High Court (Insolvency and Companies List)
+      long_name: The Business and Property Division (Insolvency and Companies List)
+      link: https://www.gov.uk/courts-tribunals/insolvency-list
+      show_in_search_filters: false
+      show_in_public_directory: false
+      show_to_editors: false
+      start_year: 2026
+      ended: false
+      court_of_record: true
+    - code: EWHC-BPD-Commercial-Financial
+      grouped_name: Financial List
+      name: High Court (Financial List)
+      long_name: The Business and Property Division (Financial List)
+      link: https://www.gov.uk/courts-tribunals/the-financial-list
+      ncn_pattern: \[(\d{4})\] (EWHC) (\d+) \((Comm)\)
+      ncn_examples:
+        - "[2025] EWHC 1881 (Comm)"
+      show_in_search_filters: false
+      show_in_public_directory: false
+      show_to_editors: false
+      start_year: 2026
+      ended: false
+      court_of_record: true
+    - code: EWHC-BPD-PropertyTrustsProbate
+      grouped_name: Property, Trusts and Probate List
+      name: High Court (Property, Trusts and Probate List)
+      long_name: The Business and Property Division (Property, Trusts and Probate List)
+      link: https://www.gov.uk/courts-tribunals/the-property-trusts-and-probate-list
+      show_in_search_filters: false
+      show_in_public_directory: false
+      show_to_editors: false
+      start_year: 2026
+      ended: false
+      court_of_record: true
+    - code: EWHC-BPD-Appeals
+      grouped_name: Business and Property Division Appeals List
+      name: High Court (Business and Property Division Appeals List)
+      long_name: The Business and Property Division (Appeals List)
+      link: https://www.gov.uk/courts-tribunals/business-and-property-division-of-the-high-court
+      show_in_search_filters: false
+      show_in_public_directory: false
+      show_to_editors: false
+      ended: false
+      court_of_record: true
+    - code: EWHC-BPD-Competition
+      grouped_name: Competition List
+      name: High Court (Competition List)
+      long_name: The Business and Property Division (Competition List)
+      link: https://www.gov.uk/courts-tribunals/the-competition-list
+      show_in_search_filters: false
+      show_in_public_directory: false
+      show_to_editors: false
+      start_year: 2026
+      ended: false
+      court_of_record: true
+    - code: EWHC-BPD-Revenue
+      grouped_name: Revenue list
+      name: High Court (Revenue list)
+      long_name: The Business and Property Division (Revenue list)
+      link: https://www.gov.uk/courts-tribunals/the-revenue-list
+      show_in_search_filters: false
+      show_in_public_directory: false
+      show_to_editors: false
+      start_year: 2026
       ended: false
       court_of_record: true
 - name: lower_courts

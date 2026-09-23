@@ -28,36 +28,50 @@
 | ---- | ---- | ----- | ------------ | ----- | --- | ----- | ----------- | ----------- | ---------- |
 | Administrative Court | EWHC-KBD-Admin | ewhc/admin | [2025] EWHC 2152 (Admin) | 2022 | – | ❌ | ❌ | ❌ | ✅ |
 | Administrative Court | EWHC-QBD-Admin | ewhc/admin | [2009] EWHC 995 (Admin) | 2003 | – | ✅ | ✅ | ✅ | ✅ |
+| Admiralty Court | EWHC-BPD-Admiralty | ewhc/admlty | [2024] EWHC 16 (Admlty) | 2026 | – | ❌ | ❌ | ❌ | ✅ |
 | Admiralty Court | EWHC-KBD-Admiralty | ewhc/admlty | [2024] EWHC 16 (Admlty) | 2022 | – | ❌ | ❌ | ❌ | ✅ |
 | Admiralty Court | EWHC-QBD-Admiralty | ewhc/admlty | [2018] EWHC 82 (Admlty) | 2003 | – | ✅ | ✅ | ✅ | ✅ |
+| Business List | EWHC-BPD-Business | – | – | 2026 | – | ❌ | ❌ | ❌ | ✅ |
 | Business List | EWHC-Chancery-Business | – | – | – | – | ❌ | ❌ | ❌ | ✅ |
 | Business and Property Courts | EWHC-Chancery-BusinessAndProperty | – | – | – | – | ❌ | ❌ | ❌ | ✅ |
 | Business and Property Courts | EWHC-KBD-BusinessAndProperty | – | – | – | – | ❌ | ❌ | ❌ | ✅ |
 | Business and Property Courts | EWHC-QBD-BusinessAndProperty | – | – | – | – | ❌ | ❌ | ❌ | ✅ |
+| Business and Property Division Appeals List | EWHC-BPD-Appeals | – | – | – | – | ❌ | ❌ | ❌ | ✅ |
 | Business and Property Division | EWHC-BPD | ewhc/bp | [2026] EWHC 2142 (BP) | 2026 | – | ✅ | ✅ | ✅ | ✅ |
-| Chancery Division | EWHC-Chancery | ewhc/ch | [2016] EWHC 2142 (Ch) | 2003 | – | ✅ | ✅ | ✅ | ✅ |
+| Chancery Division | EWHC-Chancery | ewhc/ch | [2016] EWHC 2142 (Ch) | 2003 | 2026 | ✅ | ✅ | ✅ | ✅ |
+| Circuit Commercial Court | EWHC-BPD-Commercial-Circuit | – | [2023] EWHC 2168 (Comm) | 2026 | – | ❌ | ❌ | ❌ | ✅ |
 | Circuit Commercial Court | EWHC-KBD-Commercial-Circuit | – | [2023] EWHC 2168 (Comm) | – | – | ❌ | ❌ | ❌ | ✅ |
 | Circuit Commercial Court | EWHC-QBD-Commercial-Circuit | – | [2021] EWHC 286 (Comm) | – | – | ❌ | ❌ | ❌ | ✅ |
+| Commercial Court | EWHC-BPD-Commercial | ewhc/comm | [2024] EWHC 789 (Comm) | 2026 | – | ❌ | ❌ | ❌ | ✅ |
 | Commercial Court | EWHC-KBD-Commercial | ewhc/comm | [2024] EWHC 789 (Comm) | 2022 | – | ❌ | ❌ | ❌ | ✅ |
 | Commercial Court | EWHC-QBD-Commercial | ewhc/comm | [2011] EWHC 68 (Comm) | 2003 | – | ✅ | ✅ | ✅ | ✅ |
+| Competition List | EWHC-BPD-Competition | – | – | 2026 | – | ❌ | ❌ | ❌ | ✅ |
 | Family Division | EWHC-Family | ewhc/fam | [2013] EWHC 3158 (Fam) | 2003 | – | ✅ | ✅ | ✅ | ✅ |
+| Financial List | EWHC-BPD-Commercial-Financial | – | [2025] EWHC 1881 (Comm) | 2026 | – | ❌ | ❌ | ❌ | ✅ |
 | Financial List | EWHC-Chancery-Financial | – | – | – | – | ❌ | ❌ | ❌ | ✅ |
 | Financial List | EWHC-KBD-Commercial-Financial | – | [2025] EWHC 1881 (Comm) | – | – | ❌ | ❌ | ❌ | ✅ |
 | Financial List | EWHC-QBD-Commercial-Financial | – | [2014] EWHC 3156 (Comm) | – | – | ❌ | ❌ | ❌ | ✅ |
 | High Court (Chancery Appeals) | EWHC-Chancery-Appeals | – | – | – | – | ❌ | ❌ | ❌ | ✅ |
 | High Court | EWHC | – | – | – | – | ❌ | ❌ | ❌ | ✅ |
+| Insolvency and Companies List | EWHC-BPD-InsolvencyAndCompanies | – | – | 2026 | – | ❌ | ❌ | ❌ | ✅ |
 | Insolvency and Companies List | EWHC-Chancery-InsolvencyAndCompanies | – | – | – | – | ❌ | ❌ | ❌ | ✅ |
+| Intellectual Property Enterprise Court | EWHC-BPD-IPEC | ewhc/ipec | [2014] EWHC 349 (IPEC) | 2026 | – | ❌ | ❌ | ❌ | ✅ |
 | Intellectual Property Enterprise Court | EWHC-Chancery-IPEC | ewhc/ipec | [2014] EWHC 349 (IPEC) | 2013 | – | ✅ | ✅ | ✅ | ✅ |
+| Intellectual Property List | EWHC-BPD-IntellectualProperty | – | – | 2026 | – | ❌ | ❌ | ❌ | ✅ |
 | Intellectual Property List | EWHC-Chancery-IntellectualProperty | – | – | – | – | ❌ | ❌ | ❌ | ✅ |
 | King's / Queen's Bench Division | TNA-EWHC-KBQBD | ewhc/kb | [2022] EWHC 2387 (KB) | 2003 | – | ❌ | ✅ | ✅ | ✅ |
 | King's Bench Division | EWHC-KBD | ewhc/kb | [2024] EWHC 285 (KB) | 2022 | – | ✅ | ❌ | ❌ | ✅ |
 | Mercantile Court | EWHC-Mercantile | ewhc/mercantile | [2014] EWHC 1195 (Mercantile) | 2008 | 2014 | ✅ | ✅ | ✅ | ✅ |
+| Patents Court | EWHC-BPD-Patents | ewhc/pat | [2015] EWHC 3163 (Pat) | 2026 | – | ❌ | ❌ | ❌ | ✅ |
 | Patents Court | EWHC-Chancery-Patents | ewhc/pat | [2015] EWHC 3163 (Pat) | 2003 | – | ✅ | ✅ | ✅ | ✅ |
 | Planning Court | EWHC-KBD-Planning | – | – | – | – | ❌ | ❌ | ❌ | ✅ |
 | Planning Court | EWHC-QBD-Planning | – | – | – | – | ❌ | ❌ | ❌ | ✅ |
+| Property, Trusts and Probate List | EWHC-BPD-PropertyTrustsProbate | – | – | 2026 | – | ❌ | ❌ | ❌ | ✅ |
 | Property, Trusts and Probate List | EWHC-Chancery-PropertyTrustsProbate | – | – | – | – | ❌ | ❌ | ❌ | ✅ |
 | Queen's Bench Division | EWHC-QBD | ewhc/qb | [2019] EWHC 2488 (QB) | 2003 | 2022 | ✅ | ❌ | ❌ | ✅ |
+| Revenue list | EWHC-BPD-Revenue | – | – | 2026 | – | ❌ | ❌ | ❌ | ✅ |
 | Senior Courts Costs Office | EWHC-SeniorCourtsCosts | ewhc/scco | [2022] EWHC 3349 (SCCO) | 2003 | – | ✅ | ✅ | ✅ | ✅ |
+| Technology and Construction Court | EWHC-BPD-TCC | ewhc/tcc | [2024] EWHC 802 (TCC) | 2026 | – | ❌ | ❌ | ❌ | ✅ |
 | Technology and Construction Court | EWHC-KBD-TCC | ewhc/tcc | [2024] EWHC 802 (TCC) | 2003 | – | ❌ | ❌ | ❌ | ✅ |
 | Technology and Construction Court | EWHC-QBD-TCC | ewhc/tcc | [2014] EWHC 1800 (TCC) | 2003 | – | ✅ | ✅ | ✅ | ✅ |
 
