@@ -34,6 +34,7 @@ graph TD
         EWHC-Chancery-Business["High Court (Business List)"]
         EWHC-Chancery-Appeals["Chancery Appeals"]
         EWHC-Chancery["High Court (Chancery Division)"]
+        EWHC-BPD["High Court (Business and Property Division)"]
         EWHC-QBD-Commercial-Circuit["High Court (Circuit Commercial Court)"]
         EWHC-KBD-Commercial-Circuit["High Court (Circuit Commercial Court)"]
         EWHC-QBD-Commercial["High Court (Commercial Court)"]
@@ -56,6 +57,20 @@ graph TD
         EWHC-SeniorCourtsCosts["High Court (Senior Court Costs Office)"]
         EWHC-QBD-TCC["High Court (Technology and Construction Court)"]
         EWHC-KBD-TCC["High Court (Technology and Construction Court)"]
+        EWHC-BPD-Admiralty["High Court (Admiralty Court)"]
+        EWHC-BPD-Commercial["High Court (Commercial Court)"]
+        EWHC-BPD-Commercial-Circuit["High Court (Circuit Commercial Court)"]
+        EWHC-BPD-IntellectualProperty["High Court (Intellectual Property List)"]
+        EWHC-BPD-IPEC["High Court (Intellectual Property Enterprise Court)"]
+        EWHC-BPD-Patents["High Court (Patents Court)"]
+        EWHC-BPD-TCC["High Court (Technology and Construction Court)"]
+        EWHC-BPD-Business["High Court (Business List)"]
+        EWHC-BPD-InsolvencyAndCompanies["High Court (Insolvency and Companies List)"]
+        EWHC-BPD-Commercial-Financial["High Court (Financial List)"]
+        EWHC-BPD-PropertyTrustsProbate["High Court (Property, Trusts and Probate List)"]
+        EWHC-BPD-Appeals["High Court (Business and Property Division Appeals List)"]
+        EWHC-BPD-Competition["High Court (Competition List)"]
+        EWHC-BPD-Revenue["High Court (Revenue list)"]
     end
     class high_court courtGroup
     subgraph lower_courts["lower_courts"]
@@ -135,6 +150,7 @@ graph TD
     class EWHC-Chancery-Business court
     class EWHC-Chancery-Appeals court
     class EWHC-Chancery court
+    class EWHC-BPD court
     class EWHC-QBD-Commercial-Circuit court
     class EWHC-KBD-Commercial-Circuit court
     class EWHC-QBD-Commercial court
@@ -157,6 +173,20 @@ graph TD
     class EWHC-SeniorCourtsCosts court
     class EWHC-QBD-TCC court
     class EWHC-KBD-TCC court
+    class EWHC-BPD-Admiralty court
+    class EWHC-BPD-Commercial court
+    class EWHC-BPD-Commercial-Circuit court
+    class EWHC-BPD-IntellectualProperty court
+    class EWHC-BPD-IPEC court
+    class EWHC-BPD-Patents court
+    class EWHC-BPD-TCC court
+    class EWHC-BPD-Business court
+    class EWHC-BPD-InsolvencyAndCompanies court
+    class EWHC-BPD-Commercial-Financial court
+    class EWHC-BPD-PropertyTrustsProbate court
+    class EWHC-BPD-Appeals court
+    class EWHC-BPD-Competition court
+    class EWHC-BPD-Revenue court
     class EWCR court
     class EWCC court
     class EWFC court
