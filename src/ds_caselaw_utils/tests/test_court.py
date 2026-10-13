@@ -1,5 +1,5 @@
 import unittest
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from unittest.mock import MagicMock, PropertyMock, patch
 
 from ds_caselaw_utils.courts import (
@@ -50,7 +50,7 @@ class TestCourt(unittest.TestCase):
 
     def test_end_year_default(self):
         court = CourtFactory({})
-        self.assertEqual(datetime.now(tz=timezone.utc).date().year, court.end_year)
+        self.assertEqual(datetime.now(tz=UTC).date().year, court.end_year)
 
     def test_is_ended_default(self):
         court = CourtFactory({})

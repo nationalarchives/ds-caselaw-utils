@@ -15,42 +15,43 @@ python import name: `ds_caselaw_utils`
 
 ```python
 from ds_caselaw_utils import neutral_url
+
 neutral_url("[2022] EAT 1")  # '/eat/2022/4'
 
 from ds_caselaw_utils import courts
 
-courts.get_all() # return a list of all courts
+courts.get_all()  # return a list of all courts
 
-courts.get_by_param("ewhc/ch") # get a court by its parameter value
+courts.get_by_param("ewhc/ch")  # get a court by its parameter value
 
-courts.get_show_in_search_filters() # returns a list of all courts that appear as
-                        # searchable options
+courts.get_show_in_search_filters()  # returns a list of all courts that appear as
+# searchable options
 
-courts.get_show_in_search_filters_groups() # returns a grouped list of all courts and tribunals
-                               # that appear as search-filter options
+courts.get_show_in_search_filters_groups()  # returns a grouped list of all courts and tribunals
+# that appear as search-filter options
 
-courts.get_grouped_show_in_search_filters_courts() # returns show_in_search_filters courts grouped for display
+courts.get_grouped_show_in_search_filters_courts()  # returns show_in_search_filters courts grouped for display
 
-courts.get_grouped_show_in_search_filters_tribunals() # returns show_in_search_filters tribunals grouped for display
+courts.get_grouped_show_in_search_filters_tribunals()  # returns show_in_search_filters tribunals grouped for display
 
-courts.get_show_in_public_directory() # returns a list of courts included in the public directory
+courts.get_show_in_public_directory()  # returns a list of courts included in the public directory
 
-courts.get_show_in_public_directory_groups() # returns public-directory courts grouped by category
+courts.get_show_in_public_directory_groups()  # returns public-directory courts grouped by category
 
-courts.get_grouped_show_in_public_directory_courts() # returns public-directory courts grouped for display
+courts.get_grouped_show_in_public_directory_courts()  # returns public-directory courts grouped for display
 
-courts.get_grouped_show_in_public_directory_tribunals() # returns public-directory tribunals grouped for display
+courts.get_grouped_show_in_public_directory_tribunals()  # returns public-directory tribunals grouped for display
 
-courts.get_show_to_editors_groups() # returns a grouped list of courts visible to editors
+courts.get_show_to_editors_groups()  # returns a grouped list of courts visible to editors
 
-courts.get_grouped_show_to_editors_courts() # returns courts visible to editors grouped for display
+courts.get_grouped_show_to_editors_courts()  # returns courts visible to editors grouped for display
 
-courts.get_grouped_show_to_editors_tribunals() # returns tribunals visible to editors grouped for display
+courts.get_grouped_show_to_editors_tribunals()  # returns tribunals visible to editors grouped for display
 
-courts.get_show_to_editors_courts() # returns a list of all *courts* (ie not tribunals)
-                             # visible to editors
+courts.get_show_to_editors_courts()  # returns a list of all *courts* (ie not tribunals)
+# visible to editors
 
-courts.get_show_to_editors_tribunals() # returns a list of all *tribunals* visible to editors
+courts.get_show_to_editors_tribunals()  # returns a list of all *tribunals* visible to editors
 ```
 
 The list of courts is defined in `src/ds_caselaw_utils/data/court_names.yml`. The format is as follows:

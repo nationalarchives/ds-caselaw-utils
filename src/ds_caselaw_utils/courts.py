@@ -6,7 +6,7 @@ Get metadata for the courts covered by the service
 
 import pathlib
 from dataclasses import dataclass
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from enum import Enum
 from functools import cached_property
 from re import compile
@@ -87,7 +87,7 @@ class Court:
         self.type = type
 
         self.start_year: int | None = data.get("start_year")
-        self.end_year: int = data.get("end_year") or datetime.now(tz=timezone.utc).date().year
+        self.end_year: int = data.get("end_year") or datetime.now(tz=UTC).date().year
         self.jurisdictions: list[Jurisdiction] = [
             Jurisdiction(jurisdiction_data) for jurisdiction_data in data.get("jurisdictions", [])
         ]
