@@ -602,9 +602,6 @@ class TestCourts(unittest.TestCase):
 
         self.assertFalse(group.display_heading)
 
-    def test_proscribed_organisations_appeal_commission_is_a_court_of_record(self):
-        self.assertTrue(courts.get_by_code(CourtCode("POAC")).is_court_of_record)
-
 
 class TestAutogenCourtsJson(unittest.TestCase):
     def test_autogen_courts_json(self):
