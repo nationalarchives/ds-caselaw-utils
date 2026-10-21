@@ -75,7 +75,7 @@
 | Technology and Construction Court | EWHC-KBD-TCC | ewhc/tcc | [2024] EWHC 802 (TCC) | 2003 | – | ❌ | ❌ | ❌ | ✅ |
 | Technology and Construction Court | EWHC-QBD-TCC | ewhc/tcc | [2014] EWHC 1800 (TCC) | 2003 | – | ✅ | ✅ | ✅ | ✅ |
 
-## Other Courts (lower_courts)
+## lower_courts
 
 | Name | Code | Param | Example NCNs | Start | End | Show to editors? | Advanced search filter? | Show in public directory? | Of record? |
 | ---- | ---- | ----- | ------------ | ----- | --- | ----- | ----------- | ----------- | ---------- |
@@ -104,7 +104,7 @@
 
 | Name | Code | Param | Example NCNs | Start | End | Show to editors? | Advanced search filter? | Show in public directory? | Of record? |
 | ---- | ---- | ----- | ------------ | ----- | --- | ----- | ----------- | ----------- | ---------- |
-| Proscribed Organisations Appeal Commission | POAC | poac | – | – | – | ✅ | ✅ | ✅ | ❌ |
+| Proscribed Organisations Appeal Commission | POAC | poac | – | – | – | ✅ | ✅ | ✅ | ✅ |
 
 ## pathogens_access_appeal_commission
 

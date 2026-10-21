@@ -709,7 +709,7 @@
       ended: false
       court_of_record: true
 - name: lower_courts
-  display_name: "Other Courts"
+  display_name: ~
   is_tribunal: false
   courts:
     - code: "EWCR"
@@ -861,6 +861,7 @@
       show_in_public_directory: true
       show_to_editors: true
       ended: false
+      court_of_record: true
       param: "poac"
 - name: pathogens_access_appeal_commission
   display_name: ~

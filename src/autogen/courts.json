@@ -929,7 +929,7 @@
   },
   {
     "name": "lower_courts",
-    "display_name": "Other Courts",
+    "display_name": null,
     "is_tribunal": false,
     "courts": [
       {
@@ -1135,9 +1135,9 @@
         "show_in_public_directory": true,
         "show_to_editors": true,
         "ended": false,
+        "court_of_record": true,
         "param": "poac",
-        "identifier_iri": "https://www.gov.uk/guidance/appeal-to-the-special-immigration-appeals-commission",
-        "court_of_record": false
+        "identifier_iri": "https://www.gov.uk/guidance/appeal-to-the-special-immigration-appeals-commission"
       }
     ]
   },
