@@ -557,6 +557,54 @@ class TestCourts(unittest.TestCase):
         for court, data in zip(courts.get_all(), courts_from_yaml):
             self.assertEqual(court.name, data["name"])
 
+    def test_grouped_search_filters_match_court_yaml(self):
+        yaml = YAML()
+        datafile = pathlib.Path(__file__).parent.parent / "data/court_names.yaml"
+        with open(datafile) as f:
+            court_data = yaml.load(f)
+
+        search_filter_court_codes = {
+            court.code for group in courts.get_grouped_show_in_search_filters_courts() for court in group.courts
+        }
+        search_filter_tribunal_codes = {
+            court.code for group in courts.get_grouped_show_in_search_filters_tribunals() for court in group.courts
+        }
+        expected_court_codes = {
+            court["code"]
+            for group in court_data
+            if not group["is_tribunal"]
+            for court in group["courts"]
+            if court["show_in_search_filters"]
+        }
+        expected_tribunal_codes = {
+            court["code"]
+            for group in court_data
+            if group["is_tribunal"]
+            for court in group["courts"]
+            if court["show_in_search_filters"]
+        }
+
+        self.assertEqual(search_filter_court_codes, expected_court_codes)
+        self.assertEqual(search_filter_tribunal_codes, expected_tribunal_codes)
+        self.assertNotIn("UKAIT", search_filter_tribunal_codes)
+        self.assertNotIn("PAAC", search_filter_tribunal_codes)
+        self.assertNotIn("EWHC-QBD", search_filter_court_codes)
+        self.assertNotIn("EWHC-KBD", search_filter_court_codes)
+        self.assertIn("TNA-EWHC-KBQBD", search_filter_court_codes)
+
+    def test_lower_courts_do_not_display_a_group_heading(self):
+        lower_court_codes = {"EWCR", "EWCC", "EWFC", "EWCOP"}
+        group = next(
+            group
+            for group in courts.get_grouped_show_in_search_filters_courts()
+            if {court.code for court in group.courts} == lower_court_codes
+        )
+
+        self.assertFalse(group.display_heading)
+
+    def test_proscribed_organisations_appeal_commission_is_a_court_of_record(self):
+        self.assertTrue(courts.get_by_code(CourtCode("POAC")).is_court_of_record)
+
 
 class TestAutogenCourtsJson(unittest.TestCase):
     def test_autogen_courts_json(self):

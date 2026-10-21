@@ -265,7 +265,7 @@ class CourtsRepository:
         courts = []
         for category in self._data:
             for court in category.get("courts", []):
-                if court.get(court_property):
+                if court.get(court_property) is True:
                     courts.append(
                         Court(
                             court, type=InstitutionType.TRIBUNAL if category["is_tribunal"] else InstitutionType.COURT
@@ -285,7 +285,7 @@ class CourtsRepository:
             courts = [
                 Court(court, type=InstitutionType.TRIBUNAL if category["is_tribunal"] else InstitutionType.COURT)
                 for court in category.get("courts", [])
-                if court.get(court_property)
+                if court.get(court_property) is True
             ]
             if len(courts) > 0:
                 groups.append(CourtGroup(category.get("display_name"), courts))
@@ -307,7 +307,9 @@ class CourtsRepository:
         for category in self._data:
             if category.get("is_tribunal", False) == (institution_type == InstitutionType.TRIBUNAL):
                 courts = [
-                    Court(court, institution_type) for court in category.get("courts", []) if court.get(court_property)
+                    Court(court, institution_type)
+                    for court in category.get("courts", [])
+                    if court.get(court_property) is True
                 ]
                 if len(courts) > 0:
                     groups.append(CourtGroup(category.get("display_name"), courts))
