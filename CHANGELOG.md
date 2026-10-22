@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## Unreleased
+## v5.1.1 (2026-10-21)
 
 - updates to courts to ensure correct courts get shown in the search filters
 
