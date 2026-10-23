@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## v5.1.2 (2026-10-23)
+
+- Further adjustments to the courts for the filters, ensuring we show the appropriate courts and that they are in the right order.
+
 ## v5.1.1 (2026-10-21)
 
 - updates to courts to ensure correct courts get shown in the search filters
