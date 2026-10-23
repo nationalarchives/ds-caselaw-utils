@@ -88,4 +88,9 @@ def test_factory():
             ],
         },
     ]
-    assert str(output_data) == str(make_court_repo_valid(input_data))
+    for group in output_data:
+        for key in ("courts", "court"):
+            for court in group[key]:
+                court["noun"] = "court"
+
+    assert output_data == make_court_repo_valid(input_data)

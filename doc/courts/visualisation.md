@@ -23,103 +23,106 @@ graph TD
     end
     class court_of_appeal courtGroup
     subgraph high_court["high_court"]
-        EWHC["High Court"]
-        EWHC-QBD-Admin["High Court (Administrative Court)"]
         EWHC-KBD-Admin["High Court (Administrative Court)"]
-        EWHC-QBD-Admiralty["High Court (Admiralty Division)"]
+        EWHC-QBD-Admin["High Court (Administrative Court)"]
+        EWHC-BPD-Admiralty["High Court (Admiralty Court)"]
         EWHC-KBD-Admiralty["High Court (Admiralty Division)"]
-        EWHC-QBD-BusinessAndProperty["High Court (Business and Property Courts)"]
-        EWHC-KBD-BusinessAndProperty["High Courts (Business and Property Courts)"]
+        EWHC-QBD-Admiralty["High Court (Admiralty Division)"]
         EWHC-Chancery-BusinessAndProperty["High Court (Business and Property Courts)"]
-        EWHC-Chancery-Business["High Court (Business List)"]
-        EWHC-Chancery-Appeals["Chancery Appeals"]
-        EWHC-Chancery["High Court (Chancery Division)"]
+        EWHC-KBD-BusinessAndProperty["High Courts (Business and Property Courts)"]
+        EWHC-QBD-BusinessAndProperty["High Court (Business and Property Courts)"]
         EWHC-BPD["High Court (Business and Property Division)"]
-        EWHC-QBD-Commercial-Circuit["High Court (Circuit Commercial Court)"]
+        EWHC-BPD-Appeals["High Court (Business and Property Division Appeals List)"]
+        EWHC-BPD-Business["High Court (Business List)"]
+        EWHC-Chancery-Business["High Court (Business List)"]
+        EWHC-Chancery["High Court (Chancery Division)"]
+        EWHC-BPD-Commercial-Circuit["High Court (Circuit Commercial Court)"]
         EWHC-KBD-Commercial-Circuit["High Court (Circuit Commercial Court)"]
-        EWHC-QBD-Commercial["High Court (Commercial Court)"]
+        EWHC-QBD-Commercial-Circuit["High Court (Circuit Commercial Court)"]
+        EWHC-BPD-Commercial["High Court (Commercial Court)"]
         EWHC-KBD-Commercial["High Court (Commercial Court)"]
+        EWHC-QBD-Commercial["High Court (Commercial Court)"]
+        EWHC-BPD-Competition["High Court (Competition List)"]
         EWHC-Family["High Court (Family Division)"]
-        EWHC-QBD-Commercial-Financial["High Court (Financial List)"]
-        EWHC-KBD-Commercial-Financial["High Court (Financial List)"]
+        EWHC-BPD-Commercial-Financial["High Court (Financial List)"]
         EWHC-Chancery-Financial["High Court (Financial List)"]
+        EWHC-KBD-Commercial-Financial["High Court (Financial List)"]
+        EWHC-QBD-Commercial-Financial["High Court (Financial List)"]
+        EWHC["High Court"]
+        EWHC-Chancery-Appeals["Chancery Appeals"]
+        EWHC-BPD-InsolvencyAndCompanies["High Court (Insolvency and Companies List)"]
         EWHC-Chancery-InsolvencyAndCompanies["High Court (Insolvency and Companies List)"]
+        EWHC-BPD-IPEC["High Court (Intellectual Property Enterprise Court)"]
         EWHC-Chancery-IPEC["High Court (Intellectual Property Enterprise Court)"]
+        EWHC-BPD-IntellectualProperty["High Court (Intellectual Property List)"]
         EWHC-Chancery-IntellectualProperty["High Court (Intellectual Property List)"]
         TNA-EWHC-KBQBD["High Court (King's / Queen's Bench Division)"]
         EWHC-KBD["High Court (King's Bench Division)"]
         EWHC-Mercantile["High Court (Mercantile Court)"]
-        EWHC-Chancery-Patents["High Court (Patents Court)"]
-        EWHC-QBD["High Court (Queen's Bench Division)"]
-        EWHC-QBD-Planning["High Court (Planning Court)"]
-        EWHC-KBD-Planning["High Court (Planning Court)"]
-        EWHC-Chancery-PropertyTrustsProbate["High Court (Property, Trusts and Probate List)"]
-        EWHC-SeniorCourtsCosts["High Court (Senior Court Costs Office)"]
-        EWHC-QBD-TCC["High Court (Technology and Construction Court)"]
-        EWHC-KBD-TCC["High Court (Technology and Construction Court)"]
-        EWHC-BPD-Admiralty["High Court (Admiralty Court)"]
-        EWHC-BPD-Commercial["High Court (Commercial Court)"]
-        EWHC-BPD-Commercial-Circuit["High Court (Circuit Commercial Court)"]
-        EWHC-BPD-IntellectualProperty["High Court (Intellectual Property List)"]
-        EWHC-BPD-IPEC["High Court (Intellectual Property Enterprise Court)"]
         EWHC-BPD-Patents["High Court (Patents Court)"]
-        EWHC-BPD-TCC["High Court (Technology and Construction Court)"]
-        EWHC-BPD-Business["High Court (Business List)"]
-        EWHC-BPD-InsolvencyAndCompanies["High Court (Insolvency and Companies List)"]
-        EWHC-BPD-Commercial-Financial["High Court (Financial List)"]
+        EWHC-Chancery-Patents["High Court (Patents Court)"]
+        EWHC-KBD-Planning["High Court (Planning Court)"]
+        EWHC-QBD-Planning["High Court (Planning Court)"]
         EWHC-BPD-PropertyTrustsProbate["High Court (Property, Trusts and Probate List)"]
-        EWHC-BPD-Appeals["High Court (Business and Property Division Appeals List)"]
-        EWHC-BPD-Competition["High Court (Competition List)"]
+        EWHC-Chancery-PropertyTrustsProbate["High Court (Property, Trusts and Probate List)"]
+        EWHC-QBD["High Court (Queen's Bench Division)"]
         EWHC-BPD-Revenue["High Court (Revenue list)"]
+        EWHC-SeniorCourtsCosts["High Court (Senior Court Costs Office)"]
+        EWHC-BPD-TCC["High Court (Technology and Construction Court)"]
+        EWHC-KBD-TCC["High Court (Technology and Construction Court)"]
+        EWHC-QBD-TCC["High Court (Technology and Construction Court)"]
     end
     class high_court courtGroup
-    subgraph lower_courts["lower_courts"]
-        EWCR["Crown Court"]
-        EWCC["County Court"]
-        EWFC["Family Court"]
-        EWFC-B["Family Court (B - district and circuit judges)"]
+    subgraph other_courts["other_courts"]
         EWCOP["Court of Protection"]
-        EWCOP-T1["Court of Protection (Tier 1 - district judges)"]
-        EWCOP-T2["Court of Protection (Tier 2 - circuit judges)"]
-        EWCOP-T3["Court of Protection (Tier 3 - high court judges)"]
+        EWCOP-T3["Court of Protection (High court judges)"]
+        EWFC["Family Court (High court judges)"]
     end
-    class lower_courts courtGroup
-    subgraph investigatory_powers_tribunal["investigatory_powers_tribunal"]
+    class other_courts courtGroup
+    subgraph specialist_tribunals["specialist_tribunals"]
+        EAT["Employment Appeal Tribunal"]
         UKIPT["Investigatory Powers Tribunal"]
-    end
-    class investigatory_powers_tribunal tribunalGroup
-    subgraph special_immigration_appeals_commission["special_immigration_appeals_commission"]
+        PAAC["Pathogens Access Appeal Commission"]
+        POAC["Proscribed Organisations Appeal Commission"]
         SIAC["Special Immigration Appeals Commission"]
     end
-    class special_immigration_appeals_commission tribunalGroup
-    subgraph proscribed_organisations_appeal_commission["proscribed_organisations_appeal_commission"]
-        POAC["Proscribed Organisations Appeal Commission"]
-    end
-    class proscribed_organisations_appeal_commission tribunalGroup
-    subgraph pathogens_access_appeal_commission["pathogens_access_appeal_commission"]
-        PAAC["Pathogens Access Appeal Commission"]
-    end
-    class pathogens_access_appeal_commission tribunalGroup
-    subgraph employment_appeal_tribunal["employment_appeal_tribunal"]
-        EAT["Employment Appeal Tribunal"]
-    end
-    class employment_appeal_tribunal tribunalGroup
+    class specialist_tribunals tribunalGroup
     subgraph upper_tribunals["upper_tribunals"]
         UKUT-AAC["Upper Tribunal (Administrative Appeals Chamber)"]
-        UKUT-IAC["Upper Tribunal (Immigration and Asylum Chamber)"]
         UKAIT["Asylum & Immigration Tribunal"]
+        UKUT-IAC["Upper Tribunal (Immigration and Asylum Chamber)"]
         UKUT-LC["Upper Tribunal (Lands Chamber)"]
         UKUT-TCC["Upper Tribunal (Tax and Chancery Chamber)"]
     end
     class upper_tribunals tribunalGroup
+    subgraph county_court["county_court"]
+        EWCC["County Court"]
+    end
+    class county_court courtGroup
+    subgraph court_of_protection_district_judges["court_of_protection_district_judges"]
+        EWCOP-T1["Court of Protection (District judges)"]
+    end
+    class court_of_protection_district_judges courtGroup
+    subgraph court_of_protection_circuit_judges["court_of_protection_circuit_judges"]
+        EWCOP-T2["Court of Protection (Circuit judges)"]
+    end
+    class court_of_protection_circuit_judges courtGroup
+    subgraph crown_court["crown_court"]
+        EWCR["Crown Court"]
+    end
+    class crown_court courtGroup
+    subgraph family_court_district_and_circuit_judges["family_court_district_and_circuit_judges"]
+        EWFC-B["Family Court (District and circuit judges)"]
+    end
+    class family_court_district_and_circuit_judges courtGroup
     subgraph first_tier_tribunals["first_tier_tribunals"]
         UKFTT-HESC["Care Standards"]
         ET["First-tier Tribunal (Employment Tribunal)"]
         UKFTT-GRC["First-tier Tribunal (General Regulatory Chamber)"]
         UKFTT-IAC["First-tier Tribunal (Immigration and Asylum Chamber)"]
-        UKFTT-TC["First-tier Tribunal (Tax Chamber)"]
         FTT-PC["Land Registration Division (Property Chamber)"]
         FTT-PHL["Primary Health Lists"]
+        UKFTT-TC["First-tier Tribunal (Tax Chamber)"]
     end
     class first_tier_tribunals tribunalGroup
     subgraph historic_tribunals["historic_tribunals"]
@@ -127,8 +130,8 @@ graph TD
         UKFTT-Credit["Consumer Credit Appeals Tribunal"]
         UKFTT-Estate["Estate Agents Tribunal"]
         UKFSMT["Financial Services Tribunal"]
-        UKIT["Information Tribunal"]
         UKIST["Immigration Services Tribunal"]
+        UKIT["Information Tribunal"]
         UKPRT["Pensions Regulator Tribunal"]
         UKSPC["Special Commissioners of Income Tax"]
         FTT-Transport["Transport Tribunal"]
@@ -139,85 +142,85 @@ graph TD
     class UKPC court
     class EWCA-Civil court
     class EWCA-Criminal court
-    class EWHC court
-    class EWHC-QBD-Admin court
     class EWHC-KBD-Admin court
-    class EWHC-QBD-Admiralty court
+    class EWHC-QBD-Admin court
+    class EWHC-BPD-Admiralty court
     class EWHC-KBD-Admiralty court
-    class EWHC-QBD-BusinessAndProperty court
-    class EWHC-KBD-BusinessAndProperty court
+    class EWHC-QBD-Admiralty court
     class EWHC-Chancery-BusinessAndProperty court
-    class EWHC-Chancery-Business court
-    class EWHC-Chancery-Appeals court
-    class EWHC-Chancery court
+    class EWHC-KBD-BusinessAndProperty court
+    class EWHC-QBD-BusinessAndProperty court
     class EWHC-BPD court
-    class EWHC-QBD-Commercial-Circuit court
+    class EWHC-BPD-Appeals court
+    class EWHC-BPD-Business court
+    class EWHC-Chancery-Business court
+    class EWHC-Chancery court
+    class EWHC-BPD-Commercial-Circuit court
     class EWHC-KBD-Commercial-Circuit court
-    class EWHC-QBD-Commercial court
+    class EWHC-QBD-Commercial-Circuit court
+    class EWHC-BPD-Commercial court
     class EWHC-KBD-Commercial court
+    class EWHC-QBD-Commercial court
+    class EWHC-BPD-Competition court
     class EWHC-Family court
-    class EWHC-QBD-Commercial-Financial court
-    class EWHC-KBD-Commercial-Financial court
+    class EWHC-BPD-Commercial-Financial court
     class EWHC-Chancery-Financial court
+    class EWHC-KBD-Commercial-Financial court
+    class EWHC-QBD-Commercial-Financial court
+    class EWHC court
+    class EWHC-Chancery-Appeals court
+    class EWHC-BPD-InsolvencyAndCompanies court
     class EWHC-Chancery-InsolvencyAndCompanies court
+    class EWHC-BPD-IPEC court
     class EWHC-Chancery-IPEC court
+    class EWHC-BPD-IntellectualProperty court
     class EWHC-Chancery-IntellectualProperty court
     class TNA-EWHC-KBQBD court
     class EWHC-KBD court
     class EWHC-Mercantile court
-    class EWHC-Chancery-Patents court
-    class EWHC-QBD court
-    class EWHC-QBD-Planning court
-    class EWHC-KBD-Planning court
-    class EWHC-Chancery-PropertyTrustsProbate court
-    class EWHC-SeniorCourtsCosts court
-    class EWHC-QBD-TCC court
-    class EWHC-KBD-TCC court
-    class EWHC-BPD-Admiralty court
-    class EWHC-BPD-Commercial court
-    class EWHC-BPD-Commercial-Circuit court
-    class EWHC-BPD-IntellectualProperty court
-    class EWHC-BPD-IPEC court
     class EWHC-BPD-Patents court
-    class EWHC-BPD-TCC court
-    class EWHC-BPD-Business court
-    class EWHC-BPD-InsolvencyAndCompanies court
-    class EWHC-BPD-Commercial-Financial court
+    class EWHC-Chancery-Patents court
+    class EWHC-KBD-Planning court
+    class EWHC-QBD-Planning court
     class EWHC-BPD-PropertyTrustsProbate court
-    class EWHC-BPD-Appeals court
-    class EWHC-BPD-Competition court
+    class EWHC-Chancery-PropertyTrustsProbate court
+    class EWHC-QBD court
     class EWHC-BPD-Revenue court
-    class EWCR court
-    class EWCC court
-    class EWFC court
-    class EWFC-B court
+    class EWHC-SeniorCourtsCosts court
+    class EWHC-BPD-TCC court
+    class EWHC-KBD-TCC court
+    class EWHC-QBD-TCC court
     class EWCOP court
-    class EWCOP-T1 court
-    class EWCOP-T2 court
     class EWCOP-T3 court
-    class UKIPT tribunal
-    class SIAC tribunal
-    class POAC tribunal
-    class PAAC tribunal
+    class EWFC court
     class EAT tribunal
+    class UKIPT tribunal
+    class PAAC tribunal
+    class POAC tribunal
+    class SIAC tribunal
     class UKUT-AAC tribunal
-    class UKUT-IAC tribunal
     class UKAIT tribunal
+    class UKUT-IAC tribunal
     class UKUT-LC tribunal
     class UKUT-TCC tribunal
+    class EWCC court
+    class EWCOP-T1 court
+    class EWCOP-T2 court
+    class EWCR court
+    class EWFC-B court
     class UKFTT-HESC tribunal
     class ET tribunal
     class UKFTT-GRC tribunal
     class UKFTT-IAC tribunal
-    class UKFTT-TC tribunal
     class FTT-PC tribunal
     class FTT-PHL tribunal
+    class UKFTT-TC tribunal
     class FTT-Claims tribunal
     class UKFTT-Credit tribunal
     class UKFTT-Estate tribunal
     class UKFSMT tribunal
-    class UKIT tribunal
     class UKIST tribunal
+    class UKIT tribunal
     class UKPRT tribunal
     class UKSPC tribunal
     class FTT-Transport tribunal

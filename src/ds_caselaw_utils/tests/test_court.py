@@ -40,6 +40,10 @@ class TestCourt(unittest.TestCase):
         court = CourtFactory({"name": "court_name"})
         self.assertEqual("court_name", court.grouped_name)
 
+    def test_noun(self):
+        court = CourtFactory({"noun": "tribunal"})
+        self.assertEqual("tribunal", court.noun)
+
     def test_param_aliases(self):
         court = CourtFactory({"param": "param_1", "extra_params": ["param_2"]})
         self.assertEqual(["param_1", "param_2"], court.param_aliases)
@@ -189,6 +193,14 @@ class TestCourtWithJurisdiction(unittest.TestCase):
         cwj = CourtWithJurisdiction(court, jurisdiction)
         self.assertEqual(cwj.grouped_name, "court_grouped_name")
         court.mock_grouped_name.assert_called()
+
+    def test_noun(self):
+        court = mock_with_properties({"noun": "tribunal"})
+        jurisdiction = mock_with_properties({})
+        cwj = CourtWithJurisdiction(court, jurisdiction)
+
+        self.assertEqual(cwj.noun, "tribunal")
+        court.mock_noun.assert_called()
 
     def test_link_and_iri_with_default_iri(self):
         # It returns the court link
