@@ -592,15 +592,61 @@ class TestCourts(unittest.TestCase):
         self.assertNotIn("EWHC-KBD", search_filter_court_codes)
         self.assertIn("TNA-EWHC-KBQBD", search_filter_court_codes)
 
-    def test_lower_courts_do_not_display_a_group_heading(self):
-        lower_court_codes = {"EWCR", "EWCC", "EWFC", "EWCOP"}
-        group = next(
-            group
-            for group in courts.get_grouped_show_in_search_filters_courts()
-            if {court.code for court in group.courts} == lower_court_codes
+    def test_search_filter_group_order(self):
+        groups = courts.get_show_in_search_filters_groups()
+        labels = [group.name or group.courts[0].name for group in groups]
+
+        self.assertEqual(
+            labels,
+            [
+                "United Kingdom Supreme Court",
+                "Privy Council",
+                "Court of Appeal",
+                "High Court (England and Wales)",
+                "Other courts",
+                "Specialist Tribunals",
+                "Upper Tribunals",
+                "County Court",
+                "Court of Protection (District judges)",
+                "Court of Protection (Circuit judges)",
+                "Crown Court",
+                "Family Court (District and circuit judges)",
+                "First-tier Tribunals",
+                "Historic Tribunals",
+            ],
         )
 
-        self.assertFalse(group.display_heading)
+    def test_search_filter_groups_are_alphabetical(self):
+        for group in courts.get_show_in_search_filters_groups():
+            labels = [court.grouped_name for court in group.courts]
+            self.assertEqual(labels, sorted(labels, key=str.casefold))
+
+    def test_other_courts_search_filter_group(self):
+        group = next(group for group in courts.get_show_in_search_filters_groups() if group.name == "Other courts")
+
+        self.assertEqual([court.code for court in group.courts], ["EWCOP-T3", "EWFC"])
+        self.assertEqual(
+            [court.name for court in group.courts],
+            ["Court of Protection (High court judges)", "Family Court (High court judges)"],
+        )
+        self.assertTrue(all(court.is_court_of_record for court in group.courts))
+
+    def test_specialist_tribunals_search_filter_group(self):
+        group = next(
+            group for group in courts.get_show_in_search_filters_groups() if group.name == "Specialist Tribunals"
+        )
+
+        self.assertEqual([court.code for court in group.courts], ["EAT", "UKIPT", "POAC", "SIAC"])
+
+    def test_court_of_protection_search_filter_entries(self):
+        court_groups = courts.get_grouped_show_in_search_filters_courts()
+        search_filter_courts = {court.code: court for group in court_groups for court in group.courts}
+
+        self.assertNotIn("EWCOP", search_filter_courts)
+        self.assertEqual(search_filter_courts["EWCOP-T1"].name, "Court of Protection (District judges)")
+        self.assertEqual(search_filter_courts["EWCOP-T2"].name, "Court of Protection (Circuit judges)")
+        self.assertEqual(search_filter_courts["EWCOP-T3"].name, "Court of Protection (High court judges)")
+        self.assertTrue(search_filter_courts["EWCOP-T3"].is_court_of_record)
 
 
 class TestAutogenCourtsJson(unittest.TestCase):

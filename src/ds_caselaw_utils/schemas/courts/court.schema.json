@@ -20,6 +20,12 @@
       "description": "The name of this court as it will commonly appear on Find Case Law.",
       "type": "string"
     },
+    "noun": {
+      "title": "Noun",
+      "description": "The noun to use when referring to this institution.",
+      "type": "string",
+      "enum": ["court", "tribunal"]
+    },
     "long_name": {
       "title": "Long Name",
       "description": "Optionally, the formal name of this court where it differs from the `name`.",
@@ -151,6 +157,7 @@
   "required": [
     "code",
     "name",
+    "noun",
     "link",
     "show_to_editors",
     "show_in_search_filters",

@@ -62,10 +62,10 @@ class CourtOutputBuilder:
                     f.write(f"\n## {group['name']}\n")
 
                 f.write(
-                    "\n| Name | Code | Param | Example NCNs | Start | End | Show to editors? | Advanced search filter? | Show in public directory? | Of record? |\n",
+                    "\n| Name | Noun | Code | Param | Example NCNs | Start | End | Show to editors? | Advanced search filter? | Show in public directory? | Of record? |\n",
                 )
                 f.write(
-                    "| ---- | ---- | ----- | ------------ | ----- | --- | ----- | ----------- | ----------- | ---------- |\n"
+                    "| ---- | ---- | ---- | ----- | ------------ | ----- | --- | ----- | ----------- | ----------- | ---------- |\n"
                 )
 
                 for court in sorted(
@@ -73,6 +73,9 @@ class CourtOutputBuilder:
                 ):
                     f.write("| ")
                     f.write(court["grouped_name"] if "grouped_name" in court else court["name"])
+
+                    f.write(" | ")
+                    f.write(court["noun"])
 
                     f.write(" | ")
                     f.write(court["code"])
@@ -126,6 +129,7 @@ class CourtOutputBuilder:
                     "group_display_name",
                     "is_tribunal",
                     "court_name",
+                    "noun",
                     "court_code",
                     "grouped_name",
                     "long_name",
@@ -161,6 +165,7 @@ class CourtOutputBuilder:
                             group.get("display_name", ""),
                             group.get("is_tribunal", False),
                             court["name"],
+                            court["noun"],
                             court["code"],
                             court.get("grouped_name", ""),
                             court.get("long_name", ""),

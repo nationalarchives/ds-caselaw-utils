@@ -24,6 +24,8 @@ courts.get_all()  # return a list of all courts
 
 courts.get_by_param("ewhc/ch")  # get a court by its parameter value
 
+courts.get_by_param("ewhc/ch").noun  # "court" (or "tribunal" for tribunal records)
+
 courts.get_show_in_search_filters()  # returns a list of all courts that appear as
 # searchable options
 
