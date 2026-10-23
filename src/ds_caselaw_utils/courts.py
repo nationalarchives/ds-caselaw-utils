@@ -18,6 +18,7 @@ from ruamel.yaml import YAML
 
 from ds_caselaw_utils.types.courts_schema_autogen import (
     CourtRelationship,
+    Noun,
     RawCourt,
     RawCourtRepository,
     RawJurisdiction,
@@ -65,6 +66,7 @@ class Court:
         self.param_aliases: list[CourtParam]
         self.code: CourtCode = CourtCode(data["code"])
         self.name: str = data["name"]
+        self.noun: Noun = data["noun"]
         self.is_ended: bool = data.get("ended") or False
         self.is_court_of_record: bool = data.get("court_of_record") or False
         self.long_name: str = data.get("long_name") or data["name"]
@@ -143,6 +145,10 @@ class CourtWithJurisdiction(Court):
     @property
     def name(self) -> str:
         return f"{self.court.name} – {self.jurisdiction.name}"
+
+    @property
+    def noun(self) -> Noun:
+        return self.court.noun
 
     @property
     def grouped_name(self) -> str:

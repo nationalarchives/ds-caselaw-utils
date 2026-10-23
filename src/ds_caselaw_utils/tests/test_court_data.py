@@ -24,3 +24,8 @@ def test_all_example_ncns_have_conversion_pattern():
         if court.ncn_examples:
             for ncn_example in court.ncn_examples:
                 assert neutral_url(NeutralCitationString(ncn_example))
+
+
+def test_institution_nouns_match_institution_types():
+    for court in courts.get_all():
+        assert court.noun == court.type.value

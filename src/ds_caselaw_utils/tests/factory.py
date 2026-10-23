@@ -6,14 +6,16 @@ from ds_caselaw_utils.types.courts_schema_autogen import RawCourt, RawCourtRepos
 
 class CourtFactory(Court):
     def __init__(self, data, type=InstitutionType.COURT):
-        data = make_court_valid(data)
+        data = make_court_valid(data, noun=type.value)
         super().__init__(data, type)
 
 
-def make_court_valid(data) -> RawCourt:
+def make_court_valid(data, noun="court") -> RawCourt:
     for keyword in ["code", "name", "link"]:
         if keyword not in data:
             data[keyword] = f"placeholder {keyword}"
+    if "noun" not in data:
+        data["noun"] = noun
     for keyword in ["show_in_search_filters", "show_in_public_directory", "show_to_editors"]:
         if keyword not in data:
             data[keyword] = True
@@ -26,7 +28,8 @@ def make_court_repo_valid(data) -> RawCourtRepository:
     for court_group in data:
         new_courts = []
         for court in court_group["courts"]:
-            new_courts.append(make_court_valid(court))
+            noun = "tribunal" if court_group.get("is_tribunal", False) else "court"
+            new_courts.append(make_court_valid(court, noun=noun))
         court_group["court"] = new_courts
         new_court_groups.append(court_group)
     return typing.cast(RawCourtRepository, new_court_groups)

@@ -3,6 +3,7 @@
   is_tribunal: false
   courts:
     - code: UKSC
+      noun: court
       name: United Kingdom Supreme Court
       long_name: The Supreme Court
       link: https://www.supremecourt.uk/
@@ -26,6 +27,7 @@
   is_tribunal: false
   courts:
     - code: UKPC
+      noun: court
       name: Privy Council
       long_name: The Judicial Committee of the Privy Council
       link: https://www.jcpc.uk/
@@ -44,6 +46,7 @@
   is_tribunal: false
   courts:
     - code: EWCA-Civil
+      noun: court
       grouped_name: "Civil Division"
       name: "Court of Appeal (Civil Division)"
       long_name: The Court of Appeal of England and Wales (Civil Division)
@@ -64,6 +67,7 @@
         - court_code: EWHC-Family
           relationship_type: hears_appeals_from
     - code: EWCA-Criminal
+      noun: court
       grouped_name: "Criminal Division"
       name: Court of Appeal (Criminal Division)
       long_name: The Court of Appeal of England and Wales (Criminal Division)
@@ -86,6 +90,7 @@
   is_tribunal: false
   courts:
     - code: EWHC
+      noun: court
       name: High Court
       long_name: The High Court of Justice
       link: https://www.judiciary.uk/courts-and-tribunals/high-court/
@@ -95,6 +100,7 @@
       ended: false
       court_of_record: true
     - code: EWHC-QBD-Admin
+      noun: court
       grouped_name: "Administrative Court"
       name: High Court (Administrative Court)
       long_name: The Administrative Court (Queen's Bench Division)
@@ -110,6 +116,7 @@
       ended: false
       court_of_record: true
     - code: EWHC-KBD-Admin
+      noun: court
       grouped_name: "Administrative Court"
       name: High Court (Administrative Court)
       long_name: The Administrative Court (King's Bench Division)
@@ -125,6 +132,7 @@
       ended: false
       court_of_record: true
     - code: EWHC-QBD-Admiralty
+      noun: court
       grouped_name: "Admiralty Court"
       name: High Court (Admiralty Division)
       long_name: The Business and Property Courts (Admiralty Court)
@@ -140,6 +148,7 @@
       ended: false
       court_of_record: true
     - code: EWHC-KBD-Admiralty
+      noun: court
       grouped_name: "Admiralty Court"
       name: High Court (Admiralty Division)
       long_name: The Business and Property Courts (Admiralty Court)
@@ -155,6 +164,7 @@
       ended: false
       court_of_record: true
     - code: EWHC-QBD-BusinessAndProperty
+      noun: court
       grouped_name: Business and Property Courts
       name: High Court (Business and Property Courts)
       long_name: The Business and Property Courts (Queen's Bench Division)
@@ -165,6 +175,7 @@
       ended: false
       court_of_record: true
     - code: EWHC-KBD-BusinessAndProperty
+      noun: court
       grouped_name: Business and Property Courts
       name: High Courts (Business and Property Courts)
       long_name: The Business and Property Courts (King's Bench Division)
@@ -175,6 +186,7 @@
       ended: false
       court_of_record: true
     - code: EWHC-Chancery-BusinessAndProperty
+      noun: court
       grouped_name: Business and Property Courts
       name: High Court (Business and Property Courts)
       long_name: The Business and Property Courts (Chancery Division)
@@ -185,6 +197,7 @@
       ended: false
       court_of_record: true
     - code: EWHC-Chancery-Business
+      noun: court
       grouped_name: Business List
       name: High Court (Business List)
       long_name: The Business and Property Courts (Business List)
@@ -195,6 +208,7 @@
       ended: false
       court_of_record: true
     - code: EWHC-Chancery-Appeals
+      noun: court
       name: Chancery Appeals
       grouped_name: High Court (Chancery Appeals)
       long_name: The Business and Property Courts (Chancery Appeals)
@@ -205,6 +219,7 @@
       ended: false
       court_of_record: true
     - code: EWHC-Chancery
+      noun: court
       grouped_name: Chancery Division
       name: High Court (Chancery Division)
       long_name: The Chancery Division of the High Court
@@ -221,6 +236,7 @@
       ended: true
       court_of_record: true
     - code: EWHC-BPD
+      noun: court
       grouped_name: Business and Property Division
       name: High Court (Business and Property Division)
       long_name: The Business and Property Division of the High Court
@@ -236,6 +252,7 @@
       ended: false
       court_of_record: true
     - code: EWHC-QBD-Commercial-Circuit
+      noun: court
       grouped_name: Circuit Commercial Court
       name: High Court (Circuit Commercial Court)
       long_name: The Business and Property Courts (Circuit Commercial Court)
@@ -249,6 +266,7 @@
       ended: false
       court_of_record: true
     - code: EWHC-KBD-Commercial-Circuit
+      noun: court
       grouped_name: Circuit Commercial Court
       name: High Court (Circuit Commercial Court)
       long_name: The Business and Property Courts (Circuit Commercial Court)
@@ -262,6 +280,7 @@
       ended: false
       court_of_record: true
     - code: EWHC-QBD-Commercial
+      noun: court
       grouped_name: Commercial Court
       name: High Court (Commercial Court)
       long_name: The Business and Property Courts (Commercial Court)
@@ -277,6 +296,7 @@
       ended: false
       court_of_record: true
     - code: EWHC-KBD-Commercial
+      noun: court
       grouped_name: Commercial Court
       name: High Court (Commercial Court)
       long_name: The Business and Property Courts (Commercial Court)
@@ -292,6 +312,7 @@
       ended: false
       court_of_record: true
     - code: EWHC-Family
+      noun: court
       grouped_name: Family Division
       name: High Court (Family Division)
       long_name: The Family Division of the High Court
@@ -307,6 +328,7 @@
       ended: false
       court_of_record: true
     - code: EWHC-QBD-Commercial-Financial
+      noun: court
       grouped_name: Financial List
       name: High Court (Financial List)
       long_name: The Business and Property Courts (The Financial List) (QBD)
@@ -320,6 +342,7 @@
       ended: false
       court_of_record: true
     - code: EWHC-KBD-Commercial-Financial
+      noun: court
       grouped_name: Financial List
       name: High Court (Financial List)
       long_name: The Business and Property Courts (The Financial List) (KBD)
@@ -333,6 +356,7 @@
       ended: false
       court_of_record: true
     - code: EWHC-Chancery-Financial
+      noun: court
       grouped_name: Financial List
       name: High Court (Financial List)
       long_name: The Business and Property Courts (Financial List)
@@ -343,6 +367,7 @@
       ended: false
       court_of_record: true
     - code: EWHC-Chancery-InsolvencyAndCompanies
+      noun: court
       grouped_name: Insolvency and Companies List
       name: High Court (Insolvency and Companies List)
       long_name: The Business and Property Courts (Insolvency and Companies List)
@@ -353,6 +378,7 @@
       ended: false
       court_of_record: true
     - code: EWHC-Chancery-IPEC
+      noun: court
       grouped_name: Intellectual Property Enterprise Court
       name: High Court (Intellectual Property Enterprise Court)
       long_name: The Business and Property Courts (Intellectual Property Enterprise Court)
@@ -368,6 +394,7 @@
       ended: false
       court_of_record: true
     - code: EWHC-Chancery-IntellectualProperty
+      noun: court
       grouped_name: Intellectual Property List
       name: High Court (Intellectual Property List)
       long_name: The Business and Property Courts (Intellectual Property List)
@@ -378,6 +405,7 @@
       ended: false
       court_of_record: true
     - code: TNA-EWHC-KBQBD
+      noun: court
       grouped_name: King's / Queen's Bench Division
       name: High Court (King's / Queen's Bench Division)
       link: https://www.gov.uk/courts-tribunals/kings-bench-division-of-the-high-court
@@ -393,6 +421,7 @@
       ended: false
       court_of_record: true
     - code: EWHC-KBD
+      noun: court
       grouped_name: King's Bench Division
       name: High Court (King's Bench Division)
       long_name: The King's Bench Division of the High Court
@@ -408,6 +437,7 @@
       ended: false
       court_of_record: true
     - code: EWHC-Mercantile
+      noun: court
       grouped_name: Mercantile Court
       name: High Court (Mercantile Court)
       link: https://www.gov.uk/courts-tribunals/intellectual-property-enterprise-court
@@ -423,6 +453,7 @@
       ended: true
       court_of_record: true
     - code: EWHC-Chancery-Patents
+      noun: court
       grouped_name: Patents Court
       name: High Court (Patents Court)
       long_name: The Business and Property Courts (Patents Court)
@@ -438,6 +469,7 @@
       ended: false
       court_of_record: true
     - code: EWHC-QBD
+      noun: court
       grouped_name: Queen's Bench Division
       name: High Court (Queen's Bench Division)
       long_name: The Queen's Bench Division of the High Court
@@ -454,6 +486,7 @@
       ended: true
       court_of_record: true
     - code: EWHC-QBD-Planning
+      noun: court
       grouped_name: Planning Court
       name: High Court (Planning Court)
       long_name: The Planning Court (Queen's Bench Division)
@@ -464,6 +497,7 @@
       ended: false
       court_of_record: true
     - code: EWHC-KBD-Planning
+      noun: court
       grouped_name: Planning Court
       name: High Court (Planning Court)
       long_name: The Planning Court (King's Bench Division)
@@ -474,6 +508,7 @@
       ended: false
       court_of_record: true
     - code: EWHC-Chancery-PropertyTrustsProbate
+      noun: court
       grouped_name: Property, Trusts and Probate List
       name: High Court (Property, Trusts and Probate List)
       long_name: The Business and Property Courts (Property, Trusts and Probate List)
@@ -484,6 +519,7 @@
       ended: false
       court_of_record: true
     - code: EWHC-SeniorCourtsCosts
+      noun: court
       grouped_name: Senior Courts Costs Office
       name: High Court (Senior Court Costs Office)
       long_name: The England and Wales High Court (Senior Courts Costs Office)
@@ -500,6 +536,7 @@
       ended: false
       court_of_record: true
     - code: EWHC-QBD-TCC
+      noun: court
       grouped_name: Technology and Construction Court
       name: High Court (Technology and Construction Court)
       long_name: The Business and Property Courts (Technology and Construction Court)
@@ -515,6 +552,7 @@
       ended: false
       court_of_record: true
     - code: EWHC-KBD-TCC
+      noun: court
       grouped_name: Technology and Construction Court
       name: High Court (Technology and Construction Court)
       long_name: The Business and Property Courts (Technology and Construction Court)
@@ -530,6 +568,7 @@
       ended: false
       court_of_record: true
     - code: EWHC-BPD-Admiralty
+      noun: court
       grouped_name: "Admiralty Court"
       name: High Court (Admiralty Court)
       long_name: The Business and Property Division (Admiralty Court)
@@ -545,6 +584,7 @@
       ended: false
       court_of_record: true
     - code: EWHC-BPD-Commercial
+      noun: court
       grouped_name: Commercial Court
       name: High Court (Commercial Court)
       long_name: The Business and Property Division (Commercial Court)
@@ -560,6 +600,7 @@
       ended: false
       court_of_record: true
     - code: EWHC-BPD-Commercial-Circuit
+      noun: court
       grouped_name: Circuit Commercial Court
       name: High Court (Circuit Commercial Court)
       long_name: The Business and Property Division (Circuit Commercial Court)
@@ -574,6 +615,7 @@
       ended: false
       court_of_record: true
     - code: EWHC-BPD-IntellectualProperty
+      noun: court
       grouped_name: Intellectual Property List
       name: High Court (Intellectual Property List)
       long_name: The Business and Property Division (Intellectual Property List)
@@ -585,6 +627,7 @@
       ended: false
       court_of_record: true
     - code: EWHC-BPD-IPEC
+      noun: court
       grouped_name: Intellectual Property Enterprise Court
       name: High Court (Intellectual Property Enterprise Court)
       long_name: The Business and Property Division (Intellectual Property Enterprise Court)
@@ -600,6 +643,7 @@
       ended: false
       court_of_record: true
     - code: EWHC-BPD-Patents
+      noun: court
       grouped_name: Patents Court
       name: High Court (Patents Court)
       long_name: The Business and Property Division (Patents Court)
@@ -615,6 +659,7 @@
       ended: false
       court_of_record: true
     - code: EWHC-BPD-TCC
+      noun: court
       grouped_name: Technology and Construction Court
       name: High Court (Technology and Construction Court)
       long_name: The Business and Property Division (Technology and Construction Court)
@@ -630,6 +675,7 @@
       ended: false
       court_of_record: true
     - code: EWHC-BPD-Business
+      noun: court
       grouped_name: Business List
       name: High Court (Business List)
       long_name: The Business and Property Division (Business List)
@@ -641,6 +687,7 @@
       ended: false
       court_of_record: true
     - code: EWHC-BPD-InsolvencyAndCompanies
+      noun: court
       grouped_name: Insolvency and Companies List
       name: High Court (Insolvency and Companies List)
       long_name: The Business and Property Division (Insolvency and Companies List)
@@ -652,6 +699,7 @@
       ended: false
       court_of_record: true
     - code: EWHC-BPD-Commercial-Financial
+      noun: court
       grouped_name: Financial List
       name: High Court (Financial List)
       long_name: The Business and Property Division (Financial List)
@@ -666,6 +714,7 @@
       ended: false
       court_of_record: true
     - code: EWHC-BPD-PropertyTrustsProbate
+      noun: court
       grouped_name: Property, Trusts and Probate List
       name: High Court (Property, Trusts and Probate List)
       long_name: The Business and Property Division (Property, Trusts and Probate List)
@@ -677,6 +726,7 @@
       ended: false
       court_of_record: true
     - code: EWHC-BPD-Appeals
+      noun: court
       grouped_name: Business and Property Division Appeals List
       name: High Court (Business and Property Division Appeals List)
       long_name: The Business and Property Division (Appeals List)
@@ -687,6 +737,7 @@
       ended: false
       court_of_record: true
     - code: EWHC-BPD-Competition
+      noun: court
       grouped_name: Competition List
       name: High Court (Competition List)
       long_name: The Business and Property Division (Competition List)
@@ -698,6 +749,7 @@
       ended: false
       court_of_record: true
     - code: EWHC-BPD-Revenue
+      noun: court
       grouped_name: Revenue list
       name: High Court (Revenue list)
       long_name: The Business and Property Division (Revenue list)
@@ -713,6 +765,7 @@
   is_tribunal: false
   courts:
     - code: "EWCR"
+      noun: court
       name: "Crown Court"
       long_name: The Crown Court
       link: https://www.judiciary.uk/courts-and-tribunals/crown-court/
@@ -726,6 +779,7 @@
       show_to_editors: true
       ended: false
     - code: "EWCC"
+      noun: court
       name: "County Court"
       long_name: The County Court
       link: https://www.judiciary.uk/courts-and-tribunals/county-court/
@@ -739,6 +793,7 @@
       show_to_editors: true
       ended: false
     - code: EWFC
+      noun: court
       name: Family Court
       long_name: The Family Court
       link: https://www.judiciary.uk/you-and-the-judiciary/going-to-court/family-law-courts/
@@ -752,6 +807,7 @@
       show_to_editors: true
       ended: false
     - code: "EWFC-B"
+      noun: court
       name: Family Court (B - district and circuit judges)
       long_name: The Family Court (B cases)
       # This is an artifact of how the Family Court creates tiers of importance.
@@ -766,6 +822,7 @@
       show_to_editors: false
       ended: false
     - code: EWCOP
+      noun: court
       name: Court of Protection
       long_name: The Court of Protection
       link: https://www.gov.uk/courts-tribunals/court-of-protection
@@ -779,6 +836,7 @@
       show_to_editors: true
       ended: false
     - code: EWCOP-T1
+      noun: court
       name: Court of Protection (Tier 1 - district judges)
       long_name: The Court of Protection (Tier 1 cases)
       link: https://www.gov.uk/courts-tribunals/court-of-protection
@@ -792,6 +850,7 @@
       show_to_editors: false
       ended: false
     - code: EWCOP-T2
+      noun: court
       name: Court of Protection (Tier 2 - circuit judges)
       long_name: The Court of Protection (Tier 2 cases)
       link: https://www.gov.uk/courts-tribunals/court-of-protection
@@ -805,6 +864,7 @@
       show_to_editors: false
       ended: false
     - code: EWCOP-T3
+      noun: court
       name: Court of Protection (Tier 3 - high court judges)
       long_name: The Court of Protection (Tier 3 cases)
       link: https://www.gov.uk/courts-tribunals/court-of-protection
@@ -823,6 +883,7 @@
   is_tribunal: true
   courts:
     - code: UKIPT
+      noun: tribunal
       name: Investigatory Powers Tribunal
       long_name: The Investigatory Powers Tribunal
       link: https://investigatorypowerstribunal.org.uk/about-the-tribunal/
@@ -841,6 +902,7 @@
   is_tribunal: true
   courts:
     - code: SIAC
+      noun: tribunal
       name: Special Immigration Appeals Commission
       link: https://www.gov.uk/guidance/appeal-to-the-special-immigration-appeals-commission
       show_in_search_filters: true
@@ -854,6 +916,7 @@
   is_tribunal: true
   courts:
     - code: POAC
+      noun: tribunal
       name: Proscribed Organisations Appeal Commission
 
       link: https://www.gov.uk/guidance/appeal-to-the-special-immigration-appeals-commission
@@ -868,6 +931,7 @@
   is_tribunal: true
   courts:
     - code: PAAC
+      noun: tribunal
       name: Pathogens Access Appeal Commission
 
       link: https://www.gov.uk/guidance/appeal-to-the-pathogens-access-appeals-commission
@@ -881,6 +945,7 @@
   is_tribunal: true
   courts:
     - code: EAT
+      noun: tribunal
       name: Employment Appeal Tribunal
       long_name: Employment Appeal Tribunal
       link: https://www.gov.uk/courts-tribunals/employment-appeal-tribunal
@@ -899,6 +964,7 @@
   is_tribunal: true
   courts:
     - code: UKUT-AAC
+      noun: tribunal
       grouped_name: Administrative Appeals Chamber
       name: Upper Tribunal (Administrative Appeals Chamber)
       long_name: United Kingdom Upper Tribunal (Administrative Appeals Chamber)
@@ -914,6 +980,7 @@
       param: "ukut/aac"
       start_year: 2011
     - code: UKUT-IAC
+      noun: tribunal
       grouped_name: Immigration and Asylum Chamber
       name: Upper Tribunal (Immigration and Asylum Chamber)
       long_name: United Kingdom Upper Tribunal (Immigration and Asylum Chamber)
@@ -930,6 +997,7 @@
       extra_params: ["ukait"]
       start_year: 2007
     - code: UKAIT
+      noun: tribunal
       show_in_search_filters: false
       show_in_public_directory: false
       show_to_editors: false
@@ -945,6 +1013,7 @@
       start_year: 2003
       end_year: 2010
     - code: UKUT-LC
+      noun: tribunal
       grouped_name: Lands Chamber
       name: Upper Tribunal (Lands Chamber)
       long_name: United Kingdom Upper Tribunal (Lands Chamber)
@@ -960,6 +1029,7 @@
       param: "ukut/lc"
       start_year: 2014
     - code: UKUT-TCC
+      noun: tribunal
       grouped_name: Tax and Chancery Chamber
       name: Upper Tribunal (Tax and Chancery Chamber)
       long_name: United Kingdom Upper Tribunal (Tax and Chancery Chamber)
@@ -979,6 +1049,7 @@
   is_tribunal: true
   courts:
     - code: UKFTT-HESC
+      noun: tribunal
       name: Care Standards
       link: https://www.gov.uk/courts-tribunals/first-tier-tribunal-care-standards
       ncn_pattern: \[(\d{4})\] (UKFTT) (\d+) \((HESC)\)
@@ -991,6 +1062,7 @@
       show_to_editors: true
       ended: false
     - code: ET
+      noun: tribunal
       grouped_name: Employment Tribunal
       name: First-tier Tribunal (Employment Tribunal)
       long_name: The Employment Tribunal
@@ -1001,6 +1073,7 @@
       show_to_editors: false
       ended: false
     - code: UKFTT-GRC
+      noun: tribunal
       grouped_name: General Regulatory Chamber
       name: First-tier Tribunal (General Regulatory Chamber)
       long_name: United Kingdom First-tier Tribunal (General Regulatory Chamber)
@@ -1064,6 +1137,7 @@
           prefix: WA
           name: Welfare of Animals
     - code: UKFTT-IAC
+      noun: tribunal
       grouped_name: Immigration and Asylum Chamber
       name: First-tier Tribunal (Immigration and Asylum Chamber)
       long_name: United Kingdom First-tier Tribunal (Immigration and Asylum Chamber)
@@ -1075,6 +1149,7 @@
       show_to_editors: true
       ended: false
     - code: UKFTT-TC
+      noun: tribunal
       grouped_name: Tax Chamber
       name: First-tier Tribunal (Tax Chamber)
       long_name: United Kingdom First-tier Tribunal (Tax)
@@ -1089,6 +1164,7 @@
       show_to_editors: true
       ended: false
     - code: FTT-PC
+      noun: tribunal
       name: Land Registration Division (Property Chamber)
       long_name: First-tier Tribunal (Property Chamber)
       param: ftt/pc
@@ -1101,6 +1177,7 @@
       show_to_editors: false
       ended: false
     - code: FTT-PHL
+      noun: tribunal
       name: Primary Health Lists
       param: ftt/phl
       link: https://www.judiciary.uk/courts-and-tribunals/tribunals/first-tier-tribunal/health-education-and-social-care-chamber/special-educational-needs-and-disability-care-standards-and-primary-health-lists-send/primary-health-lists/
@@ -1113,6 +1190,7 @@
   is_tribunal: true
   courts:
     - code: FTT-Claims
+      noun: tribunal
       name: Claims Management Services Tribunal
       long_name: Claims Management Services Tribunal
       param: ftt/claims
@@ -1124,6 +1202,7 @@
       show_to_editors: true
       ended: true
     - code: UKFTT-Credit
+      noun: tribunal
       name: Consumer Credit Appeals Tribunal
       long_name: Consumer Credit Appeals Tribunal
       param: ukftt/credit
@@ -1135,6 +1214,7 @@
       show_to_editors: true
       ended: true
     - code: UKFTT-Estate
+      noun: tribunal
       name: Estate Agents Tribunal
       long_name: Estate Agents Tribunal
       param: ukftt/estate
@@ -1146,6 +1226,7 @@
       show_to_editors: true
       ended: true
     - code: UKFSMT
+      noun: tribunal
       name: Financial Services Tribunal
       long_name: Financial Services and Markets Tribunal
       # Heard appeals against FSA regulatory decisions under FSMA 2000; merged into UKUT-TCC in 2010.
@@ -1158,6 +1239,7 @@
       show_to_editors: true
       ended: true
     - code: UKIT
+      noun: tribunal
       name: Information Tribunal
       link: https://webarchive.nationalarchives.gov.uk/ukgwa/20120405092513/http://www.justice.gov.uk/tribunals/information-rights
       # previously known as the Data Protection Tribunal; became the Information Rights Tribunal and then First Tier Tribunal (Information Rights)
@@ -1169,6 +1251,7 @@
       show_to_editors: true
       ended: true
     - code: UKIST
+      noun: tribunal
       name: Immigration Services Tribunal
       long_name: The Immigration Services Tribunal
       param: ukist
@@ -1180,6 +1263,7 @@
       show_to_editors: true
       ended: true
     - code: UKPRT
+      noun: tribunal
       name: Pensions Regulator Tribunal
       long_name: The Pensions Regulator Tribunal
       # Heard appeals against Pensions Regulator determinations under the Pensions Act 2004; merged into UKUT-TCC in 2010.
@@ -1192,6 +1276,7 @@
       show_to_editors: true
       ended: true
     - code: UKSPC
+      noun: tribunal
       name: Special Commissioners of Income Tax
       long_name: Special Commissioners of Income Tax
       # Heard direct tax appeals (income tax, corporation tax, capital gains tax); merged into UKFTT-TC in 2009.
@@ -1204,6 +1289,7 @@
       show_to_editors: true
       ended: true
     - code: FTT-Transport
+      noun: tribunal
       name: Transport Tribunal
       param: ftt/transport
       link: https://webarchive.nationalarchives.gov.uk/ukgwa/20160811143636/http://www.transporttribunal.gov.uk/Aspx/Default.aspx
@@ -1214,6 +1300,7 @@
       show_to_editors: true
       ended: true
     - code: UKVAT
+      noun: tribunal
       name: VAT and Duties Tribunal
       long_name: VAT and Duties Tribunal
       # Heard indirect tax appeals (VAT, Customs Duties, Excise Duties, Insurance Premium Tax,

@@ -29,6 +29,7 @@ def test_factory():
             "courts": [
                 {
                     "name": "court1",
+                    "noun": "court",
                     "show_in_search_filters": True,
                     "show_in_public_directory": True,
                     "code": "placeholder code",
@@ -37,6 +38,7 @@ def test_factory():
                 },
                 {
                     "name": "court2",
+                    "noun": "court",
                     "show_in_search_filters": False,
                     "show_in_public_directory": True,
                     "code": "placeholder code",
@@ -47,6 +49,7 @@ def test_factory():
             "court": [
                 {
                     "name": "court1",
+                    "noun": "court",
                     "show_in_search_filters": True,
                     "show_in_public_directory": True,
                     "code": "placeholder code",
@@ -55,6 +58,7 @@ def test_factory():
                 },
                 {
                     "name": "court2",
+                    "noun": "court",
                     "show_in_search_filters": False,
                     "show_in_public_directory": True,
                     "code": "placeholder code",
@@ -69,6 +73,7 @@ def test_factory():
             "courts": [
                 {
                     "name": "court3",
+                    "noun": "court",
                     "show_in_search_filters": False,
                     "show_in_public_directory": True,
                     "code": "placeholder code",
@@ -79,6 +84,7 @@ def test_factory():
             "court": [
                 {
                     "name": "court3",
+                    "noun": "court",
                     "show_in_search_filters": False,
                     "show_in_public_directory": True,
                     "code": "placeholder code",
@@ -88,4 +94,4 @@ def test_factory():
             ],
         },
     ]
-    assert str(output_data) == str(make_court_repo_valid(input_data))
+    assert output_data == make_court_repo_valid(input_data)

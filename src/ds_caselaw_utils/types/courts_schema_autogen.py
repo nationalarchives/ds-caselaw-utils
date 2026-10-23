@@ -40,6 +40,19 @@ pattern: ^\[([0-9]{4})\] ([a-zA-Z]+)(?: ([a-zA-Z]+))? ([0-9]+)(?: \(([a-zA-Z0-9]
 
 
 
+Noun = Literal['court'] | Literal['tribunal']
+r"""
+Noun.
+
+The noun to use when referring to this institution.
+"""
+NOUN_COURT: Literal['court'] = "court"
+r"""The values for the 'Noun' enum"""
+NOUN_TRIBUNAL: Literal['tribunal'] = "tribunal"
+r"""The values for the 'Noun' enum"""
+
+
+
 class RawCourt(TypedDict, total=False):
     r"""
     Raw Court.
@@ -89,6 +102,15 @@ class RawCourt(TypedDict, total=False):
     Name.
 
     The name of this court as it will commonly appear on Find Case Law.
+
+    Required property
+    """
+
+    noun: Required["Noun"]
+    r"""
+    Noun.
+
+    The noun to use when referring to this institution.
 
     Required property
     """
