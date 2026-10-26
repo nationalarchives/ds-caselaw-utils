@@ -4,5 +4,14 @@
     "github>nationalarchives/ds-find-caselaw-docs",
     ":preserveSemverRanges"
   ],
-  "addLabels": ["no-changelog"]
+  "addLabels": ["no-changelog"],
+  "packageRules": [
+    {
+      "description": "Require manual review for Python runtime upgrades",
+      "matchManagers": ["github-actions"],
+      "matchDepNames": ["python"],
+      "enabled": true,
+      "automerge": false
+    }
+  ]
 }
