@@ -375,10 +375,9 @@ Must be one of:
 **Description:** The route which the file took to reach the parser.
 
 Must be one of:
-* "TDR"
-* "BULK"
-* "EUI"
+* "tdr"
 * "bulk"
+* "eui"
 
 ## <a name="metadata_fields"></a>13. Property `Parser process metadata > metadata_fields`
 
