@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## Unreleased
+
+- Parser metadata schema: `primary_source.route` now accepts only the lower-case values `tdr`, `bulk` and `eui`, which is what the parser emits. The upper-case values are no longer valid.
+
 ## v5.1.2 (2026-10-23)
 
 - Further adjustments to the courts for the filters, ensuring we show the appropriate courts and that they are in the right order.

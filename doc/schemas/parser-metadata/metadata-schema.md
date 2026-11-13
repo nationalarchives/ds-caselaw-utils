@@ -417,10 +417,9 @@ Must be one of:
 **Description:** The route which the file took to reach the parser.
 
 Must be one of:
-* "TDR"
-* "BULK"
-* "EUI"
+* "tdr"
 * "bulk"
+* "eui"
 
 #### <a name="parameters_PARSER_metadata_fields"></a>1.1.13. Property `Document processing metadata > parameters > PARSER > metadata_fields`
 

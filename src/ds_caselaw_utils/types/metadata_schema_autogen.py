@@ -436,18 +436,16 @@ class _MetadataFieldsItem(TypedDict, total=False):
 
 
 
-_PrimarySourceFileRoute = Literal['TDR'] | Literal['BULK'] | Literal['EUI'] | Literal['bulk']
+_PrimarySourceFileRoute = Literal['tdr'] | Literal['bulk'] | Literal['eui']
 r"""
 The route which the file took to reach the parser.
 
 name: Route
 """
-_PRIMARYSOURCEFILEROUTE_TDR: Literal['TDR'] = "TDR"
+_PRIMARYSOURCEFILEROUTE_TDR: Literal['tdr'] = "tdr"
 r"""The values for the 'The route which the file took to reach the parser' enum"""
-_PRIMARYSOURCEFILEROUTE_BULK: Literal['BULK'] = "BULK"
+_PRIMARYSOURCEFILEROUTE_BULK: Literal['bulk'] = "bulk"
 r"""The values for the 'The route which the file took to reach the parser' enum"""
-_PRIMARYSOURCEFILEROUTE_EUI: Literal['EUI'] = "EUI"
-r"""The values for the 'The route which the file took to reach the parser' enum"""
-_PRIMARYSOURCEFILEROUTE_BULK0: Literal['bulk'] = "bulk"
+_PRIMARYSOURCEFILEROUTE_EUI: Literal['eui'] = "eui"
 r"""The values for the 'The route which the file took to reach the parser' enum"""
 
