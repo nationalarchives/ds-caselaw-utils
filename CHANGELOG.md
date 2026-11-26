@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## Unreleased
+
+### Feat
+
+- Parser metadata schema: add `proceedings_identifier` metadata field
+
 ## v5.2.0 (2026-11-16)
 
 - Parser metadata schema: `primary_source.route` now accepts only the lower-case values `tdr`, `bulk` and `eui`, which is what the parser emits. The upper-case values are no longer valid.

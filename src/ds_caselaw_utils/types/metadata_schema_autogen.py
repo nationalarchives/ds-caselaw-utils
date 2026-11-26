@@ -381,6 +381,34 @@ class _MetadataFieldsItem(TypedDict, total=False):
               - name
               - parent
               type: object
+      - if:
+          properties:
+            name:
+              const: proceedings_identifier
+        then:
+          properties:
+            value:
+              additionalProperties: false
+              description: An identifier for the proceedings which resulted in this document,
+                such as an appeal number. A document may have more than one.
+              properties:
+                type:
+                  description: The kind of identifier, as it is labelled in the source.
+                  examples:
+                  - Appeal No
+                  title: Proceedings identifier type
+                  type: string
+                value:
+                  description: The identifier itself.
+                  examples:
+                  - 2026-01234.EA
+                  title: Proceedings identifier value
+                  type: string
+              required:
+              - type
+              - value
+              title: Proceedings identifier
+              type: object
     """
 
     id: str
