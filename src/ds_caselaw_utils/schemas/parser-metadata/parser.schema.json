@@ -229,6 +229,36 @@
                 }
               }
             }
+          },
+          {
+            "if": {
+              "properties": { "name": { "const": "proceedings_identifier" } }
+            },
+            "then": {
+              "properties": {
+                "value": {
+                  "title": "Proceedings identifier",
+                  "description": "An identifier for the proceedings which resulted in this document, such as an appeal number. A document may have more than one.",
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "title": "Proceedings identifier type",
+                      "description": "The kind of identifier, as it is labelled in the source.",
+                      "type": "string",
+                      "examples": ["Appeal No"]
+                    },
+                    "value": {
+                      "title": "Proceedings identifier value",
+                      "description": "The identifier itself.",
+                      "type": "string",
+                      "examples": ["2026-01234.EA"]
+                    }
+                  },
+                  "required": ["type", "value"],
+                  "additionalProperties": false
+                }
+              }
+            }
           }
         ]
       }
